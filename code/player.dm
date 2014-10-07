@@ -34,7 +34,7 @@ client
 				var/offset_x = click_o.step_x + pixel_x
 				var/offset_y = click_o.step_y + pixel_y
 				player.target_location(location, offset_x, offset_y)
-	MouseDrop(tile/drag_obj, atom/movable/over_obj, src_loc, over_loc, src_control, over_control, params)
+	/*MouseDrop(tile/drag_obj, atom/movable/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])
 		var/pixel_y = text2num(params_list["icon-y"])
@@ -47,7 +47,27 @@ client
 			else if(istype(over_obj, /atom/movable))
 				offset_x = over_obj.step_x + pixel_x - HOTSPOT_OFFSET
 				offset_y = over_obj.step_y + pixel_y - HOTSPOT_OFFSET
-			player.move_tile(drag_obj, over_obj, offset_x, offset_y);
+			player.move_tile(drag_obj, over_obj, offset_x, offset_y);*/
+tile
+	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params)
+		var/list/params_list = params2list(params)
+		var/pixel_x = text2num(params_list["icon-x"])
+		var/pixel_y = text2num(params_list["icon-y"])
+		var/offset_x// = drag_obj.step_x + pixel_x
+		var/offset_y// = drag_obj.step_y + pixel_y
+		if(istype(over_obj, /turf))
+			offset_x = pixel_x - HOTSPOT_OFFSET
+			offset_y = pixel_y - HOTSPOT_OFFSET
+			Move(over_obj, 0, offset_x, offset_y)
+		else if(istype(over_obj, /player/hud/hotbar))
+			var/player/hud/hotbar/over_bar = over_obj
+			offset_x = pixel_x - HOTSPOT_OFFSET
+			offset_y = pixel_y - HOTSPOT_OFFSET
+			over_bar.add_tile(src, pixel_x, pixel_y)
+		/*else if(istype(over_obj, /atom/movable))
+			var/atom/movable/amoo = over_obj
+			offset_x = amoo.step_x + pixel_x - HOTSPOT_OFFSET
+			offset_y = amoo.step_y + pixel_y - HOTSPOT_OFFSET*/
 
 
 player
@@ -68,6 +88,8 @@ player
 		focus(character)
 		primary = melee_tile
 		secondary = melee_tile
+	Del()
+		del hud
 	var
 		client/client
 		actor/character
@@ -89,8 +111,8 @@ player
 			character.act(move_tile, target_turf, offset_x, offset_y)
 		target_actor(actor/target_actor)
 			character.act(primary, target_actor)
-		move_tile(tile/dragged, atom/over_obj, offset_x, offset_y)
+		/*move_tile(tile/dragged, atom/over_obj, offset_x, offset_y)
 			if(over_obj.Enter(dragged))
 				dragged.screen_loc = null;
 				client.screen.Remove(dragged)
-			dragged.Move(over_obj, 0, offset_x, offset_y)
+			dragged.Move(over_obj, 0, offset_x, offset_y)*/

@@ -1,4 +1,9 @@
-#define HOTSPOT_OFFSET 12
+#define TILE_SIZE 24
+#define HOTSPOT_OFFSET (TILE_SIZE/2)
+// Note that the above "TILE" refers to a specific type of object, /tile, and not to world.icon_size
+#define HOTBAR_TILE_SIZE (TILE_SIZE+2)
+#define HOTBAR_LAYER 6
+#define HUD_TILE_LAYER 7
 
 #define TARGET_NONE 0
 #define TARGET_TURF 1

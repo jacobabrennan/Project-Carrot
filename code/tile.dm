@@ -1,7 +1,7 @@
 tile
 	parent_type = /obj
-	bound_width = 24
-	bound_height = 24
+	bound_width = TILE_SIZE
+	bound_height = TILE_SIZE
 	density = FALSE
 	var
 		delay = 0
