@@ -1,6 +1,9 @@
+#define FACTION_PLAYER 1
+#define FACTION_ENEMY 2
 wanderer
 	parent_type = /actor
 	icon_state = "red"
+	faction = FACTION_ENEMY
 	bound_x = 0
 	bound_y = 0
 	bound_height = 32
@@ -19,22 +22,26 @@ actor
 	bound_y = 8
 	bound_height = 16
 	bound_width = 16
-
+	step_size = 3
 	var
 		actor/action/action
 		acting = FALSE
+		faction = FACTION_PLAYER
+		action_cycle_delay = 1
 	proc
-		act(actor/action/A)
+		act(tile/new_tile, new_target, new_offset_x, new_offset_y)
 			if(action)
 				del action
-			action = A
-			act_cycle()
+			if(new_tile.target_check(src, new_target))
+				action = new(new_tile, new_target, new_offset_x, new_offset_y)
+				act_cycle()
+				return TRUE
 		act_cycle()
 			if(acting) return
 			acting = TRUE
 			while(acting && action)
+				sleep(action_cycle_delay)
 				action.iterate(src)
-				sleep(1)
 			acting = FALSE
 
 actor/action
@@ -58,8 +65,8 @@ actor/action
 				var/theta = atan2(max_delta_x, max_delta_y)
 				var/delta_x = user.step_size*cos(theta);
 				var/delta_y = user.step_size*sin(theta);
-				delta_x = -(-round(abs(delta_x)) * ((delta_x < 0)? -1 : 1))
-				delta_y = -(-round(abs(delta_y)) * ((delta_y < 0)? -1 : 1))
+				delta_x = (-round(-abs(delta_x)) * ((delta_x < 0)? -1 : 1))
+				delta_y = (-round(-abs(delta_y)) * ((delta_y < 0)? -1 : 1))
 				delta_x = min(abs(max_delta_x), max(-abs(max_delta_x), delta_x))
 				delta_y = min(abs(max_delta_y), max(-abs(max_delta_y), delta_y))
 				user.Move(user.loc, 0, user.step_x+delta_x, user.step_y+delta_y)
@@ -76,5 +83,5 @@ actor/action
 				delta_y = min(abs(max_delta_y), max(-abs(max_delta_y), delta_y))
 				user.Move(user.loc, 0, user.step_x+delta_x, user.step_y+delta_y)
 			if(tile.range_check(user, target, offset_x, offset_y))
-				tile.use(user, target, offset_x, offset_y)
-				del src
+				var continuous = tile.use(user, target, offset_x, offset_y)
+				if(!continuous) del src

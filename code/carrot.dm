@@ -3,15 +3,9 @@
  */
 
 world
-	fps = 25		// 25 frames per second
+	fps = 15		// 25 frames per second
 	icon_size = 32	// 32x32 icon size by default
 	view = 6		// show up to 6 tiles outward from center (13x13 view)
-	New()
-		.=..()
-		world << "Creating"
-	Del()
-		world << "Deleting"
-		.=..()
 	hub_password = "tD69MKdrVX2qBjpu"
 	hub = "iainperegrine.carrot"
 
