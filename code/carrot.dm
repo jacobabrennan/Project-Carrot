@@ -27,6 +27,24 @@ obj
 turf
 	icon_state = "green"
 
+tile
+	icon_state = "carrot"
+
 proc/atan2(x, y)
     if(!x && !y) return 0
     return y >= 0 ? arccos(x / sqrt(x * x + y * y)) : -arccos(x / sqrt(x * x + y * y))
+
+coord
+	var
+		x
+		y
+	New(_x,_y)
+		x = _x
+		y = _y
+atom/movable
+	proc
+		center_offset()
+			var/coord/center = New()
+			center.x = step_x + bound_x + (bound_width /2)
+			center.y = step_y + bound_y + (bound_height/2)
+			return center

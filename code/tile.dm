@@ -1,18 +1,17 @@
-#define TARGET_NONE 0
-#define TARGET_TURF 1
-#define TARGET_RANGE 2
-#define TARGET_ENEMY 4
-#define TARGET_FRIEND 8
-#define TARGET_ACTOR (4|8)
-
-#define RANGE_CENTER -1
-
 tile
 	parent_type = /obj
+	bound_width = 24
+	bound_height = 24
+	density = FALSE
 	var
 		delay = 0
 		target_class = TARGET_ENEMY
-		range = 0
+		range = RANGE_TOUCH
+	New()
+		. = ..()
+		mouse_drag_pointer = icon_state
+	Enter()
+		return FALSE
 	proc
 		target_check(actor/user, atom/target)
 			if((TARGET_NONE|TARGET_RANGE)&target_class)
@@ -52,3 +51,14 @@ var/tile/melee/melee_tile = new()
 tile/melee
 	target_class = TARGET_ENEMY
 	use(actor/user, atom/target, offset_x, offset_y){}
+
+
+
+
+
+tile/test_item
+	range = RANGE_TOUCH
+	target_class = TARGET_ACTOR
+	use(actor/user, atom/target, offset_x, offset_y)
+		target.icon_state = "orange"
+		del src

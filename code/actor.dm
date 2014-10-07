@@ -1,5 +1,3 @@
-#define FACTION_PLAYER 1
-#define FACTION_ENEMY 2
 wanderer
 	parent_type = /actor
 	icon_state = "red"
