@@ -1,7 +1,11 @@
 // BEGIN_INTERNALS
 /*
-DIR: code 
+LAST_COMPILE_TIME: 1412657677
+DIR: code graphics maps 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
+LAST_COMPILE_VERSION: 507.1259
+WINDOW: code\carrot.dm;code\tile.dm;code\player.dm;graphics\rectangles.dmi;maps\trash.dmm;code\driver.dm;code\actor.dm
+FILE: code\carrot.dm
 */
 // END_INTERNALS

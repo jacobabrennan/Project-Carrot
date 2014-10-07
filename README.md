@@ -9,7 +9,7 @@ Must have subscriber features. $SUPPORT
 Minimal Interface. None, if possible. [$TIME]
 Persistent World, no game instancing [$ATOM, $TIME]
 Build your own environment. [$ATOM, $FUN]
-Huge world that takes you forever to traverse, with no means for teleportaion, and death sets you back quite far - Unless your party can keep you alive (protect the dead?). $UNIQUE
+Huge world that takes you forever to traverse, with no means for teleportaion, and death sets you back quite far - Unless your party can keep you alive (protect the dead?). [$UNIQUE]
 
 Game Play Brain Store:
 Keep People Engaged
@@ -53,7 +53,7 @@ Needed to Version 0.1:
 Gameplay Objects:
 	Mappable:
 		Turfs
-		Combatants
+		Actors
 			Characters
 		Furniture
 		Tiles - Click and Draggable, but only from nearby.
