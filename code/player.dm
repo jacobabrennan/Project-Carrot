@@ -2,6 +2,7 @@ world
 	mob = /player/connector
 client
 	perspective = EYE_PERSPECTIVE
+	show_popup_menus = FALSE
 	var
 		player/player
 	East()
@@ -20,7 +21,7 @@ client
 		player.command(SOUTH)
 	Southeast()
 		player.command(SOUTHEAST)
-	Click(object, location, control, params)
+	/*Click(object, location, control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])
 		var/pixel_y = text2num(params_list["icon-y"])
@@ -33,7 +34,7 @@ client
 				var/atom/movable/click_o = object
 				var/offset_x = click_o.step_x + pixel_x
 				var/offset_y = click_o.step_y + pixel_y
-				player.target_location(location, offset_x, offset_y)
+				player.target_location(location, offset_x, offset_y)*/
 	/*MouseDrop(tile/drag_obj, atom/movable/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])
@@ -48,7 +49,40 @@ client
 				offset_x = over_obj.step_x + pixel_x - HOTSPOT_OFFSET
 				offset_y = over_obj.step_y + pixel_y - HOTSPOT_OFFSET
 			player.move_tile(drag_obj, over_obj, offset_x, offset_y);*/
+turf
+	Click(location, control, params)
+		var/list/params_list = params2list(params)
+		var/pixel_x = text2num(params_list["icon-x"])
+		var/pixel_y = text2num(params_list["icon-y"])
+		usr.client.player.target_location(location, pixel_x, pixel_y)
+actor
+	Click(location, control, params)
+		if(istype(location, /turf))
+			var/list/params_list = params2list(params)
+			var/left = params_list["left"]
+			var/right = params_list["right"]
+			if(left)
+				usr.client.player.target_actor(src, PRIMARY)
+			else if(right)
+				usr.client.player.target_actor(src, SECONDARY)
 tile
+	Click(location, control, params)
+		var/list/params_list = params2list(params)
+		var/pixel_x = text2num(params_list["icon-x"])
+		var/pixel_y = text2num(params_list["icon-y"])
+		if(istype(loc, /turf))
+			// Move to tile's location
+			var/offset_x = step_x + pixel_x
+			var/offset_y = step_y + pixel_y
+			usr.client.player.target_location(loc, offset_x, offset_y)
+		if(istype(loc, /player/hud/hotbar))
+			var/left = params_list["left"]
+			var/right = params_list["right"]
+			if(left)
+				usr.client.player.hud.selection_display.select(src, PRIMARY)
+			if(right)
+				usr.client.player.hud.selection_display.select(src, SECONDARY)
+
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])
@@ -86,8 +120,6 @@ player
 		. = ..()
 		character = new
 		focus(character)
-		primary = melee_tile
-		secondary = melee_tile
 	Del()
 		del hud
 	var
@@ -109,8 +141,12 @@ player
 			client.eye = character
 		target_location(turf/target_turf, offset_x, offset_y)
 			character.act(move_tile, target_turf, offset_x, offset_y)
-		target_actor(actor/target_actor)
-			character.act(primary, target_actor)
+		target_actor(actor/target_actor, which)
+			var/tile/action_tile
+			if(which == PRIMARY) action_tile = primary
+			else if(which == SECONDARY) action_tile = secondary
+			if(action_tile)
+				character.act(action_tile, target_actor)
 		/*move_tile(tile/dragged, atom/over_obj, offset_x, offset_y)
 			if(over_obj.Enter(dragged))
 				dragged.screen_loc = null;

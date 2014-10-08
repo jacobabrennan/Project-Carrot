@@ -30,6 +30,8 @@ actor
 		act(tile/new_tile, new_target, new_offset_x, new_offset_y)
 			if(action)
 				del action
+			if(!new_tile)
+				return
 			if(new_tile.target_check(src, new_target))
 				action = new(new_tile, new_target, new_offset_x, new_offset_y)
 				act_cycle()
@@ -39,7 +41,7 @@ actor
 			acting = TRUE
 			while(acting && action)
 				sleep(action_cycle_delay)
-				action.iterate(src)
+				if(action && acting) action.iterate(src)
 			acting = FALSE
 
 actor/action
@@ -57,29 +59,35 @@ actor/action
 		offset_y = new_offset_y
 	proc
 		iterate(actor/user)
+			var delta_x
+			var delta_y
 			if(offset_x != null && offset_y != null)
 				var/max_delta_x = (world.icon_size*(target.x - user.x)) + offset_x - (user.step_x + user.bound_x + (user.bound_width /2))
 				var/max_delta_y = (world.icon_size*(target.y - user.y)) + offset_y - (user.step_y + user.bound_y + (user.bound_height/2))
 				var/theta = atan2(max_delta_x, max_delta_y)
-				var/delta_x = user.step_size*cos(theta);
-				var/delta_y = user.step_size*sin(theta);
+				delta_x = user.step_size*cos(theta);
+				delta_y = user.step_size*sin(theta);
 				delta_x = (-round(-abs(delta_x)) * ((delta_x < 0)? -1 : 1))
 				delta_y = (-round(-abs(delta_y)) * ((delta_y < 0)? -1 : 1))
 				delta_x = min(abs(max_delta_x), max(-abs(max_delta_x), delta_x))
 				delta_y = min(abs(max_delta_y), max(-abs(max_delta_y), delta_y))
-				user.Move(user.loc, 0, user.step_x+delta_x, user.step_y+delta_y)
 			else if(istype(target, /atom/movable))
 				var/atom/movable/m_targ = target
 				var/max_delta_x = (world.icon_size*(m_targ.x - user.x)) + (m_targ.step_x + m_targ.bound_x + (m_targ.bound_width /2)) - (user.step_x + user.bound_x + (user.bound_width /2))
 				var/max_delta_y = (world.icon_size*(m_targ.y - user.y)) + (m_targ.step_y + m_targ.bound_y + (m_targ.bound_height/2)) - (user.step_y + user.bound_y + (user.bound_height/2))
 				var/theta = atan2(max_delta_x, max_delta_y)
-				var/delta_x = user.step_size*cos(theta);
-				var/delta_y = user.step_size*sin(theta);
+				delta_x = user.step_size*cos(theta);
+				delta_y = user.step_size*sin(theta);
 				delta_x = -(-round(abs(delta_x)) * ((delta_x < 0)? -1 : 1))
 				delta_y = -(-round(abs(delta_y)) * ((delta_y < 0)? -1 : 1))
 				delta_x = min(abs(max_delta_x), max(-abs(max_delta_x), delta_x))
 				delta_y = min(abs(max_delta_y), max(-abs(max_delta_y), delta_y))
-				user.Move(user.loc, 0, user.step_x+delta_x, user.step_y+delta_y)
+			if(delta_x || delta_y)
+				if(!user.Move(user.loc, 0, user.step_x+delta_x, user.step_y+delta_y)) // Try full move
+					if(user.Move(user.loc, 0, user.step_x, user.step_y+delta_y)) // if blocked, try vertical move first
+						user.Move(user.loc, 0, user.step_x+delta_x, user.step_y) // then try horizontal move again
+					else if(user.Move(user.loc, user.step_x, user.step_x+delta_x, user.step_y)) // otherwise try horizontal move first
+						user.Move(user.loc, 0, user.step_x, user.step_y+delta_y) // then try vertical move again
 			if(tile.range_check(user, target, offset_x, offset_y))
 				var continuous = tile.use(user, target, offset_x, offset_y)
 				if(!continuous) del src

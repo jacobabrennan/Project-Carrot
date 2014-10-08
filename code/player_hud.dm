@@ -9,6 +9,7 @@ player/hud
 	var
 		client/client
 		list/hotbars = list()
+		player/hud/selection_display/selection_display = new()
 	New()
 		. = ..()
 		var/inventory_size = 4
@@ -31,6 +32,8 @@ player/hud
 		y_offset -= 100
 		slot.setup(temp_skills, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "skills")
 		hotbars.Add(slot)
+		// Selection Display
+		selection_display.setup()
 	Del()
 		for(var/player/hud/hotbar/_hotbar in hotbars)
 			del _hotbar
@@ -38,8 +41,58 @@ player/hud
 	proc
 		connect(client/new_client)
 			client = new_client
+			selection_display.connect(new_client)
 			for(var/player/hud/hotbar/_hotbar in hotbars)
 				_hotbar.connect(new_client)
+player/hud/selection_display
+	parent_type = /obj
+	mouse_drop_zone = TRUE
+	layer = HOTBAR_LAYER
+	bound_width = 3*HOTBAR_TILE_SIZE
+	icon = 'hud_3x2.dmi'
+	icon_state = "selection_display"
+	var
+		client/client
+		obj/primary
+		obj/secondary
+	Del()
+		del primary
+		del secondary
+	proc
+		setup()
+			primary = new()
+			secondary = new()
+			for(var/obj/O in list(primary,secondary))
+				O.bound_width = TILE_SIZE
+				O.bound_height = TILE_SIZE
+				O.layer = HUD_TILE_LAYER
+			primary.screen_loc = "CENTER:-[9],NORTH:7"
+			secondary.screen_loc = "CENTER:[17],NORTH:7"
+			screen_loc = "CENTER:-23,NORTH:6"
+		connect(client/new_client)
+			client = new_client
+			client.screen.Add(src)
+			client.screen.Add(primary)
+			client.screen.Add(secondary)
+			if(!client.player.primary)
+				select(melee_tile, PRIMARY)
+		select(tile/selected_tile, which=PRIMARY)
+			switch(which)
+				if(PRIMARY)
+					client.player.primary = selected_tile
+					primary.icon = selected_tile.icon
+					primary.icon_state = selected_tile.icon_state
+				if(SECONDARY)
+					client.player.secondary = selected_tile
+					secondary.icon = selected_tile.icon
+					secondary.icon_state = selected_tile.icon_state
+		deselect(tile/deselect_tile)
+			if(deselect_tile == client.player.primary)
+				client.player.primary = null
+				primary.icon = null
+			if(deselect_tile == client.player.secondary)
+				client.player.secondary = null
+				secondary.icon = null
 player/hud/hotbar
 	parent_type = /obj
 	mouse_drop_zone = TRUE
@@ -97,6 +150,11 @@ player/hud/hotbar
 	Exited(tile/drop_tile, atom/new_loc)
 		if(new_loc != src)
 			reference[reference.Find(drop_tile)] = null
+		if(!istype(new_loc, /player/hud/hotbar))
+			if(drop_tile == client.player.primary || drop_tile == client.player.secondary)
+				client.player.hud.selection_display.deselect(drop_tile)
+				if(!client.player.primary)
+					client.player.hud.selection_display.select(melee_tile, PRIMARY)
 		drop_tile.layer = initial(drop_tile.layer)
 		client.screen.Remove(drop_tile)
 		. = ..()

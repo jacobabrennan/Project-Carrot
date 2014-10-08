@@ -2,7 +2,6 @@
 // END_INTERNALS
 // BEGIN_FILE_DIR
 #define FILE_DIR .
-#define FILE_DIR "code"
 #define FILE_DIR "graphics"
 // END_FILE_DIR
 // BEGIN_PREFERENCES
