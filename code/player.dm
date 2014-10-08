@@ -7,10 +7,8 @@ client
 		player/player
 player
 	parent_type = /mob
-	Del()
-		del hud
 	var
-		actor/character
+		character/character
 		tile/primary
 		tile/secondary
 	Login()
@@ -19,6 +17,7 @@ player
 		client.player = src
 		if(!character)
 			character = new(locate(50,50,1));
+		character.connect(src)
 		client.eye = character
 	proc
 		target_location(turf/target_turf, offset_x, offset_y)

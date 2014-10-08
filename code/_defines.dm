@@ -39,3 +39,20 @@
 #define TILE_0100000000000000 16384
 #define TILE_1000000000000000 32768
 //efine EQUIPMENT_0000000000000000 65536
+
+/*
+Crafting Rule of Thumb: 3 combinations of 5 different kinds of objects yeilds 32 different objects.
+Crafting: How many items can be made from a combination of 4 items chosen from N items?
+f(4,n) = (n**3 + n)/2
+
+ 1:  1
+ 2:  5
+ 3: 15
+ 4: 34
+ 5: 65
+ 6:111
+ 7:175
+ 8:260
+ 9:396
+10:505
+*/

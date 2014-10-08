@@ -24,13 +24,13 @@ tile
 			var/offset_x = step_x + pixel_x
 			var/offset_y = step_y + pixel_y
 			usr.client.player.target_location(loc, offset_x, offset_y)
-		if(istype(loc, /player/hud/hotbar))
+		if(istype(loc, /character/hud/hotbar))
 			var/left = params_list["left"]
 			var/right = params_list["right"]
 			if(left)
-				usr.client.player.hud.selection_display.select(src, PRIMARY)
+				usr.client.player.character.hud.selection_display.select(src, PRIMARY)
 			if(right)
-				usr.client.player.hud.selection_display.select(src, SECONDARY)
+				usr.client.player.character.hud.selection_display.select(src, SECONDARY)
 
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
@@ -42,8 +42,8 @@ tile
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
 			Move(over_obj, 0, offset_x, offset_y)
-		else if(istype(over_obj, /player/hud/hotbar))
-			var/player/hud/hotbar/over_bar = over_obj
+		else if(istype(over_obj, /character/hud/hotbar))
+			var/character/hud/hotbar/over_bar = over_obj
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
 

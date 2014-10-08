@@ -1,15 +1,21 @@
-player
+character
+	parent_type = /actor
 	var
-		player/hud/hud = new()
-	Login(client/new_client)
-		. = ..()
-		hud.connect(client)
-player/hud
-	parent_type = /datum
+		character/hud/hud
+	Del()
+		del hud
+	proc
+		connect(player/new_player)
+			if(!hud)
+				hud = new()
+			hud.loc = src
+			hud.connect(new_player)
+character/hud
+	parent_type = /obj
 	var
-		client/client
+		player/player
 		list/hotbars = list()
-		player/hud/selection_display/selection_display = new()
+		character/hud/selection_display/selection_display
 	New()
 		. = ..()
 		var/inventory_size = 4
@@ -19,34 +25,35 @@ player/hud
 		var/list/temp_equip  = new(); temp_equip.len  = inventory_size
 		var/list/temp_skills = new(); temp_skills.len = inventory_size
 		// Inventory Hot Bar
-		var/player/hud/hotbar/slot = new()
+		var/character/hud/hotbar/slot = new(src)
 		slot.setup(temp_inv, null, 1, inventory_size, "EAST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "inventory")
 		hotbars.Add(slot)
 		// Equipment Hot Bar
-		slot = new()
+		slot = new(src)
 		var/list/equip_req = list(TILE_CHARM, TILE_ARMOR, TILE_OFFHAND, TILE_WEAPON)
 		slot.setup(temp_equip, equip_req, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "equipment")
 		hotbars.Add(slot)
 		// Skills Hot Bar
-		slot = new()
+		slot = new(src)
 		y_offset *= -1
 		y_offset -= 100
 		var/list/skills_req = list(TILE_NONE,TILE_NONE,TILE_NONE,TILE_NONE)
 		slot.setup(temp_skills, skills_req, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "skills")
 		hotbars.Add(slot)
 		// Selection Display
+		selection_display = new(src)
 		selection_display.setup()
 	Del()
-		for(var/player/hud/hotbar/_hotbar in hotbars)
+		for(var/character/hud/hotbar/_hotbar in hotbars)
 			del _hotbar
 		. = ..()
 	proc
-		connect(client/new_client)
-			client = new_client
-			selection_display.connect(new_client)
-			for(var/player/hud/hotbar/_hotbar in hotbars)
-				_hotbar.connect(new_client)
-player/hud/selection_display
+		connect(player/new_player)
+			player = new_player
+			selection_display.connect(new_player)
+			for(var/character/hud/hotbar/_hotbar in hotbars)
+				_hotbar.connect(new_player)
+character/hud/selection_display
 	parent_type = /obj
 	mouse_drop_zone = TRUE
 	layer = HOTBAR_LAYER
@@ -54,7 +61,7 @@ player/hud/selection_display
 	icon = 'hud_3x2.dmi'
 	icon_state = "selection_display"
 	var
-		client/client
+		player/player
 		obj/primary
 		obj/secondary
 	Del()
@@ -71,36 +78,37 @@ player/hud/selection_display
 			primary.screen_loc = "CENTER:-[9],NORTH:7"
 			secondary.screen_loc = "CENTER:[17],NORTH:7"
 			screen_loc = "CENTER:-23,NORTH:6"
-		connect(client/new_client)
-			client = new_client
-			client.screen.Add(src)
-			client.screen.Add(primary)
-			client.screen.Add(secondary)
-			if(!client.player.primary)
+		connect(player/new_player)
+			player = new_player
+			if(player.client)
+				player.client.screen.Add(src)
+				player.client.screen.Add(primary)
+				player.client.screen.Add(secondary)
+			if(!player.primary)
 				select(attack_tile, PRIMARY)
 		select(tile/selected_tile, which=PRIMARY)
 			switch(which)
 				if(PRIMARY)
-					client.player.primary = selected_tile
+					player.primary = selected_tile
 					primary.icon = selected_tile.icon
 					primary.icon_state = selected_tile.icon_state
 				if(SECONDARY)
-					client.player.secondary = selected_tile
+					player.secondary = selected_tile
 					secondary.icon = selected_tile.icon
 					secondary.icon_state = selected_tile.icon_state
 		deselect(tile/deselect_tile)
-			if(deselect_tile == client.player.primary)
-				client.player.primary = null
+			if(deselect_tile == player.primary)
+				player.primary = null
 				primary.icon = null
-			if(deselect_tile == client.player.secondary)
-				client.player.secondary = null
+			if(deselect_tile == player.secondary)
+				player.secondary = null
 				secondary.icon = null
-player/hud/hotbar
+character/hud/hotbar
 	parent_type = /obj
 	mouse_drop_zone = TRUE
 	layer = HOTBAR_LAYER
 	var
-		client/client
+		player/player
 		width
 		height
 		align_x
@@ -143,11 +151,12 @@ player/hud/hotbar
 				loc_text += (offset_y_atom > 0)? "+[offset_y_atom]" : "[offset_y_atom]"
 			loc_text += (abs(offset_y) > 0)? ":[offset_y_px]" : ""
 			screen_loc = loc_text
-		connect(client/new_client)
-			client = new_client
-			client.screen.Add(src)
-			for(var/atom/tile in reference)
-				client.screen.Add(tile)
+		connect(player/new_player)
+			player = new_player
+			if(player.client)
+				player.client.screen.Add(src)
+				for(var/atom/tile in reference)
+					player.client.screen.Add(tile)
 		add_tile(tile/drop_tile, pixel_x, pixel_y)
 			// Determine Index where tile will be dropped, based on cursor posision
 			var old_index = reference.Find(drop_tile)
@@ -179,15 +188,18 @@ player/hud/hotbar
 	Exited(tile/drop_tile, atom/new_loc)
 		if(new_loc != src)
 			reference[reference.Find(drop_tile)] = null
-		if(!istype(new_loc, /player/hud/hotbar))
-			if(drop_tile == client.player.primary || drop_tile == client.player.secondary)
-				client.player.hud.selection_display.deselect(drop_tile)
-				if(!client.player.primary)
-					client.player.hud.selection_display.select(attack_tile, PRIMARY)
+		if(!istype(new_loc, /character/hud/hotbar))
+			player.character.halt_action(drop_tile)
+			if(drop_tile == player.primary || drop_tile == player.secondary)
+				player.character.hud.selection_display.deselect(drop_tile)
+				if(!player.primary)
+					player.character.hud.selection_display.select(attack_tile, PRIMARY)
 		drop_tile.layer = initial(drop_tile.layer)
-		client.screen.Remove(drop_tile)
+		if(player.client)
+			player.client.screen.Remove(drop_tile)
 		. = ..()
 	Entered(tile/drop_tile)
 		drop_tile.layer = HUD_TILE_LAYER
-		client.screen.Add(drop_tile)
+		if(player.client)
+			player.client.screen.Add(drop_tile)
 		. = ..()

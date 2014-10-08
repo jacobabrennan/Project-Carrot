@@ -50,6 +50,8 @@ tile
 			else
 				if(bounds_dist(user, target) <= range)
 					return TRUE
+		use_check(actor/user)
+
 		use(actor/user, atom/target, offset_x, offset_y){}
 
 // Global Tile Types, used for global actions.

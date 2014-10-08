@@ -28,6 +28,9 @@ actor
 				sleep(action_cycle_delay)
 				if(action && acting) action.iterate(src)
 			acting = FALSE
+		halt_action(tile/halt_tile)
+			if(!halt_tile || action.tile == halt_tile)
+				del action
 
 actor/action
 	parent_type = /datum
