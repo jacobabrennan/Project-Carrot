@@ -50,8 +50,6 @@ tile
 			else
 				if(bounds_dist(user, target) <= range)
 					return TRUE
-		use_check(actor/user)
-
 		use(actor/user, atom/target, offset_x, offset_y){}
 
 // Global Tile Types, used for global actions.
@@ -64,9 +62,7 @@ var/tile/attack/attack_tile = new()
 tile/attack
 	icon_state = "attack"
 	target_class = TARGET_ENEMY
-	use(actor/user, atom/target, offset_x, offset_y){}
-
-
-
-
-
+	use(actor/user, atom/target, offset_x, offset_y)
+		var/character/C = user
+		if(istype(C) && C.hud.equipment.weapon)
+			C.hud.equipment.weapon.use(user, target, offset_x, offset_y)

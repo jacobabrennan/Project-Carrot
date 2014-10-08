@@ -11,6 +11,7 @@
 #include "code\_defines.dm"
 #include "code\actor.dm"
 #include "code\carrot.dm"
+#include "code\craft.dm"
 #include "code\player.dm"
 #include "code\player_hud.dm"
 #include "code\player_mouse_control.dm"

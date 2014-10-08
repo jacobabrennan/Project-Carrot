@@ -31,7 +31,6 @@ tile
 				usr.client.player.character.hud.selection_display.select(src, PRIMARY)
 			if(right)
 				usr.client.player.character.hud.selection_display.select(src, SECONDARY)
-
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])

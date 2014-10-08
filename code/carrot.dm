@@ -69,13 +69,22 @@ tile/test/radish
 	icon_state = "radish"
 	range = 48
 	target_class = TARGET_ACTOR
-	tile_type = TILE_WEAPON
 	use(actor/user, atom/movable/target, offset_x, offset_y)
 		target.icon_state = "purple"
 		target.bound_x = 8
 		target.bound_y = 8
 		target.bound_width = 16
 		target.bound_height = 16
+		Del()
+tile/test/carrot_sword
+	icon_state = "carrot_sword"
+	target_class = TARGET_ENEMY
+	tile_type = TILE_WEAPON
+	use(actor/user, atom/movable/target, offset_x, offset_y)
+		if(target.bound_width == 16)
+			target.icon_state = "orange_small"
+		else
+			target.icon_state = "orange"
 wanderer
 	parent_type = /actor
 	icon_state = "red"

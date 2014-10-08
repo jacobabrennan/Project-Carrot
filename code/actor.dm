@@ -29,7 +29,7 @@ actor
 				if(action && acting) action.iterate(src)
 			acting = FALSE
 		halt_action(tile/halt_tile)
-			if(!halt_tile || action.tile == halt_tile)
+			if(action && (!halt_tile || action.tile == halt_tile))
 				del action
 
 actor/action
