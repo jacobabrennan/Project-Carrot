@@ -97,6 +97,14 @@ tile
 			var/player/hud/hotbar/over_bar = over_obj
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
+
+			// strangeness with the icon offset in the web client
+			// further testing would be nice in order to file a bug report
+			// 130 = height of the HUD object
+			// 32 = tile height, presumably
+			if(usr.client.connection == "web")
+				pixel_y += 130 - 32
+
 			over_bar.add_tile(src, pixel_x, pixel_y)
 		/*else if(istype(over_obj, /atom/movable))
 			var/atom/movable/amoo = over_obj
