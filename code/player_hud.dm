@@ -20,17 +20,19 @@ player/hud
 		var/list/temp_skills = new(); temp_skills.len = inventory_size
 		// Inventory Hot Bar
 		var/player/hud/hotbar/slot = new()
-		slot.setup(temp_inv, 1, inventory_size, "EAST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "inventory")
+		slot.setup(temp_inv, null, 1, inventory_size, "EAST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "inventory")
 		hotbars.Add(slot)
 		// Equipment Hot Bar
 		slot = new()
-		slot.setup(temp_equip, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "equipment")
+		var/list/equip_req = list(TILE_CHARM, TILE_ARMOR, TILE_OFFHAND, TILE_WEAPON)
+		slot.setup(temp_equip, equip_req, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "equipment")
 		hotbars.Add(slot)
 		// Skills Hot Bar
 		slot = new()
 		y_offset *= -1
 		y_offset -= 100
-		slot.setup(temp_skills, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "skills")
+		var/list/skills_req = list(TILE_NONE,TILE_NONE,TILE_NONE,TILE_NONE)
+		slot.setup(temp_skills, skills_req, 1, inventory_size, "WEST", "CENTER", x_offset, y_offset, 'hud_1x5.dmi', "skills")
 		hotbars.Add(slot)
 		// Selection Display
 		selection_display.setup()
@@ -110,11 +112,13 @@ player/hud/hotbar
 		offset_x_px
 		offset_y_px
 		list/reference
+		list/requirements
 	proc
-		setup(list/_reference, _width, _height, _align_x, _align_y, _offset_x, _offset_y, _icon, _icon_state)
+		setup(list/_reference, list/_requirements, _width, _height, _align_x, _align_y, _offset_x, _offset_y, _icon, _icon_state)
 			width = _width
 			height = _height
 			reference = _reference
+			requirements = _requirements
 			icon = _icon
 			icon_state = _icon_state
 			align_x = _align_x
@@ -145,26 +149,33 @@ player/hud/hotbar
 			for(var/atom/tile in reference)
 				client.screen.Add(tile)
 		add_tile(tile/drop_tile, pixel_x, pixel_y)
+			// Determine Index where tile will be dropped, based on cursor posision
 			var old_index = reference.Find(drop_tile)
 			var/slot_x = round(pixel_x/HOTBAR_TILE_SIZE)+1
 			var/slot_y = round(pixel_y/HOTBAR_TILE_SIZE)+1
 			var compound_index = slot_x + ((slot_y-1)*width)
 			if(compound_index <= 0 || compound_index > reference.len)
 				return
+			// Determine if this tile is the type of tile this position accepts
+			if(requirements && compound_index <= requirements.len)
+				var/required = requirements[compound_index]
+				if(required != null)
+					// Null means "no requirements", which is separate from 0 (TILE_NONE), which means "nothing can go here".
+					if(!(required&drop_tile.tile_type))
+						return
 			if(reference[compound_index])
 				return // TODO
-			else
-				if(old_index)
-					reference[old_index] = null
-				reference[compound_index] = drop_tile
-				var/slot_px_x = (slot_x-1)*HOTBAR_TILE_SIZE + 1
-				var/slot_px_y = (slot_y-1)*HOTBAR_TILE_SIZE + 1
-				var/loc_text = align_x
-				loc_text += (abs(offset_x) > 0)? ":[offset_x+slot_px_x]" : ""
-				loc_text += ",[align_y]"
-				loc_text += (abs(offset_y) > 0)? ":[offset_y+slot_px_y]" : ""
-				drop_tile.screen_loc = loc_text
-				drop_tile.Move(src)
+			if(old_index)
+				reference[old_index] = null
+			reference[compound_index] = drop_tile
+			var/slot_px_x = (slot_x-1)*HOTBAR_TILE_SIZE + 1
+			var/slot_px_y = (slot_y-1)*HOTBAR_TILE_SIZE + 1
+			var/loc_text = align_x
+			loc_text += (abs(offset_x) > 0)? ":[offset_x+slot_px_x]" : ""
+			loc_text += ",[align_y]"
+			loc_text += (abs(offset_y) > 0)? ":[offset_y+slot_px_y]" : ""
+			drop_tile.screen_loc = loc_text
+			drop_tile.Move(src)
 	Exited(tile/drop_tile, atom/new_loc)
 		if(new_loc != src)
 			reference[reference.Find(drop_tile)] = null

@@ -59,7 +59,6 @@ atom/movable
 tile/test/carrot
 	range = RANGE_TOUCH
 	target_class = TARGET_ACTOR
-	tile_type = TILE_WEAPON
 	use(actor/user, atom/movable/target, offset_x, offset_y)
 		if(target.bound_width == 16)
 			target.icon_state = "orange_small"
