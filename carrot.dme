@@ -11,9 +11,9 @@
 #include "code\_defines.dm"
 #include "code\actor.dm"
 #include "code\carrot.dm"
-#include "code\driver.dm"
 #include "code\player.dm"
 #include "code\player_hud.dm"
+#include "code\player_mouse_control.dm"
 #include "code\tile.dm"
 #include "maps\trash.dmm"
 // END_INCLUDE

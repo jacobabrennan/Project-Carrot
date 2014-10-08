@@ -58,9 +58,9 @@ tile/move
 	range = RANGE_CENTER
 	target_class = TARGET_TURF|TARGET_ACTOR
 	use(actor/user, atom/target, offset_x, offset_y){}
-var/tile/melee/melee_tile = new()
-tile/melee
-	icon_state = "melee"
+var/tile/attack/attack_tile = new()
+tile/attack
+	icon_state = "attack"
 	target_class = TARGET_ENEMY
 	use(actor/user, atom/target, offset_x, offset_y){}
 
@@ -68,24 +68,3 @@ tile/melee
 
 
 
-tile/test/carrot
-	range = RANGE_TOUCH
-	target_class = TARGET_ACTOR
-	tile_type = TILE_WEAPON
-	use(actor/user, atom/movable/target, offset_x, offset_y)
-		if(target.bound_width == 16)
-			target.icon_state = "orange_small"
-		else
-			target.icon_state = "orange"
-		Del()
-tile/test/radish
-	icon_state = "radish"
-	range = 48
-	target_class = TARGET_ACTOR
-	tile_type = TILE_WEAPON
-	use(actor/user, atom/movable/target, offset_x, offset_y)
-		target.icon_state = "purple"
-		target.bound_x = 8
-		target.bound_y = 8
-		target.bound_width = 16
-		target.bound_height = 16

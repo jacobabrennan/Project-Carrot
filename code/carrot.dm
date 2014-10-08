@@ -30,10 +30,14 @@ turf
 tile
 	icon_state = "carrot"
 
+client/verb/say(what as text)
+	world << "<b>[key]</b>: [what]"
+
 proc/atan2(x, y)
     if(!x && !y) return 0
     return y >= 0 ? arccos(x / sqrt(x * x + y * y)) : -arccos(x / sqrt(x * x + y * y))
 
+/*
 coord
 	var
 		x
@@ -48,3 +52,44 @@ atom/movable
 			center.x = step_x + bound_x + (bound_width /2)
 			center.y = step_y + bound_y + (bound_height/2)
 			return center
+*/
+
+
+//================================ TRASH ==============================//
+tile/test/carrot
+	range = RANGE_TOUCH
+	target_class = TARGET_ACTOR
+	tile_type = TILE_WEAPON
+	use(actor/user, atom/movable/target, offset_x, offset_y)
+		if(target.bound_width == 16)
+			target.icon_state = "orange_small"
+		else
+			target.icon_state = "orange"
+		Del()
+tile/test/radish
+	icon_state = "radish"
+	range = 48
+	target_class = TARGET_ACTOR
+	tile_type = TILE_WEAPON
+	use(actor/user, atom/movable/target, offset_x, offset_y)
+		target.icon_state = "purple"
+		target.bound_x = 8
+		target.bound_y = 8
+		target.bound_width = 16
+		target.bound_height = 16
+wanderer
+	parent_type = /actor
+	icon_state = "red"
+	faction = FACTION_ENEMY
+	bound_x = 0
+	bound_y = 0
+	bound_height = 32
+	bound_width = 32
+	New()
+		. = ..()
+		walk_rand(src,3)
+	Move()
+		. = ..()
+		if(rand(0,16)>15)
+			dir = pick(1,2,4,8)
+//================================ TRASH ==============================//

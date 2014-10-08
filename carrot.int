@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1412736671
+LAST_COMPILE_TIME: 1412744166
 DIR: code graphics maps 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 507.1259
-WINDOW: code\_defines.dm;code\carrot.dm;code\tile.dm;code\player.dm;graphics\rectangles.dmi;maps\trash.dmm;code\driver.dm;code\actor.dm;code\player_hud.dm
-FILE: code\tile.dm
+WINDOW: code\_defines.dm;code\carrot.dm;code\tile.dm;graphics\rectangles.dmi;maps\trash.dmm;code\driver.dm;code\actor.dm;code\player_hud.dm;code\player.dm;code\player_mouse_control.dm
+FILE: graphics\rectangles.dmi
 */
 // END_INTERNALS

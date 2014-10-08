@@ -1,18 +1,3 @@
-wanderer
-	parent_type = /actor
-	icon_state = "red"
-	faction = FACTION_ENEMY
-	bound_x = 0
-	bound_y = 0
-	bound_height = 32
-	bound_width = 32
-	New()
-		. = ..()
-		walk_rand(src,3)
-	Move()
-		. = ..()
-		if(rand(0,16)>15)
-			dir = pick(1,2,4,8)
 actor
 	parent_type = /mob
 	icon_state = "blue"

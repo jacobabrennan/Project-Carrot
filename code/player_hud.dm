@@ -75,7 +75,7 @@ player/hud/selection_display
 			client.screen.Add(primary)
 			client.screen.Add(secondary)
 			if(!client.player.primary)
-				select(melee_tile, PRIMARY)
+				select(attack_tile, PRIMARY)
 		select(tile/selected_tile, which=PRIMARY)
 			switch(which)
 				if(PRIMARY)
@@ -105,6 +105,10 @@ player/hud/hotbar
 		align_y
 		offset_x
 		offset_y
+		offset_x_atom
+		offset_y_atom
+		offset_x_px
+		offset_y_px
 		list/reference
 	proc
 		setup(list/_reference, _width, _height, _align_x, _align_y, _offset_x, _offset_y, _icon, _icon_state)
@@ -117,11 +121,23 @@ player/hud/hotbar
 			align_y = _align_y
 			offset_x = _offset_x
 			offset_y = _offset_y
+			offset_x_atom = 0
+			offset_y_atom = 0
+			offset_x_px = offset_x % world.icon_size
+			offset_y_px = offset_y % world.icon_size
+			if(offset_x)
+				offset_x_atom = round(abs(offset_x)/world.icon_size) * ((offset_x > 0)? 1 : -1)
+			if(offset_y)
+				offset_y_atom = round(abs(offset_y)/world.icon_size) * ((offset_y > 0)? 1 : -1)
 			// Calculate Screen Loc
 			var/loc_text = align_x
-			loc_text += (abs(offset_x) > 0)? ":[offset_x]" : ""
+			if(offset_x_atom)
+				loc_text += (offset_x_atom > 0)? "+[offset_x_atom]" : "[offset_x_atom]"
+			loc_text += (abs(offset_x) > 0)? ":[offset_x_px]" : ""
 			loc_text += ",[align_y]"
-			loc_text += (abs(offset_y) > 0)? ":[offset_y]" : ""
+			if(offset_y_atom)
+				loc_text += (offset_y_atom > 0)? "+[offset_y_atom]" : "[offset_y_atom]"
+			loc_text += (abs(offset_y) > 0)? ":[offset_y_px]" : ""
 			screen_loc = loc_text
 		connect(client/new_client)
 			client = new_client
@@ -133,6 +149,8 @@ player/hud/hotbar
 			var/slot_x = round(pixel_x/HOTBAR_TILE_SIZE)+1
 			var/slot_y = round(pixel_y/HOTBAR_TILE_SIZE)+1
 			var compound_index = slot_x + ((slot_y-1)*width)
+			if(compound_index <= 0 || compound_index > reference.len)
+				return
 			if(reference[compound_index])
 				return // TODO
 			else
@@ -154,7 +172,7 @@ player/hud/hotbar
 			if(drop_tile == client.player.primary || drop_tile == client.player.secondary)
 				client.player.hud.selection_display.deselect(drop_tile)
 				if(!client.player.primary)
-					client.player.hud.selection_display.select(melee_tile, PRIMARY)
+					client.player.hud.selection_display.select(attack_tile, PRIMARY)
 		drop_tile.layer = initial(drop_tile.layer)
 		client.screen.Remove(drop_tile)
 		. = ..()
