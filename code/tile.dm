@@ -15,6 +15,7 @@ tile
 		target_class = TARGET_ENEMY
 		range = RANGE_TOUCH
 		tile_type = TILE_NONE
+		resource = "trash" // Text string, used when crafting
 	New()
 		. = ..()
 		mouse_drag_pointer = icon_state
@@ -62,6 +63,7 @@ var/tile/attack/attack_tile = new()
 tile/attack
 	icon_state = "attack"
 	target_class = TARGET_ENEMY
+	resource = "value"
 	use(actor/user, atom/target, offset_x, offset_y)
 		var/character/C = user
 		if(istype(C) && C.hud.equipment.weapon)

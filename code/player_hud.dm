@@ -237,7 +237,7 @@ character/hud/hotbar/crafting
 		for(var/I = 1; I <= reference.len; I++)
 			if(!reference[I])
 				return
-		var result = craft(player.character, reference.Copy())
+		var result = recipe_manager.craft(player.character, reference.Copy())
 		if(result)
 			add_tile(result, 1)
 character/hud/hotbar/equipment

@@ -59,6 +59,7 @@ atom/movable
 tile/test/carrot
 	range = RANGE_TOUCH
 	target_class = TARGET_ACTOR
+	resource = "carrot"
 	use(actor/user, atom/movable/target, offset_x, offset_y)
 		if(target.bound_width == 16)
 			target.icon_state = "orange_small"
@@ -69,6 +70,7 @@ tile/test/radish
 	icon_state = "radish"
 	range = 48
 	target_class = TARGET_ACTOR
+	resource = "radish"
 	use(actor/user, atom/movable/target, offset_x, offset_y)
 		target.icon_state = "purple"
 		target.bound_x = 8
@@ -80,6 +82,7 @@ tile/test/carrot_sword
 	icon_state = "carrot_sword"
 	target_class = TARGET_ENEMY
 	tile_type = TILE_WEAPON
+	resource = "carrot"
 	use(actor/user, atom/movable/target, offset_x, offset_y)
 		if(target.bound_width == 16)
 			target.icon_state = "orange_small"
@@ -100,4 +103,15 @@ wanderer
 		. = ..()
 		if(rand(0,16)>15)
 			dir = pick(1,2,4,8)
+recipe
+	carrot_sword
+		ingredients = list("carrot","carrot","carrot","carrot")
+		product = /tile/test/carrot_sword
+		craft(ingredients, value)
+			. = ..()
+	trash
+		ingredients = list("radish","carrot")
+		product = /tile/test/radish
+		craft(ingredients, value)
+			. = ..()
 //================================ TRASH ==============================//

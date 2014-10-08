@@ -15,6 +15,7 @@
 #include "code\player.dm"
 #include "code\player_hud.dm"
 #include "code\player_mouse_control.dm"
+#include "code\recipes.dm"
 #include "code\tile.dm"
 #include "maps\trash.dmm"
 // END_INCLUDE
