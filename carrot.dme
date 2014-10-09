@@ -18,5 +18,6 @@
 #include "code\player_mouse_control.dm"
 #include "code\recipes.dm"
 #include "code\tile.dm"
+#include "code\x_wooden_hut.dm"
 #include "maps\trash.dmm"
 // END_INCLUDE

@@ -28,3 +28,4 @@ block/bush
 tile/wood
 	icon_state = "wood"
 	resource = "wood"
+

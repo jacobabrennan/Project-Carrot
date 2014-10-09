@@ -16,6 +16,7 @@ tile
 		range = RANGE_TOUCH
 		tile_type = TILE_NONE
 		resource = "trash" // Text string, used when crafting
+		value = 1
 	New()
 		. = ..()
 		mouse_drag_pointer = icon_state

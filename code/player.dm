@@ -32,7 +32,7 @@ player
 			var/tile/action_tile
 			if(which == PRIMARY) action_tile = primary
 			else if(which == SECONDARY) action_tile = secondary
-			if(action_tile.target_class & TARGET_BLOCK)
+			if(action_tile && action_tile.target_class & TARGET_BLOCK)
 				character.act(action_tile, target_block)
 			else
 				character.act(tile_move, target_block)

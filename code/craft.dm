@@ -47,10 +47,23 @@ recipe_manager
 			if(recipe)
 				var/tile/result = recipe.craft(ingredients)
 				return result
+			else
+				return compound(ingredients)
+		compound(list/ingredients)
+			var/avg_value = 0
+			for(var/tile/T in ingredients)
+				avg_value += T.value
+				del T
+			avg_value /= ingredients.len
+			var/tile/value/value = new()
+			value.value = avg_value
+			return value;
+
+
 		find_recipe(list/resource_types)
 			// Look for exact match
 			var/exact_signature = resource_signature(resource_types)
-			var recipe = recipes[exact_signature]
+			var/recipe = recipes[exact_signature]
 			if(recipe)
 				return recipe
 			// Try to find duplicates. This method only works with recipes of 4 ingredients or less.
@@ -105,6 +118,9 @@ recipe_manager
 					return recipe
 
 
+tile/value
+	icon_state = "value_0"
+	resource = "value"
 recipe
 	var
 		list/ingredients
@@ -118,7 +134,7 @@ recipe
 		ingredients = recipe_manager.order_ingredients(ingredients)
 		ingredients_signature = recipe_manager.resource_signature(ingredients)
 	proc
-		craft(ingredients)
+		craft(ingredients, value)
 			for(var/tile/T in ingredients)
 				del T
 			if(product)

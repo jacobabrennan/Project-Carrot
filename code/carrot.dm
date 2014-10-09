@@ -111,13 +111,6 @@ wanderer
 			dir = pick(1,2,4,8)
 recipe
 	carrot_sword
-		ingredients = list("carrot","carrot","carrot","carrot")
+		ingredients = list("carrot")
 		product = /tile/test/carrot_sword
-		craft(ingredients, value)
-			. = ..()
-	trash
-		ingredients = list("radish","carrot")
-		product = /tile/test/radish
-		craft(ingredients, value)
-			. = ..()
 //================================ TRASH ==============================//
