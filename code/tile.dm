@@ -5,6 +5,13 @@ tile/garbage
 		. = ..()
 		spawn(5)
 			del entrant
+	proc
+		// TODO: This is a hack to keep references on newly crafted tiles.
+		// Otherwise they keep disapearing when crafted on the web client. Who knows.
+		temp_storage(atom/referenced)
+			var/stored = referenced
+			spawn(36000)
+				if(stored) stored = null
 tile
 	parent_type = /obj
 	bound_width = TILE_SIZE

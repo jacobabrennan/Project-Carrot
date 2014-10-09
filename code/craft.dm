@@ -49,7 +49,7 @@ recipe_manager
 				return result
 			else
 				return compound(ingredients)
-		compound(list/ingredients)
+		compound(list/ingredients, crafter)
 			var/avg_value = 0
 			for(var/tile/T in ingredients)
 				avg_value += T.value

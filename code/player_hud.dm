@@ -188,7 +188,12 @@ character/hud/hotbar
 			return loc_text
 		add_tile(tile/drop_tile, compound_index, pixel_y)
 			var old_index = reference.Find(drop_tile)
-			if(pixel_y) // Mouse coordinates supplied instead of index
+			if(!compound_index) // No coordinates supplied, find an empty slot.
+				for(var/I = 1 to reference.len)
+					if(!reference[I])
+						compound_index = I
+						break
+			else if(pixel_y) // Mouse coordinates supplied instead of index
 				compound_index = find_slot(compound_index, pixel_y)
 			if(!compound_index || compound_index <= 0 || compound_index > reference.len)
 				return
@@ -219,11 +224,13 @@ character/hud/hotbar
 		if(player.client)
 			player.client.screen.Remove(drop_tile)
 		. = ..()
-	Entered(tile/drop_tile)
+	Entered(tile/drop_tile, turf/old_loc)
 		drop_tile.layer = HUD_TILE_LAYER
 		if(player.client)
 			player.client.screen.Add(drop_tile)
 		. = ..()
+		//if(istype(old_loc)) // TODO: Replace with "animate on pixel_x/y". Whatever that means.
+		//	missile(drop_tile, old_loc, player.character)
 character/hud/hotbar/inventory
 	align_x = "EAST"
 	align_y = "Center"
@@ -242,6 +249,7 @@ character/hud/hotbar/crafting
 			if(!reference[I])
 				return
 		var result = recipe_manager.craft(player.character, reference.Copy())
+		garbage.temp_storage(result)
 		if(result)
 			add_tile(result, 1)
 character/hud/hotbar/equipment

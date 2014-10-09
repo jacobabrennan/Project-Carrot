@@ -23,8 +23,6 @@ block
 			usr.client.player.target_block(src, PRIMARY)
 		else if(right)
 			usr.client.player.target_block(src, SECONDARY)
-
-
 tile
 	Click(location, control, params)
 		var/list/params_list = params2list(params)
@@ -44,8 +42,8 @@ tile
 				usr.client.player.character.hud.selection_display.select(src, SECONDARY)
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
-		var/pixel_x = text2num(params_list["icon-x"])
-		var/pixel_y = text2num(params_list["icon-y"])
+		var/pixel_x = round(text2num(params_list["icon-x"]))
+		var/pixel_y = round(text2num(params_list["icon-y"]))
 		var/offset_x// = drag_obj.step_x + pixel_x
 		var/offset_y// = drag_obj.step_y + pixel_y
 		if(istype(over_obj, /turf))
