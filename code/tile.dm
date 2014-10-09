@@ -18,13 +18,15 @@ tile
 	bound_height = TILE_SIZE
 	density = FALSE
 	var
-		delay = 0
+		recharge_time = 0
 		target_class = TARGET_ENEMY
 		range = RANGE_TOUCH
 		tile_type = TILE_NONE
 		resource = "trash" // Text string, used when crafting
+		continuous_use = FALSE
 		value = 1
 		construct
+		last_use
 	New()
 		. = ..()
 		mouse_drag_pointer = icon_state
@@ -77,7 +79,17 @@ tile
 			else
 				if(bounds_dist(user, target) <= range)
 					return TRUE
-		use(actor/user, atom/target, offset_x, offset_y){}
+		use(actor/user, atom/target, offset_x, offset_y)
+			last_use = world.time
+			// TODO: Add an animation here
+			color = "#000"
+			animate(src, color=null, recharge_time)
+			//
+			return continuous_use
+		ready(actor/user)
+			. = TRUE
+			if(recharge_time && (world.time - last_use < recharge_time))
+				return FALSE
 
 // Global Tile Types, used for global actions.
 var/tile/shared/move/tile_move = new()
@@ -98,9 +110,29 @@ tile/shared/attack
 	screen_loc = "CENTER:69,NORTH:7"
 	layer = HUD_TILE_LAYER
 	use(actor/user, atom/target, offset_x, offset_y)
+		. = ..()
 		var/character/C = user
 		if(istype(C) && C.hud.equipment.weapon)
-			C.hud.equipment.weapon.use(user, target, offset_x, offset_y)
+			return C.hud.equipment.weapon.use(user, target, offset_x, offset_y)
+	target_check(actor/user, atom/target)
+		var/character/C = user
+		if(istype(C) && C.hud.equipment.weapon)
+			return C.hud.equipment.weapon.target_check(user, target)
+		else
+			. = ..()
+	range_check(actor/user, atom/target, offset_x, offset_y)
+		var/character/C = user
+		if(istype(C) && C.hud.equipment.weapon)
+			return C.hud.equipment.weapon.range_check(user, target)
+		else
+			. = ..()
+	ready(actor/user)
+		var/character/C = user
+		if(istype(C) && C.hud.equipment.weapon)
+			return C.hud.equipment.weapon.ready(user)
+		else
+			. = ..()
+
 var/tile/shared/follow/tile_follow = new()
 tile/shared/follow
 	icon_state = "follow"

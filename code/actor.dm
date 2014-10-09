@@ -79,6 +79,8 @@ actor/action
 						user.Move(user.loc, 0, user.step_x+delta_x, user.step_y) // then try horizontal move again
 					else if(user.Move(user.loc, user.step_x, user.step_x+delta_x, user.step_y)) // otherwise try horizontal move first
 						user.Move(user.loc, 0, user.step_x, user.step_y+delta_y) // then try vertical move again
+			if(!tile.ready(user))
+				return
 			if(tile.range_check(user, target, offset_x, offset_y))
 				if(istype(target, /block))
 					var/block/target_block = target

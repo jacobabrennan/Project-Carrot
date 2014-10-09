@@ -1,3 +1,23 @@
+// Message of the Day //
+var
+	motd = {"
+Want to help out? We need graphics, audio, and programming. We also need help from someone who knows how to use the new animate() feature. Contact JacobABrennan for more info, or check out the GitHub repo if that's how you roll.
+	GitHub: <a href="https://github.com/jacobabrennan/carrot">https://github.com/jacobabrennan/carrot</a>
+	BYOND Hub: <a href="http://www.byond.com/games/IainPeregrine/project_carrot">IainPeregrine.project_carrot</a>
+	Email: <a href="email:jacobabrennan@gmail.com">JacobABrennan@gmail.com</a>
+	BYOND Key: IainPeregrine
+	"}
+proc
+	motd(client/client)
+		client << "<b>Ahoy!:</b> [motd]"
+client/New()
+	. = ..()
+	motd(src)
+
+client/Center()
+	world.Reboot()
+// End Message of the Day
+
 /*
 	These are simple defaults for your project.
  */
@@ -7,10 +27,7 @@ world
 	icon_size = 32	// 32x32 icon size by default
 	view = 6		// show up to 6 tiles outward from center (13x13 view)
 	hub_password = "tD69MKdrVX2qBjpu"
-	hub = "iainperegrine.carrot"
-
-client/Center()
-	world.Reboot()
+	hub = "iainperegrine.project_carrot"
 
 // Make objects move 8 pixels per tick when walking
 
@@ -42,25 +59,6 @@ atom/movable/proc/center(atom/movable/reference)
 	var/offset_y = reference.step_y + (reference.bound_height-bound_height)/2
 	Move(reference.loc, 0, offset_x, offset_y)
 
-
-/*
-coord
-	var
-		x
-		y
-	New(_x,_y)
-		x = _x
-		y = _y
-atom/movable
-	proc
-		center_offset()
-			var/coord/center = New()
-			center.x = step_x + bound_x + (bound_width /2)
-			center.y = step_y + bound_y + (bound_height/2)
-			return center
-*/
-
-
 //================================ TRASH ==============================//
 tile/test/carrot
 	range = RANGE_TOUCH
@@ -90,11 +88,16 @@ tile/test/carrot_sword
 	tile_type = TILE_WEAPON
 	resource = "carrot"
 	value = 100
+	continuous_use = TRUE
+	recharge_time = 15
 	use(actor/user, atom/movable/target, offset_x, offset_y)
+		. = ..()
 		if(target.bound_width == 16)
-			target.icon_state = "orange_small"
+			flick("orange_small",target)
 		else
 			target.icon_state = "orange"
+			spawn(2)
+				target.icon_state = initial(target.icon_state)
 wanderer
 	parent_type = /actor
 	icon_state = "red"
