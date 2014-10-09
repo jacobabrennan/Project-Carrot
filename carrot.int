@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1412833444
+LAST_COMPILE_TIME: 1412838645
 DIR: code graphics maps Lib 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 507.1259
 WINDOW: code\_defines.dm;code\carrot.dm;code\tile.dm;maps\trash.dmm;code\driver.dm;code\actor.dm;code\player.dm;code\player_hud.dm;code\player_mouse_control.dm;graphics\rectangles.dmi;code\craft.dm;code\recipes.dm;code\block.dm;carrot.dme;graphics\wood_hut.dmi;code\x_wooden_hut.dm
-FILE: code\carrot.dm
+FILE: maps\trash.dmm
 */
 // END_INTERNALS

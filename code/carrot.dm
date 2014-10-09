@@ -89,6 +89,7 @@ tile/test/carrot_sword
 	target_class = TARGET_ENEMY
 	tile_type = TILE_WEAPON
 	resource = "carrot"
+	value = 100
 	use(actor/user, atom/movable/target, offset_x, offset_y)
 		if(target.bound_width == 16)
 			target.icon_state = "orange_small"

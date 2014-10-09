@@ -5,7 +5,8 @@ block
 		resource = null
 		resource_amount = null
 		destroyable = TRUE
-		resource_delay = 0
+		resource_delay = 30
+		interact
 	proc
 		gather(actor/gatherer)
 			if(resource && resource_amount && destroyable)
@@ -17,6 +18,7 @@ block
 					var/angle = I*(360/resource_amount)+angle_offset
 					T.Move(T.loc, 0, cos(angle)*10, sin(angle)*10)
 				del src
+		interact(actor/user){}
 
 
 
@@ -25,6 +27,7 @@ block/bush
 	icon_state = "bush"
 	resource = /tile/wood
 	resource_amount = 3
+	resource_delay = 50
 tile/wood
 	icon_state = "wood"
 	resource = "wood"

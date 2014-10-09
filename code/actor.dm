@@ -41,6 +41,7 @@ actor/action
 		offset_x
 		offset_y
 		tile/tile
+		timer
 	New(new_tile, new_target, new_offset_x, new_offset_y)
 		. = ..()
 		tile = new_tile
@@ -79,5 +80,23 @@ actor/action
 					else if(user.Move(user.loc, user.step_x, user.step_x+delta_x, user.step_y)) // otherwise try horizontal move first
 						user.Move(user.loc, 0, user.step_x, user.step_y+delta_y) // then try vertical move again
 			if(tile.range_check(user, target, offset_x, offset_y))
-				var continuous = tile.use(user, target, offset_x, offset_y)
-				if(!continuous) del src
+				if(istype(target, /block))
+					var/block/target_block = target
+					if(tile == tile_gather)
+						if(timer == null)
+							timer = target_block.resource_delay || 0
+						if(timer <= 0)
+							var continuous = tile.use(user, target_block, offset_x, offset_y)
+							if(!continuous) del src
+						else
+							timer--
+							// TODO: Play some kind of animation here.
+					else if(target_block.interact)
+						target_block.interact(user)
+						del src
+					else
+						var continuous = tile.use(user, target, offset_x, offset_y)
+						if(!continuous) del src
+				else
+					var continuous = tile.use(user, target, offset_x, offset_y)
+					if(!continuous) del src

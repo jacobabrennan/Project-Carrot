@@ -100,8 +100,9 @@ recipe_manager
 			// Test Duplicate Groups, compile possible signatures.
 			var/list/test_sigs = list()
 			if(res_count[res_count[1]] == 4) // aaaa
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[1]))) // aab
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[1]))) // ab
+				test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[1]))) // aaa
+				test_sigs.Add(resource_signature(list(res_count[1], res_count[1]))) // aa
+				test_sigs.Add(resource_signature(list(res_count[1]))) // a
 			else if(res_count[res_count[1]] == 3) // aaab
 				test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
 				test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
@@ -110,7 +111,7 @@ recipe_manager
 				test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[2]))) // abb
 				test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
 			else // aabc
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
+				test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[3]))) // abc
 			// Test each signature, return recipe as soon as one is found.
 			for(var/sig in test_sigs)
 				recipe = recipes[sig]

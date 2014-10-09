@@ -24,6 +24,7 @@ tile
 		tile_type = TILE_NONE
 		resource = "trash" // Text string, used when crafting
 		value = 1
+		construct
 	New()
 		. = ..()
 		mouse_drag_pointer = icon_state
@@ -32,6 +33,20 @@ tile
 		. = ..()
 	Enter()
 		return FALSE
+	Move(turf/new_loc, new_dir, new_step_x, new_step_y)
+		if(construct && istype(new_loc, /turf))
+			if(new_loc.density || new_loc.contents.len)
+				return
+			. = ..()
+			var/turf/offset_turf = loc
+			if(step_x+bound_x+(bound_width /2) >= world.icon_size)
+				offset_turf = get_step(offset_turf, EAST)
+			if(step_y+bound_y+(bound_height/2) >= world.icon_size)
+				offset_turf = get_step(offset_turf, NORTH)
+			new construct(offset_turf)
+			del src
+		else
+			. = ..()
 	proc
 		target_check(actor/user, atom/target)
 			if((TARGET_NONE|TARGET_RANGE)&target_class)
@@ -57,7 +72,7 @@ tile
 					if(delta_x == 0 && delta_y == 0)
 						return TRUE
 				else// if(istype(target, /actor) || istype(target, /block))
-					if(bounds_dist(user, target) == 0)
+					if(bounds_dist(user, target) <= 0)
 						return TRUE
 			else
 				if(bounds_dist(user, target) <= range)
