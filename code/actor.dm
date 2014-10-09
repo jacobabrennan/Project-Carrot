@@ -31,7 +31,8 @@ actor
 		halt_action(tile/halt_tile)
 			if(action && (!halt_tile || action.tile == halt_tile))
 				del action
-		break_down()
+		get_step_size() // Overridden on combatant
+			return step_size
 
 
 actor/action
@@ -52,12 +53,13 @@ actor/action
 		iterate(actor/user)
 			var delta_x
 			var delta_y
+			var/step_size = user.get_step_size()
 			if(offset_x != null && offset_y != null)
 				var/max_delta_x = (world.icon_size*(target.x - user.x)) + offset_x - (user.step_x + user.bound_x + (user.bound_width /2))
 				var/max_delta_y = (world.icon_size*(target.y - user.y)) + offset_y - (user.step_y + user.bound_y + (user.bound_height/2))
 				var/theta = atan2(max_delta_x, max_delta_y)
-				delta_x = user.step_size*cos(theta);
-				delta_y = user.step_size*sin(theta);
+				delta_x = step_size*cos(theta)
+				delta_y = step_size*sin(theta)
 				delta_x = (-round(-abs(delta_x)) * ((delta_x < 0)? -1 : 1))
 				delta_y = (-round(-abs(delta_y)) * ((delta_y < 0)? -1 : 1))
 				delta_x = min(abs(max_delta_x), max(-abs(max_delta_x), delta_x))
@@ -67,8 +69,8 @@ actor/action
 				var/max_delta_x = (world.icon_size*(m_targ.x - user.x)) + (m_targ.step_x + m_targ.bound_x + (m_targ.bound_width /2)) - (user.step_x + user.bound_x + (user.bound_width /2))
 				var/max_delta_y = (world.icon_size*(m_targ.y - user.y)) + (m_targ.step_y + m_targ.bound_y + (m_targ.bound_height/2)) - (user.step_y + user.bound_y + (user.bound_height/2))
 				var/theta = atan2(max_delta_x, max_delta_y)
-				delta_x = user.step_size*cos(theta);
-				delta_y = user.step_size*sin(theta);
+				delta_x = step_size*cos(theta);
+				delta_y = step_size*sin(theta);
 				delta_x = -(-round(abs(delta_x)) * ((delta_x < 0)? -1 : 1))
 				delta_y = -(-round(abs(delta_y)) * ((delta_y < 0)? -1 : 1))
 				delta_x = min(abs(max_delta_x), max(-abs(max_delta_x), delta_x))

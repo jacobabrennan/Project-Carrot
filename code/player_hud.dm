@@ -15,6 +15,7 @@ character/hud
 	var
 		player/player
 		character/hud/selection_display/selection_display
+		character/hud/health_bar/health_bar
 		character/hud/hotbar/inventory/inventory
 		character/hud/hotbar/equipment/equipment
 		character/hud/hotbar/skills/skills
@@ -28,18 +29,88 @@ character/hud
 		// Selection Display
 		selection_display = new(src)
 		selection_display.setup()
+		// Health Bar
+		health_bar = new(src)
+		health_bar.setup()
 	Del()
 		del inventory
 		del equipment
 		del skills
 		del crafting
+		del selection_display
+		del health_bar
 		. = ..()
 	proc
 		connect(player/new_player)
 			player = new_player
 			selection_display.connect(new_player)
+			health_bar.connect(new_player)
 			for(var/character/hud/hotbar/_hotbar in list(inventory,equipment,skills,crafting))
 				_hotbar.connect(new_player)
+character/hud/health_bar
+	parent_type = /obj
+	layer = HOTBAR_LAYER
+	screen_loc = "CENTER-3:21,NORTH:14"
+	var
+		player/player
+		obj/bar_exact
+		obj/bar_moving
+		obj/bar_cap
+		obj/bar_foot
+	Del()
+		del bar_exact
+		del bar_moving
+		del bar_cap
+		del bar_foot
+	proc
+		setup()
+			bar_exact = new()
+			bar_moving = new()
+			bar_foot = new()
+			bar_cap = new()
+			for(var/obj/O in list(bar_exact, bar_cap, bar_foot, bar_moving))
+				O.layer = HUD_TILE_LAYER+1
+				O.icon = 'rectangles.dmi'
+			bar_moving.layer = HUD_TILE_LAYER
+			bar_exact.icon_state = "health_bar"
+			bar_cap.icon_state = "health_cap"
+			bar_foot.icon_state = "health_foot"
+			bar_moving.icon_state = "red_bar"
+			bar_exact.screen_loc = screen_loc
+			bar_moving.screen_loc = screen_loc
+			bar_foot.screen_loc = "CENTER-2:21,NORTH:14"
+			bar_cap.screen_loc = screen_loc
+		connect(player/new_player)
+			player = new_player
+			adjust(new_player.character.health, new_player.character.max_health())
+			if(player.client)
+				//player.client.screen.Add(src)
+				for(var/obj/O in list(bar_exact, bar_cap, bar_foot, bar_moving))
+					player.client.screen.Add(O)
+	proc
+		adjust(current, max)
+			var/health_percent = current/max
+			var/bar_width = 98
+			var/icon_width = 32
+			var/x_scale = health_percent*bar_width/icon_width
+			var/x_offset = -(health_percent*bar_width)/2 + world.icon_size/2
+			var/matrix/M = matrix()
+			M.Scale(x_scale,1)
+			M.Translate(x_offset,0)
+			bar_exact.transform = M
+			animate(bar_moving, transform = M, 5)
+			M = matrix()
+			M.Translate(2*x_offset-32,0)
+			bar_cap.transform = M
+			var C = rgb(
+				round(512*cos(health_percent*90)),
+				round(256*sin(health_percent*90)),
+				0
+			)
+			animate(bar_cap, color = C, 5)
+			animate(bar_exact, color = C, 5)
+			animate(bar_foot, color = C, 5)
+
 character/hud/selection_display
 	parent_type = /obj
 	layer = HOTBAR_LAYER
@@ -66,7 +137,7 @@ character/hud/selection_display
 				O.layer = HUD_TILE_LAYER
 			primary.screen_loc = "CENTER:-[9],NORTH:7"
 			secondary.screen_loc = "CENTER:[17],NORTH:7"
-			screen_loc = "CENTER:-23,NORTH:6"
+			screen_loc = "CENTER-4:-25,NORTH:6"
 		connect(player/new_player)
 			player = new_player
 			if(player.client)

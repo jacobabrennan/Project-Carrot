@@ -82,8 +82,9 @@ tile
 		use(actor/user, atom/target, offset_x, offset_y)
 			last_use = world.time
 			// TODO: Add an animation here
-			color = "#000"
-			animate(src, color=null, recharge_time)
+			if(recharge_time)
+				color = "#000"
+				animate(src, color=null, recharge_time)
 			//
 			return continuous_use
 		ready(actor/user)

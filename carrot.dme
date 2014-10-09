@@ -12,6 +12,7 @@
 #include "code\actor.dm"
 #include "code\block.dm"
 #include "code\carrot.dm"
+#include "code\combatant.dm"
 #include "code\craft.dm"
 #include "code\player.dm"
 #include "code\player_hud.dm"

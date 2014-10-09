@@ -13,6 +13,12 @@ proc
 client/New()
 	. = ..()
 	motd(src)
+	world << {"<i style="color:grey">[key] has logged in</i>"}
+	// TODO: Separate out traffic
+client/Del()
+	world << {"<i style="color:grey">[key] has logged out</i>"}
+	// TODO: Separate out traffic
+	. = ..()
 
 client/Center()
 	world.Reboot()
@@ -90,14 +96,15 @@ tile/test/carrot_sword
 	value = 100
 	continuous_use = TRUE
 	recharge_time = 15
-	use(actor/user, atom/movable/target, offset_x, offset_y)
+	use(actor/user, actor/target, offset_x, offset_y)
 		. = ..()
-		if(target.bound_width == 16)
+		target.hurt(1, user, src)
+		/*if(target.bound_width == 16)
 			flick("orange_small",target)
 		else
 			target.icon_state = "orange"
 			spawn(2)
-				target.icon_state = initial(target.icon_state)
+				target.icon_state = initial(target.icon_state)*/
 wanderer
 	parent_type = /actor
 	icon_state = "red"
