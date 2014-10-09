@@ -29,7 +29,7 @@ actor
 			. = 0
 			if(amount < 0) return
 			if(attacker.faction & faction) return
-			. = adjust_health(amount, attacker)
+			. = adjust_health(-amount, attacker)
 			// TODO: Better animation
 			var/old_color = color
 			color = "#ff0000"

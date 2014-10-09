@@ -19,10 +19,12 @@ block
 		var/list/params_list = params2list(params)
 		var/left = params_list["left"]
 		var/right = params_list["right"]
+		var/pixel_x = text2num(params_list["icon-x"])
+		var/pixel_y = text2num(params_list["icon-y"])
 		if(left)
-			usr.client.player.target_block(src, PRIMARY)
+			usr.client.player.target_block(src, PRIMARY, pixel_x, pixel_y)
 		else if(right)
-			usr.client.player.target_block(src, SECONDARY)
+			usr.client.player.target_block(src, SECONDARY, pixel_x, pixel_y)
 tile
 	Click(location, control, params)
 		var/list/params_list = params2list(params)

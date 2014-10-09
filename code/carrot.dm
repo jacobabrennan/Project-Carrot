@@ -49,6 +49,9 @@ obj
 
 turf
 	icon_state = "green"
+	New()
+		. = ..()
+		icon_state = pick("green_1", "green_2")
 
 tile
 	icon_state = "carrot"
@@ -106,9 +109,8 @@ tile/test/carrot_sword
 			spawn(2)
 				target.icon_state = initial(target.icon_state)*/
 wanderer
-	parent_type = /actor
+	parent_type = /enemy
 	icon_state = "red"
-	faction = FACTION_ENEMY
 	bound_x = 0
 	bound_y = 0
 	bound_height = 32

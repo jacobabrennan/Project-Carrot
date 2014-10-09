@@ -1,3 +1,18 @@
+recipe/wooden_floor
+	ingredients = list("wood")
+	product = /tile/wooden_floor
+tile/wooden_floor
+	icon = 'wood_hut.dmi'
+	icon_state = "tile_floor"
+	construct = /block/wooden_floor
+block/wooden_floor
+	icon = 'wood_hut.dmi'
+	icon_state = "floor"
+	density = FALSE
+	resource = /tile/wood
+	resource_amount = 2
+	resource_delay = 100
+
 recipe/wooden_wall
 	ingredients = list("wood","wood")
 	product = /tile/wooden_wall
