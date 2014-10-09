@@ -37,6 +37,12 @@ proc/atan2(x, y)
     if(!x && !y) return 0
     return y >= 0 ? arccos(x / sqrt(x * x + y * y)) : -arccos(x / sqrt(x * x + y * y))
 
+atom/movable/proc/center(atom/movable/reference)
+	var/offset_x = reference.step_x + (reference.bound_width -bound_width )/2
+	var/offset_y = reference.step_y + (reference.bound_height-bound_height)/2
+	Move(reference.loc, 0, offset_x, offset_y)
+
+
 /*
 coord
 	var

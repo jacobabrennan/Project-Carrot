@@ -102,7 +102,6 @@ recipe_manager
 			for(var/sig in test_sigs)
 				recipe = recipes[sig]
 				if(recipe)
-					world << "Got: [sig]"
 					return recipe
 
 

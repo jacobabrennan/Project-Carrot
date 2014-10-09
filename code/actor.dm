@@ -31,6 +31,8 @@ actor
 		halt_action(tile/halt_tile)
 			if(action && (!halt_tile || action.tile == halt_tile))
 				del action
+		break_down()
+
 
 actor/action
 	parent_type = /datum

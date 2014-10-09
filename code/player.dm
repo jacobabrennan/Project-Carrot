@@ -21,10 +21,18 @@ player
 		client.eye = character
 	proc
 		target_location(turf/target_turf, offset_x, offset_y)
-			character.act(move_tile, target_turf, offset_x, offset_y)
+			character.act(tile_move, target_turf, offset_x, offset_y)
 		target_actor(actor/target_actor, which)
 			var/tile/action_tile
 			if(which == PRIMARY) action_tile = primary
 			else if(which == SECONDARY) action_tile = secondary
 			if(action_tile)
 				character.act(action_tile, target_actor)
+		target_block(block/target_block, which)
+			var/tile/action_tile
+			if(which == PRIMARY) action_tile = primary
+			else if(which == SECONDARY) action_tile = secondary
+			if(action_tile.target_class & TARGET_BLOCK)
+				character.act(action_tile, target_block)
+			else
+				character.act(tile_move, target_block)

@@ -10,6 +10,7 @@
 // BEGIN_INCLUDE
 #include "code\_defines.dm"
 #include "code\actor.dm"
+#include "code\block.dm"
 #include "code\carrot.dm"
 #include "code\craft.dm"
 #include "code\player.dm"

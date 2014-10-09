@@ -14,6 +14,17 @@ actor
 				usr.client.player.target_actor(src, PRIMARY)
 			else if(right)
 				usr.client.player.target_actor(src, SECONDARY)
+block
+	Click(location, control, params)
+		var/list/params_list = params2list(params)
+		var/left = params_list["left"]
+		var/right = params_list["right"]
+		if(left)
+			usr.client.player.target_block(src, PRIMARY)
+		else if(right)
+			usr.client.player.target_block(src, SECONDARY)
+
+
 tile
 	Click(location, control, params)
 		var/list/params_list = params2list(params)
@@ -58,3 +69,13 @@ tile
 			var/atom/movable/amoo = over_obj
 			offset_x = amoo.step_x + pixel_x - HOTSPOT_OFFSET
 			offset_y = amoo.step_y + pixel_y - HOTSPOT_OFFSET*/
+tile/shared
+	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params){}
+	Click(location, control, params)
+		var/list/params_list = params2list(params)
+		var/left = params_list["left"]
+		var/right = params_list["right"]
+		if(left)
+			usr.client.player.character.hud.selection_display.select(src, PRIMARY)
+		if(right)
+			usr.client.player.character.hud.selection_display.select(src, SECONDARY)

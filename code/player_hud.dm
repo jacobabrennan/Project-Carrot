@@ -42,20 +42,22 @@ character/hud
 				_hotbar.connect(new_player)
 character/hud/selection_display
 	parent_type = /obj
-	mouse_drop_zone = TRUE
 	layer = HOTBAR_LAYER
-	bound_width = 3*HOTBAR_TILE_SIZE
-	icon = 'hud_3x2.dmi'
-	icon_state = "selection_display"
+	bound_width = 6*HOTBAR_TILE_SIZE
+	icon = 'selection_display.png'
 	var
 		player/player
 		obj/primary
 		obj/secondary
+		tile/attack
+		tile/gather
 	Del()
 		del primary
 		del secondary
 	proc
 		setup()
+			attack = tile_attack
+			gather = tile_gather
 			primary = new()
 			secondary = new()
 			for(var/obj/O in list(primary,secondary))
@@ -71,8 +73,10 @@ character/hud/selection_display
 				player.client.screen.Add(src)
 				player.client.screen.Add(primary)
 				player.client.screen.Add(secondary)
+				player.client.screen.Add(attack)
+				player.client.screen.Add(gather)
 			if(!player.primary)
-				select(attack_tile, PRIMARY)
+				select(tile_attack, PRIMARY)
 		select(tile/selected_tile, which=PRIMARY)
 			switch(which)
 				if(PRIMARY)
@@ -210,7 +214,7 @@ character/hud/hotbar
 			if(drop_tile == player.primary || drop_tile == player.secondary)
 				player.character.hud.selection_display.deselect(drop_tile)
 				if(!player.primary)
-					player.character.hud.selection_display.select(attack_tile, PRIMARY)
+					player.character.hud.selection_display.select(tile_attack, PRIMARY)
 		drop_tile.layer = initial(drop_tile.layer)
 		if(player.client)
 			player.client.screen.Remove(drop_tile)
