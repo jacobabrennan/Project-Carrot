@@ -78,66 +78,66 @@ tile
 			. = TRUE
 			if(recharge_time && (world.time - last_use < recharge_time))
 				return FALSE
+		get_range() // This exists mostly to be overridden by the attack tile.
+			return range
 
 // Global Tile Types, used for global actions.
-tile/shared
+tile/default
 	Move(){}
 	New()
 		. = ..()
 		mouse_drag_pointer = null
-var/tile/shared/move/tile_move = new()
-tile/shared/move
+tile/default/move
 	icon_state = "follow"
 	range = RANGE_TOUCH
 	target_class = TARGET_ACTOR|TARGET_TURF|TARGET_BLOCK
 	use(actor/user, atom/target, offset_x, offset_y){}
-var/tile/shared/attack/tile_attack = new()
-tile/shared/attack
+tile/default/attack
 	icon_state = "attack"
 	target_class = TARGET_ENEMY
 	screen_loc = "CENTER:69,NORTH:7"
 	layer = HUD_TILE_LAYER
+	range = RANGE_TOUCH
 	use(actor/user, atom/target, offset_x, offset_y)
 		. = ..()
 		var/character/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.use(user, target, offset_x, offset_y)
+		else
+			last_use = world.time
+			color = "#000"
+			animate(src, color=null, user.innate_attack_time)
+			user.innate_attack(target)
+			return TRUE
 	target_check(actor/user, atom/target)
 		var/character/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.target_check(user, target)
 		else
 			. = ..()
-	/*range_check(actor/user, atom/target, offset_x, offset_y)
-		var/character/C = user
-		if(istype(C) && C.hud.equipment.weapon)
-			return C.hud.equipment.weapon.range_check(user, target)
-		else
-			. = ..()*/
 	ready(actor/user)
 		var/character/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.ready(user)
 		else
+			if(user.innate_attack_time && (world.time - last_use < user.innate_attack_time))
+				return FALSE
+			else
+				return TRUE
 			. = ..()
-
-var/tile/shared/follow/tile_follow = new()
-tile/shared/follow
-	icon_state = "follow"
-	screen_loc = "CENTER:69,NORTH:7"
-	range = RANGE_TOUCH
-	target_class = TARGET_ACTOR
-	layer = HUD_TILE_LAYER
-	/*range_check(actor/user, atom/target, offset_x, offset_y)
-		return FALSE*/
-var/tile/shared/gather/tile_gather = new()
-tile/shared/gather
+	get_range(user)
+		var/character/C = user
+		if(istype(C) && C.hud.equipment.weapon)
+			return C.hud.equipment.weapon.get_range()
+		else
+			. = ..()
+tile/default/gather
 	icon_state = "gather"
 	screen_loc = "CENTER:95,NORTH:7"
 	target_class = TARGET_BLOCK
 	layer = HUD_TILE_LAYER
+	recharge_time = 30
 	use(actor/user, block/target, offset_x, offset_y)
+		. = ..()
 		if(!istype(target)) return
 		target.gather(user)
-
-

@@ -1,16 +1,17 @@
 "a" = (/turf,/area)
-"b" = (/block/bush,/turf,/area)
-"c" = (/tile/test/carrot{step_x = 0; step_y = 0},/turf,/area)
-"d" = (/tile/test/radish,/turf,/area)
-"e" = (/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/turf,/area)
-"f" = (/tile/test/carrot{step_x = 16; step_y = 24},/turf,/area)
-"g" = (/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/turf,/area)
-"h" = (/tile/test/carrot,/turf,/area)
-"i" = (/tile/test/carrot_sword,/turf,/area)
-"j" = (/wanderer,/turf,/area)
-"k" = (/block/wooden_window,/turf,/area)
-"l" = (/block/wooden_floor,/turf,/area)
-"m" = (/block/wooden_door,/turf,/area)
+"b" = (/turf,/region)
+"c" = (/block/bush,/turf,/region)
+"d" = (/block/wooden_floor,/turf,/region)
+"e" = (/tile/test/carrot{step_x = 0; step_y = 0},/turf,/region)
+"f" = (/tile/test/radish,/turf,/region)
+"g" = (/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/turf,/region)
+"h" = (/tile/test/carrot{step_x = 16; step_y = 24},/turf,/region)
+"i" = (/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/turf,/region)
+"j" = (/tile/test/carrot,/turf,/region)
+"k" = (/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/turf,/region)
+"l" = (/tile/test/carrot_sword,/turf,/region)
+"m" = (/block/wooden_window,/turf,/region)
+"n" = (/block/wooden_door,/turf,/region)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -55,20 +56,20 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbaabbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbaaabaaaabbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbaaaabbbaccdabaaaabbbabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbabbbaccadababbbabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbacaadeaabbababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababbaaafagaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaabaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaiaaaaahabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajaaaaklmjaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbcbbbbcbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbdbbbbbcccbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbcbbbcccccccccccbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbccccccbbcccccbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbccccbbbcbbbbccccbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccbbbbcccbeefbcbbbbcccbcbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccbcccbeebfbcbcccbcbbbcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccccccbebbfgbbccbcbcbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbcbccbbbhbibbbbbjbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbcbbbbbbkbbbbbbcbbjbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbcbbbbbbblbbbbbjbcbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbmbnbbbjbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbfbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabcbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

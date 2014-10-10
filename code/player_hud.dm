@@ -1,5 +1,6 @@
 character
 	parent_type = /actor
+	iteration_delay = 1
 	var
 		character/hud/hud
 	Del()
@@ -10,6 +11,9 @@ character
 				hud = new()
 			hud.loc = src
 			hud.connect(new_player)
+	adjust_health(amount, actor/attacker)
+		. = ..()
+		hud.health_bar.adjust(health, max_health())
 character/hud
 	parent_type = /obj
 	var
@@ -103,7 +107,7 @@ character/hud/health_bar
 			M.Translate(2*x_offset-32,0)
 			bar_cap.transform = M
 			var C = rgb(
-				round(512*cos(health_percent*90)),
+				round(256*cos(health_percent*90)),
 				round(256*sin(health_percent*90)),
 				0
 			)
@@ -127,8 +131,6 @@ character/hud/selection_display
 		del secondary
 	proc
 		setup()
-			attack = tile_attack
-			gather = tile_gather
 			primary = new()
 			secondary = new()
 			for(var/obj/O in list(primary,secondary))
@@ -140,6 +142,8 @@ character/hud/selection_display
 			screen_loc = "CENTER-4:-25,NORTH:6"
 		connect(player/new_player)
 			player = new_player
+			attack = player.character.tile_attack
+			gather = player.character.tile_gather
 			if(player.client)
 				player.client.screen.Add(src)
 				player.client.screen.Add(primary)
@@ -147,7 +151,7 @@ character/hud/selection_display
 				player.client.screen.Add(attack)
 				player.client.screen.Add(gather)
 			if(!player.primary)
-				select(tile_attack, PRIMARY)
+				select(player.character.tile_attack, PRIMARY)
 		select(tile/selected_tile, which=PRIMARY)
 			switch(which)
 				if(PRIMARY)
@@ -290,7 +294,7 @@ character/hud/hotbar
 			if(drop_tile == player.primary || drop_tile == player.secondary)
 				player.character.hud.selection_display.deselect(drop_tile)
 				if(!player.primary)
-					player.character.hud.selection_display.select(tile_attack, PRIMARY)
+					player.character.hud.selection_display.select(player.character.tile_attack, PRIMARY)
 		drop_tile.layer = initial(drop_tile.layer)
 		if(player.client)
 			player.client.screen.Remove(drop_tile)

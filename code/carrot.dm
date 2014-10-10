@@ -63,10 +63,19 @@ proc/atan2(x, y)
     if(!x && !y) return 0
     return y >= 0 ? arccos(x / sqrt(x * x + y * y)) : -arccos(x / sqrt(x * x + y * y))
 
-atom/movable/proc/center(atom/movable/reference)
-	var/offset_x = reference.step_x + (reference.bound_width -bound_width )/2
-	var/offset_y = reference.step_y + (reference.bound_height-bound_height)/2
-	Move(reference.loc, 0, offset_x, offset_y)
+atom/proc/aloc()
+	var/turf/turf_loc = locate(x,y,z)
+	if(turf_loc)
+		return turf_loc.loc
+atom/movable/proc/center(atom/movable/ref)
+	var/offset_x = (ref.step_x+ref.bound_x+ref.bound_width /2) - (bound_x+bound_width /2)//reference.step_x + (reference.bound_width -bound_width )/2
+	var/offset_y = (ref.step_y+ref.bound_y+ref.bound_height/2) - (bound_y+bound_height/2)//reference.step_y + (reference.bound_height-bound_height)/2
+	Move(ref.loc, 0, offset_x, offset_y)
+atom/movable/proc/get_center()
+	var/offset_x = round((step_x+bound_x+bound_width /2)/world.icon_size)
+	var/offset_y = round((step_y+bound_y+bound_height/2)/world.icon_size)
+	var/turf/center = locate(x+offset_x, y+offset_y,z)
+	return center
 
 //================================ TRASH ==============================//
 tile/test/carrot
@@ -84,13 +93,33 @@ tile/test/radish
 	range = 48
 	target_class = TARGET_ACTOR
 	resource = "radish"
-	use(actor/user, atom/movable/target, offset_x, offset_y)
+	use(actor/user, actor/target, offset_x, offset_y)
+		if(!istype(target)) return
+		target.adjust_health(user.max_health())
 		target.icon_state = "purple"
 		target.bound_x = 8
 		target.bound_y = 8
 		target.bound_width = 16
 		target.bound_height = 16
 		Del()
+tile/test/radish_bow
+	icon_state = "radish_bow"
+	target_class = TARGET_ENEMY
+	tile_type = TILE_WEAPON
+	range = 256
+	resource = "radish"
+	value = 100
+	continuous_use = TRUE
+	recharge_time = 15
+	use(actor/user, actor/target, offset_x, offset_y)
+		. = ..()
+		target.hurt(1, user, src)
+		/*if(target.bound_width == 16)
+			flick("orange_small",target)
+		else
+			target.icon_state = "orange"
+			spawn(2)
+				target.icon_state = initial(target.icon_state)*/
 tile/test/carrot_sword
 	icon_state = "carrot_sword"
 	target_class = TARGET_ENEMY
@@ -115,15 +144,14 @@ wanderer
 	bound_y = 0
 	bound_height = 32
 	bound_width = 32
-	New()
-		. = ..()
-		walk_rand(src,3)
-	Move()
-		. = ..()
-		if(rand(0,16)>15)
-			dir = pick(1,2,4,8)
 recipe
 	carrot_sword
 		ingredients = list("carrot")
 		product = /tile/test/carrot_sword
+	carrot_sword
+		ingredients = list("radish")
+		product = /tile/test/radish_bow
+tile/enemy_placer
+	icon_state = "enemy_placer"
+	construct = /wanderer
 //================================ TRASH ==============================//

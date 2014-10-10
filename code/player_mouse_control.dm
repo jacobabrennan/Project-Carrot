@@ -69,7 +69,7 @@ tile
 			var/atom/movable/amoo = over_obj
 			offset_x = amoo.step_x + pixel_x - HOTSPOT_OFFSET
 			offset_y = amoo.step_y + pixel_y - HOTSPOT_OFFSET*/
-tile/shared
+tile/default
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params){}
 	Click(location, control, params)
 		var/list/params_list = params2list(params)

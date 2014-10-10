@@ -3,6 +3,7 @@ world
 client
 	perspective = EYE_PERSPECTIVE
 	show_popup_menus = FALSE
+	//script = 'style.css'
 	var
 		player/player
 player
@@ -21,7 +22,7 @@ player
 		client.eye = character
 	proc
 		target_location(turf/target_turf, offset_x, offset_y)
-			character.act(tile_move, target_turf, offset_x, offset_y)
+			character.act(character.tile_move, target_turf, offset_x, offset_y)
 		target_actor(actor/target_actor, which)
 			var/tile/action_tile
 			if(which == PRIMARY) action_tile = primary
@@ -35,4 +36,4 @@ player
 			if(action_tile && action_tile.target_class & TARGET_BLOCK)
 				character.act(action_tile, target_block, offset_x, offset_y)
 			else
-				character.act(tile_move, target_block, offset_x, offset_y)
+				character.act(character.tile_move, target_block, offset_x, offset_y)
