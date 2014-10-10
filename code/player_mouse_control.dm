@@ -48,10 +48,10 @@ tile
 		var/pixel_y = round(text2num(params_list["icon-y"]))
 		var/offset_x// = drag_obj.step_x + pixel_x
 		var/offset_y// = drag_obj.step_y + pixel_y
-		if(istype(over_obj, /turf))
+		if(istype(over_obj, /turf) || (istype(over_obj, /block) && !over_obj.density))
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
-			Move(over_obj, 0, offset_x, offset_y)
+			Move(locate(over_obj.x,over_obj.y,over_obj.z), 0, offset_x, offset_y)
 		else if(istype(over_obj, /character/hud/hotbar))
 			var/character/hud/hotbar/over_bar = over_obj
 			offset_x = pixel_x - HOTSPOT_OFFSET

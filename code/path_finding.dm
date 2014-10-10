@@ -24,7 +24,7 @@ turf
 			return L
 		Distance(turf/t)
 			if(get_dist(src,t) == 1)
-				if(locate(/actor) in t) return 10
+				if(locate(/actor) in t) return 5
 				else if(x != t.x && y != t.y) return 1.4
 				return 1
 			else

@@ -47,7 +47,7 @@ actor/floater
 		var/n_color = "white"
 		if(isnum(new_text))
 			if(new_text > 0)
-				n_color = "#ff0000"
+				n_color = "#00FF00"
 		color = n_color
 		maptext = {"<b style="font-family:press-start2p;font-size:14pt;text-align:center; v-align:middle; color:[n_color]">[abs(new_text)]</b>"}
 		var/float_time = 5

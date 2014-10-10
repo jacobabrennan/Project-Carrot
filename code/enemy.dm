@@ -13,9 +13,13 @@ enemy
 		. = ..()
 		spawn()
 			behavior()
-	blocked()
+	Del()
 		del plan
+		. = ..()
+	blocked()
 		halt_action()
+		if(plan)
+			plan.blocked(src)
 	proc
 		behavior()
 			for(var/I = 1 to 5)
@@ -48,18 +52,24 @@ enemy/plan
 		list/path
 	New(actor/self, actor/_target)
 		target = _target
-		var/turf/dest = locate(target.x,target.y,target.z)
-		var/turf/start = locate(self.x,self.y,self.z)
-		path = AStar(start,dest,/turf/proc/AdjacentTurfs,/turf/proc/Distance,       0,          30,         null,/turf/proc/Distance)
-			//       start, end,                adjacent,               dist,maxnodes,maxnodedepth,mintargetdist,        minnodedist)
-		if(!path)
-			del src
+		advance(self)
 	proc
 		advance(actor/self)
-			if(!path.len)
+			if(rand()*4 >= 3) del path
+			if(!path || !path.len)
 				self.act(self.tile_attack, target)
+			else
+				var/turf/next_step = path[1]
+				path.Remove(next_step)
+				self.act(self.tile_move, next_step)
+		blocked(actor/self)
+			for(var/I = 1 to 5)
+				var/turf/dest = locate(target.x,target.y,target.z)
+				var/turf/start = locate(self.x,self.y,self.z)
+				path = AStar(start,dest,/turf/proc/AdjacentTurfs,/turf/proc/Distance,       0,          30,         null,/turf/proc/Distance)
+					//       start, end,                adjacent,               dist,maxnodes,maxnodedepth,mintargetdist,        minnodedist)
+				if(path)
+					return
+				sleep(30)
+			if(!path)
 				del src
-			if(rand()*4 >= 3) del src
-			var/turf/next_step = path[1]
-			path.Remove(next_step)
-			self.act(self.tile_move, next_step)

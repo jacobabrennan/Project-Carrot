@@ -148,7 +148,7 @@ recipe
 	carrot_sword
 		ingredients = list("carrot")
 		product = /tile/test/carrot_sword
-	carrot_sword
+	radish_bow
 		ingredients = list("radish")
 		product = /tile/test/radish_bow
 tile/enemy_placer

@@ -17,4 +17,6 @@ region
 			if(!(spawner.faction & FACTION_PLAYER)) return
 			var/list/drange = DijkstraTurfInRange(
 				spawner.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/RangeFinished, P_INCLUDE_FINISHED)
-			new /wanderer(pick(drange-range(spawner,2)))
+			drange -= view(spawner,2)
+			if(drange.len)
+				new /wanderer(pick(drange))
