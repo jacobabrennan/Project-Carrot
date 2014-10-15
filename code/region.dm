@@ -16,7 +16,9 @@ region
 		spawn_enemy(actor/spawner)
 			if(!(spawner.faction & FACTION_PLAYER)) return
 			var/list/drange = DijkstraTurfInRange(
-				spawner.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/RangeFinished, P_INCLUDE_FINISHED)
+				spawner.loc,/turf/proc/AdjacentTurfs,/turf/proc/AbsDistance,/proc/RangeFinished, P_INCLUDE_FINISHED)
 			drange -= view(spawner,2)
+			for(var/turf/T in drange)
+				if(T.dense()) drange.Remove(T)
 			if(drange.len)
 				new /wanderer(pick(drange))

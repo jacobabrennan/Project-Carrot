@@ -17,11 +17,14 @@ actor
 			// TODO: modify base_speed based on class, equipped tiles, enchantments.
 			return base_health
 		adjust_health(amount, actor/attacker)
-			var start_health = health
+			var/start_health = health
+			// Calculate defense before this block.
+			var/unbounded_health = health + amount
 			health = max(0, min(max_health(), health + amount))
+			//
 			if(health == 0)
 				die(attacker)
-			var delta_health = health - start_health
+			var delta_health = unbounded_health - start_health
 			new /actor/floater(src, delta_health)
 			return delta_health
 		die(actor/attacker)

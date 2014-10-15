@@ -2,16 +2,19 @@
 "b" = (/turf,/region)
 "c" = (/block/bush,/turf,/region)
 "d" = (/block/wooden_floor,/turf,/region)
-"e" = (/tile/test/carrot{step_x = 0; step_y = 0},/turf,/region)
-"f" = (/tile/test/radish,/turf,/region)
-"g" = (/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/turf,/region)
-"h" = (/tile/test/carrot{step_x = 16; step_y = 24},/turf,/region)
-"i" = (/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/turf,/region)
-"j" = (/tile/test/carrot,/turf,/region)
-"k" = (/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/turf,/region)
-"l" = (/tile/test/carrot_sword,/turf,/region)
-"m" = (/block/wooden_window,/turf,/region)
-"n" = (/block/wooden_door,/turf,/region)
+"e" = (/block/wooden_wall,/turf,/region)
+"f" = (/block/wooden_window,/turf,/region)
+"g" = (/block/wooden_door,/turf,/region)
+"h" = (/tile/test/carrot{step_x = 0; step_y = 0},/turf,/region)
+"i" = (/tile/test/radish,/turf,/region)
+"j" = (/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/tile/value,/turf,/region)
+"k" = (/tile/test/carrot{step_x = 16; step_y = 24},/turf,/region)
+"l" = (/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/tile/test/radish,/turf,/region)
+"m" = (/tile/wooden_window,/turf,/region)
+"n" = (/tile/test/carrot,/turf,/region)
+"o" = (/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/tile/enemy_placer,/turf,/region)
+"p" = (/tile/test/radish_bow,/turf,/region)
+"q" = (/tile/test/carrot_sword,/turf,/region)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -59,16 +62,16 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbcbbbbcbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbdbbbbbcccbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbcbbbcccccccccccbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbccccccbbcccccbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbccccbbbcbbbbccccbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccbbbbcccbeefbcbbbbcccbcbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccbcccbeebfbcbcccbcbbbcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccccccbebbfgbbccbcbcbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbcbccbbbhbibbbbbjbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbcbbbbbbkbbbbbbcbbjbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbcbbbbbbblbbbbbjbcbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbmbnbbbjbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbfbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbccccceefgecccbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbccccbbbgdddfccccbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccbbbbcccchhibfdddecccbcbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccbcccchhbiefgfecbcbbbcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccccccchbbijbbccccbcbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbcbcccbbkblbmbccnbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbcbbbbccobbpbbbcccnbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbcbccbbbbqbbbccnbcbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbccbbbbbbbbccnbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbccbbbbbbbbccibbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabcbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

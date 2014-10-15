@@ -1,3 +1,17 @@
+character/hud/hotbar/crafting
+	Click(location, control, params)
+		var/list/params_list = params2list(params)
+		var/pixel_x = round(text2num(params_list["icon-x"]))
+		var/pixel_y = round(text2num(params_list["icon-y"]))
+
+		// strangeness with the icon offset in the web client
+		// further testing would be nice in order to file a bug report
+		// 130 = height of the HUD object
+		// 32 = tile height, presumably
+		if(usr.client.connection == "web")
+			pixel_y += 130 - 32 // TODO
+
+		add_tile(new /character/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
 turf
 	Click(location, control, params)
 		var/list/params_list = params2list(params)

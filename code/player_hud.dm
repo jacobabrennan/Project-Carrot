@@ -3,10 +3,12 @@ character
 	iteration_delay = 1
 	var
 		character/hud/hud
+		player/player
 	Del()
 		del hud
 	proc
 		connect(player/new_player)
+			player = new_player
 			if(!hud)
 				hud = new()
 			hud.loc = src
@@ -20,6 +22,7 @@ character/hud
 		player/player
 		character/hud/selection_display/selection_display
 		character/hud/health_bar/health_bar
+		character/hud/bp_display/bp_display
 		character/hud/hotbar/inventory/inventory
 		character/hud/hotbar/equipment/equipment
 		character/hud/hotbar/skills/skills
@@ -36,6 +39,8 @@ character/hud
 		// Health Bar
 		health_bar = new(src)
 		health_bar.setup()
+		// CP Display
+		bp_display = new(src)
 	Del()
 		del inventory
 		del equipment
@@ -43,12 +48,14 @@ character/hud
 		del crafting
 		del selection_display
 		del health_bar
+		del bp_display
 		. = ..()
 	proc
 		connect(player/new_player)
 			player = new_player
 			selection_display.connect(new_player)
 			health_bar.connect(new_player)
+			bp_display.connect(new_player)
 			for(var/character/hud/hotbar/_hotbar in list(inventory,equipment,skills,crafting))
 				_hotbar.connect(new_player)
 character/hud/health_bar
@@ -115,6 +122,26 @@ character/hud/health_bar
 			animate(bar_exact, color = C, 5)
 			animate(bar_foot, color = C, 5)
 
+character/hud/bp_display
+	parent_type = /obj
+	layer = HUD_TILE_LAYER
+	screen_loc = "WEST:8,NORTH:9"
+	var
+		player/player
+	proc
+		connect(player/new_player)
+			player = new_player
+			adjust(new_player.build_points)
+			if(player.client)
+				player.client.screen.Add(src)
+	proc
+		adjust(current)
+			if(current >= 1)
+				current = round(current)
+				maptext = {"<b style="font-family:press-start2p;font-size:16px;text-align:center; v-align:middle; color:white">[current]</b>"}
+			else
+				maptext = ""
+
 character/hud/selection_display
 	parent_type = /obj
 	layer = HOTBAR_LAYER
@@ -139,7 +166,7 @@ character/hud/selection_display
 				O.layer = HUD_TILE_LAYER
 			primary.screen_loc = "CENTER:-[9],NORTH:7"
 			secondary.screen_loc = "CENTER:[17],NORTH:7"
-			screen_loc = "CENTER-4:-25,NORTH:6"
+			screen_loc = "CENTER-5:-25,NORTH:6"
 		connect(player/new_player)
 			player = new_player
 			attack = player.character.tile_attack
@@ -174,6 +201,8 @@ character/hud/hotbar
 	mouse_drop_zone = TRUE
 	layer = HOTBAR_LAYER
 	icon = 'hud_1x5.dmi'
+	bound_height = 130
+	bound_width = 26
 	var
 		player/player
 		width = 1
@@ -327,6 +356,16 @@ character/hud/hotbar/crafting
 		garbage.temp_storage(result)
 		if(result)
 			add_tile(result, 1)
+	tile_filler
+		parent_type = /tile/value
+		icon_state = "filler"
+		value = 0
+		Move(character/hud/hotbar/crafting/new_loc)
+			. = ..()
+			if(!istype(new_loc) && new_loc != garbage)
+				Move(garbage)
+		Click()
+			Move(garbage)
 character/hud/hotbar/equipment
 	align_x = "WEST"
 	align_y = "Center"

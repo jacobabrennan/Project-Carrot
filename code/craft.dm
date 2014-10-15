@@ -54,9 +54,11 @@ recipe_manager
 			for(var/tile/T in ingredients)
 				avg_value += T.value
 				del T
-			avg_value /= ingredients.len
+			avg_value = round(avg_value / ingredients.len)
+			if(avg_value < 1) return
 			var/tile/value/value = new()
-			value.value = avg_value
+			value.set_value(avg_value)
+			//value.value = avg_value
 			return value;
 
 
@@ -122,6 +124,12 @@ recipe_manager
 tile/value
 	icon_state = "value_0"
 	resource = "value"
+	proc
+		set_value(new_value)
+			value = new_value
+			if(new_value >= 1)
+				var/n_color = "#FFFFFF"
+				maptext = {"<b style="font-family:press-start2p;font-size:14pt;text-align:center; v-align:middle; color:[n_color]">[new_value]</b>"}
 recipe
 	var
 		list/ingredients

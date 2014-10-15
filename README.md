@@ -55,7 +55,7 @@ Gameplay Objects:
 		Turfs
 		Actors
 			Characters
-		Furniture
+		Blocks
 		Tiles - Click and Draggable, but only from nearby.
 			Classes
 			Usable

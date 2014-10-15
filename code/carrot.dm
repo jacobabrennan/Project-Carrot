@@ -82,10 +82,12 @@ tile/test/carrot
 	range = RANGE_TOUCH
 	target_class = TARGET_ACTOR
 	resource = "carrot"
-	use(actor/user, atom/movable/target, offset_x, offset_y)
+	use(actor/user, actor/target, offset_x, offset_y)
+		if(!istype(target)) return
+		target.adjust_health(1)
 		if(target.bound_width == 16)
 			target.icon_state = "orange_small"
-		else
+		else if(target.bound_width == 32)
 			target.icon_state = "orange"
 		Del()
 tile/test/radish
@@ -96,17 +98,12 @@ tile/test/radish
 	use(actor/user, actor/target, offset_x, offset_y)
 		if(!istype(target)) return
 		target.adjust_health(user.max_health())
-		target.icon_state = "purple"
-		target.bound_x = 8
-		target.bound_y = 8
-		target.bound_width = 16
-		target.bound_height = 16
 		Del()
 tile/test/radish_bow
 	icon_state = "radish_bow"
 	target_class = TARGET_ENEMY
 	tile_type = TILE_WEAPON
-	range = 256
+	range = 4*32
 	resource = "radish"
 	value = 100
 	continuous_use = TRUE
@@ -130,16 +127,13 @@ tile/test/carrot_sword
 	recharge_time = 15
 	use(actor/user, actor/target, offset_x, offset_y)
 		. = ..()
-		target.hurt(1, user, src)
-		/*if(target.bound_width == 16)
-			flick("orange_small",target)
-		else
+		target.hurt(3, user, src)
+		if(target.bound_width == 32)
 			target.icon_state = "orange"
-			spawn(2)
-				target.icon_state = initial(target.icon_state)*/
 wanderer
 	parent_type = /enemy
 	icon_state = "red"
+	tile_attack = new /tile/test/radish_bow()
 	bound_x = 0
 	bound_y = 0
 	bound_height = 32
@@ -154,4 +148,11 @@ recipe
 tile/enemy_placer
 	icon_state = "enemy_placer"
 	construct = /wanderer
+player/iain
+	key = "iainperegrine"
+	Login()
+		. = ..()
+		character.icon_state = "club"
+		character.bound_width = 24
+		character.bound_height = 24
 //================================ TRASH ==============================//

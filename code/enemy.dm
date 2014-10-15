@@ -1,12 +1,15 @@
 enemy
 	parent_type = /actor
 	faction = FACTION_ENEMY
-	base_health = 5
+	base_health = 1
 	base_speed = 3
-	tile_gather = null
+	//tile_gather = null
 	var
 		enemy/plan/plan
-	die()
+		exp = 1 // currently, directly translates to CP
+	die(character/killer)
+		if(istype(killer) && killer.player)
+			killer.player.adjust_bp(exp)
 		spawn()
 			Del()
 	New()
@@ -19,7 +22,7 @@ enemy
 	blocked()
 		halt_action()
 		if(plan)
-			plan.blocked(src)
+			plan.reassess()
 	proc
 		behavior()
 			for(var/I = 1 to 5)
@@ -48,28 +51,62 @@ enemy
 enemy/plan
 	parent_type = /datum
 	var
+		enemy/user
 		actor/target
 		list/path
-	New(actor/self, actor/_target)
+		max_int = 20
+		intelligence // A number. A finite resource which is expended. CPU
+		int_rate = 10 // A number. The rate at which intelligence is replenished.
+	New(actor/_user, actor/_target, _max_int, _int_rate)
+		user = _user
 		target = _target
-		advance(self)
+		max_int = _max_int || max_int
+		intelligence = max_int
+		int_rate = _int_rate || int_rate
+		spawn()
+			while(src)
+				intelligence = min(intelligence+int_rate, max_int)
+				sleep(30)
+		spawn()
+			while(user)
+				if(path)
+					user.icon_state = "orange"
+				else
+					user.icon_state = "red"
+				sleep(1)
+		user.act(user.tile_attack, target)
 	proc
-		advance(actor/self)
-			if(rand()*4 >= 3) del path
+		advance()
+			var within_view = (target in view(user))
+			if(within_view && user.tile_attack.get_range() > bounds_dist(user,target)+64)
+				user.act(user.tile_attack, target)
+				return
+			if(path && rand()*(path.len+4) < 1)
+				del path
 			if(!path || !path.len)
-				self.act(self.tile_attack, target)
+				if(within_view)
+					user.act(user.tile_attack, target)
+				else if(rand()*4<1)
+					reassess()
+				else
+					var/turf/start = locate(user.x,user.y,user.z)
+					user.act(user.tile_move, pick(start.AdjacentTurfs()))
 			else
 				var/turf/next_step = path[1]
 				path.Remove(next_step)
-				self.act(self.tile_move, next_step)
-		blocked(actor/self)
-			for(var/I = 1 to 5)
+				user.act(user.tile_move, next_step)
+		reassess()
+			if(intelligence >= 20)
 				var/turf/dest = locate(target.x,target.y,target.z)
-				var/turf/start = locate(self.x,self.y,self.z)
-				path = AStar(start,dest,/turf/proc/AdjacentTurfs,/turf/proc/Distance,       0,          30,         null,/turf/proc/Distance)
-					//       start, end,                adjacent,               dist,maxnodes,maxnodedepth,mintargetdist,        minnodedist)
-				if(path)
-					return
-				sleep(30)
-			if(!path)
-				del src
+				var/turf/start = locate(user.x,user.y,user.z)
+				var/within_view = (target in view(user))
+				var/pursue_range = within_view? round(user.tile_attack.get_range() / world.icon_size) : 0
+				path = AStar(start,dest,/turf/proc/AdjacentTurfs,/turf/proc/WeightDistance,       0,          20, pursue_range,/turf/proc/AbsDistance)
+					//       start, end,                adjacent,                     dist,maxnodes,maxnodedepth,mintargetdist,           minnodedist)
+				intelligence -= 20
+				if((!path || !path.len) && (rand()*4 >= 3) && !(user in view(target)))
+					del src
+			else if(intelligence <= 0)
+
+			else
+				del path

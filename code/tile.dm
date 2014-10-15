@@ -24,7 +24,7 @@ tile
 		tile_type = TILE_NONE
 		resource = "trash" // Text string, used when crafting
 		continuous_use = FALSE
-		value = 1
+		value = 0
 		construct
 		last_use
 	New()
@@ -37,7 +37,7 @@ tile
 		return FALSE
 	Move(turf/new_loc, new_dir, new_step_x, new_step_y)
 		if(construct && istype(new_loc, /turf))
-			if(new_loc.density || new_loc.contents.len)
+			if(new_loc.dense())
 				return
 			. = ..()
 			var/turf/offset_turf = loc

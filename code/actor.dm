@@ -80,7 +80,7 @@ actor/action
 			// If target is an interactive block && bounds_dist <= 0, Interact(), cease action
 			var/touching = (bounds_dist(user, target) <= 0)
 			var/block/interactor = target
-			if(touching && istype(interactor) && interactor.interact)
+			if(touching && istype(interactor) && interactor.interact && (tile != user.tile_gather))
 				interactor.interact(user)
 				del src
 				return
@@ -101,11 +101,12 @@ actor/action
 			// If target is within tile range, use tile or wait.
 			var/tile_range = tile.get_range(user)
 			var/within_range = FALSE
+			var/within_view = (target in view(user))
 			if(
 				// delta_x/y == 0   <--- Could not possibly be any closer. Satisfies all below.
 				(delta_x == 0 && delta_y == 0) || \
 				// delta_x/y <= Tile.range   <--- Does not need to get closer. Satisfies all below.
-				(max(abs(delta_x), abs(delta_y)) <= tile_range) || \
+				(within_view && max(abs(delta_x), abs(delta_y)) <= tile_range) || \
 				// Target is solid, and bounds_dist <= 0  <--- Cannot get to center. Touching is close enough.
 				(target.density && touching)
 			){

@@ -8,10 +8,12 @@ client
 		player/player
 player
 	parent_type = /mob
+	//sight = SEE_PIXELS // Causes problems with the HUD*
 	var
 		character/character
 		tile/primary
 		tile/secondary
+		build_points = 0
 	Login()
 		. = ..()
 		loc = null
@@ -37,3 +39,7 @@ player
 				character.act(action_tile, target_block, offset_x, offset_y)
 			else
 				character.act(character.tile_move, target_block, offset_x, offset_y)
+		adjust_bp(amount)
+			build_points = max(0, build_points + amount)
+			if(character)
+				character.hud.bp_display.adjust(build_points)

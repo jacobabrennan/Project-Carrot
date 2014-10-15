@@ -2,7 +2,10 @@ turf
 	proc
 		dense()
 			for(var/block/B in src)
-				if(B.density) return TRUE
+				if(B.density) return B
+		opaque()
+			for(var/block/B in src)
+				if(B.opacity) return B
 		AdjacentTurfs()
 			var/list/L = list()
 			var/turf/n = get_step(src,NORTH)
@@ -21,8 +24,20 @@ turf
 			for(var/I = L.len to 1 step -1)
 				var/turf/T = L[I]
 				if(!L[I] || T.dense()) L.Cut(I,I+1)
+				else if(!L[I]) L.Cut(I,I+1)
 			return L
-		Distance(turf/t)
+		WeightDistance(turf/t)
+			var/weight = 1
+			if(locate(/actor) in t) weight += 5
+			if(t.dense())
+				if(t.opaque()) weight += 300
+				else weight += 45
+			if(get_dist(src,t) == 1)
+				if(x != t.x && y != t.y) weight += 1.4
+				return weight
+			else
+				return get_dist(src,t)
+		AbsDistance(turf/t)
 			if(get_dist(src,t) == 1)
 				if(locate(/actor) in t) return 5
 				else if(x != t.x && y != t.y) return 1.4
