@@ -49,7 +49,7 @@ tile
 			var/offset_x = step_x + pixel_x
 			var/offset_y = step_y + pixel_y
 			usr.client.player.target_location(loc, offset_x, offset_y)
-		if(istype(loc, /character/hud/hotbar))
+		if(istype(loc, /character/hud/hotbar) || istype(loc, /tile/spell_book))
 			var/left = params_list["left"]
 			var/right = params_list["right"]
 			if(left)

@@ -386,13 +386,17 @@ character/hud/hotbar/equipment
 		. = ..()
 		switch(reference.Find(added_tile))
 			if(1) weapon = added_tile
-			if(2) offhand = added_tile
+			if(2)
+				offhand = added_tile
+				player.character.hud.skills.show(added_tile)
 			if(3) body = added_tile
 			if(4) charm = added_tile
 	Exited(tile/removed_tile)
 		switch(reference.Find(removed_tile))
 			if(1) weapon = null
-			if(2) offhand = null
+			if(2)
+				offhand = null
+				player.character.hud.skills.show()
 			if(3) body = null
 			if(4) charm = null
 		. = ..()
@@ -400,6 +404,7 @@ character/hud/hotbar/skills
 	align_x = "WEST"
 	align_y = "Center"
 	icon_state = "skills"
+	alpha = 0
 	offset_x = -TILE_SIZE+(32+TILE_SIZE)/2
 	offset_y = -TILE_SIZE+(32-TILE_SIZE)/2 - 105
 	/* Create a global list in global scope, keep it out of the object tree, reuse for all skills hotbars. */
@@ -407,3 +412,28 @@ character/hud/hotbar/skills
 	New()
 		. = ..()
 		requirements = requirements_skills
+	proc
+		show(tile/spell_book/new_tile)
+			if(player && player.client)
+				for(var/tile/T in reference)
+					player.client.screen.Remove(T)
+			reference = list(null,null,null,null)
+			var/show = FALSE
+			if(istype(new_tile))
+				var/I = 0
+				for(var/tile/T in new_tile)
+					I++
+					if(I > reference.len) break
+					show = TRUE
+					reference[I] = T
+					T.screen_loc = find_screen_loc(I)
+					Entered(T)
+			if(player && player.client)
+				if(show)
+					world << "Showing"
+					player.client.screen.Add(src)
+					animate(src, alpha = 255, 3)
+				else
+					world << "Hiding"
+					player.client.screen.Remove(src)
+					alpha = 0
