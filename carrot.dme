@@ -8,6 +8,7 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
+#include <iainperegrine\dmm_suite\dmm_suite.dme>
 #include <theodis\pathfinder\Pathfinder.dme>
 #include "code\_defines.dm"
 #include "code\actor.dm"
@@ -23,8 +24,9 @@
 #include "code\player_mouse_control.dm"
 #include "code\recipes.dm"
 #include "code\region.dm"
+#include "code\save_load.dm"
 #include "code\spell_book.dm"
 #include "code\tile.dm"
 #include "code\x_wooden_hut.dm"
-#include "maps\trash.dmm"
+#include "region\forest.dm"
 // END_INCLUDE

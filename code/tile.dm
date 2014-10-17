@@ -17,6 +17,7 @@ tile
 	bound_width = TILE_SIZE
 	bound_height = TILE_SIZE
 	density = FALSE
+	layer = TILE_LAYER
 	var
 		recharge_time = 0
 		target_class = TARGET_ENEMY
@@ -45,6 +46,13 @@ tile
 				offset_turf = get_step(offset_turf, EAST)
 			if(step_y+bound_y+(bound_height/2) >= world.icon_size)
 				offset_turf = get_step(offset_turf, NORTH)
+			var/player/user = usr
+			for(var/block/bed/B in range(TOTEM_RANGE+1, offset_turf))
+				if(!istype(user))
+					return
+				if(B.owner_ckey != user.ckey)
+					user << "You can't gather so close to others' property."
+					return
 			new construct(offset_turf)
 			del src
 		else
@@ -137,7 +145,13 @@ tile/default/gather
 	target_class = TARGET_BLOCK
 	layer = HUD_TILE_LAYER
 	recharge_time = 30
-	use(actor/user, block/target, offset_x, offset_y)
+	use(character/user, block/target, offset_x, offset_y)
 		. = ..()
 		if(!istype(target)) return
+		for(var/block/bed/B in range(TOTEM_RANGE, target))
+			if(!istype(user) || !user.player)
+				return
+			if(B.owner_ckey != user.player.ckey)
+				user.player << "You can't gather so close to others' property."
+				return
 		target.gather(user)

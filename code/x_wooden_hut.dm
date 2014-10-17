@@ -1,3 +1,37 @@
+recipe/bed
+	ingredients = list("wood", "wood", "wood", "wood")
+	product = /tile/bed
+tile/bed
+	icon = 'wood_hut.dmi'
+	icon_state = "tile_bed"
+	construct = /block/bed
+block/bed // Hazordu Totem
+	icon = 'wood_hut.dmi'
+	icon_state = "bed"
+	// 9x9, range(4)
+	density = TRUE
+	layer = BLOCK_OVER_LAYER
+	resource = /tile/wood
+	resource_amount = 1
+	resource_delay = 100
+	bound_x = 6
+	bound_y = 4
+	bound_width = 20
+	bound_height = 26
+	New()
+		. = ..()
+		if(usr)
+			set_owner(usr)
+	var
+		owner_ckey
+	proc
+		set_owner(player/new_owner)
+			owner_ckey = new_owner.ckey
+			var/bed_tag = "[owner_ckey]_start"
+			var/block/bed/old_bed = locate(bed_tag)
+			del old_bed
+			tag = bed_tag
+
 recipe/wooden_floor
 	ingredients = list("wood")
 	product = /tile/wooden_floor
@@ -9,8 +43,9 @@ block/wooden_floor
 	icon = 'wood_hut.dmi'
 	icon_state = "floor"
 	density = FALSE
+	layer = BLOCK_UNDER_LAYER
 	resource = /tile/wood
-	resource_amount = 2
+	resource_amount = 1
 	resource_delay = 100
 
 recipe/wooden_wall
@@ -29,7 +64,7 @@ block/wooden_wall
 	resource_delay = 100
 
 recipe/wooden_door
-	ingredients = list("wood","wood","carrot")
+	ingredients = list("wood","wood","wood")
 	product = /tile/wooden_door
 tile/wooden_door
 	icon = 'wood_hut.dmi'

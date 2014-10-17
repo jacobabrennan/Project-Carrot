@@ -430,10 +430,8 @@ character/hud/hotbar/skills
 					Entered(T)
 			if(player && player.client)
 				if(show)
-					world << "Showing"
 					player.client.screen.Add(src)
 					animate(src, alpha = 255, 3)
 				else
-					world << "Hiding"
 					player.client.screen.Remove(src)
 					alpha = 0

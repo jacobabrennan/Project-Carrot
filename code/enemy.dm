@@ -67,13 +67,6 @@ enemy/plan
 			while(src)
 				intelligence = min(intelligence+int_rate, max_int)
 				sleep(30)
-		spawn()
-			while(user)
-				if(path)
-					user.icon_state = "orange"
-				else
-					user.icon_state = "red"
-				sleep(1)
 		user.act(user.tile_attack, target)
 	proc
 		advance()
@@ -105,7 +98,7 @@ enemy/plan
 					//       start, end,                adjacent,                     dist,maxnodes,maxnodedepth,mintargetdist,           minnodedist)
 				intelligence -= 20
 				if((!path || !path.len) && (rand()*4 >= 3) && !(user in view(target)))
-					del src
+					del user
 			else if(intelligence <= 0)
 
 			else

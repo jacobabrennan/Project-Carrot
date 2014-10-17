@@ -1,6 +1,7 @@
 block
 	parent_type = /obj
 	density = TRUE
+	layer = BLOCK_OVER_LAYER
 	var
 		resource = null
 		resource_amount = null
@@ -14,7 +15,7 @@ block
 			if(resource && resource_amount && destroyable)
 				if(gatherer.player.build_points < bp_cost)
 					// TODO: Display "can't gather" animation of some sort
-					world << "You don't have enough Building Points to gather this resource."
+					gatherer.player << "You don't have enough Building Points to gather this resource."
 					return
 				gatherer.player.adjust_bp(-bp_cost)
 				density = FALSE
@@ -26,17 +27,4 @@ block
 					T.Move(T.loc, 0, cos(angle)*10, sin(angle)*10)
 				del src
 		interact(actor/user){}
-
-
-
-block/bush
-	icon = 'rectangles.dmi'
-	icon_state = "bush"
-	opacity = TRUE
-	resource = /tile/wood
-	resource_amount = 3
-	resource_delay = 50
-tile/wood
-	icon_state = "wood"
-	resource = "wood"
 

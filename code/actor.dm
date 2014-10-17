@@ -6,6 +6,7 @@ actor
 	bound_height = 16
 	bound_width = 16
 	step_size = 3
+	layer = ACTOR_LAYER
 	var
 		actor/action/action
 		acting = FALSE

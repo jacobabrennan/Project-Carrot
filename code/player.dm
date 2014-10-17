@@ -16,10 +16,14 @@ player
 		build_points = 0
 	Login()
 		. = ..()
+		while(!map_handler.loaded)
+			sleep(10)
 		loc = null
 		client.player = src
 		if(!character)
-			character = new(locate(50,50,1));
+			var/block/bed/player_bed = locate("[ckey]_start")
+			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : locate(50,50,1)
+			character = new(start_tile)
 		character.connect(src)
 		client.eye = character
 	proc

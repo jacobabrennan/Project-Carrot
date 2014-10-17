@@ -44,7 +44,10 @@ recipe_manager
 				if(T.resource)
 					resource_types.Add(T.resource)
 			var/recipe/recipe = find_recipe(resource_types)
-			if(recipe)
+			var/value = 0
+			for(var/tile/T in ingredients)
+				value += T.value
+			if(recipe && recipe.cost <= value)
 				var/tile/result = recipe.craft(ingredients)
 				return result
 			else
@@ -133,6 +136,7 @@ tile/value
 recipe
 	var
 		list/ingredients
+		cost = 0
 		ingredients_signature
 		tile/product
 	New()

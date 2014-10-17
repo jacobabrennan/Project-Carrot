@@ -140,6 +140,7 @@ wanderer
 	bound_width = 32
 recipe
 	carrot_sword
+		cost = 25
 		ingredients = list("carrot")
 		product = /tile/test/carrot_sword
 	radish_bow
