@@ -7,9 +7,9 @@ enemy
 	var
 		enemy/plan/plan
 		exp = 1 // currently, directly translates to CP
-	die(character/killer)
-		if(istype(killer) && killer.player)
-			killer.player.adjust_bp(exp)
+	die(player/killer)
+		if(istype(killer))
+			killer.adjust_bp(exp)
 		spawn()
 			Del()
 	New()

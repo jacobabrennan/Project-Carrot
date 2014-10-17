@@ -43,7 +43,7 @@ actor
 			return target.hurt(base_strength, src)
 actor/floater
 	parent_type = /obj
-	layer = FLY_LAYER
+	layer = ACTOR_LAYER+1
 	New(new_loc, new_text)
 		. = ..()
 		center(new_loc)
@@ -57,3 +57,30 @@ actor/floater
 		animate(src, pixel_y = world.icon_size, float_time)
 		spawn(float_time)
 			del src
+
+tile/weapon
+	icon = 'equipment.dmi'
+	range = RANGE_TOUCH
+	target_class = TARGET_ENEMY
+	tile_type = TILE_WEAPON
+	continuous_use = TRUE
+	recharge_time = 15
+	var
+		potency = 1
+	use(actor/user, actor/target)
+		. = ..()
+		var/damage = gauss(potency)
+		damage = target.hurt(damage, user, src)
+		return damage
+tile/body
+	icon = 'equipment.dmi'
+	tile_type = TILE_BODY
+	var
+		potency = 1
+	proc
+		defend(actor/wearer, actor/attacker, damage)
+			var og = damage
+			var def = gauss(potency/2 + 0.5)
+			damage = max(1,damage - def)
+			world << "[damage] = [og] - [def]"
+			return damage

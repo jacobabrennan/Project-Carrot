@@ -18,12 +18,15 @@ block/bed // Hazordu Totem
 	bound_y = 4
 	bound_width = 20
 	bound_height = 26
+	interact = TRUE
 	New()
 		. = ..()
 		if(usr)
 			set_owner(usr)
 	var
 		owner_ckey
+	interact(actor/user)
+		user.adjust_health(user.max_health())
 	proc
 		set_owner(player/new_owner)
 			owner_ckey = new_owner.ckey

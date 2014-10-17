@@ -10,14 +10,14 @@ block
 		interact
 		bp_cost = 1
 	proc
-		gather(character/gatherer)
-			if(!istype(gatherer) || !gatherer.player) return
+		gather(player/gatherer)
+			if(!istype(gatherer)) return
 			if(resource && resource_amount && destroyable)
-				if(gatherer.player.build_points < bp_cost)
+				if(gatherer.build_points < bp_cost)
 					// TODO: Display "can't gather" animation of some sort
-					gatherer.player << "You don't have enough Building Points to gather this resource."
+					gatherer << "You don't have enough Building Points to gather this resource."
 					return
-				gatherer.player.adjust_bp(-bp_cost)
+				gatherer.adjust_bp(-bp_cost)
 				density = FALSE
 				var/angle_offset = rand(0,360)
 				for(var/I = 1 to resource_amount)

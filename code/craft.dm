@@ -164,3 +164,35 @@ armor
 book
 shield
 charm*/
+
+
+tile/wood
+	icon_state = "wood"
+	resource = "wood"
+tile/stone
+	icon_state = "stone"
+	resource = "stone"
+tile/iron_ore
+	icon_state = "iron_ore"
+	resource = "iron_ore"
+tile/iron
+	icon_state = "iron"
+	resource = "iron"
+recipe/iron
+	ingredients = list("iron_ore","wood")
+	product = /tile/iron
+
+recipe/iron_sword
+	ingredients = list("iron","iron")
+	product = /tile/weapon/iron_sword
+tile/weapon/iron_sword
+	icon = 'equipment.dmi'
+	icon_state = "iron_sword"
+	potency = 2
+recipe/iron_armor
+	ingredients = list("iron","iron","iron","iron")
+	product = /tile/body/iron_armor
+tile/body/iron_armor
+	icon = 'equipment.dmi'
+	icon_state = "iron_armor"
+	potency = 2

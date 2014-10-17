@@ -1,32 +1,29 @@
-character
-	parent_type = /actor
+player
 	iteration_delay = 1
 	var
-		character/hud/hud
-		player/player
+		player/hud/hud
 	Del()
 		del hud
 	proc
-		connect(player/new_player)
-			player = new_player
+		connect()
 			if(!hud)
 				hud = new()
 			hud.loc = src
-			hud.connect(new_player)
+			hud.connect(src)
 	adjust_health(amount, actor/attacker)
 		. = ..()
 		hud.health_bar.adjust(health, max_health())
-character/hud
+player/hud
 	parent_type = /obj
 	var
 		player/player
-		character/hud/selection_display/selection_display
-		character/hud/health_bar/health_bar
-		character/hud/bp_display/bp_display
-		character/hud/hotbar/inventory/inventory
-		character/hud/hotbar/equipment/equipment
-		character/hud/hotbar/skills/skills
-		character/hud/hotbar/crafting/crafting
+		player/hud/selection_display/selection_display
+		player/hud/health_bar/health_bar
+		player/hud/bp_display/bp_display
+		player/hud/hotbar/inventory/inventory
+		player/hud/hotbar/equipment/equipment
+		player/hud/hotbar/skills/skills
+		player/hud/hotbar/crafting/crafting
 	New()
 		. = ..()
 		inventory = new(src)
@@ -56,9 +53,9 @@ character/hud
 			selection_display.connect(new_player)
 			health_bar.connect(new_player)
 			bp_display.connect(new_player)
-			for(var/character/hud/hotbar/_hotbar in list(inventory,equipment,skills,crafting))
+			for(var/player/hud/hotbar/_hotbar in list(inventory,equipment,skills,crafting))
 				_hotbar.connect(new_player)
-character/hud/health_bar
+player/hud/health_bar
 	parent_type = /obj
 	layer = HOTBAR_LAYER
 	screen_loc = "CENTER-3:21,NORTH:14"
@@ -93,7 +90,7 @@ character/hud/health_bar
 			bar_cap.screen_loc = screen_loc
 		connect(player/new_player)
 			player = new_player
-			adjust(new_player.character.health, new_player.character.max_health())
+			adjust(new_player.health, new_player.max_health())
 			if(player.client)
 				//player.client.screen.Add(src)
 				for(var/obj/O in list(bar_exact, bar_cap, bar_foot, bar_moving))
@@ -122,7 +119,7 @@ character/hud/health_bar
 			animate(bar_exact, color = C, 5)
 			animate(bar_foot, color = C, 5)
 
-character/hud/bp_display
+player/hud/bp_display
 	parent_type = /obj
 	layer = HUD_TILE_LAYER
 	screen_loc = "WEST:8,NORTH:9"
@@ -142,7 +139,7 @@ character/hud/bp_display
 			else
 				maptext = ""
 
-character/hud/selection_display
+player/hud/selection_display
 	parent_type = /obj
 	layer = HOTBAR_LAYER
 	bound_width = 6*HOTBAR_TILE_SIZE
@@ -169,8 +166,8 @@ character/hud/selection_display
 			screen_loc = "CENTER-5:-25,NORTH:6"
 		connect(player/new_player)
 			player = new_player
-			attack = player.character.tile_attack
-			gather = player.character.tile_gather
+			attack = player.tile_attack
+			gather = player.tile_gather
 			if(player.client)
 				player.client.screen.Add(src)
 				player.client.screen.Add(primary)
@@ -178,7 +175,7 @@ character/hud/selection_display
 				player.client.screen.Add(attack)
 				player.client.screen.Add(gather)
 			if(!player.primary)
-				select(player.character.tile_attack, PRIMARY)
+				select(player.tile_attack, PRIMARY)
 		select(tile/selected_tile, which=PRIMARY)
 			switch(which)
 				if(PRIMARY)
@@ -196,7 +193,7 @@ character/hud/selection_display
 			if(deselect_tile == player.secondary)
 				player.secondary = null
 				secondary.icon = null
-character/hud/hotbar
+player/hud/hotbar
 	parent_type = /obj
 	mouse_drop_zone = TRUE
 	layer = HOTBAR_LAYER
@@ -318,12 +315,12 @@ character/hud/hotbar
 	Exited(tile/drop_tile, atom/new_loc)
 		if(new_loc != src)
 			reference[reference.Find(drop_tile)] = null
-		if(!istype(new_loc, /character/hud/hotbar))
-			player.character.halt_action(drop_tile)
+		if(!istype(new_loc, /player/hud/hotbar))
+			player.halt_action(drop_tile)
 			if(drop_tile == player.primary || drop_tile == player.secondary)
-				player.character.hud.selection_display.deselect(drop_tile)
+				player.hud.selection_display.deselect(drop_tile)
 				if(!player.primary)
-					player.character.hud.selection_display.select(player.character.tile_attack, PRIMARY)
+					player.hud.selection_display.select(player.tile_attack, PRIMARY)
 		drop_tile.layer = initial(drop_tile.layer)
 		if(player.client)
 			player.client.screen.Remove(drop_tile)
@@ -334,14 +331,14 @@ character/hud/hotbar
 			player.client.screen.Add(drop_tile)
 		. = ..()
 		//if(istype(old_loc)) // TODO: Replace with "animate on pixel_x/y". Whatever that means.
-		//	missile(drop_tile, old_loc, player.character)
-character/hud/hotbar/inventory
+		//	missile(drop_tile, old_loc, player)
+player/hud/hotbar/inventory
 	align_x = "EAST"
 	align_y = "Center"
 	icon_state = "inventory"
 	offset_x = -TILE_SIZE+(32+TILE_SIZE)/2 //(world.icon_size+TILE_SIZE)/2 // LEGACY
 	offset_y =  TILE_SIZE+(32-TILE_SIZE)/2 //(world.icon_size-TILE_SIZE)/2
-character/hud/hotbar/crafting
+player/hud/hotbar/crafting
 	align_x = "EAST"
 	align_y = "Center"
 	icon_state = "crafting"
@@ -352,7 +349,7 @@ character/hud/hotbar/crafting
 		for(var/I = 1; I <= reference.len; I++)
 			if(!reference[I])
 				return
-		var result = recipe_manager.craft(player.character, reference.Copy())
+		var result = recipe_manager.craft(player, reference.Copy())
 		garbage.temp_storage(result)
 		if(result)
 			add_tile(result, 1)
@@ -360,22 +357,22 @@ character/hud/hotbar/crafting
 		parent_type = /tile/value
 		icon_state = "filler"
 		value = 0
-		Move(character/hud/hotbar/crafting/new_loc)
+		Move(player/hud/hotbar/crafting/new_loc)
 			. = ..()
 			if(!istype(new_loc) && new_loc != garbage)
 				Move(garbage)
 		Click()
 			Move(garbage)
-character/hud/hotbar/equipment
+player/hud/hotbar/equipment
 	align_x = "WEST"
 	align_y = "Center"
 	icon_state = "equipment"
 	offset_x = -TILE_SIZE+(32+TILE_SIZE)/2
 	offset_y =  TILE_SIZE+(32-TILE_SIZE)/2
 	var
-		tile/weapon
+		tile/weapon/weapon
 		tile/offhand
-		tile/body
+		tile/body/body
 		tile/charm
 	/* Create a global list in global scope, keep it out of the object tree, reuse for all equipment hotbars. */
 	/var/list/requirements_equip = list(TILE_WEAPON,TILE_OFFHAND,TILE_BODY,TILE_CHARM)
@@ -388,7 +385,7 @@ character/hud/hotbar/equipment
 			if(1) weapon = added_tile
 			if(2)
 				offhand = added_tile
-				player.character.hud.skills.show(added_tile)
+				player.hud.skills.show(added_tile)
 			if(3) body = added_tile
 			if(4) charm = added_tile
 	Exited(tile/removed_tile)
@@ -396,15 +393,15 @@ character/hud/hotbar/equipment
 			if(1) weapon = null
 			if(2)
 				offhand = null
-				player.character.hud.skills.show()
+				player.hud.skills.show()
 			if(3) body = null
 			if(4) charm = null
 		. = ..()
-character/hud/hotbar/skills
+player/hud/hotbar/skills
 	align_x = "WEST"
 	align_y = "Center"
 	icon_state = "skills"
-	alpha = 0
+	invisibility = 1
 	offset_x = -TILE_SIZE+(32+TILE_SIZE)/2
 	offset_y = -TILE_SIZE+(32-TILE_SIZE)/2 - 105
 	/* Create a global list in global scope, keep it out of the object tree, reuse for all skills hotbars. */
@@ -431,7 +428,7 @@ character/hud/hotbar/skills
 			if(player && player.client)
 				if(show)
 					player.client.screen.Add(src)
-					animate(src, alpha = 255, 3)
+					invisibility = 0
 				else
 					player.client.screen.Remove(src)
-					alpha = 0
+					invisibility = 1

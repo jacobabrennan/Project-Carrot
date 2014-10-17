@@ -1,4 +1,4 @@
-character/hud/hotbar/crafting
+player/hud/hotbar/crafting
 	Click(location, control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = round(text2num(params_list["icon-x"]))
@@ -11,36 +11,44 @@ character/hud/hotbar/crafting
 		if(usr.client.connection == "web")
 			pixel_y += 130 - 32 // TODO
 
-		add_tile(new /character/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
+		add_tile(new /player/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
 turf
 	Click(location, control, params)
+		var/player/P = usr
+		if(!istype(P)) return
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])
 		var/pixel_y = text2num(params_list["icon-y"])
-		usr.client.player.target_location(location, pixel_x, pixel_y)
+		P.target_location(location, pixel_x, pixel_y)
 actor
 	Click(location, control, params)
+		var/player/P = usr
+		if(!istype(P)) return
 		if(istype(location, /turf))
 			var/list/params_list = params2list(params)
 			var/left = params_list["left"]
 			var/right = params_list["right"]
 			if(left)
-				usr.client.player.target_actor(src, PRIMARY)
+				P.target_actor(src, PRIMARY)
 			else if(right)
-				usr.client.player.target_actor(src, SECONDARY)
+				P.target_actor(src, SECONDARY)
 block
 	Click(location, control, params)
+		var/player/P = usr
+		if(!istype(P)) return
 		var/list/params_list = params2list(params)
 		var/left = params_list["left"]
 		var/right = params_list["right"]
 		var/pixel_x = text2num(params_list["icon-x"])
 		var/pixel_y = text2num(params_list["icon-y"])
 		if(left)
-			usr.client.player.target_block(src, PRIMARY, pixel_x, pixel_y)
+			P.target_block(src, PRIMARY, pixel_x, pixel_y)
 		else if(right)
-			usr.client.player.target_block(src, SECONDARY, pixel_x, pixel_y)
+			P.target_block(src, SECONDARY, pixel_x, pixel_y)
 tile
 	Click(location, control, params)
+		var/player/P = usr
+		if(!istype(P)) return
 		var/list/params_list = params2list(params)
 		var/pixel_x = text2num(params_list["icon-x"])
 		var/pixel_y = text2num(params_list["icon-y"])
@@ -48,14 +56,14 @@ tile
 			// Move to tile's location
 			var/offset_x = step_x + pixel_x
 			var/offset_y = step_y + pixel_y
-			usr.client.player.target_location(loc, offset_x, offset_y)
-		if(istype(loc, /character/hud/hotbar) || istype(loc, /tile/spell_book))
+			P.target_location(loc, offset_x, offset_y)
+		if(istype(loc, /player/hud/hotbar) || istype(loc, /tile/spell_book))
 			var/left = params_list["left"]
 			var/right = params_list["right"]
 			if(left)
-				usr.client.player.character.hud.selection_display.select(src, PRIMARY)
+				P.hud.selection_display.select(src, PRIMARY)
 			if(right)
-				usr.client.player.character.hud.selection_display.select(src, SECONDARY)
+				P.hud.selection_display.select(src, SECONDARY)
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params)
 		var/list/params_list = params2list(params)
 		var/pixel_x = round(text2num(params_list["icon-x"]))
@@ -66,8 +74,8 @@ tile
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
 			Move(locate(over_obj.x,over_obj.y,over_obj.z), 0, offset_x, offset_y)
-		else if(istype(over_obj, /character/hud/hotbar))
-			var/character/hud/hotbar/over_bar = over_obj
+		else if(istype(over_obj, /player/hud/hotbar))
+			var/player/hud/hotbar/over_bar = over_obj
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
 
@@ -86,10 +94,12 @@ tile
 tile/default
 	MouseDrop(atom/over_obj, src_loc, over_loc, src_control, over_control, params){}
 	Click(location, control, params)
+		var/player/P = usr
+		if(!istype(P)) return
 		var/list/params_list = params2list(params)
 		var/left = params_list["left"]
 		var/right = params_list["right"]
 		if(left)
-			usr.client.player.character.hud.selection_display.select(src, PRIMARY)
+			P.hud.selection_display.select(src, PRIMARY)
 		if(right)
-			usr.client.player.character.hud.selection_display.select(src, SECONDARY)
+			P.hud.selection_display.select(src, SECONDARY)

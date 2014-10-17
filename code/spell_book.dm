@@ -1,5 +1,6 @@
 tile/spell_book
 	tile_type = TILE_OFFHAND
+	icon = 'equipment.dmi'
 	icon_state = "spell_book"
 	Exit()
 		return FALSE

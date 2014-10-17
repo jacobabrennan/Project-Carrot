@@ -108,7 +108,7 @@ tile/default/attack
 	range = RANGE_TOUCH
 	use(actor/user, atom/target, offset_x, offset_y)
 		. = ..()
-		var/character/C = user
+		var/player/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.use(user, target, offset_x, offset_y)
 		else
@@ -118,13 +118,13 @@ tile/default/attack
 			user.innate_attack(target)
 			return TRUE
 	target_check(actor/user, atom/target)
-		var/character/C = user
+		var/player/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.target_check(user, target)
 		else
 			. = ..()
 	ready(actor/user)
-		var/character/C = user
+		var/player/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.ready(user)
 		else
@@ -134,7 +134,7 @@ tile/default/attack
 				return TRUE
 			. = ..()
 	get_range(user)
-		var/character/C = user
+		var/player/C = user
 		if(istype(C) && C.hud.equipment.weapon)
 			return C.hud.equipment.weapon.get_range()
 		else
@@ -145,13 +145,13 @@ tile/default/gather
 	target_class = TARGET_BLOCK
 	layer = HUD_TILE_LAYER
 	recharge_time = 30
-	use(character/user, block/target, offset_x, offset_y)
+	use(player/user, block/target, offset_x, offset_y)
 		. = ..()
 		if(!istype(target)) return
 		for(var/block/bed/B in range(TOTEM_RANGE, target))
-			if(!istype(user) || !user.player)
+			if(!istype(user))
 				return
-			if(B.owner_ckey != user.player.ckey)
-				user.player << "You can't gather so close to others' property."
+			if(B.owner_ckey != user.ckey)
+				user << "You can't gather so close to others' property."
 				return
 		target.gather(user)

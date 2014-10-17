@@ -1,4 +1,4 @@
-character
+player
 	Move()
 		. = ..()
 		if(.)

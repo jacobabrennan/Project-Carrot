@@ -62,23 +62,23 @@ player
 		astartest()
 			var/turf/dest = locate(/block/wooden_floor)
 			dest = dest.loc
-			var/path[] = AStar(character.loc,dest,/turf/proc/AdjacentTurfs,/turf/proc/Distance)
+			var/path[] = AStar(player.loc,dest,/turf/proc/AdjacentTurfs,/turf/proc/Distance)
 			for(var/turf/t in path)
 				sleep(5)
 				t.icon_state = "grid"
 		dijkstratest()
-			var/path[] = Dijkstra(character.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/Finished)
+			var/path[] = Dijkstra(player.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/Finished)
 			for(var/turf/t in path)
 				t.icon_state = "grid"
 
 		dijkstratestall()
-			var/paths[] = Dijkstra(character.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/FinishedAll, , 0)
+			var/paths[] = Dijkstra(player.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/FinishedAll, , 0)
 			for(var/list/path in paths)
 				for(var/turf/t in path)
 					t.icon_state = "grid"
 
 		dijkstratestrange()
-			var/path[] = DijkstraTurfInRange(character.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/RangeFinished, P_INCLUDE_INTERIOR)
+			var/path[] = DijkstraTurfInRange(player.loc,/turf/proc/AdjacentTurfs,/turf/proc/Distance,/proc/RangeFinished, P_INCLUDE_INTERIOR)
 			for(var/turf/t in path)
 				t.icon_state = "grid"
 */

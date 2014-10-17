@@ -48,7 +48,8 @@ obj
 	step_size = 8
 
 turf
-	icon_state = "green"
+	icon = 'forest.dmi'
+	icon_state = "green_1"
 	New()
 		. = ..()
 		icon_state = pick("green_1", "green_2")
@@ -63,6 +64,24 @@ proc/atan2(x, y)
     if(!x && !y) return 0
     return y >= 0 ? arccos(x / sqrt(x * x + y * y)) : -arccos(x / sqrt(x * x + y * y))
 
+
+proc
+	gauss(base)
+		// Looking back, there's no way I wrote this function.
+		if(base <= 1){ return base}
+		var/x,y,rsq // Who defines multiple variables like this?
+		do // do/while is always more complicated than it needs be. Just use a regular while.
+			x=2*rand()-1
+			y=2*rand()-1
+			rsq=x*x+y*y // Spaces, anyone?
+		while(rsq>1 || !rsq) // What is this magic rsq, anyway? Identifyable identifiers ftw.
+		. = y*sqrt(-2*log(rsq)/rsq)
+		var/standard_deviation = base/6 // Gotta love 6.
+		. *= standard_deviation // Someone likes dots.
+		. += base
+		. = max(0,min(round(.),base*2))
+		// Okay, perhaps I did write it. I must have been high on shoe pollish, or something.
+
 atom/proc/aloc()
 	var/turf/turf_loc = locate(x,y,z)
 	if(turf_loc)
@@ -70,7 +89,10 @@ atom/proc/aloc()
 atom/movable/proc/center(atom/movable/ref)
 	var/offset_x = (ref.step_x+ref.bound_x+ref.bound_width /2) - (bound_x+bound_width /2)//reference.step_x + (reference.bound_width -bound_width )/2
 	var/offset_y = (ref.step_y+ref.bound_y+ref.bound_height/2) - (bound_y+bound_height/2)//reference.step_y + (reference.bound_height-bound_height)/2
-	Move(ref.loc, 0, offset_x, offset_y)
+	if(!Move(ref.loc, 0, offset_x, offset_y))
+		loc = ref.loc
+		step_x = offset_x
+		step_y = offset_y
 atom/movable/proc/get_center()
 	var/offset_x = round((step_x+bound_x+bound_width /2)/world.icon_size)
 	var/offset_y = round((step_y+bound_y+bound_height/2)/world.icon_size)
@@ -100,34 +122,19 @@ tile/test/radish
 		target.adjust_health(user.max_health())
 		Del()
 tile/test/radish_bow
+	parent_type = /tile/weapon
 	icon_state = "radish_bow"
-	target_class = TARGET_ENEMY
-	tile_type = TILE_WEAPON
-	range = 4*32
 	resource = "radish"
 	value = 100
-	continuous_use = TRUE
-	recharge_time = 15
-	use(actor/user, actor/target, offset_x, offset_y)
-		. = ..()
-		target.hurt(1, user, src)
-		/*if(target.bound_width == 16)
-			flick("orange_small",target)
-		else
-			target.icon_state = "orange"
-			spawn(2)
-				target.icon_state = initial(target.icon_state)*/
+	range = 4*32
 tile/test/carrot_sword
+	parent_type = /tile/weapon
 	icon_state = "carrot_sword"
-	target_class = TARGET_ENEMY
-	tile_type = TILE_WEAPON
 	resource = "carrot"
 	value = 100
-	continuous_use = TRUE
-	recharge_time = 15
+	potency = 10
 	use(actor/user, actor/target, offset_x, offset_y)
 		. = ..()
-		target.hurt(3, user, src)
 		if(target.bound_width == 32)
 			target.icon_state = "orange"
 wanderer
@@ -138,6 +145,10 @@ wanderer
 	bound_y = 0
 	bound_height = 32
 	bound_width = 32
+	New()
+		. = ..()
+		var/tile/weapon/weapon_tile = pick(/tile/test/radish_bow, /tile/test/carrot_sword)
+		tile_attack = new weapon_tile()
 recipe
 	carrot_sword
 		cost = 25
@@ -151,9 +162,7 @@ tile/enemy_placer
 	construct = /wanderer
 player/iain
 	key = "iainperegrine"
-	Login()
-		. = ..()
-		character.icon_state = "club"
-		character.bound_width = 24
-		character.bound_height = 24
+	icon_state = "club"
+	bound_width = 24
+	bound_height = 24
 //================================ TRASH ==============================//
