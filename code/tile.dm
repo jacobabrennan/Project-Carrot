@@ -27,7 +27,7 @@ tile
 		continuous_use = FALSE
 		value = 0
 		construct
-		last_use
+		tmp/last_use
 	New()
 		. = ..()
 		mouse_drag_pointer = icon_state

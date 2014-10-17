@@ -4,6 +4,7 @@ player
 		player/hud/hud
 	Del()
 		del hud
+		. = ..()
 	proc
 		connect()
 			if(!hud)
@@ -12,7 +13,7 @@ player
 			hud.connect(src)
 	adjust_health(amount, actor/attacker)
 		. = ..()
-		hud.health_bar.adjust(health, max_health())
+		if(hud) hud.health_bar.adjust(health, max_health())
 player/hud
 	parent_type = /obj
 	var

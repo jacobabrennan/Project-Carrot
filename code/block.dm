@@ -9,6 +9,7 @@ block
 		resource_delay = 30
 		interact
 		bp_cost = 1
+		exaustable = TRUE
 	proc
 		gather(player/gatherer)
 			if(!istype(gatherer)) return
@@ -25,6 +26,7 @@ block
 					T.center(src)
 					var/angle = I*(360/resource_amount)+angle_offset
 					T.Move(T.loc, 0, cos(angle)*10, sin(angle)*10)
-				del src
+				if(exaustable)
+					del src
 		interact(actor/user){}
 

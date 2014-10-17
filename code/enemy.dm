@@ -3,7 +3,7 @@ enemy
 	faction = FACTION_ENEMY
 	base_health = 1
 	base_speed = 3
-	//tile_gather = null
+	tile_gather = null
 	var
 		enemy/plan/plan
 		exp = 1 // currently, directly translates to CP
@@ -29,7 +29,7 @@ enemy
 				if(!plan)
 					var/target// = plan? plan.target : null
 					var/list/targets = list()
-					for(var/actor/A in orange(src,10))
+					for(var/actor/A in oview(src,10))
 						if(A.faction != faction)
 							targets.Add(A)
 					while(targets.len)
@@ -98,7 +98,7 @@ enemy/plan
 					//       start, end,                adjacent,                     dist,maxnodes,maxnodedepth,mintargetdist,           minnodedist)
 				intelligence -= 20
 				if((!path || !path.len) && (rand()*4 >= 3) && !(user in view(target)))
-					del user
+					del src
 			else if(intelligence <= 0)
 
 			else

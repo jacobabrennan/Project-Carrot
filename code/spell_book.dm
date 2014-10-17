@@ -13,6 +13,10 @@ tile/spell_book
 			new /tile/spell/heal()
 		)
 tile/spell
+	Move(){}
+	New()
+		. = ..()
+		mouse_drag_pointer = null
 	fire
 		icon_state = "scroll_fire"
 		target_class = TARGET_ENEMY

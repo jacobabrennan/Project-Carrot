@@ -14,6 +14,7 @@
 #define SECONDARY 32
 
 #define TOTEM_RANGE 4
+#define PINGOUT_TIME 60
 
 #define TARGET_NONE 0
 #define TARGET_TURF 1
