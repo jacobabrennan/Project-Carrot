@@ -21,6 +21,7 @@ client/Del()
 	. = ..()
 
 client/Center()
+	map_handler.save()
 	world.Reboot()
 // End Message of the Day
 
@@ -132,7 +133,7 @@ tile/test/carrot_sword
 	icon_state = "carrot_sword"
 	resource = "carrot"
 	value = 100
-	potency = 10
+	potency = 4
 	use(actor/user, actor/target, offset_x, offset_y)
 		. = ..()
 		if(target.bound_width == 32)

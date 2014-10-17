@@ -13,6 +13,7 @@ player
 		tile/primary
 		tile/secondary
 		build_points = 0
+		player/logout_timer/logout_timer
 	New()
 		. = ..()
 		while(!map_handler.loaded)
@@ -20,7 +21,12 @@ player
 		respawn()
 	Login()
 		. = ..()
+		if(logout_timer)
+			del logout_timer
 		connect(src)
+	Logout()
+		. = ..()
+		logout_timer = new(src)
 	die()
 		. = ..()
 		spawn()
@@ -32,7 +38,6 @@ player
 			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : locate(50,50,1)
 			loc = start_tile
 			if(player_bed)
-				world << "Centering: [rand(0,20)]"
 				center(player_bed)
 			else
 				step_x = 0
@@ -69,3 +74,9 @@ player
 		var/old_color = color
 		color = "#ff0000"
 		animate(src, color = old_color, 3)
+player/logout_timer
+	parent_type = /datum
+	New(player/player)
+		. = ..()
+		spawn(PINGOUT_TIME)
+			del player

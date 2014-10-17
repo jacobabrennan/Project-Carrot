@@ -1,3 +1,41 @@
+player
+	Login()
+		. = ..()
+		world << ckey
+		load()
+	Logout()
+		save()
+		. = ..()
+	proc
+		save()
+			var/savefile/S = new("player_saves/[ckey].sav")
+			S["build_points"] << build_points
+			S["weapon"] << hud.equipment.weapon
+			S["offhand"] << hud.equipment.offhand
+			S["body"] << hud.equipment.body
+			S["charm"] << hud.equipment.charm
+			S["inventory"] << hud.inventory.reference
+			S["crafting"] << hud.crafting.reference
+		load()
+			if(!fexists("player_saves/[ckey].sav")) return
+			var/savefile/S = new("player_saves/[ckey].sav")
+			var/tile/weapon
+			var/tile/offhand
+			var/tile/body
+			var/tile/charm
+			var/list/inventory
+			var/list/crafting
+			S["build_points"] >> build_points
+			S["weapon"]       >> weapon
+			S["offhand"]      >> offhand
+			S["body"]         >> body
+			S["charm"]        >> charm
+			S["inventory"]    >> inventory
+			S["crafting"]     >> crafting
+			if(weapon ) hud.equipment.add_tile(weapon , 1)
+			if(offhand) hud.equipment.add_tile(offhand, 2)
+			if(body   ) hud.equipment.add_tile(body   , 3)
+			if(charm  ) hud.equipment.add_tile(charm  , 4)
 world
 	New()
 		. = ..()
@@ -7,20 +45,18 @@ map_handler
 	parent_type = /dmm_suite
 	var
 		loaded = FALSE
+		map_name = "maps/live_test.dmm"
 	proc
-		save(var/map_name as text)
-			/*
-				The save() verb saves a map with name "[map_name].dmm".
-				*/
-			if((ckey(map_name) != lowertext(map_name)) || (!ckey(map_name)))
-				usr << "The file name you supplied includes invalid characters, or is empty. Please supply a valid file name."
-				return
-			var/dmm_suite/D = new()
+		save()
+			world << "Starting Save"
 			var/turf/south_west_deep = locate(1,1,1)
 			var/turf/north_east_shallow = locate(world.maxx,world.maxy,world.maxz)
-			D.save_map(south_west_deep, north_east_shallow, map_name, flags = DMM_IGNORE_PLAYERS)
-			usr << {"The file [map_name].dmm has been saved. It can be found in the same directly in which this library resides.\n\
-		 (Usually: C:\\Documents and Settings\\Your Name\\Application Data\\BYOND\\lib\\iainperegrine\\dmm_suite)"}
+			var/file_text = write_map(south_west_deep, north_east_shallow, flags = DMM_IGNORE_MOBS|DMM_IGNORE_TURF_VARS)
+			if(fexists(map_name))
+				fdel(map_name)
+			var/saved_map = file(map_name)
+			saved_map << file_text
+			world << "Save Complete"
 
 
 		write()
@@ -37,6 +73,11 @@ map_handler
 
 		load()
 			world << "Loading"
-			load_map(file("maps/kells.dmm"))
+			var/map
+			if(!fexists(map_name))
+				map = file("maps/kells.dmm")
+			else
+				map = file(map_name)
+			load_map(map)
 			loaded = TRUE
 			world << "Finished Loading"

@@ -42,7 +42,8 @@ actor
 			// TODO: Randomize damage? Enchantments?
 			return target.hurt(base_strength, src)
 actor/floater
-	parent_type = /obj
+	parent_type = /mob
+	icon_state = ""
 	layer = ACTOR_LAYER+1
 	New(new_loc, new_text)
 		. = ..()
@@ -79,8 +80,9 @@ tile/body
 		potency = 1
 	proc
 		defend(actor/wearer, actor/attacker, damage)
-			var og = damage
 			var def = gauss(potency/2 + 0.5)
 			damage = max(1,damage - def)
-			world << "[damage] = [og] - [def]"
 			return damage
+tile/charm
+	icon = 'equipment.dmi'
+	tile_type = TILE_CHARM
