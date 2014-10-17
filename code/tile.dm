@@ -51,7 +51,7 @@ tile
 				if(!istype(user))
 					return
 				if(B.owner_ckey != user.ckey)
-					user << "You can't gather so close to others' property."
+					user << "You can't build so close to others' property."
 					return
 			new construct(offset_turf)
 			del src

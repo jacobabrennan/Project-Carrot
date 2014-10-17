@@ -1,5 +1,10 @@
-
-
+*.dmb
+*.rsc
+*.int
+*.lk
+maps/
+hub_resources/
+player_saves/
 
 # Common Unwanted Files #
 

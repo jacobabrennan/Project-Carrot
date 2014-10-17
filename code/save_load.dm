@@ -19,23 +19,29 @@ player
 		load()
 			if(!fexists("player_saves/[ckey].sav")) return
 			var/savefile/S = new("player_saves/[ckey].sav")
+			var/bp
 			var/tile/weapon
 			var/tile/offhand
 			var/tile/body
 			var/tile/charm
 			var/list/inventory
 			var/list/crafting
-			S["build_points"] >> build_points
+			S["build_points"] >> bp
 			S["weapon"]       >> weapon
 			S["offhand"]      >> offhand
 			S["body"]         >> body
 			S["charm"]        >> charm
 			S["inventory"]    >> inventory
 			S["crafting"]     >> crafting
+			adjust_bp(bp)
 			if(weapon ) hud.equipment.add_tile(weapon , 1)
 			if(offhand) hud.equipment.add_tile(offhand, 2)
 			if(body   ) hud.equipment.add_tile(body   , 3)
 			if(charm  ) hud.equipment.add_tile(charm  , 4)
+			for(var/tile/T in inventory)
+				hud.inventory.add_tile(T)
+			for(var/tile/T in crafting)
+				hud.crafting.add_tile(T)
 world
 	New()
 		. = ..()
