@@ -1,6 +1,12 @@
 cave
 	parent_type = /region
 	luminosity = 0
+	spawn_rate = 196
+	enemy_groups = list(
+		list(/cave/enemy/jel_1,/cave/enemy/jel_1,/cave/enemy/jel_1),
+		list(/cave/enemy/jel_2),
+		list(/cave/enemy/jel_2,/cave/enemy/jel_1)
+	)
 	turf
 		parent_type = /turf
 		icon = 'cave.dmi'
@@ -14,7 +20,6 @@ cave
 		icon = 'cave.dmi'
 		var
 			load_bearing = FALSE
-		bp_cost = 0
 		gather()
 			if(load_bearing)
 				for(var/turf/support in orange(3, src))
@@ -45,14 +50,15 @@ cave
 				if(!.)
 					icon_state = "dug_out"
 		iron
-			icon = 'forest.dmi'
-			icon_state = "iron"
-			opacity = FALSE
-			resource = /tile/iron_ore
-			resource_amount = 3
+			icon_state = "rock_iron"
+			load_bearing = 2
+			opacity = TRUE
+			resource = /tile/iron
+			resource_amount = 2
 			resource_delay = 50
 		amethyst
 			icon_state = "rock_amethyst"
+			bp_cost = 10
 			luminosity = 5
 			load_bearing = FALSE
 			opacity = TRUE
@@ -216,3 +222,40 @@ cave/block/amethyst_podium
 	Del()
 		del lighting
 		. = ..()
+
+recipe/amethyst_ring
+	ingredients = list("ring","amethyst")
+	product = /tile/charm/amethyst_ring
+tile/charm/amethyst_ring
+	icon = 'equipment.dmi'
+	icon_state = "amethyst_ring"
+	resource = "ring"
+
+cave/enemy
+	parent_type = /enemy
+	icon = 'enemies.dmi'
+	jel_1
+		icon_state = "jel_green"
+		//tile_attack = new /tile/test/radish_bow()
+		bound_x = 2
+		bound_y = 2
+		bound_height = 20
+		bound_width = 20
+		base_speed = 2
+		/*New()
+			. = ..()
+			var/tile/weapon/weapon_tile = pick(/tile/test/radish_bow, /tile/test/carrot_sword)
+			tile_attack = new weapon_tile()*/
+	jel_2
+		icon_state = "jel_red"
+		//tile_attack = new /tile/test/radish_bow()
+		base_health = 3
+		bound_x = 2
+		bound_y = 2
+		bound_height = 20
+		bound_width = 20
+		base_speed = 3
+		/*New()
+			. = ..()
+			var/tile/weapon/weapon_tile = pick(/tile/test/radish_bow, /tile/test/carrot_sword)
+			tile_attack = new weapon_tile()*/

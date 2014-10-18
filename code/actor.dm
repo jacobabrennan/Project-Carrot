@@ -1,6 +1,6 @@
 actor
 	parent_type = /mob
-	icon_state = "blue"
+	icon_state = "diamond"
 	bound_x = 8
 	bound_y = 8
 	bound_height = 16

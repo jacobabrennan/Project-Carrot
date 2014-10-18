@@ -194,6 +194,7 @@ recipe/iron_sword
 tile/weapon/iron_sword
 	icon = 'equipment.dmi'
 	icon_state = "iron_sword"
+	resource = "sword"
 	potency = 2
 
 recipe/iron_armor
@@ -202,6 +203,7 @@ recipe/iron_armor
 tile/body/iron_armor
 	icon = 'equipment.dmi'
 	icon_state = "iron_armor"
+	resource = "armor"
 	potency = 2
 
 recipe/iron_ring
@@ -210,3 +212,4 @@ recipe/iron_ring
 tile/charm/iron_ring
 	icon = 'equipment.dmi'
 	icon_state = "iron_ring"
+	resource = "ring"

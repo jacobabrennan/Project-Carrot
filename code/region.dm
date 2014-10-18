@@ -10,16 +10,22 @@ area
 region
 	parent_type = /area
 	notify(actor/actor)
-		if(rand()*64 > 63)
+		if(rand()*spawn_rate > spawn_rate-1)
 			spawn_enemy(actor)
+	var
+		spawn_rate = 196
+		list/enemy_groups
 	proc
 		spawn_enemy(actor/spawner)
+			if(!enemy_groups) return
 			if(!(spawner.faction & FACTION_PLAYER)) return
-			var/list/drange = DijkstraTurfInRange(
-				spawner.loc,/turf/proc/AdjacentTurfs,/turf/proc/AbsDistance,/proc/RangeFinished, P_INCLUDE_FINISHED)
-			drange -= view(spawner,2)
-			for(var/turf/T in drange)
-				if(T.dense()) drange.Remove(T)
-				if(locate(/block/bed) in range(TOTEM_RANGE, T)) drange.Remove(T)
-			if(drange.len)
-				new /wanderer(pick(drange))
+			var/list/group = pick(enemy_groups)
+			for(var/path in group)
+				var/list/drange = DijkstraTurfInRange(
+					spawner.loc,/turf/proc/AdjacentTurfs,/turf/proc/AbsDistance,/proc/RangeFinished, P_INCLUDE_FINISHED)
+				drange -= view(spawner,2)
+				for(var/turf/T in drange)
+					if(T.dense()) drange.Remove(T)
+					if(locate(/block/bed) in range(TOTEM_RANGE, T)) drange.Remove(T)
+				if(drange.len)
+					new path(pick(drange))

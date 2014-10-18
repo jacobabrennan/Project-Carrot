@@ -129,18 +129,6 @@ tile/test/carrot_sword
 		. = ..()
 		if(target.bound_width == 32)
 			target.icon_state = "orange"
-wanderer
-	parent_type = /enemy
-	icon_state = "red"
-	tile_attack = new /tile/test/radish_bow()
-	bound_x = 0
-	bound_y = 0
-	bound_height = 32
-	bound_width = 32
-	New()
-		. = ..()
-		var/tile/weapon/weapon_tile = pick(/tile/test/radish_bow, /tile/test/carrot_sword)
-		tile_attack = new weapon_tile()
 recipe
 	carrot_sword
 		cost = 25
@@ -151,5 +139,5 @@ recipe
 		product = /tile/test/radish_bow
 tile/enemy_placer
 	icon_state = "enemy_placer"
-	construct = /wanderer
+	construct = /cave/enemy/jel_1
 //================================ TRASH ==============================//
