@@ -28,5 +28,7 @@
 #include "code\spell_book.dm"
 #include "code\tile.dm"
 #include "code\x_wooden_hut.dm"
+#include "ignore\hub.dm"
+#include "region\cave.dm"
 #include "region\forest.dm"
 // END_INCLUDE

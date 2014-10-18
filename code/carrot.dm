@@ -33,7 +33,6 @@ world
 	fps = 15		// 25 frames per second
 	icon_size = 32	// 32x32 icon size by default
 	view = 6		// show up to 6 tiles outward from center (13x13 view)
-	hub = "iainperegrine.project_carrot"
 
 // Make objects move 8 pixels per tick when walking
 
@@ -46,13 +45,6 @@ mob
 
 obj
 	step_size = 8
-
-turf
-	icon = 'forest.dmi'
-	icon_state = "green_1"
-	New()
-		. = ..()
-		icon_state = pick("green_1", "green_2")
 
 tile
 	icon_state = "carrot"
@@ -160,9 +152,4 @@ recipe
 tile/enemy_placer
 	icon_state = "enemy_placer"
 	construct = /wanderer
-player/iain
-	key = "iainperegrine"
-	icon_state = "club"
-	bound_width = 24
-	bound_height = 24
 //================================ TRASH ==============================//

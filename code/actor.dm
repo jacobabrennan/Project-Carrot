@@ -82,7 +82,16 @@ actor/action
 			var/touching = (bounds_dist(user, target) <= 0)
 			var/block/interactor = target
 			if(touching && istype(interactor) && interactor.interact && (tile != user.tile_gather))
-				interactor.interact(user)
+				var/allowed = TRUE
+				for(var/block/bed/B in range(TOTEM_RANGE, interactor))
+					if(B == interactor) continue
+					if(B.owner_ckey)
+						if(B.owner_ckey == user.ckey)
+							break
+						else
+							allowed = FALSE
+				if(allowed)
+					interactor.interact(user)
 				del src
 				return
 			// Determine Distance

@@ -4,11 +4,11 @@ client
 	perspective = EYE_PERSPECTIVE
 	show_popup_menus = FALSE
 	//script = 'style.css'
-	var
-		player/player
 player
 	parent_type = /actor
 	//sight = SEE_PIXELS // Causes problems with the HUD*
+	see_in_dark = 3
+	infra_luminosity = 12
 	var
 		tile/primary
 		tile/secondary
@@ -35,7 +35,7 @@ player
 	proc
 		respawn()
 			var/block/bed/player_bed = locate("[ckey]_start")
-			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : locate(50,50,1)
+			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : (locate("town_start") || locate(50,50,1))
 			loc = start_tile
 			if(player_bed)
 				center(player_bed)

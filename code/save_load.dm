@@ -1,7 +1,6 @@
 player
 	Login()
 		. = ..()
-		world << ckey
 		load()
 	Logout()
 		save()

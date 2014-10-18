@@ -1,6 +1,8 @@
 enemy
 	parent_type = /actor
 	faction = FACTION_ENEMY
+	see_infrared = TRUE
+	sight = SEE_MOBS
 	base_health = 1
 	base_speed = 3
 	tile_gather = null

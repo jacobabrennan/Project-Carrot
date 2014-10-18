@@ -144,7 +144,7 @@ tile/default/gather
 	screen_loc = "CENTER:95,NORTH:7"
 	target_class = TARGET_BLOCK
 	layer = HUD_TILE_LAYER
-	recharge_time = 30
+	//recharge_time = 30
 	use(player/user, block/target, offset_x, offset_y)
 		. = ..()
 		if(!istype(target)) return

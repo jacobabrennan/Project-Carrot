@@ -20,5 +20,6 @@ region
 			drange -= view(spawner,2)
 			for(var/turf/T in drange)
 				if(T.dense()) drange.Remove(T)
+				if(locate(/block/bed) in range(TOTEM_RANGE, T)) drange.Remove(T)
 			if(drange.len)
 				new /wanderer(pick(drange))

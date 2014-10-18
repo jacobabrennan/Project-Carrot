@@ -178,6 +178,11 @@ tile/iron_ore
 tile/iron
 	icon_state = "iron"
 	resource = "iron"
+tile/amethyst
+	luminosity = 3
+	icon_state = "amethyst"
+	resource = "amethyst"
+
 recipe/iron
 	ingredients = list("iron_ore","wood")
 	product = /tile/iron

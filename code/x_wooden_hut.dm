@@ -118,9 +118,6 @@ block/wooden_window
 	interact = TRUE
 	var
 		open = FALSE
-	New()
-		. = ..()
-		open()
 	interact(actor/user)
 		if(open)
 			close()
