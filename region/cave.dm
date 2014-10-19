@@ -256,6 +256,7 @@ tile/fire
 	_4{ construct = /cave/block/fire{light_reach = LIGHT_REACH; life_span = 3000}}
 cave/block/fire
 	opacity = FALSE
+	density = FALSE
 	icon = 'cave.dmi'
 	icon_state = "fire"
 	resource_delay = 100

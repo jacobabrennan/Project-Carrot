@@ -14,6 +14,7 @@ player/hud/hotbar/crafting
 		add_tile(new /player/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
 turf
 	Click(location, control, params)
+		. = ..()
 		var/player/P = usr
 		if(!istype(P)) return
 		var/list/params_list = params2list(params)

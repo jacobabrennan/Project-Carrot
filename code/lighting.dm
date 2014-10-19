@@ -31,8 +31,11 @@ atom/movable
 			if(new_value == opacity) return
 			opacity = new_value
 			var/light_reach = view(LIGHT_REACH, loc)
-			for(var/turf/T in light_reach)
-				T.lighting.recalculate()
+			for(var/turf/lighting/L in light_reach)
+				L.recalculate()
+client/Northeast()
+	for(var/turf/lighting/L in range(LIGHT_REACH, src))
+		L.recalculate()
 
 light_source
 	parent_type = /obj
@@ -64,21 +67,24 @@ light_source
 	Move(new_loc)
 		var/old_view = view(reach, src)
 		. = ..()
-		for(var/turf/T in (view(reach, src)+old_view))
-			T.lighting.recalculate()
+		for(var/turf/lighting/L in (view(reach, src)+old_view))
+			L.recalculate()
 		return
 	assign_loc(new_loc)
 		var/old_view = view(reach, src)
 		. = ..()
-		for(var/turf/T in view(reach, src)+old_view)
-			T.lighting.recalculate()
+		for(var/turf/lighting/L in (view(reach, src)+old_view))
+			L.recalculate()
 		return
 turf
 	var
 		tmp/turf/lighting/lighting
 	New()
 		. = ..()
-		lighting = new(src)
+		if(!lighting)
+			lighting = locate() in src
+		if(!lighting)
+			lighting = new(src)
 	lighting
 		parent_type = /obj
 		//blend_mode = BLEND_SUBTRACT
