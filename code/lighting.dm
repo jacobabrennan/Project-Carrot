@@ -43,7 +43,7 @@ light_source
 		value // [0,1]
 		spread = 12
 		reach = LIGHT_REACH
-	New(new_loc, _hue, _sat, _val, _reach)
+	New(turf/new_loc, _hue, _sat, _val, _reach)
 		. = ..()
 		hue = _hue
 		saturation = _sat
@@ -52,6 +52,7 @@ light_source
 		spawn()
 			while(!map_handler.loaded)
 				sleep(10)
+			world << "New Light Source!: [new_loc.x],[new_loc.y],[new_loc.z]"
 			for(var/turf/lighting/L in view(reach, src))
 				L.recalculate()
 	Del()

@@ -44,8 +44,8 @@ player
 world
 	New()
 		. = ..()
-		//map_handler.load()
-		map_handler.loaded = TRUE
+		map_handler.load()
+		//map_handler.loaded = TRUE
 client/Northwest()
 	world.Reboot()
 client/Center()
@@ -56,7 +56,7 @@ map_handler
 	parent_type = /dmm_suite
 	var
 		loaded = FALSE
-		map_name = "maps/poop_face.dmm"
+		map_name = "maps/live_test.dmm"
 	proc
 		save()
 			world << "Starting Save"
