@@ -210,10 +210,10 @@ cave/block/amethyst_podium
 		light_intensity = 0.25
 		light_radius = 256
 		light_color = "#ffffff"
-		hue = 0
+		hue = 210
 	New()
 		. = ..()
-		light_source = new(loc, 210, 0.5, 0.5)
+		light_source = new(loc, hue, 1, 0.25)
 		return
 		/*lighting = new(loc)
 		lighting.mouse_opacity = 0
