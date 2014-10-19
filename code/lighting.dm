@@ -52,22 +52,24 @@ light_source
 		spawn()
 			while(!map_handler.loaded)
 				sleep(10)
-			for(var/turf/lighting/L in view(LIGHT_REACH, src))
+			for(var/turf/lighting/L in view(reach, src))
 				L.recalculate()
 	Del()
-		for(var/turf/lighting/L in view(LIGHT_REACH, src))
+		var/old_loc = loc
+		loc = null
+		for(var/turf/lighting/L in view(reach, old_loc))
 			L.recalculate()
 		. = ..()
 	Move(new_loc)
-		var/old_view = view(LIGHT_REACH, src)
+		var/old_view = view(reach, src)
 		. = ..()
-		for(var/turf/T in (view(LIGHT_REACH, src)+old_view))
+		for(var/turf/T in (view(reach, src)+old_view))
 			T.lighting.recalculate()
 		return
 	assign_loc(new_loc)
-		var/old_view = view(LIGHT_REACH, src)
+		var/old_view = view(reach, src)
 		. = ..()
-		for(var/turf/T in view(LIGHT_REACH, src)+old_view)
+		for(var/turf/T in view(reach, src)+old_view)
 			T.lighting.recalculate()
 		return
 turf

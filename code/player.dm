@@ -18,6 +18,7 @@ player
 		. = ..()
 		while(!map_handler.loaded)
 			sleep(10)
+		light_source = new(loc, 0, 0, 0.3, 3)
 		respawn()
 	Login()
 		. = ..()

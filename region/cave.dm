@@ -53,8 +53,15 @@ cave
 			icon_state = "rock_iron"
 			load_bearing = 2
 			opacity = TRUE
-			resource = /tile/iron
+			resource = /tile/iron_ore
 			resource_amount = 2
+			resource_delay = 50
+		coal
+			icon_state = "rock_coal"
+			load_bearing = 2
+			opacity = TRUE
+			resource = /tile/coal
+			resource_amount = 6
 			resource_delay = 50
 		amethyst
 			icon_state = "rock_amethyst"
@@ -225,15 +232,48 @@ cave/block/amethyst_podium
 		M.Scale(light_radius/16)
 		lighting.transform = M*/
 
+
+
+recipe/fire_1
+	ingredients = list("coal")
+	product = /tile/fire/_1
+recipe/fire_2
+	ingredients = list("coal","coal")
+	product = /tile/fire/_2
+recipe/fire_3
+	ingredients = list("coal","coal","coal")
+	product = /tile/fire/_3
+recipe/fire_4
+	ingredients = list("coal","coal","coal","coal")
+	product = /tile/fire/_4
+tile/fire
+	icon = 'cave.dmi'
+	icon_state = "tile_fire"
+	construct = /cave/block/fire
+	_1{ construct = /cave/block/fire{light_reach = 6; life_span = 1200}}
+	_2{ construct = /cave/block/fire{light_reach = 8; life_span = 1800}}
+	_3{ construct = /cave/block/fire{light_reach = 10; life_span = 2400}}
+	_4{ construct = /cave/block/fire{light_reach = LIGHT_REACH; life_span = 3000}}
 cave/block/fire
 	opacity = FALSE
 	icon = 'cave.dmi'
 	icon_state = "fire"
 	resource_delay = 100
+	var
+		life_span = 1800
+		light_reach = LIGHT_REACH
 	New()
 		. = ..()
-		light_source = new(loc, 60, 0.2, 0.7)
-		return
+		light_source = new(loc, 60, 0.2, 0.7, light_reach)
+		if(life_span >= 0)
+			spawn()
+				var/original_lifespan = life_span
+				while(life_span > 0)
+					sleep(300)
+					life_span -= 300
+					del light_source
+					if(life_span <= 0) del src
+					light_source = new(loc, 60, 0.2, 0.7*(life_span/original_lifespan), light_reach)
 
 recipe/amethyst_ring
 	ingredients = list("ring","amethyst")

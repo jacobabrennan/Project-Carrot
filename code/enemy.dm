@@ -92,6 +92,7 @@ enemy/plan
 				user.act(user.tile_move, next_step)
 		reassess()
 			if(intelligence >= 20)
+				if(!target) del src
 				var/turf/dest = locate(target.x,target.y,target.z)
 				var/turf/start = locate(user.x,user.y,user.z)
 				var/within_view = (target in view(user))
