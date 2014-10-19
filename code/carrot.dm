@@ -20,9 +20,6 @@ client/Del()
 	// TODO: Separate out traffic
 	. = ..()
 
-client/Center()
-	map_handler.save()
-	world.Reboot()
 // End Message of the Day
 
 /*
@@ -82,7 +79,7 @@ atom/movable/proc/center(atom/movable/ref)
 	var/offset_x = (ref.step_x+ref.bound_x+ref.bound_width /2) - (bound_x+bound_width /2)//reference.step_x + (reference.bound_width -bound_width )/2
 	var/offset_y = (ref.step_y+ref.bound_y+ref.bound_height/2) - (bound_y+bound_height/2)//reference.step_y + (reference.bound_height-bound_height)/2
 	if(!Move(ref.loc, 0, offset_x, offset_y))
-		loc = ref.loc
+		assign_loc(ref.loc)
 		step_x = offset_x
 		step_y = offset_y
 atom/movable/proc/get_center()

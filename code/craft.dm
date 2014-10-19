@@ -179,9 +179,11 @@ tile/iron
 	icon_state = "iron"
 	resource = "iron"
 tile/amethyst
-	luminosity = 3
 	icon_state = "amethyst"
 	resource = "amethyst"
+	New()
+		. = ..()
+		light_source = new(loc, 210, 1, 0.2, 4)
 
 recipe/iron
 	ingredients = list("iron_ore","wood")

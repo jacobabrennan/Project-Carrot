@@ -44,13 +44,19 @@ player
 world
 	New()
 		. = ..()
-		map_handler.load()
+		//map_handler.load()
+		map_handler.loaded = TRUE
+client/Northwest()
+	world.Reboot()
+client/Center()
+	map_handler.save()
+	world.Reboot()
 var/map_handler/map_handler = new()
 map_handler
 	parent_type = /dmm_suite
 	var
 		loaded = FALSE
-		map_name = "maps/live_test.dmm"
+		map_name = "maps/poop_face.dmm"
 	proc
 		save()
 			world << "Starting Save"

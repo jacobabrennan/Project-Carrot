@@ -36,7 +36,9 @@ player
 		respawn()
 			var/block/bed/player_bed = locate("[ckey]_start")
 			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : (locate("town_start") || locate(50,50,1))
-			loc = start_tile
+			assign_loc(start_tile)
+			if(light_source)
+				light_source.Move(start_tile)
 			if(player_bed)
 				center(player_bed)
 			else

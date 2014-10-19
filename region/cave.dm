@@ -1,6 +1,6 @@
 cave
 	parent_type = /region
-	luminosity = 0
+	//luminosity = 1
 	spawn_rate = 196
 	enemy_groups = list(
 		list(/cave/enemy/jel_1,/cave/enemy/jel_1,/cave/enemy/jel_1),
@@ -58,13 +58,16 @@ cave
 			resource_delay = 50
 		amethyst
 			icon_state = "rock_amethyst"
-			bp_cost = 10
-			luminosity = 5
+			bp_cost = 0//10
+//			luminosity = 5
 			load_bearing = FALSE
 			opacity = TRUE
 			resource = /tile/amethyst
 			resource_amount = 1
 			resource_delay = 50
+			New()
+				. = ..()
+				light_source = new(loc, 210, 1, 0.25,5)
 
 
 recipe/cave_bed
@@ -137,12 +140,12 @@ cave/block/stone_door
 		open()
 			open = TRUE
 			density = FALSE
-			opacity = FALSE
+			change_opacity(FALSE)
 			icon_state = "door_open"
 		close()
 			open = FALSE
 			density = TRUE
-			opacity = TRUE
+			change_opacity(TRUE)
 			icon_state = "door"
 
 
@@ -171,11 +174,11 @@ cave/block/stone_window
 	proc
 		open()
 			open = TRUE
-			opacity = FALSE
+			change_opacity(FALSE)
 			icon_state = "window_open"
 		close()
 			open = FALSE
-			opacity = TRUE
+			change_opacity(TRUE)
 			icon_state = "window"
 
 recipe/amethyst_podium
@@ -192,18 +195,20 @@ cave/block/amethyst_podium
 	resource = /tile/amethyst
 	resource_amount = 1
 	resource_delay = 100
-	luminosity = 6
+//	luminosity = 6
 	bound_width = 16
 	bound_x = 8
 	bound_height = 24
 	var
-		atom/movable/lighting
-		light_intensity = 0.4
+		light_intensity = 0.25
 		light_radius = 256
-		light_color = "#88ffff"
+		light_color = "#ffffff"
+		hue = 0
 	New()
 		. = ..()
-		lighting = new(loc)
+		light_source = new(loc, 210, 0.5, 0.5)
+		return
+		/*lighting = new(loc)
 		lighting.mouse_opacity = 0
 		lighting.layer = EFFECTS_LAYER
 		lighting.bound_x = bound_x
@@ -218,10 +223,17 @@ cave/block/amethyst_podium
 		lighting.blend_mode = BLEND_MULTIPLY
 		var/matrix/M = matrix()
 		M.Scale(light_radius/16)
-		lighting.transform = M
-	Del()
-		del lighting
+		lighting.transform = M*/
+
+cave/block/fire
+	opacity = FALSE
+	icon = 'cave.dmi'
+	icon_state = "fire"
+	resource_delay = 100
+	New()
 		. = ..()
+		light_source = new(loc, 60, 0.2, 0.7)
+		return
 
 recipe/amethyst_ring
 	ingredients = list("ring","amethyst")

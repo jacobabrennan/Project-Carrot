@@ -8,7 +8,6 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
-#include <iainperegrine\dmm_suite\dmm_suite.dme>
 #include <theodis\pathfinder\Pathfinder.dme>
 #include "code\_defines.dm"
 #include "code\actor.dm"
@@ -18,6 +17,7 @@
 #include "code\craft.dm"
 #include "code\driver.dm"
 #include "code\enemy.dm"
+#include "code\lighting.dm"
 #include "code\path_finding.dm"
 #include "code\player.dm"
 #include "code\player_hud.dm"
@@ -28,7 +28,11 @@
 #include "code\spell_book.dm"
 #include "code\tile.dm"
 #include "code\x_wooden_hut.dm"
+#include "code\dmm_suite\dmm_suite.dm"
+#include "code\dmm_suite\reader.dm"
+#include "code\dmm_suite\writer.dm"
 #include "ignore\hub.dm"
+#include "maps\live_test.dmm"
 #include "region\cave.dm"
 #include "region\forest.dm"
 // END_INCLUDE

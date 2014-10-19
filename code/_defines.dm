@@ -2,18 +2,20 @@
 #define HOTSPOT_OFFSET (TILE_SIZE/2)
 // Note that the above "TILE" refers to a specific type of object, /tile, and not to world.icon_size
 #define HOTBAR_TILE_SIZE (TILE_SIZE+2)
-#define HOTBAR_LAYER 8
-#define HUD_TILE_LAYER 9
 #define BLOCK_UNDER_LAYER 3
 #define BLOCK_OVER_LAYER 4
 #define TILE_LAYER 5
 #define ACTOR_LAYER 6
-#define EFFECTS_LAYER 7
+#define lighting_LAYER 7
+#define EFFECTS_LAYER 8
+#define HOTBAR_LAYER 9
+#define HUD_TILE_LAYER 10
 
 #define PRIMARY 16
 #define SECONDARY 32
 
 #define TOTEM_RANGE 4
+#define LIGHT_REACH 12
 #define PINGOUT_TIME 60
 
 #define TARGET_NONE 0
@@ -64,3 +66,11 @@ f(4,n) = (n**3 + n)/2
  9:396
 10:505
 */
+
+#define DMM_IGNORE_AREAS 1
+#define DMM_IGNORE_TURFS 2
+#define DMM_IGNORE_OBJS 4
+#define DMM_IGNORE_NPCS 8
+#define DMM_IGNORE_PLAYERS 16
+#define DMM_IGNORE_MOBS 24
+#define DMM_IGNORE_TURF_VARS 32

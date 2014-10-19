@@ -1,10 +1,8 @@
 actor
 	parent_type = /mob
 	icon_state = "diamond"
-	bound_x = 8
-	bound_y = 8
-	bound_height = 16
-	bound_width = 16
+	bound_height = 24
+	bound_width = 24
 	step_size = 3
 	layer = ACTOR_LAYER
 	var

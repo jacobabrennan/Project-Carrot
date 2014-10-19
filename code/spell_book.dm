@@ -14,6 +14,7 @@ tile/spell_book
 		)
 tile/spell
 	Move(){}
+	MouseDrop(){}
 	New()
 		. = ..()
 		mouse_drag_pointer = null

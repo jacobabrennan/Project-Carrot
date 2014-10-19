@@ -92,12 +92,12 @@ block/wooden_door
 		open()
 			open = TRUE
 			density = FALSE
-			opacity = FALSE
+			change_opacity(FALSE)
 			icon_state = "door_open"
 		close()
 			open = FALSE
 			density = TRUE
-			opacity = TRUE
+			change_opacity(TRUE)
 			icon_state = "door"
 
 
@@ -126,9 +126,9 @@ block/wooden_window
 	proc
 		open()
 			open = TRUE
-			opacity = FALSE
+			change_opacity(FALSE)
 			icon_state = "window_open"
 		close()
 			open = FALSE
-			opacity = TRUE
+			change_opacity(TRUE)
 			icon_state = "window"
