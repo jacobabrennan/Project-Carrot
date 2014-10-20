@@ -1,3 +1,10 @@
+player/Login()
+	. = ..()
+	if(client.connection == "web")
+		see_invisible = 0
+	else
+		see_invisible = 1
+
 atom/movable
 	var
 		tmp/light_source/light_source
@@ -75,9 +82,11 @@ light_source
 		for(var/turf/lighting/L in (view(reach, src)+old_view))
 			L.recalculate()
 		return
+
 turf
 	var
 		tmp/turf/lighting/lighting
+		tmp/turf/lighting_web/lighting_web
 	New()
 		. = ..()
 		if(!lighting)
@@ -89,19 +98,23 @@ turf
 		//blend_mode = BLEND_SUBTRACT
 		mouse_opacity = 0
 		ignore = TRUE
+		invisibility = 1
 		var
+			turf/lighting/web_shade/web_shade
 			image/red
 			image/green
 			image/blue
+			white_value = 0 // Web Client Only
 			red_value = 0
 			green_value = 0
 			blue_value = 0
 		Move(){}
-		New(loc)
+		New(new_loc)
 			. = ..()
-			red   = image('rectangles.dmi',src,"light",lighting_LAYER)
-			green = image('rectangles.dmi',src,"light",lighting_LAYER)
-			blue  = image('rectangles.dmi',src,"light",lighting_LAYER)
+			web_shade = new(new_loc)
+			red   = image('rectangles.dmi',src,"light",LIGHTING_LAYER)
+			green = image('rectangles.dmi',src,"light",LIGHTING_LAYER)
+			blue  = image('rectangles.dmi',src,"light",LIGHTING_LAYER)
 			red.blend_mode = BLEND_SUBTRACT
 			green.blend_mode = BLEND_SUBTRACT
 			blue.blend_mode = BLEND_SUBTRACT
@@ -114,7 +127,9 @@ turf
 				red_value   += amo_r
 				green_value += amo_g
 				blue_value  += amo_b
+				white_value = max(red_value,green_value,blue_value)
 				overlays.Cut()
+				web_shade.alpha = max(0, min(255, ((1 - white_value)*255)))
 				if(red_value <= 1)
 					red.alpha   = max(0, min(255, ((1 - red_value  )*255)))
 					red.blend_mode = BLEND_SUBTRACT
@@ -133,8 +148,6 @@ turf
 				else
 					blue.alpha   = max(0, min(255, (blue_value-1)*32))
 					blue.blend_mode = BLEND_ADD
-				//green.alpha = max(0, min(255, ((1 - green_value)*255)))
-				//blue.alpha  = max(0, min(255, ((1 - blue_value )*255)))
 				overlays.Add(red, green, blue)
 			add_light_source(light_source/source, flag)
 				if(!istype(source.loc, /turf)) return
@@ -143,13 +156,8 @@ turf
 				fall_off = sqrt(1-(1-fall_off)**2)
 				var/list/rgb = hsv2rgb(source.hue, source.saturation, fall_off)
 				adjust_light(rgb["red"],rgb["green"],rgb["blue"])
-			/*remove_light_source(light_source/source, old_loc)
-				if(!old_loc) old_loc = source.loc
-				var/fall_off = source.value * min(1, max(0, (1 - get_dist(loc, source.loc)/LIGHT_REACH)))
-				fall_off = sqrt(1-(1-fall_off)**2)
-				var/list/rgb = hsv2rgb(source.hue, source.saturation, fall_off)
-				adjust_light(-rgb["red"],-rgb["green"],-rgb["blue"])*/
 			recalculate(flag)
+				white_value = 0
 				red_value = 0
 				green_value = 0
 				blue_value = 0
@@ -181,3 +189,18 @@ turf
 				rgb["green"] = (rgb_prime[2]+m)
 				rgb["blue" ] = (rgb_prime[3]+m)
 				return rgb
+		web_shade
+			parent_type = /obj
+			mouse_opacity = 0
+			ignore = TRUE
+			Move(){}
+			icon = 'rectangles.dmi'
+			icon_state = "shade"
+			alpha = 255
+	/*Shadow
+
+	Invisible Icon
+
+	RGB Subtraction Mask
+
+	MAP (FULLY LIT)*/

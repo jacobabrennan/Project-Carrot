@@ -41,7 +41,8 @@ turf
 				else if(x != t.x && y != t.y) return 1.4
 				return 1
 			else
-				return get_dist(src,t)
+				return sqrt((src.x - t.x) * (src.x - t.x) + (src.y - t.y) * (src.y - t.y))
+				//return get_dist(src,t)
 proc
 	//Done after running into the first destination object
 	Finished(turf/t)

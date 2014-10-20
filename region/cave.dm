@@ -260,12 +260,13 @@ cave/block/fire
 	icon = 'cave.dmi'
 	icon_state = "fire"
 	resource_delay = 100
+	ignore = TRUE
 	var
 		life_span = 1800
 		light_reach = LIGHT_REACH
 	New()
 		. = ..()
-		light_source = new(loc, 60, 0.2, 0.7, light_reach)
+		light_source = new(loc, 30, 0.2, 0.7, light_reach)
 		if(life_span >= 0)
 			spawn()
 				var/original_lifespan = life_span

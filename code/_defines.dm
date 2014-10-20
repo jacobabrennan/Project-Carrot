@@ -6,7 +6,7 @@
 #define BLOCK_OVER_LAYER 4
 #define TILE_LAYER 5
 #define ACTOR_LAYER 6
-#define lighting_LAYER 7
+#define LIGHTING_LAYER 7
 #define EFFECTS_LAYER 8
 #define HOTBAR_LAYER 9
 #define HUD_TILE_LAYER 10
@@ -17,6 +17,7 @@
 #define TOTEM_RANGE 4
 #define LIGHT_REACH 12
 #define PINGOUT_TIME 60
+#define TILE_TRANSLATE_TIME 5
 
 #define TARGET_NONE 0
 #define TARGET_TURF 1

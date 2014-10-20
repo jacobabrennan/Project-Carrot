@@ -1,7 +1,15 @@
 // Message of the Day //
 var
 	motd = {"
-Want to help out? We need graphics, audio, and programming. We also need help from someone who knows how to use the new animate() feature. Contact JacobABrennan for more info, or check out the GitHub repo if that's how you roll.
+<b><big>Quick How to</big>:
+	Click to move. Drag and Drop to move tiles.
+	Kill enemies to gain building points.
+	Click the Pick-Axe tile to gather resources instead of attacking.
+	Fill your crafting bar with 4 tiles to craft (click the crafting bar to add blank tiles).</b>
+
+The game is a work in progress, and more is being added every day. The lighting system, for instance, was just added two days ago.
+
+Think you could make the game better? Let me know, it'd be great to have other players making the game. Or, you could just contribute to the GitHub repo, if that's how you roll.
 	GitHub: <a href="https://github.com/jacobabrennan/carrot">https://github.com/jacobabrennan/carrot</a>
 	BYOND Hub: <a href="http://www.byond.com/games/IainPeregrine/project_carrot">IainPeregrine.project_carrot</a>
 	Email: <a href="email:jacobabrennan@gmail.com">JacobABrennan@gmail.com</a>
@@ -9,7 +17,7 @@ Want to help out? We need graphics, audio, and programming. We also need help fr
 	"}
 proc
 	motd(client/client)
-		client << "<b>Ahoy!:</b> [motd]"
+		client << "[motd]"
 client/New()
 	. = ..()
 	motd(src)

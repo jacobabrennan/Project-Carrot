@@ -36,8 +36,8 @@ tile
 		. = ..()
 	Enter()
 		return FALSE
-	Move(turf/new_loc, new_dir, new_step_x, new_step_y)
-		if(construct && istype(new_loc, /turf))
+	Move(turf/new_loc, new_dir, new_step_x, new_step_y, construct_override)
+		if(!construct_override && construct && istype(new_loc, /turf))
 			if(new_loc.dense())
 				return
 			. = ..()
@@ -53,11 +53,31 @@ tile
 				if(B.owner_ckey != user.ckey)
 					user << "You can't build so close to others' property."
 					return
-			new construct(offset_turf)
-			del src
+			mouse_opacity = 0
+			spawn(TILE_TRANSLATE_TIME)
+				new construct(offset_turf)
+				del src
 		else
 			. = ..()
+	Move()
+		var/turf/old_loc = loc
+		var/old_px_x = step_x
+		var/old_px_y = step_y
+		. = ..()
+		var/turf/new_loc = loc
+		if(!.) return
+		if(!istype(old_loc) || !istype(new_loc)) return
+		var/offset_x = (old_loc.x - loc.x)*world.icon_size + (old_px_x - step_x)
+		var/offset_y = (old_loc.y - loc.y)*world.icon_size + (old_px_y - step_y)
+		pixel_x = offset_x
+		pixel_y = offset_y
+		animate(src, pixel_x = 0, pixel_y = 0, TILE_TRANSLATE_TIME, 0, SINE_EASING)
+
 	proc
+		/*translate(px_x, px_y)
+			pixel_x = px_x
+			pixel_y = px_y
+			animate(src, pixel_x=0, pixel_y=0, 10, 0, EASE_IN)*/
 		target_check(actor/user, atom/target)
 			if((TARGET_NONE|TARGET_RANGE)&target_class)
 				return TRUE

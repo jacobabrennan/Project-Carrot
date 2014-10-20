@@ -25,6 +25,7 @@ player/hud
 		player/hud/hotbar/equipment/equipment
 		player/hud/hotbar/skills/skills
 		player/hud/hotbar/crafting/crafting
+		player/hud/background/background
 	New()
 		. = ..()
 		inventory = new(src)
@@ -39,6 +40,8 @@ player/hud
 		health_bar.setup()
 		// CP Display
 		bp_display = new(src)
+		// Background (clouds, needed to register clicks out of view)
+		background = new(src)
 	Del()
 		del inventory
 		del equipment
@@ -47,6 +50,7 @@ player/hud
 		del selection_display
 		del health_bar
 		del bp_display
+		del background
 		. = ..()
 	proc
 		connect(player/new_player)
@@ -56,6 +60,20 @@ player/hud
 			bp_display.connect(new_player)
 			for(var/player/hud/hotbar/_hotbar in list(inventory,equipment,skills,crafting))
 				_hotbar.connect(new_player)
+			background.connect(new_player)
+
+player/hud/background
+	parent_type = /obj
+	icon = 'background.png'
+	screen_loc = "SOUTHWEST"
+	layer = AREA_LAYER-1
+	var
+		player/player
+	proc
+		connect(player/new_player)
+			player = new_player
+			player.client.screen.Add(src)
+
 player/hud/health_bar
 	parent_type = /obj
 	layer = HOTBAR_LAYER

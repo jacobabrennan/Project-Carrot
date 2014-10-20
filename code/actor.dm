@@ -70,7 +70,7 @@ actor/action
 			//           start,        end,                adjacent,                     dist,maxnodes,maxnodedepth,mintargetdist,           minnodedist)
 		if(path && path.len)
 			path.Remove(path[1])
-			if(istype(new_target, /block))
+			if(istype(new_target, /block) && path.len)
 				path.Remove(path[path.len])
 		for(var/turf/T in path)
 			var/dense = FALSE

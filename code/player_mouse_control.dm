@@ -1,3 +1,5 @@
+client
+	Move(){}
 player/hud/hotbar/crafting
 	Click(location, control, params)
 		var/list/params_list = params2list(params)
@@ -12,6 +14,31 @@ player/hud/hotbar/crafting
 			pixel_y += 130 - 32 // TODO
 
 		add_tile(new /player/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
+player/hud/background
+	Click(location, control, params)
+		var/list/params_list = params2list(params)
+		var/screen_loc = params_list["screen-loc"]
+		var/sep_pos = findtext(screen_loc, ",")
+		var/screen_x = copytext(screen_loc, 1, sep_pos)
+		var/screen_y = copytext(screen_loc, sep_pos+1)
+		sep_pos = findtext(screen_x, ":")
+		var/screen_atom_x = text2num(copytext(screen_x, 1, sep_pos))
+		var/screen_px_x   = text2num(copytext(screen_x, sep_pos+1))
+		sep_pos = findtext(screen_y, ":")
+		var/screen_atom_y = text2num(copytext(screen_y, 1, sep_pos))
+		var/screen_px_y   = text2num(copytext(screen_y, sep_pos+1))
+		var/map_size = ((world.view*2)+1)*world.icon_size
+		var/offset_x = (screen_atom_x*world.icon_size)+screen_px_x - (map_size/2) - (world.icon_size)
+		var/offset_y = (screen_atom_y*world.icon_size)+screen_px_y - (map_size/2) - (world.icon_size)
+		var/center_x = (player.x*world.icon_size)+player.step_x+player.bound_x+player.bound_width /2
+		var/center_y = (player.y*world.icon_size)+player.step_y+player.bound_y+player.bound_height/2
+		var/target_x = center_x + offset_x
+		var/target_y = center_y + offset_y
+		var/target_atom_x = round(target_x/world.icon_size)
+		var/target_atom_y = round(target_y/world.icon_size)
+		var/target_px_x   = target_x%world.icon_size
+		var/target_px_y   = target_y%world.icon_size
+		player.target_location(locate(target_atom_x, target_atom_y, player.z), target_px_x, target_px_y)
 turf
 	Click(location, control, params)
 		. = ..()
@@ -74,7 +101,10 @@ tile
 		if(istype(over_obj, /turf) || (istype(over_obj, /block) && !over_obj.density))
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
-			Move(locate(over_obj.x,over_obj.y,over_obj.z), 0, offset_x, offset_y)
+			var/turf/new_loc = locate(over_obj.x,over_obj.y,over_obj.z)
+			if(!istype(loc, /turf))
+				Move(usr.loc, 0, usr.step_x, usr.step_y, TRUE)
+			Move(new_loc, 0, offset_x, offset_y)
 		else if(istype(over_obj, /player/hud/hotbar))
 			var/player/hud/hotbar/over_bar = over_obj
 			offset_x = pixel_x - HOTSPOT_OFFSET
@@ -87,6 +117,11 @@ tile
 			if(usr.client.connection == "web")
 				pixel_y += 130 - 32 // TODO
 
+			if(istype(loc, /turf))
+				new /tile/move_animation(src, loc, step_x, step_y, usr.loc,
+					usr.step_x+usr.bound_x+(usr.bound_width -bound_width )/2,
+					usr.step_y+usr.bound_y+(usr.bound_height-bound_height)/2
+				)
 			over_bar.add_tile(src, pixel_x, pixel_y)
 		/*else if(istype(over_obj, /atom/movable))
 			var/atom/movable/amoo = over_obj
@@ -104,3 +139,18 @@ tile/default
 			P.hud.selection_display.select(src, PRIMARY)
 		if(right)
 			P.hud.selection_display.select(src, SECONDARY)
+tile/move_animation
+	mouse_opacity = 0
+	New(tile/model, old_loc, old_x, old_y, new_loc, new_x, new_y)
+		. = ..()
+		translate(model, old_loc, old_x, old_y, new_loc, new_x, new_y)
+	proc
+		translate(tile/model, old_loc, old_x, old_y, new_loc, new_x, new_y)
+			icon = model.icon
+			icon_state = model.icon_state
+			loc = old_loc
+			step_x = old_x
+			step_y = old_y
+			Move(new_loc, 0, new_x, new_y)
+			spawn(TILE_TRANSLATE_TIME)
+				del src
