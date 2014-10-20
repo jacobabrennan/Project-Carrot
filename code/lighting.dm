@@ -55,7 +55,6 @@ light_source
 		spawn()
 			while(!map_handler.loaded)
 				sleep(10)
-			world << "New Light Source!: [new_loc.x],[new_loc.y],[new_loc.z]"
 			for(var/turf/lighting/L in view(reach, src))
 				L.recalculate()
 	Del()

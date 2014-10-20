@@ -70,6 +70,9 @@ proc
 		. += base
 		. = max(0,min(round(.),base*2))
 		// Okay, perhaps I did write it. I must have been high on shoe pollish, or something.
+	sign(_n)
+		if(_n >= 0) return 1
+		return -1
 
 atom/proc/aloc()
 	var/turf/turf_loc = locate(x,y,z)

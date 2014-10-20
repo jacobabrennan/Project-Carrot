@@ -27,17 +27,15 @@ turf
 				else if(!L[I]) L.Cut(I,I+1)
 			return L
 		WeightDistance(turf/t)
-			var/weight = 1
+			/*var/weight = 1
 			if(locate(/actor) in t) weight += 5
-			if(t.dense())
-				if(t.opaque()) weight += 300
-				else weight += 45
 			if(get_dist(src,t) == 1)
 				if(x != t.x && y != t.y) weight += 1.4
 				return weight
-			else
-				return get_dist(src,t)
+			else*/
+			return get_dist(src,t)
 		AbsDistance(turf/t)
+			return get_dist(src, t)
 			if(get_dist(src,t) == 1)
 				if(locate(/actor) in t) return 5
 				else if(x != t.x && y != t.y) return 1.4
