@@ -9,6 +9,8 @@ player
 	//sight = SEE_PIXELS // Causes problems with the HUD*
 	see_in_dark = 3
 	infra_luminosity = 12
+	icon = 'shadow.dmi'
+	icon_state = "rough"
 	var
 		tile/primary
 		tile/secondary
