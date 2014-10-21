@@ -330,6 +330,11 @@ player/hud/hotbar
 				reference[old_index] = null
 			reference[compound_index] = drop_tile
 			drop_tile.screen_loc = find_screen_loc(compound_index)
+			if(istype(drop_tile.loc, /turf))
+				new /tile/move_animation(drop_tile, drop_tile.loc, drop_tile.step_x, drop_tile.step_y, player.loc,
+					player.step_x+player.bound_x+(player.bound_width -drop_tile.bound_width )/2,
+					player.step_y+player.bound_y+(player.bound_height-drop_tile.bound_height)/2
+				)
 			return drop_tile.Move(src)
 	Exited(tile/drop_tile, atom/new_loc)
 		if(new_loc != src)

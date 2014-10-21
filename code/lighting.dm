@@ -63,24 +63,34 @@ light_source
 			while(!map_handler.loaded)
 				sleep(10)
 			for(var/turf/lighting/L in view(reach, src))
-				L.recalculate()
+				L.add_light_source(src)
 	Del()
 		var/old_loc = loc
 		loc = null
 		for(var/turf/lighting/L in view(reach, old_loc))
-			L.recalculate()
+			L.remove_light_source(src, old_loc)
 		. = ..()
 	Move(new_loc)
+		var/old_loc = loc
 		var/old_view = view(reach, src)
 		. = ..()
-		for(var/turf/lighting/L in (view(reach, src)+old_view))
-			L.recalculate()
+		if(old_loc == loc) return
+		var/new_view = view(reach, src)
+		for(var/turf/lighting/L in old_view)
+			L.remove_light_source(src, old_loc)
+		for(var/turf/lighting/L in new_view)
+			L.add_light_source(src)
 		return
 	assign_loc(new_loc)
+		var/old_loc = loc
 		var/old_view = view(reach, src)
 		. = ..()
-		for(var/turf/lighting/L in (view(reach, src)+old_view))
-			L.recalculate()
+		for(var/turf/lighting/L in old_view)
+			L.remove_light_source(src, old_loc)
+		for(var/turf/lighting/L in view(reach, loc))
+			L.add_light_source(src)
+		/*for(var/turf/lighting/L in (view(reach, src)+old_view))
+			L.recalculate()*/
 		return
 
 turf
@@ -149,14 +159,21 @@ turf
 					blue.alpha   = max(0, min(255, (blue_value-1)*32))
 					blue.blend_mode = BLEND_ADD
 				overlays.Add(red, green, blue)
-			add_light_source(light_source/source, flag)
+			add_light_source(light_source/source)
 				if(!istype(source.loc, /turf)) return
 				var/angular_dist = sqrt((source.loc.x - loc.x)**2 + (source.loc.y - loc.y)**2)
 				var/fall_off = source.value * min(1, max(0, (1 - angular_dist/(source.reach))))
 				fall_off = sqrt(1-(1-fall_off)**2)
 				var/list/rgb = hsv2rgb(source.hue, source.saturation, fall_off)
 				adjust_light(rgb["red"],rgb["green"],rgb["blue"])
-			recalculate(flag)
+			remove_light_source(light_source/source, turf/old_loc)
+				if(!istype(old_loc, /turf)) return
+				var/angular_dist = sqrt((old_loc.x - loc.x)**2 + (old_loc.y - loc.y)**2)
+				var/fall_off = source.value * min(1, max(0, (1 - angular_dist/(source.reach))))
+				fall_off = sqrt(1-(1-fall_off)**2)
+				var/list/rgb = hsv2rgb(source.hue, source.saturation, fall_off)
+				adjust_light(-rgb["red"],-rgb["green"],-rgb["blue"])
+			recalculate()
 				white_value = 0
 				red_value = 0
 				green_value = 0
@@ -164,7 +181,7 @@ turf
 				var/lighted = FALSE
 				for(var/light_source/L in view(LIGHT_REACH, src))
 					lighted = TRUE
-					add_light_source(L, flag)
+					add_light_source(L)
 				if(!lighted)
 					adjust_light(0,0,0)
 			hsv2rgb(hue, saturation, value)
@@ -193,6 +210,7 @@ turf
 			parent_type = /obj
 			mouse_opacity = 0
 			ignore = TRUE
+			layer = LIGHTING_LAYER
 			Move(){}
 			icon = 'rectangles.dmi'
 			icon_state = "shade"

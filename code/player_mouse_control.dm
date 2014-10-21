@@ -98,7 +98,10 @@ tile
 		var/pixel_y = round(text2num(params_list["icon-y"]))
 		var/offset_x// = drag_obj.step_x + pixel_x
 		var/offset_y// = drag_obj.step_y + pixel_y
-		if(istype(over_obj, /turf) || (istype(over_obj, /block) && !over_obj.density))
+		if(over_obj == usr)
+			var/player/P = usr
+			P.hud.inventory.add_tile(src)
+		else if(istype(over_obj, /turf) || (istype(over_obj, /block) && !over_obj.density))
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
 			var/turf/new_loc = locate(over_obj.x,over_obj.y,over_obj.z)
@@ -117,11 +120,6 @@ tile
 			if(usr.client.connection == "web")
 				pixel_y += 130 - 32 // TODO
 
-			if(istype(loc, /turf))
-				new /tile/move_animation(src, loc, step_x, step_y, usr.loc,
-					usr.step_x+usr.bound_x+(usr.bound_width -bound_width )/2,
-					usr.step_y+usr.bound_y+(usr.bound_height-bound_height)/2
-				)
 			over_bar.add_tile(src, pixel_x, pixel_y)
 		/*else if(istype(over_obj, /atom/movable))
 			var/atom/movable/amoo = over_obj
