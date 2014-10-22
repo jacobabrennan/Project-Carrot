@@ -84,8 +84,7 @@ enemy/plan
 				else if(rand()*4<1)
 					reassess()
 				else
-					var/turf/start = locate(user.x,user.y,user.z)
-					user.act(user.tile_move, pick(start.AdjacentTurfs()))
+					user.act(user.tile_move, get_step_rand(user))
 			else
 				var/turf/next_step = path[1]
 				path.Remove(next_step)
@@ -93,11 +92,23 @@ enemy/plan
 		reassess()
 			if(intelligence >= 20)
 				if(!target) del src
-				var/turf/dest = locate(target.x,target.y,target.z)
+				var/atom/dest_proxy = target
+				if(!istype(target, /turf) && !istype(target, /block))
+					dest_proxy = locate(target.x,target.y,target.z)
 				var/turf/start = locate(user.x,user.y,user.z)
 				var/within_view = (target in view(user))
 				var/pursue_range = within_view? round(user.tile_attack.get_range() / world.icon_size) : 0
-				path = AStar(start,dest,/turf/proc/AdjacentTurfs,/turf/proc/WeightDistance,       0,          20, pursue_range,/turf/proc/AbsDistance)
+				path = AStar(
+					start,
+					dest_proxy,
+					/path_finder/proc/adjacent,
+					/path_finder/proc/weight_distance,
+					/path_finder/proc/equality,
+					0,
+					20,
+					pursue_range,
+					/path_finder/proc/abs_distance
+				)
 					//       start, end,                adjacent,                     dist,maxnodes,maxnodedepth,mintargetdist,           minnodedist)
 				intelligence -= 20
 				if((!path || !path.len) && (rand()*4 >= 3) && !(user in view(target)))

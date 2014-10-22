@@ -71,11 +71,17 @@ dmm_suite{
 				This is done to approximate the layered turf effect of DM's map editor.
 				An image of each turf is stored in old_turf_underlays[], and is later added to the new turf's underlays.
 				*/
+			var/list/objects_list = new()
 			for(var/dpos=1;dpos!=0;dpos=findtext(model,",",dpos,0)+1){
 				/*Loop: Identifies each object's data, instantiates it, and reconstitues it's fields.
 					- Each iteration represents one object's data, including type path and field values.
 					*/
 				var/full_def = copytext(model,dpos,findtext(model,",",dpos,0))
+				objects_list.Add(full_def)
+				if(!findtext(copytext(model,dpos,0),",")){break}
+			}
+			for(var/object_index = objects_list.len; object_index > 0; object_index--){
+				var/full_def = objects_list[object_index]
 				var/atom_def = text2path(copytext(full_def,1,findtext(full_def,"{")))
 				var/list/attributes[0]
 				if(findtext(full_def,"{")){
@@ -139,7 +145,6 @@ dmm_suite{
 					_preloader.load(instance)
 					}
 					//End Instanciation
-				if(!findtext(copytext(model,dpos,0),",")){break}
 				sleep(-1)
 				}
 			}

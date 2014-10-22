@@ -22,7 +22,7 @@ region
 			var/list/group = pick(enemy_groups)
 			for(var/path in group)
 				var/list/drange = DijkstraTurfInRange(
-					spawner.loc,/turf/proc/AdjacentTurfs,/turf/proc/AbsDistance,/proc/RangeFinished, P_INCLUDE_FINISHED)
+					spawner.loc,/path_finder/proc/adjacent,/path_finder/proc/abs_distance,/proc/RangeFinished, P_INCLUDE_FINISHED)
 				drange -= view(spawner,2)
 				for(var/turf/T in drange)
 					if(T.dense()) drange.Remove(T)

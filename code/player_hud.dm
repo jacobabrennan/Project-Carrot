@@ -1,3 +1,14 @@
+client/New()
+	. = ..()
+	var/obj/title_screen = new()
+	title_screen.screen_loc = "SOUTHWEST"
+	title_screen.layer = 100
+	title_screen.icon = 'title.png'
+	screen.Add(title_screen)
+	spawn(60)
+		animate(title_screen, alpha = 0, 30)
+		spawn(30)
+			del title_screen
 player
 	iteration_delay = 1
 	var

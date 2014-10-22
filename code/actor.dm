@@ -65,8 +65,20 @@ actor/action
 		if(actor.step_x + actor.bound_x + (actor.bound_width /2) > 32) start_turf = get_step(start_turf, EAST )
 		if(actor.step_y + actor.bound_y + (actor.bound_height/2) > 32) start_turf = get_step(start_turf, NORTH)
 		var/pursue_range = 0
-		var/turf/target_turf = locate(new_target.x, new_target.y, new_target.z)
-		path = AStar(start_turf,target_turf,/turf/proc/AdjacentTurfs,/turf/proc/WeightDistance,      20,          20, pursue_range,/turf/proc/AbsDistance)
+		var/atom/target_proxy = target
+		if(!istype(target, /turf) && !istype(target, /block))
+			target_proxy = locate(new_target.x, new_target.y, new_target.z)
+		path = AStar(
+			start_turf,
+			target_proxy,
+			/path_finder/proc/adjacent,
+			/path_finder/proc/weight_distance,
+			/path_finder/proc/equality,
+			20,
+			20,
+			pursue_range,
+			/path_finder/proc/abs_distance
+		)
 			//           start,        end,                adjacent,                     dist,maxnodes,maxnodedepth,mintargetdist,           minnodedist)
 		if(path && path.len)
 			path.Remove(path[1])

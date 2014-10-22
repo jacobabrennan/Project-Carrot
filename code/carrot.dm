@@ -7,7 +7,7 @@ var
 	Click the Pick-Axe tile to gather resources instead of attacking.
 	Fill your crafting bar with 4 tiles to craft (click the crafting bar to add blank tiles).</b>
 
-The game is a work in progress, and more is being added every day. The lighting system, for instance, was just added two days ago.
+The game is a work in progress, and more is being added every day. You character icon, for example, was just added today.
 
 Think you could make the game better? Let me know, it'd be great to have other players making the game. Or, you could just contribute to the GitHub repo, if that's how you roll.
 	GitHub: <a href="https://github.com/jacobabrennan/carrot">https://github.com/jacobabrennan/carrot</a>
@@ -81,11 +81,35 @@ proc
 	sign(_n)
 		if(_n >= 0) return 1
 		return -1
+	hsv2rgb(hue, saturation, value)
+		if(!isnum(hue)) return
+		var/list/rgb_prime
+		// When 0 ? H < 360, 0 ? S ? 1 and 0 ? V ? 1:
+		var/C = value * saturation
+		var/X = C * (1 - abs((hue/60)%2 - 1))
+		var/m = value - C
+		hue = round(hue)
+		while(hue < 0) hue += 360
+		while(hue >= 360) hue -= 360
+		switch(hue)
+			if(  0 to  59) rgb_prime = list(C,X,0)
+			if( 60 to 119) rgb_prime = list(X,C,0)
+			if(120 to 179) rgb_prime = list(0,C,X)
+			if(180 to 239) rgb_prime = list(0,X,C)
+			if(240 to 299) rgb_prime = list(X,0,C)
+			if(300 to 360) rgb_prime = list(C,0,X)
+		var/list/rgb = list()
+		rgb["red"  ] = (rgb_prime[1]+m)
+		rgb["green"] = (rgb_prime[2]+m)
+		rgb["blue" ] = (rgb_prime[3]+m)
+		return rgb
 
 atom/proc/aloc()
-	var/turf/turf_loc = locate(x,y,z)
-	if(turf_loc)
-		return turf_loc.loc
+	var/atom/current = src
+	while(current.loc)
+		current = current.loc
+		if(istype(current, /area))
+			return current
 atom/movable/proc/center(atom/movable/ref)
 	var/offset_x = (ref.step_x+ref.bound_x+ref.bound_width /2) - (bound_x+bound_width /2)//reference.step_x + (reference.bound_width -bound_width )/2
 	var/offset_y = (ref.step_y+ref.bound_y+ref.bound_height/2) - (bound_y+bound_height/2)//reference.step_y + (reference.bound_height-bound_height)/2

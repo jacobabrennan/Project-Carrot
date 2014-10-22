@@ -1,3 +1,8 @@
+region
+	var
+		ambient_hue = 0
+		ambient_saturation = 0
+		ambient_value = 0
 player/Login()
 	. = ..()
 	if(client.connection == "web")
@@ -40,9 +45,6 @@ atom/movable
 			var/light_reach = view(LIGHT_REACH, loc)
 			for(var/turf/lighting/L in light_reach)
 				L.recalculate()
-client/Northeast()
-	for(var/turf/lighting/L in range(LIGHT_REACH, src))
-		L.recalculate()
 
 light_source
 	parent_type = /obj
@@ -92,7 +94,6 @@ light_source
 		/*for(var/turf/lighting/L in (view(reach, src)+old_view))
 			L.recalculate()*/
 		return
-
 turf
 	var
 		tmp/turf/lighting/lighting
@@ -101,7 +102,7 @@ turf
 		. = ..()
 		if(!lighting)
 			lighting = locate() in src
-		if(!lighting)
+		if(!lighting && istype(loc, /region))
 			lighting = new(src)
 	lighting
 		parent_type = /obj
@@ -131,7 +132,9 @@ turf
 			red.color   = "#f00"
 			green.color = "#0f0"
 			blue.color  = "#00f"
-			adjust_light(0,0,0)
+			var/region/aloc = aloc(new_loc)
+			var/list/ambient = hsv2rgb(aloc.ambient_hue, aloc.ambient_saturation, aloc.ambient_value)
+			adjust_light(ambient["red"],ambient["green"],ambient["blue"])
 		proc
 			adjust_light(amo_r, amo_g, amo_b)
 				red_value   += amo_r
@@ -178,34 +181,11 @@ turf
 				red_value = 0
 				green_value = 0
 				blue_value = 0
-				var/lighted = FALSE
+				var/region/aloc = aloc(src)
+				var/list/ambient = hsv2rgb(aloc.ambient_hue, aloc.ambient_saturation, aloc.ambient_value)
+				adjust_light(ambient["red"],ambient["green"],ambient["blue"])
 				for(var/light_source/L in view(LIGHT_REACH, src))
-					lighted = TRUE
 					add_light_source(L)
-				if(!lighted)
-					adjust_light(0,0,0)
-			hsv2rgb(hue, saturation, value)
-				if(!isnum(hue)) return
-				var/list/rgb_prime
-				// When 0 ? H < 360, 0 ? S ? 1 and 0 ? V ? 1:
-				var/C = value * saturation
-				var/X = C * (1 - abs((hue/60)%2 - 1))
-				var/m = value - C
-				hue = round(hue)
-				while(hue < 0) hue += 360
-				while(hue >= 360) hue -= 360
-				switch(hue)
-					if(  0 to  59) rgb_prime = list(C,X,0)
-					if( 60 to 119) rgb_prime = list(X,C,0)
-					if(120 to 179) rgb_prime = list(0,C,X)
-					if(180 to 239) rgb_prime = list(0,X,C)
-					if(240 to 299) rgb_prime = list(X,0,C)
-					if(300 to 360) rgb_prime = list(C,0,X)
-				var/list/rgb = list()
-				rgb["red"  ] = (rgb_prime[1]+m)
-				rgb["green"] = (rgb_prime[2]+m)
-				rgb["blue" ] = (rgb_prime[3]+m)
-				return rgb
 		web_shade
 			parent_type = /obj
 			mouse_opacity = 0

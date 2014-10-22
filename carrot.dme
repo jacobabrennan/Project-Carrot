@@ -9,7 +9,7 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
-#include <theodis\pathfinder\Pathfinder.dme>
+#include <theodis\priorityqueue\PriorityQueue.dme>
 #include "code\_defines.dm"
 #include "code\actor.dm"
 #include "code\block.dm"
@@ -27,6 +27,7 @@
 #include "code\region.dm"
 #include "code\save_load.dm"
 #include "code\spell_book.dm"
+#include "code\theodis_pathfinder.dm"
 #include "code\tile.dm"
 #include "code\x_wooden_hut.dm"
 #include "code\dmm_suite\dmm_suite.dm"
@@ -34,5 +35,6 @@
 #include "code\dmm_suite\writer.dm"
 #include "ignore\hub.dm"
 #include "region\cave.dm"
+#include "region\cave_amethyst.dm"
 #include "region\forest.dm"
 // END_INCLUDE

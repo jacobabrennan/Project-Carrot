@@ -2,6 +2,9 @@ cave
 	parent_type = /region
 	//luminosity = 1
 	spawn_rate = 196
+	ambient_hue = 0
+	ambient_saturation = 0
+	ambient_value = 0
 	enemy_groups = list(
 		list(/cave/enemy/jel_1,/cave/enemy/jel_1,/cave/enemy/jel_1),
 		list(/cave/enemy/jel_2),
@@ -116,7 +119,7 @@ cave/block/stone_wall
 	opacity = TRUE
 	icon = 'cave.dmi'
 	icon_state = "wall"
-	load_bearing = 4
+	load_bearing = 8
 	resource = /tile/stone
 	resource_amount = 1
 	resource_delay = 100
@@ -213,7 +216,7 @@ cave/block/amethyst_podium
 		hue = 210
 	New()
 		. = ..()
-		light_source = new(loc, hue, 1, 0.25)
+		light_source = new(loc, hue, 0.5, 0.25)
 		return
 		/*lighting = new(loc)
 		lighting.mouse_opacity = 0

@@ -11,11 +11,15 @@ player
 	infra_luminosity = 12
 	icon = 'shadow.dmi'
 	icon_state = "rough"
+	bound_x = 8
+	bound_width = 16
+	bound_height = 16
 	var
 		tile/primary
 		tile/secondary
 		build_points = 0
 		player/logout_timer/logout_timer
+		color_assigned = FALSE
 	New()
 		. = ..()
 		spawn()
@@ -23,10 +27,30 @@ player
 				sleep(10)
 			respawn()
 			light_source = new(loc, 0, 0, 0.2, 3)
+
 	Login()
 		. = ..()
 		if(logout_timer)
 			del logout_timer
+		// Assign random but consistent color using md5(key)
+		if(!color_assigned)
+			var/hash_browns = md5(key)
+			if(key == "Kaiochao")
+				hash_browns = md5("KaioChao")
+			var/hue = 0
+			for(var/II = 1 to length(hash_browns))
+				hue += text2ascii(hash_browns, II)
+			hue %= 360
+			color_assigned = hsv2rgb(hue, 0.7, 0.2)
+			color_assigned = rgb(
+				color_assigned["red"  ] * 255,
+				color_assigned["green"] * 255,
+				color_assigned["blue" ] * 255
+			)
+			var/icon/I = icon(icon)
+			I.SwapColor(rgb(0,51,51), color_assigned)
+			icon = I
+		//
 		connect(src)
 	Logout()
 		. = ..()

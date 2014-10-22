@@ -6,43 +6,52 @@ turf
 		opaque()
 			for(var/block/B in src)
 				if(B.opacity) return B
-		AdjacentTurfs()
+path_finder
+	proc
+		equality(a,b)
+			return (a == b)
+		adjacent(var/atom/A)
+			if(!istype(A, /turf)) return list()
 			var/list/L = list()
-			var/turf/n = get_step(src,NORTH)
-			var/turf/s = get_step(src,SOUTH)
-			var/turf/e = get_step(src,EAST)
-			var/turf/w = get_step(src,WEST)
+			var/turf/n = get_step(A,NORTH)
+			var/turf/s = get_step(A,SOUTH)
+			var/turf/e = get_step(A,EAST)
+			var/turf/w = get_step(A,WEST)
 			L.Add(n,s,e,w)
 			var/nd = n? n.dense() : TRUE
 			var/sd = s? s.dense() : TRUE
 			var/ed = e? e.dense() : TRUE
 			var/wd = w? w.dense() : TRUE
-			if(!nd && !ed) L.Add(get_step(src,NORTHEAST))
-			if(!nd && !wd) L.Add(get_step(src,NORTHWEST))
-			if(!sd && !ed) L.Add(get_step(src,SOUTHEAST))
-			if(!sd && !wd) L.Add(get_step(src,SOUTHWEST))
+			if(!nd && !ed) L.Add(get_step(A,NORTHEAST))
+			if(!nd && !wd) L.Add(get_step(A,NORTHWEST))
+			if(!sd && !ed) L.Add(get_step(A,SOUTHEAST))
+			if(!sd && !wd) L.Add(get_step(A,SOUTHWEST))
+			var/list/LB = new()
+			for(var/block/B in A)
+				LB.Add(B)
 			for(var/I = L.len to 1 step -1)
 				var/turf/T = L[I]
-				if(!L[I] || T.dense()) L.Cut(I,I+1)
+				for(var/block/B in T)
+					LB.Add(B)
+				if(!T || T.dense()) L.Cut(I,I+1)
 				else if(!L[I]) L.Cut(I,I+1)
+			L.Add(LB)
 			return L
-		WeightDistance(turf/t)
+		weight_distance(atom/A, atom/B)
 			/*var/weight = 1
 			if(locate(/actor) in t) weight += 5
 			if(get_dist(src,t) == 1)
 				if(x != t.x && y != t.y) weight += 1.4
 				return weight
 			else*/
-			return get_dist(src,t)
-		AbsDistance(turf/t)
-			return get_dist(src, t)
-			if(get_dist(src,t) == 1)
-				if(locate(/actor) in t) return 5
-				else if(x != t.x && y != t.y) return 1.4
+			return get_dist(A, B)
+		abs_distance(atom/A, atom/B)
+			if(get_dist(A, B) == 1)
+				if(locate(/actor) in B) return 5
+				else if(A.x != B.x && A.y != B.y) return 1.4
 				return 1
 			else
-				return sqrt((src.x - t.x) * (src.x - t.x) + (src.y - t.y) * (src.y - t.y))
-				//return get_dist(src,t)
+				return sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y))
 proc
 	//Done after running into the first destination object
 	Finished(turf/t)

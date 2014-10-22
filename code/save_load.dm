@@ -46,8 +46,8 @@ world
 		. = ..()
 		map_handler.load()
 		//map_handler.loaded = TRUE
-client/Northwest()
-	world.Reboot()
+/*client/Northwest()
+	world.Reboot()*/
 client/Center()
 	map_handler.save()
 	world.Reboot()
