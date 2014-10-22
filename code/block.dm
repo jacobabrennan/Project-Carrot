@@ -12,7 +12,8 @@ block
 		exaustable = TRUE
 	proc
 		gather(player/gatherer)
-			if(!istype(gatherer)) return
+			if(!istype(gatherer))
+				return
 			if(resource && resource_amount && destroyable)
 				if(gatherer.build_points < bp_cost)
 					// TODO: Display "can't gather" animation of some sort

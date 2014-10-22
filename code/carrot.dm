@@ -7,7 +7,8 @@ var
 	Click the Pick-Axe tile to gather resources instead of attacking.
 	Fill your crafting bar with 4 tiles to craft (click the crafting bar to add blank tiles).</b>
 
-The game is a work in progress, and more is being added every day. You character icon, for example, was just added today.
+The game is a work in progress, and more is being added every day. What's new today?:
+	Finally, a Title Screen!
 
 Think you could make the game better? Let me know, it'd be great to have other players making the game. Or, you could just contribute to the GitHub repo, if that's how you roll.
 	GitHub: <a href="https://github.com/jacobabrennan/carrot">https://github.com/jacobabrennan/carrot</a>

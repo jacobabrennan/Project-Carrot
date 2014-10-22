@@ -46,8 +46,8 @@ world
 		. = ..()
 		map_handler.load()
 		//map_handler.loaded = TRUE
-/*client/Northwest()
-	world.Reboot()*/
+client/Northwest()
+	world.Reboot()
 client/Center()
 	map_handler.save()
 	world.Reboot()
@@ -61,7 +61,7 @@ map_handler
 		save()
 			world << "Starting Save"
 			var/turf/south_west_deep = locate(1,1,1)
-			var/turf/north_east_shallow = locate(world.maxx,world.maxy,world.maxz)
+			var/turf/north_east_shallow = locate(world.maxx,world.maxy,1)
 			var/file_text = write_map(south_west_deep, north_east_shallow, flags = DMM_IGNORE_MOBS|DMM_IGNORE_TURF_VARS)
 			if(fexists(map_name))
 				fdel(map_name)

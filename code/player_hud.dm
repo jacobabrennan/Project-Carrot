@@ -5,8 +5,8 @@ client/New()
 	title_screen.layer = 100
 	title_screen.icon = 'title.png'
 	screen.Add(title_screen)
-	spawn(60)
-		animate(title_screen, alpha = 0, 30)
+	spawn(0)
+		animate(title_screen, alpha = 0, 30, null, CIRCULAR_EASING|EASE_IN)
 		spawn(30)
 			del title_screen
 player
@@ -382,12 +382,20 @@ player/hud/hotbar/crafting
 	Entered(tile/drop_tile)
 		. = ..()
 		for(var/I = 1; I <= reference.len; I++)
-			if(!reference[I])
+			if(reference[I])
+				icon_state = "crafting_ready"
 				return
-		var result = recipe_manager.craft(player, reference.Copy())
-		garbage.temp_storage(result)
-		if(result)
-			add_tile(result, 1)
+	Exited()
+		. = ..()
+		for(var/I = 1; I <= reference.len; I++)
+			if(reference[I])
+				return
+		icon_state = "crafting"
+		//var result = recipe_manager.craft(player, reference.Copy())
+		//garbage.temp_storage(result)
+		//if(result)
+		//	add_tile(result, 1)
+	/*
 	tile_filler
 		parent_type = /tile/value
 		icon_state = "filler"
@@ -397,7 +405,7 @@ player/hud/hotbar/crafting
 			if(!istype(new_loc) && new_loc != garbage)
 				Move(garbage)
 		Click()
-			Move(garbage)
+			Move(garbage)*/
 player/hud/hotbar/equipment
 	align_x = "WEST"
 	align_y = "Center"

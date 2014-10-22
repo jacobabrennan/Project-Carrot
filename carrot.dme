@@ -37,4 +37,5 @@
 #include "region\cave.dm"
 #include "region\cave_amethyst.dm"
 #include "region\forest.dm"
+#include "region\tutorial.dm"
 // END_INCLUDE

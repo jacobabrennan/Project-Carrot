@@ -167,7 +167,8 @@ tile/default/gather
 	recharge_time = 30
 	use(player/user, block/target, offset_x, offset_y)
 		. = ..()
-		if(!istype(target)) return
+		if(!istype(target))
+			return
 		for(var/block/bed/B in range(TOTEM_RANGE, target))
 			if(!istype(user))
 				return

@@ -5,15 +5,23 @@ player/hud/hotbar/crafting
 		var/list/params_list = params2list(params)
 		var/pixel_x = round(text2num(params_list["icon-x"]))
 		var/pixel_y = round(text2num(params_list["icon-y"]))
-
-		// strangeness with the icon offset in the web client
-		// further testing would be nice in order to file a bug report
-		// 130 = height of the HUD object
-		// 32 = tile height, presumably
-		if(usr.client.connection == "web")
-			pixel_y += 130 - 32 // TODO
-
-		add_tile(new /player/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
+		var/click_index = find_slot(pixel_x, pixel_y)
+		if(click_index == 0)
+			if(!(locate(/tile) in reference)) return
+		//add_tile(new /player/hud/hotbar/crafting/tile_filler(), pixel_x, pixel_y)
+			var result = recipe_manager.craft(player, reference.Copy())
+			garbage.temp_storage(result)
+			if(result)
+				var/inv_space = FALSE
+				for(var/I = 1 to player.hud.inventory.reference.len)
+					if(!player.hud.inventory.reference[I])
+						inv_space = I
+						break
+				if(inv_space)
+					player.hud.inventory.add_tile(result, inv_space)
+				else
+					spawn(10)
+						add_tile(result, 1)
 player/hud/background
 	Click(location, control, params)
 		var/list/params_list = params2list(params)
@@ -112,14 +120,6 @@ tile
 			var/player/hud/hotbar/over_bar = over_obj
 			offset_x = pixel_x - HOTSPOT_OFFSET
 			offset_y = pixel_y - HOTSPOT_OFFSET
-
-			// strangeness with the icon offset in the web client
-			// further testing would be nice in order to file a bug report
-			// 130 = height of the HUD object
-			// 32 = tile height, presumably
-			if(usr.client.connection == "web")
-				pixel_y += 130 - 32 // TODO
-
 			over_bar.add_tile(src, pixel_x, pixel_y)
 		/*else if(istype(over_obj, /atom/movable))
 			var/atom/movable/amoo = over_obj

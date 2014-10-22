@@ -38,6 +38,7 @@ cave
 						else
 							weight += 1
 					if(weight > 0)
+						world << "You cannot gather from this, it is supporting too much weight. (Try building stone walls around it)."
 						return FALSE
 			. = ..()
 

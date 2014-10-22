@@ -1,7 +1,23 @@
 dmm_suite{
-	load_map(var/dmm_file as file, var/z_offset as num){
-		if(!z_offset){
-			z_offset = world.maxz+1
+	load_map(var/dmm_file as file, var/list/offset_coords as num){
+		var/x_offset
+		var/y_offset
+		var/z_offset
+		if(!istype(offset_coords)){
+			x_offset = 1
+			y_offset = 1
+			if(!offset_coords){
+				z_offset = world.maxz+1
+				}
+			else if(isnum(offset_coords)){
+				z_offset = offset_coords
+				}
+			offset_coords = list(x_offset,y_offset,z_offset)
+			}
+		else{
+			x_offset = offset_coords[1]
+			y_offset = offset_coords[2]
+			z_offset = offset_coords[3]
 			}
 		var/quote = ascii2text(34)
 		var/tfile = file2text(dmm_file)
@@ -33,12 +49,14 @@ dmm_suite{
 					ycrd = y_depth
 					}
 				else{ycrd--}
+				world.maxy = max(world.maxy, ycrd+y_offset)
 				xcrd=0
 				for(var/mpos=1;mpos<=length(grid_line);mpos+=key_len){
 					xcrd++
+					world.maxx = max(world.maxx, xcrd+x_offset)
 					if(world.maxx<xcrd){world.maxx=xcrd}
 					var/model_key = copytext(grid_line,mpos,mpos+key_len)
-					parse_grid(grid_models[model_key],xcrd,ycrd,zcrd+z_offset)
+					parse_grid(grid_models[model_key],xcrd+x_offset,ycrd+y_offset,zcrd+z_offset)
 					}
 				if(gpos+length(grid_line)+1>length(zgrid)){break}
 				sleep(-1)
@@ -73,7 +91,7 @@ dmm_suite{
 				*/
 			var/list/objects_list = new()
 			for(var/dpos=1;dpos!=0;dpos=findtext(model,",",dpos,0)+1){
-				/*Loop: Identifies each object's data, instantiates it, and reconstitues it's fields.
+				/*Loop: Splits Model data into a list of objects' data.
 					- Each iteration represents one object's data, including type path and field values.
 					*/
 				var/full_def = copytext(model,dpos,findtext(model,",",dpos,0))
@@ -81,6 +99,10 @@ dmm_suite{
 				if(!findtext(copytext(model,dpos,0),",")){break}
 			}
 			for(var/object_index = objects_list.len; object_index > 0; object_index--){
+				/* Loop: Works backwards through the object data (to start with /area),
+					- Identifies each object's data, instantiates it, and reconstitues it's fields.
+					- Each iteration represents one object's data, including type path and field values.
+					*/
 				var/full_def = objects_list[object_index]
 				var/atom_def = text2path(copytext(full_def,1,findtext(full_def,"{")))
 				var/list/attributes[0]
