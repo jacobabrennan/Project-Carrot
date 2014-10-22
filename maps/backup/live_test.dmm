@@ -1,0 +1,633 @@
+"aa" = (/turf/lighting,/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ab" = (/turf/lighting,/cave/block/iron,/cave/turf/dirt,/cave)
+"ac" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ad" = (/turf/lighting,/cave/turf/dirt,/cave)
+"ae" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"af" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 4; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ag" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ah" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ai" = (/turf/lighting,/cave/block/iron,/tile/iron{bounds = "24,24"; step_x = 26; step_y = 7; dir = 8; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"aj" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 8; step_y = 28; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ak" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"al" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"am" = (/turf/lighting,/tile/iron{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "iron"},/tile/iron{bounds = "24,24"; step_x = 6; step_y = 25; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"an" = (/turf/lighting,/cave/block/iron,/tile/iron{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"ao" = (/turf/lighting,/tile/iron{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"ap" = (/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"aq" = (/turf/lighting,/cave/block/rock_face,/tile/iron{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"ar" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"as" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"at" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"au" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"av" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aw" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 8; step_y = 4; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ax" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ay" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"az" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aA" = (/turf/lighting,/cave/block/stone_wall,/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aB" = (/turf/lighting,/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"aC" = (/turf/lighting,/cave/block/stone_door,/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"aD" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aE" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/tile/stone{bounds = "24,24"; step_x = 6; step_y = 7; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aF" = (/turf/lighting,/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"aG" = (/turf/lighting,/cave/block/stone_floor,/tile/iron{bounds = "24,24"; step_x = 5; step_y = 2; dir = 8; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"aH" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aI" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/tile/stone{bounds = "24,24"; step_x = 4; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aJ" = (/turf/lighting,/cave/block/stone_floor,/tile/iron{bounds = "24,24"; step_x = 30; dir = 8; mouse_drag_pointer = "iron"},/tile/iron{bounds = "24,24"; step_x = 29; step_y = 26; dir = 8; mouse_drag_pointer = "iron"},/cave/turf/dirt,/cave)
+"aK" = (/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"aL" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 28; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aM" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"aN" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"aO" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_floor,/cave/block/stone_door,/cave/turf/dirt,/cave)
+"aP" = (/turf/lighting{green_value = 1.50203; blue_value = 1.50203},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"aQ" = (/turf/lighting{green_value = 1.52746; blue_value = 1.52746},/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"aR" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"aS" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/turf/dirt,/cave)
+"aT" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"aU" = (/turf/lighting{green_value = 1.4865; blue_value = 1.4865},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"aV" = (/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"aW" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"aX" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_floor,/cave/block/bed{owner_ckey = "kaiochao"; bounds = "7,5 to 26,30"; tag = "kaiochao_start"},/cave/turf/dirt,/cave)
+"aY" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"aZ" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ba" = (/turf/lighting{green_value = 1.01061; blue_value = 1.01061},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bb" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bc" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"bd" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"be" = (/turf/lighting{green_value = 1.52598; blue_value = 1.52598},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bf" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/block/stone_floor,/tile/spell_book{bounds = "24,24"; mouse_drag_pointer = "spell_book"},/cave/turf/dirt,/cave)
+"bg" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/block/stone_floor,/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bh" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bi" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/stone_floor,/cave/block/stone_door,/cave/turf/dirt,/cave)
+"bj" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/amethyst,/cave/turf/dirt,/cave)
+"bk" = (/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bl" = (/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/block/stone_floor,/cave/block/bed{bounds = "7,5 to 26,30"},/cave/turf/dirt,/cave)
+"bm" = (/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bn" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bo" = (/turf/lighting,/cave/block/stone_floor,/cave/block/bed{bounds = "7,5 to 26,30"},/cave/turf/dirt,/cave)
+"bp" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"bq" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"br" = (/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bs" = (/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/block/stone_floor,/tile/spell_book{bounds = "24,24"; mouse_drag_pointer = "spell_book"},/cave/turf/dirt,/cave)
+"bt" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bu" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bv" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bw" = (/turf/lighting{green_value = 1.25865; blue_value = 1.25865},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bx" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"by" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"bz" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/turf/dirt,/cave)
+"bA" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bB" = (/turf/lighting,/cave/block/stone_floor,/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bC" = (/turf/lighting{green_value = 1.90908; blue_value = 1.90908},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bD" = (/turf/lighting{green_value = 1.35631; blue_value = 1.35631},/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bE" = (/turf/lighting{green_value = 1.35631; blue_value = 1.35631},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bF" = (/turf/lighting{green_value = 1.31683; blue_value = 1.31683},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bG" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/turf/dirt,/cave)
+"bH" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bI" = (/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bJ" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bK" = (/turf/lighting,/cave/block/rock_face,/cave/block/bed{bounds = "7,5 to 26,30"},/cave/turf/dirt,/cave)
+"bL" = (/turf/lighting{green_value = 1.99483; blue_value = 1.99483},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bM" = (/turf/lighting{green_value = 2.05302; blue_value = 2.05302},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bN" = (/turf/lighting{green_value = 1.44206; blue_value = 1.44206},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bO" = (/turf/lighting{green_value = 1.40679; blue_value = 1.40679},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bP" = (/turf/lighting{green_value = 1.36732; blue_value = 1.36732},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bQ" = (/turf/lighting{green_value = 1.32288; blue_value = 1.32288},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bR" = (/turf/lighting{green_value = 1.52746; blue_value = 1.52746},/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"bS" = (/turf/lighting{green_value = 1.78768; blue_value = 1.78768},/cave/turf/dirt,/cave)
+"bT" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"bU" = (/turf/lighting{green_value = 1.365; blue_value = 1.365},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bV" = (/turf/lighting{green_value = 2.12906; blue_value = 2.12906},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bW" = (/turf/lighting{green_value = 2.17955; blue_value = 2.17955},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bX" = (/turf/lighting{green_value = 1.45123; blue_value = 1.45123},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bY" = (/turf/lighting{green_value = 1.41176; blue_value = 1.41176},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"bZ" = (/turf/lighting{green_value = 1.36732; blue_value = 1.36732},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"ca" = (/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/tile/stone{bounds = "24,24"; step_x = 18; step_y = 7; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 11; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cb" = (/turf/lighting{green_value = 1.8512; blue_value = 1.8512},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 4; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cc" = (/turf/lighting{green_value = 1.7372; blue_value = 1.7372},/tile/stone{bounds = "24,24"; step_x = 16; step_y = 9; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cd" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"ce" = (/turf/lighting{green_value = 1.39336; blue_value = 1.39336},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"cf" = (/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cg" = (/turf/lighting{green_value = 2.24739; blue_value = 2.24739},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"ch" = (/turf/lighting{green_value = 2.26347; blue_value = 2.26347},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"ci" = (/turf/lighting{green_value = 1.49071; blue_value = 1.49071},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cj" = (/turf/lighting{green_value = 1.40679; blue_value = 1.40679},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"ck" = (/turf/lighting{green_value = 1.91777; blue_value = 1.91777},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cl" = (/turf/lighting{green_value = 1.84913; blue_value = 1.84913},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 26; step_y = 4; dir = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 11; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cm" = (/turf/lighting{green_value = 1.76466; blue_value = 1.76466},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 20; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 26; step_y = 13; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 27; dir = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cn" = (/turf/lighting{green_value = 1.65066; blue_value = 1.65066},/tile/stone{bounds = "24,24"; step_x = 19; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 10; dir = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"co" = (/turf/lighting,/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"cp" = (/turf/lighting{green_value = 1.47698; blue_value = 1.47698},/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"cq" = (/turf/lighting{green_value = 1.50203; blue_value = 1.50203},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cr" = (/turf/lighting{green_value = 2.29874; blue_value = 2.29874},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cs" = (/turf/lighting{green_value = 2.30661; blue_value = 2.30661},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"ct" = (/turf/lighting{green_value = 1.4865; blue_value = 1.4865},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cu" = (/turf/lighting{green_value = 1.44206; blue_value = 1.44206},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cv" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/tile/charm/amethyst_ring{screen_loc = "WEST:5,Center:29"; bounds = "24,24"; step_x = 18; step_y = 4; mouse_drag_pointer = "amethyst_ring"; color = "#000000"},/cave/turf/dirt,/cave)
+"cw" = (/turf/lighting{green_value = 1.81752; blue_value = 1.81752},/cave/turf/dirt,/cave)
+"cx" = (/turf/lighting{green_value = 1.74887; blue_value = 1.74887},/tile/stone{bounds = "24,24"; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 20; step_y = 17; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cy" = (/turf/lighting{green_value = 1.6644; blue_value = 1.6644},/tile/stone{bounds = "24,24"; step_x = 11; step_y = 30; dir = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/block/stone_wall,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 12; dir = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cz" = (/turf/lighting{green_value = 1.26475; blue_value = 1.26475},/tile/stone{bounds = "24,24"; step_x = 11; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 18; step_y = 6; dir = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cA" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"cB" = (/turf/lighting{green_value = 2.33034; blue_value = 2.33034},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"cC" = (/turf/lighting{green_value = 2.33821; blue_value = 2.33821},/cave/block/stone_window{open = 1; icon_state = "window_open"; opacity = 0},/cave/turf/dirt,/cave)
+"cD" = (/turf/lighting{green_value = 2.33821; blue_value = 2.33821},/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt,/cave)
+"cE" = (/turf/lighting{green_value = 1.59286; blue_value = 1.59286},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"cF" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/turf/dirt,/cave)
+"cG" = (/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/turf/dirt,/cave)
+"cH" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/tile/body/iron_armor{screen_loc = "WEST:5,Center:55"; bounds = "24,24"; step_x = 31; step_y = 2; mouse_drag_pointer = "iron_armor"; color = "#000000"},/cave/turf/dirt,/cave)
+"cI" = (/turf/lighting{green_value = 1.75596; blue_value = 1.75596},/cave/turf/dirt,/cave)
+"cJ" = (/turf/lighting{green_value = 1.69778; blue_value = 1.69778},/tile/spell_book{screen_loc = "EAST:5,Center:-46"; bounds = "24,24"; step_x = 4; step_y = 5; dir = 1; mouse_drag_pointer = "spell_book"; color = "#000000"},/cave/turf/dirt,/cave)
+"cK" = (/turf/lighting{green_value = 1.62913; blue_value = 1.62913},/cave/turf/dirt,/cave)
+"cL" = (/turf/lighting{green_value = 1.14501; blue_value = 1.14501},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cM" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"cN" = (/turf/lighting{green_value = 0.77962; blue_value = 0.77962},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"cO" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cP" = (/turf/lighting{green_value = 1.58595; blue_value = 1.58595},/cave/turf/dirt,/cave)
+"cQ" = (/turf/lighting{green_value = 2.36657; blue_value = 2.36657},/cave/turf/dirt,/cave)
+"cR" = (/turf/lighting{green_value = 2.33034; blue_value = 2.33034},/cave/turf/dirt,/cave)
+"cS" = (/turf/lighting{green_value = 2.28266; blue_value = 2.28266},/cave/turf/dirt,/cave)
+"cT" = (/turf/lighting{green_value = 2.1969; blue_value = 2.1969},/cave/turf/dirt,/cave)
+"cU" = (/turf/lighting{green_value = 2.09924; blue_value = 2.09924},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cV" = (/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"cW" = (/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/tile/weapon/iron_sword{screen_loc = "WEST:5,Center:107"; bounds = "24,24"; step_x = 7; step_y = 1; mouse_drag_pointer = "iron_sword"},/cave/turf/dirt,/cave)
+"cX" = (/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/cave/turf/dirt,/cave)
+"cY" = (/turf/lighting{green_value = 0.799305; blue_value = 0.799305},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"cZ" = (/turf/lighting{green_value = 0.8179; blue_value = 0.8179},/cave/block/stone_floor,/cave/block/amethyst_podium{hue = 240; bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"da" = (/turf/lighting{green_value = 0.8179; blue_value = 0.8179},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"db" = (/turf/lighting{green_value = 0.799305; blue_value = 0.799305},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"dc" = (/turf/lighting{green_value = 0.759934; blue_value = 0.759934},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"dd" = (/turf/lighting{green_value = 3.15742; blue_value = 3.15742},/cave/block/amethyst,/cave/turf/dirt,/cave)
+"de" = (/turf/lighting{green_value = 2.57255; blue_value = 2.57255},/cave/block/amethyst,/cave/turf/dirt,/cave)
+"df" = (/turf/lighting{green_value = 1.93551; blue_value = 1.93551},/cave/block/amethyst,/cave/turf/dirt,/cave)
+"dg" = (/turf/lighting{green_value = 1.61138; blue_value = 1.61138},/cave/block/amethyst_podium{hue = 120; bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"dh" = (/turf/lighting{green_value = 1.62122; blue_value = 1.62122},/cave/turf/dirt,/cave)
+"di" = (/turf/lighting{green_value = 2.22233; blue_value = 2.22233},/cave/block/amethyst_podium{hue = 240; bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"dj" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dk" = (/turf/lighting{green_value = 0.759934; blue_value = 0.759934},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dl" = (/turf/lighting{green_value = 0.799305; blue_value = 0.799305},/cave/block/stone_floor,/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt,/cave)
+"dm" = (/turf/lighting{green_value = 0.836494; blue_value = 0.836494},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"dn" = (/turf/lighting{green_value = 0.854137; blue_value = 0.854137},/cave/block/stone_floor,/tile/amethyst{screen_loc = "EAST:5,Center:-72"; bounds = "24,24"; step_y = 19; mouse_drag_pointer = "amethyst"},/cave/turf/dirt,/cave)
+"do" = (/turf/lighting{green_value = 0.759934; blue_value = 0.759934},/cave/block/stone_floor,/cave/block/stone_door,/cave/turf/dirt,/cave)
+"dp" = (/turf/lighting{green_value = 3.10693; blue_value = 3.10693},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dq" = (/turf/lighting{green_value = 3.18518; blue_value = 3.18518},/cave/turf/dirt,/cave)
+"dr" = (/turf/lighting{green_value = 3.84662; blue_value = 3.84662},/cave/block/amethyst,/cave/turf/dirt,/cave)
+"ds" = (/turf/lighting{green_value = 3.20959; blue_value = 3.20959},/cave/block/amethyst,/cave/turf/dirt,/cave)
+"dt" = (/turf/lighting{green_value = 1.58595; blue_value = 1.58595},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"du" = (/turf/lighting{green_value = 1.62447; blue_value = 1.62447},/cave/turf/dirt,/cave)
+"dv" = (/turf/lighting{green_value = 2.1969; blue_value = 2.1969},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dw" = (/turf/lighting{green_value = 1.24799; blue_value = 1.24799},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dx" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"dy" = (/turf/lighting{green_value = 0.854137; blue_value = 0.854137},/cave/block/stone_floor,/tile/amethyst{screen_loc = "EAST:5,Center:-46"; bounds = "24,24"; step_x = 31; step_y = 29; dir = 4; mouse_drag_pointer = "amethyst"},/cave/turf/dirt,/cave)
+"dz" = (/turf/lighting{green_value = 1.59286; blue_value = 1.59286},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dA" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"dB" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"dC" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/iron,/cave/turf/dirt,/cave)
+"dD" = (/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/turf/dirt,/cave)
+"dE" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dF" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/turf/dirt,/cave)
+"dG" = (/turf/lighting{green_value = 0.77962; blue_value = 0.77962},/cave/block/stone_floor,/cave/block/bed{owner_ckey = "iainperegrine"; bounds = "7,5 to 26,30"; tag = "iainperegrine_start"},/cave/turf/dirt,/cave)
+"dH" = (/turf/lighting{green_value = 0.77962; blue_value = 0.77962},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"dI" = (/turf/lighting{green_value = 1.49071; blue_value = 1.49071},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dJ" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/turf/dirt,/cave)
+"dK" = (/turf/lighting{green_value = 1.27407; blue_value = 1.27407},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dL" = (/turf/lighting{green_value = 0.738978; blue_value = 0.738978},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"dM" = (/turf/lighting{green_value = 0.738978; blue_value = 0.738978},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"dN" = (/turf/lighting{green_value = 0.738978; blue_value = 0.738978},/cave/block/stone_door,/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"dO" = (/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/turf/dirt,/cave)
+"dP" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"dQ" = (/turf/lighting{green_value = 0.98121; blue_value = 0.98121},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dR" = (/turf/lighting{green_value = 0.98121; blue_value = 0.98121},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"dS" = (/turf/lighting{green_value = 1.04845; blue_value = 1.04845},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dT" = (/turf/lighting{green_value = 1.04845; blue_value = 1.04845},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"dU" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"dV" = (/turf/lighting{green_value = 1.24799; blue_value = 1.24799},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"dW" = (/turf/lighting{green_value = 1.08203; blue_value = 1.08203},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dX" = (/turf/lighting{green_value = 1.08203; blue_value = 1.08203},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"dY" = (/turf/lighting{green_value = 1.09446; blue_value = 1.09446},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"dZ" = (/turf/lighting{green_value = 1.09446; blue_value = 1.09446},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"ea" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"eb" = (/turf/lighting{green_value = 1.0892; blue_value = 1.0892},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ec" = (/turf/lighting{green_value = 1.0892; blue_value = 1.0892},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"ed" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ee" = (/turf/lighting{green_value = 1.06545; blue_value = 1.06545},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ef" = (/turf/lighting{green_value = 1.06545; blue_value = 1.06545},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"eg" = (/turf/lighting{green_value = 1.01652; blue_value = 1.01652},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"eh" = (/turf/lighting{green_value = 1.01652; blue_value = 1.01652},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"ei" = (/turf/lighting{green_value = 0.874186; blue_value = 0.874186},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ej" = (/turf/lighting{green_value = 0.874186; blue_value = 0.874186},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"ek" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"el" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"em" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"en" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/turf/dirt,/cave)
+"eo" = (/turf/lighting{green_value = 0.866025; blue_value = 0.866025},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"ep" = (/turf/lighting,/cave/block/rock_face,/turf/lighting,/cave/turf/dirt,/cave)
+"eq" = (/turf/lighting,/cave/block/iron,/turf/lighting,/cave/turf/dirt,/cave)
+"er" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"es" = (/turf/lighting,/turf/lighting,/cave/turf/dirt,/cave)
+"et" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eu" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 4; dir = 8; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"ev" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"ew" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"ex" = (/turf/lighting,/cave/block/iron,/tile/iron{bounds = "24,24"; step_x = 26; step_y = 7; dir = 8; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"ey" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 8; step_y = 28; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"ez" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eA" = (/turf/lighting,/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eB" = (/turf/lighting,/tile/iron{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "iron"},/tile/iron{bounds = "24,24"; step_x = 6; step_y = 25; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"eC" = (/turf/lighting,/cave/block/iron,/tile/iron{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"eD" = (/turf/lighting,/tile/iron{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"eE" = (/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/block/rock_face,/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/turf/dirt,/cave)
+"eF" = (/turf/lighting,/cave/block/rock_face,/tile/iron{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"eG" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/block/rock_face,/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/turf/dirt,/cave)
+"eH" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/turf/dirt,/cave)
+"eI" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eJ" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eK" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eL" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 8; step_y = 4; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eM" = (/turf/lighting,/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eN" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/turf/dirt,/cave)
+"eO" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/turf/dirt,/cave)
+"eP" = (/turf/lighting,/cave/block/stone_wall,/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/turf/lighting,/cave/turf/dirt,/cave)
+"eQ" = (/turf/lighting,/cave/block/stone_wall,/turf/lighting,/cave/turf/dirt,/cave)
+"eR" = (/turf/lighting,/cave/block/stone_door,/cave/block/stone_floor,/turf/lighting,/cave/turf/dirt,/cave)
+"eS" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"eT" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/tile/stone{bounds = "24,24"; step_x = 6; step_y = 7; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"eU" = (/turf/lighting,/cave/block/stone_floor,/turf/lighting,/cave/turf/dirt,/cave)
+"eV" = (/turf/lighting,/cave/block/stone_floor,/tile/iron{bounds = "24,24"; step_x = 5; step_y = 2; dir = 8; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"eW" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"eX" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/tile/stone{bounds = "24,24"; step_x = 4; step_y = 9; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"eY" = (/turf/lighting,/cave/block/stone_floor,/tile/iron{bounds = "24,24"; step_x = 30; dir = 8; mouse_drag_pointer = "iron"},/tile/iron{bounds = "24,24"; step_x = 29; step_y = 26; dir = 8; mouse_drag_pointer = "iron"},/turf/lighting,/cave/turf/dirt,/cave)
+"eZ" = (/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/block/stone_wall,/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/turf/dirt,/cave)
+"fa" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 28; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"fb" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"fc" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_wall,/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"fd" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_floor,/cave/block/stone_door,/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"fe" = (/turf/lighting{green_value = 1.50203; blue_value = 1.50203},/cave/block/stone_wall,/turf/lighting{green_value = 1.50203; blue_value = 1.50203},/cave/turf/dirt,/cave)
+"ff" = (/turf/lighting{green_value = 1.52746; blue_value = 1.52746},/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/turf/lighting{green_value = 1.52746; blue_value = 1.52746},/cave/turf/dirt,/cave)
+"fg" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/rock_face,/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/turf/dirt,/cave)
+"fh" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/turf/dirt,/cave)
+"fi" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/stone_wall,/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"fj" = (/turf/lighting{green_value = 1.4865; blue_value = 1.4865},/cave/block/stone_floor,/turf/lighting{green_value = 1.4865; blue_value = 1.4865},/cave/turf/dirt,/cave)
+"fk" = (/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/block/stone_floor,/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/turf/dirt,/cave)
+"fl" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_floor,/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/turf/dirt,/cave)
+"fm" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_floor,/cave/block/bed{owner_ckey = "kaiochao"; bounds = "7,5 to 26,30"; tag = "kaiochao_start"},/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/turf/dirt,/cave)
+"fn" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_wall,/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/turf/dirt,/cave)
+"fo" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/rock_face,/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/turf/dirt,/cave)
+"fp" = (/turf/lighting{green_value = 1.01061; blue_value = 1.01061},/cave/block/stone_wall,/turf/lighting{green_value = 1.01061; blue_value = 1.01061},/cave/turf/dirt,/cave)
+"fq" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/stone_wall,/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"fr" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/rock_face,/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"fs" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"ft" = (/turf/lighting{green_value = 1.52598; blue_value = 1.52598},/cave/block/stone_floor,/turf/lighting{green_value = 1.52598; blue_value = 1.52598},/cave/turf/dirt,/cave)
+"fu" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/block/stone_floor,/tile/spell_book{bounds = "24,24"; mouse_drag_pointer = "spell_book"},/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/turf/dirt,/cave)
+"fv" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/block/stone_floor,/cave/block/stone_floor,/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/turf/dirt,/cave)
+"fw" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/block/stone_floor,/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/turf/dirt,/cave)
+"fx" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/stone_floor,/cave/block/stone_door,/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/turf/dirt,/cave)
+"fy" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/amethyst,/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"fz" = (/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/block/stone_wall,/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/turf/dirt,/cave)
+"fA" = (/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/block/stone_floor,/cave/block/bed{bounds = "7,5 to 26,30"},/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/turf/dirt,/cave)
+"fB" = (/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/block/stone_floor,/turf/lighting{green_value = 1.14556; blue_value = 1.14556},/cave/turf/dirt,/cave)
+"fC" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_floor,/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"fD" = (/turf/lighting,/cave/block/stone_floor,/cave/block/bed{bounds = "7,5 to 26,30"},/turf/lighting,/cave/turf/dirt,/cave)
+"fE" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/rock_face,/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"fF" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"fG" = (/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/block/stone_floor,/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/turf/dirt,/cave)
+"fH" = (/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/block/stone_floor,/tile/spell_book{bounds = "24,24"; mouse_drag_pointer = "spell_book"},/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/turf/dirt,/cave)
+"fI" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/stone_floor,/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"fJ" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/stone_wall,/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"fK" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/stone_wall,/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/turf/dirt,/cave)
+"fL" = (/turf/lighting{green_value = 1.25865; blue_value = 1.25865},/cave/block/stone_floor,/turf/lighting{green_value = 1.25865; blue_value = 1.25865},/cave/turf/dirt,/cave)
+"fM" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/stone_floor,/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/turf/dirt,/cave)
+"fN" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/rock_face,/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/turf/dirt,/cave)
+"fO" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/turf/dirt,/cave)
+"fP" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/stone_floor,/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"fQ" = (/turf/lighting,/cave/block/stone_floor,/cave/block/stone_wall,/turf/lighting,/cave/turf/dirt,/cave)
+"fR" = (/turf/lighting{green_value = 1.90908; blue_value = 1.90908},/cave/block/stone_wall,/turf/lighting{green_value = 1.90908; blue_value = 1.90908},/cave/turf/dirt,/cave)
+"fS" = (/turf/lighting{green_value = 1.35631; blue_value = 1.35631},/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/block/stone_floor,/turf/lighting{green_value = 1.35631; blue_value = 1.35631},/cave/turf/dirt,/cave)
+"fT" = (/turf/lighting{green_value = 1.35631; blue_value = 1.35631},/cave/block/stone_wall,/turf/lighting{green_value = 1.35631; blue_value = 1.35631},/cave/turf/dirt,/cave)
+"fU" = (/turf/lighting{green_value = 1.31683; blue_value = 1.31683},/cave/block/stone_wall,/turf/lighting{green_value = 1.31683; blue_value = 1.31683},/cave/turf/dirt,/cave)
+"fV" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/turf/dirt,/cave)
+"fW" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/block/stone_floor,/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/turf/dirt,/cave)
+"fX" = (/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/block/stone_wall,/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/turf/dirt,/cave)
+"fY" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/stone_wall,/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/turf/dirt,/cave)
+"fZ" = (/turf/lighting,/cave/block/rock_face,/cave/block/bed{bounds = "7,5 to 26,30"},/turf/lighting,/cave/turf/dirt,/cave)
+"ga" = (/turf/lighting{green_value = 1.99483; blue_value = 1.99483},/cave/block/stone_wall,/turf/lighting{green_value = 1.99483; blue_value = 1.99483},/cave/turf/dirt,/cave)
+"gb" = (/turf/lighting{green_value = 2.05302; blue_value = 2.05302},/cave/block/stone_floor,/turf/lighting{green_value = 2.05302; blue_value = 2.05302},/cave/turf/dirt,/cave)
+"gc" = (/turf/lighting{green_value = 1.44206; blue_value = 1.44206},/cave/block/stone_floor,/turf/lighting{green_value = 1.44206; blue_value = 1.44206},/cave/turf/dirt,/cave)
+"gd" = (/turf/lighting{green_value = 1.40679; blue_value = 1.40679},/cave/block/stone_floor,/turf/lighting{green_value = 1.40679; blue_value = 1.40679},/cave/turf/dirt,/cave)
+"ge" = (/turf/lighting{green_value = 1.36732; blue_value = 1.36732},/cave/block/stone_floor,/turf/lighting{green_value = 1.36732; blue_value = 1.36732},/cave/turf/dirt,/cave)
+"gf" = (/turf/lighting{green_value = 1.32288; blue_value = 1.32288},/cave/block/stone_wall,/turf/lighting{green_value = 1.32288; blue_value = 1.32288},/cave/turf/dirt,/cave)
+"gg" = (/turf/lighting{green_value = 1.52746; blue_value = 1.52746},/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/turf/lighting{green_value = 1.52746; blue_value = 1.52746},/cave/turf/dirt,/cave)
+"gh" = (/turf/lighting{green_value = 1.78768; blue_value = 1.78768},/turf/lighting{green_value = 1.78768; blue_value = 1.78768},/cave/turf/dirt,/cave)
+"gi" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"gj" = (/turf/lighting{green_value = 1.365; blue_value = 1.365},/cave/block/stone_wall,/turf/lighting{green_value = 1.365; blue_value = 1.365},/cave/turf/dirt,/cave)
+"gk" = (/turf/lighting{green_value = 2.12906; blue_value = 2.12906},/cave/block/stone_floor,/turf/lighting{green_value = 2.12906; blue_value = 2.12906},/cave/turf/dirt,/cave)
+"gl" = (/turf/lighting{green_value = 2.17955; blue_value = 2.17955},/cave/block/stone_floor,/turf/lighting{green_value = 2.17955; blue_value = 2.17955},/cave/turf/dirt,/cave)
+"gm" = (/turf/lighting{green_value = 1.45123; blue_value = 1.45123},/cave/block/stone_floor,/turf/lighting{green_value = 1.45123; blue_value = 1.45123},/cave/turf/dirt,/cave)
+"gn" = (/turf/lighting{green_value = 1.41176; blue_value = 1.41176},/cave/block/stone_floor,/turf/lighting{green_value = 1.41176; blue_value = 1.41176},/cave/turf/dirt,/cave)
+"go" = (/turf/lighting{green_value = 1.36732; blue_value = 1.36732},/cave/block/stone_wall,/turf/lighting{green_value = 1.36732; blue_value = 1.36732},/cave/turf/dirt,/cave)
+"gp" = (/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/tile/stone{bounds = "24,24"; step_x = 18; step_y = 7; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 11; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/turf/dirt,/cave)
+"gq" = (/turf/lighting{green_value = 1.8512; blue_value = 1.8512},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 4; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 6; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.8512; blue_value = 1.8512},/cave/turf/dirt,/cave)
+"gr" = (/turf/lighting{green_value = 1.7372; blue_value = 1.7372},/tile/stone{bounds = "24,24"; step_x = 16; step_y = 9; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.7372; blue_value = 1.7372},/cave/turf/dirt,/cave)
+"gs" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/turf/dirt,/cave)
+"gt" = (/turf/lighting{green_value = 1.39336; blue_value = 1.39336},/cave/block/stone_wall,/turf/lighting{green_value = 1.39336; blue_value = 1.39336},/cave/turf/dirt,/cave)
+"gu" = (/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/block/stone_floor,/turf/lighting{green_value = 1.45155; blue_value = 1.45155},/cave/turf/dirt,/cave)
+"gv" = (/turf/lighting{green_value = 2.24739; blue_value = 2.24739},/cave/block/stone_floor,/turf/lighting{green_value = 2.24739; blue_value = 2.24739},/cave/turf/dirt,/cave)
+"gw" = (/turf/lighting{green_value = 2.26347; blue_value = 2.26347},/cave/block/stone_floor,/turf/lighting{green_value = 2.26347; blue_value = 2.26347},/cave/turf/dirt,/cave)
+"gx" = (/turf/lighting{green_value = 1.49071; blue_value = 1.49071},/cave/block/stone_floor,/turf/lighting{green_value = 1.49071; blue_value = 1.49071},/cave/turf/dirt,/cave)
+"gy" = (/turf/lighting{green_value = 1.40679; blue_value = 1.40679},/cave/block/stone_wall,/turf/lighting{green_value = 1.40679; blue_value = 1.40679},/cave/turf/dirt,/cave)
+"gz" = (/turf/lighting{green_value = 1.94435; blue_value = 1.94435},/cave/block/rock_face,/turf/lighting{green_value = 1.94435; blue_value = 1.94435},/cave/turf/dirt,/cave)
+"gA" = (/turf/lighting{green_value = 1.91777; blue_value = 1.91777},/cave/block/rock_face,/turf/lighting{green_value = 1.91777; blue_value = 1.91777},/cave/turf/dirt,/cave)
+"gB" = (/turf/lighting{green_value = 1.84913; blue_value = 1.84913},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 26; step_y = 4; dir = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 11; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.84913; blue_value = 1.84913},/cave/turf/dirt,/cave)
+"gC" = (/turf/lighting{green_value = 1.76466; blue_value = 1.76466},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 20; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 26; step_y = 13; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 27; dir = 6; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.76466; blue_value = 1.76466},/cave/turf/dirt,/cave)
+"gD" = (/turf/lighting{green_value = 1.65066; blue_value = 1.65066},/tile/stone{bounds = "24,24"; step_x = 19; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 10; dir = 6; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.65066; blue_value = 1.65066},/cave/turf/dirt,/cave)
+"gE" = (/turf/lighting,/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting,/cave/turf/dirt,/cave)
+"gF" = (/turf/lighting{green_value = 1.47698; blue_value = 1.47698},/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/turf/lighting{green_value = 1.47698; blue_value = 1.47698},/cave/turf/dirt,/cave)
+"gG" = (/turf/lighting{green_value = 1.50203; blue_value = 1.50203},/cave/block/stone_floor,/turf/lighting{green_value = 1.50203; blue_value = 1.50203},/cave/turf/dirt,/cave)
+"gH" = (/turf/lighting{green_value = 2.29874; blue_value = 2.29874},/cave/block/stone_floor,/turf/lighting{green_value = 2.29874; blue_value = 2.29874},/cave/turf/dirt,/cave)
+"gI" = (/turf/lighting{green_value = 2.30661; blue_value = 2.30661},/cave/block/stone_floor,/turf/lighting{green_value = 2.30661; blue_value = 2.30661},/cave/turf/dirt,/cave)
+"gJ" = (/turf/lighting{green_value = 1.52598; blue_value = 1.52598},/cave/block/rock_face,/turf/lighting{green_value = 1.52598; blue_value = 1.52598},/cave/turf/dirt,/cave)
+"gK" = (/turf/lighting{green_value = 1.4865; blue_value = 1.4865},/cave/block/rock_face,/turf/lighting{green_value = 1.4865; blue_value = 1.4865},/cave/turf/dirt,/cave)
+"gL" = (/turf/lighting{green_value = 1.44206; blue_value = 1.44206},/cave/block/rock_face,/turf/lighting{green_value = 1.44206; blue_value = 1.44206},/cave/turf/dirt,/cave)
+"gM" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/tile/charm/amethyst_ring{screen_loc = "WEST:5,Center:29"; bounds = "24,24"; step_x = 18; step_y = 4; mouse_drag_pointer = "amethyst_ring"; color = "#000000"},/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"gN" = (/turf/lighting{green_value = 1.81752; blue_value = 1.81752},/turf/lighting{green_value = 1.81752; blue_value = 1.81752},/cave/turf/dirt,/cave)
+"gO" = (/turf/lighting{green_value = 1.74887; blue_value = 1.74887},/tile/stone{bounds = "24,24"; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 20; step_y = 17; dir = 10; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.74887; blue_value = 1.74887},/cave/turf/dirt,/cave)
+"gP" = (/turf/lighting{green_value = 1.6644; blue_value = 1.6644},/tile/stone{bounds = "24,24"; step_x = 11; step_y = 30; dir = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/block/stone_wall,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 12; dir = 6; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.6644; blue_value = 1.6644},/cave/turf/dirt,/cave)
+"gQ" = (/turf/lighting{green_value = 1.26475; blue_value = 1.26475},/tile/stone{bounds = "24,24"; step_x = 11; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 18; step_y = 6; dir = 6; mouse_drag_pointer = "stone"},/turf/lighting{green_value = 1.26475; blue_value = 1.26475},/cave/turf/dirt,/cave)
+"gR" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/block/stone_wall,/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/turf/dirt,/cave)
+"gS" = (/turf/lighting{green_value = 2.33034; blue_value = 2.33034},/cave/block/stone_wall,/turf/lighting{green_value = 2.33034; blue_value = 2.33034},/cave/turf/dirt,/cave)
+"gT" = (/turf/lighting{green_value = 2.33821; blue_value = 2.33821},/cave/block/stone_window{open = 1; icon_state = "window_open"; opacity = 0},/turf/lighting{green_value = 2.33821; blue_value = 2.33821},/cave/turf/dirt,/cave)
+"gU" = (/turf/lighting{green_value = 2.33821; blue_value = 2.33821},/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/turf/lighting{green_value = 2.33821; blue_value = 2.33821},/cave/turf/dirt,/cave)
+"gV" = (/turf/lighting{green_value = 1.59286; blue_value = 1.59286},/cave/block/stone_wall,/turf/lighting{green_value = 1.59286; blue_value = 1.59286},/cave/turf/dirt,/cave)
+"gW" = (/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/turf/lighting{green_value = 1.55759; blue_value = 1.55759},/cave/turf/dirt,/cave)
+"gX" = (/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/turf/lighting{green_value = 1.51811; blue_value = 1.51811},/cave/turf/dirt,/cave)
+"gY" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/tile/body/iron_armor{screen_loc = "WEST:5,Center:55"; bounds = "24,24"; step_x = 31; step_y = 2; mouse_drag_pointer = "iron_armor"; color = "#000000"},/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"gZ" = (/turf/lighting{green_value = 1.75596; blue_value = 1.75596},/turf/lighting{green_value = 1.75596; blue_value = 1.75596},/cave/turf/dirt,/cave)
+"ha" = (/turf/lighting{green_value = 1.69778; blue_value = 1.69778},/tile/spell_book{screen_loc = "EAST:5,Center:-46"; bounds = "24,24"; step_x = 4; step_y = 5; dir = 1; mouse_drag_pointer = "spell_book"; color = "#000000"},/turf/lighting{green_value = 1.69778; blue_value = 1.69778},/cave/turf/dirt,/cave)
+"hb" = (/turf/lighting{green_value = 1.62913; blue_value = 1.62913},/turf/lighting{green_value = 1.62913; blue_value = 1.62913},/cave/turf/dirt,/cave)
+"hc" = (/turf/lighting{green_value = 1.14501; blue_value = 1.14501},/cave/block/rock_face,/turf/lighting{green_value = 1.14501; blue_value = 1.14501},/cave/turf/dirt,/cave)
+"hd" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"he" = (/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/block/rock_face,/turf/lighting{green_value = 1.54647; blue_value = 1.54647},/cave/turf/dirt,/cave)
+"hf" = (/turf/lighting{green_value = 1.58595; blue_value = 1.58595},/turf/lighting{green_value = 1.58595; blue_value = 1.58595},/cave/turf/dirt,/cave)
+"hg" = (/turf/lighting{green_value = 2.36657; blue_value = 2.36657},/turf/lighting{green_value = 2.36657; blue_value = 2.36657},/cave/turf/dirt,/cave)
+"hh" = (/turf/lighting{green_value = 2.33034; blue_value = 2.33034},/turf/lighting{green_value = 2.33034; blue_value = 2.33034},/cave/turf/dirt,/cave)
+"hi" = (/turf/lighting{green_value = 2.28266; blue_value = 2.28266},/turf/lighting{green_value = 2.28266; blue_value = 2.28266},/cave/turf/dirt,/cave)
+"hj" = (/turf/lighting{green_value = 2.1969; blue_value = 2.1969},/turf/lighting{green_value = 2.1969; blue_value = 2.1969},/cave/turf/dirt,/cave)
+"hk" = (/turf/lighting{green_value = 2.09924; blue_value = 2.09924},/cave/block/rock_face,/turf/lighting{green_value = 2.09924; blue_value = 2.09924},/cave/turf/dirt,/cave)
+"hl" = (/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/cave/block/rock_face,/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/cave/turf/dirt,/cave)
+"hm" = (/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/tile/weapon/iron_sword{screen_loc = "WEST:5,Center:107"; bounds = "24,24"; step_x = 7; step_y = 1; mouse_drag_pointer = "iron_sword"},/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/cave/turf/dirt,/cave)
+"hn" = (/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/turf/lighting{green_value = 0.99153; blue_value = 0.99153},/cave/turf/dirt,/cave)
+"ho" = (/turf/lighting{green_value = 3.15742; blue_value = 3.15742},/cave/block/amethyst,/turf/lighting{green_value = 3.15742; blue_value = 3.15742},/cave/turf/dirt,/cave)
+"hp" = (/turf/lighting{green_value = 2.57255; blue_value = 2.57255},/cave/block/amethyst,/turf/lighting{green_value = 2.57255; blue_value = 2.57255},/cave/turf/dirt,/cave)
+"hq" = (/turf/lighting{green_value = 1.93551; blue_value = 1.93551},/cave/block/amethyst,/turf/lighting{green_value = 1.93551; blue_value = 1.93551},/cave/turf/dirt,/cave)
+"hr" = (/turf/lighting{green_value = 1.61138; blue_value = 1.61138},/cave/block/amethyst_podium{hue = 120; bounds = "9,1 to 24,24"},/turf/lighting{green_value = 1.61138; blue_value = 1.61138},/cave/turf/dirt,/cave)
+"hs" = (/turf/lighting{green_value = 1.62122; blue_value = 1.62122},/turf/lighting{green_value = 1.62122; blue_value = 1.62122},/cave/turf/dirt,/cave)
+"ht" = (/turf/lighting{green_value = 2.22233; blue_value = 2.22233},/cave/block/amethyst_podium{hue = 240; bounds = "9,1 to 24,24"},/turf/lighting{green_value = 2.22233; blue_value = 2.22233},/cave/turf/dirt,/cave)
+"hu" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/rock_face,/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"hv" = (/turf/lighting,/cave/block/stone_floor,/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/turf/lighting,/cave/turf/dirt,/cave)
+"hw" = (/turf/lighting,/cave/block/stone_floor,/cave/block/stone_door,/turf/lighting,/cave/turf/dirt,/cave)
+"hx" = (/turf/lighting{green_value = 3.10693; blue_value = 3.10693},/cave/block/rock_face,/turf/lighting{green_value = 3.10693; blue_value = 3.10693},/cave/turf/dirt,/cave)
+"hy" = (/turf/lighting{green_value = 3.18518; blue_value = 3.18518},/turf/lighting{green_value = 3.18518; blue_value = 3.18518},/cave/turf/dirt,/cave)
+"hz" = (/turf/lighting{green_value = 3.84662; blue_value = 3.84662},/cave/block/amethyst,/turf/lighting{green_value = 3.84662; blue_value = 3.84662},/cave/turf/dirt,/cave)
+"hA" = (/turf/lighting{green_value = 3.20959; blue_value = 3.20959},/cave/block/amethyst,/turf/lighting{green_value = 3.20959; blue_value = 3.20959},/cave/turf/dirt,/cave)
+"hB" = (/turf/lighting{green_value = 1.58595; blue_value = 1.58595},/cave/block/rock_face,/turf/lighting{green_value = 1.58595; blue_value = 1.58595},/cave/turf/dirt,/cave)
+"hC" = (/turf/lighting{green_value = 1.62447; blue_value = 1.62447},/turf/lighting{green_value = 1.62447; blue_value = 1.62447},/cave/turf/dirt,/cave)
+"hD" = (/turf/lighting{green_value = 2.1969; blue_value = 2.1969},/cave/block/rock_face,/turf/lighting{green_value = 2.1969; blue_value = 2.1969},/cave/turf/dirt,/cave)
+"hE" = (/turf/lighting{green_value = 1.24799; blue_value = 1.24799},/cave/block/rock_face,/turf/lighting{green_value = 1.24799; blue_value = 1.24799},/cave/turf/dirt,/cave)
+"hF" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"hG" = (/turf/lighting{green_value = 1.59286; blue_value = 1.59286},/cave/block/rock_face,/turf/lighting{green_value = 1.59286; blue_value = 1.59286},/cave/turf/dirt,/cave)
+"hH" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"hI" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"hJ" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/iron,/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/turf/dirt,/cave)
+"hK" = (/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/turf/lighting{green_value = 1.56125; blue_value = 1.56125},/cave/turf/dirt,/cave)
+"hL" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/block/rock_face,/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/turf/dirt,/cave)
+"hM" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/turf/dirt,/cave)
+"hN" = (/turf/lighting,/cave/block/stone_floor,/cave/block/bed{owner_ckey = "iainperegrine"; bounds = "7,5 to 26,30"; tag = "iainperegrine_start"},/turf/lighting,/cave/turf/dirt,/cave)
+"hO" = (/turf/lighting{green_value = 1.49071; blue_value = 1.49071},/cave/block/rock_face,/turf/lighting{green_value = 1.49071; blue_value = 1.49071},/cave/turf/dirt,/cave)
+"hP" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/turf/dirt,/cave)
+"hQ" = (/turf/lighting{green_value = 1.27407; blue_value = 1.27407},/cave/block/rock_face,/turf/lighting{green_value = 1.27407; blue_value = 1.27407},/cave/turf/dirt,/cave)
+"hR" = (/turf/lighting,/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting,/cave/turf/dirt,/cave)
+"hS" = (/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/turf/dirt,/cave)
+"hT" = (/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 0.637037; blue_value = 0.637037},/cave/turf/dirt,/cave)
+"hU" = (/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.285652; blue_value = 0.285652},/cave/turf/dirt,/cave)
+"hV" = (/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.399653; blue_value = 0.399653},/cave/turf/dirt,/cave)
+"hW" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"hX" = (/turf/lighting{green_value = 1.24799; blue_value = 1.24799},/cave/block/rock_face{icon_state = "dug_out"},/turf/lighting{green_value = 1.24799; blue_value = 1.24799},/cave/turf/dirt,/cave)
+"hY" = (/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.484123; blue_value = 0.484123},/cave/turf/dirt,/cave)
+"hZ" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/rock_face,/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"ia" = (/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.552771; blue_value = 0.552771},/cave/turf/dirt,/cave)
+"ib" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/rock_face,/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"ic" = (/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.610953; blue_value = 0.610953},/cave/turf/dirt,/cave)
+"id" = (/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.661438; blue_value = 0.661438},/cave/turf/dirt,/cave)
+"ie" = (/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.705878; blue_value = 0.705878},/cave/turf/dirt,/cave)
+"if" = (/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.745356; blue_value = 0.745356},/cave/turf/dirt,/cave)
+"ig" = (/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.780625; blue_value = 0.780625},/cave/turf/dirt,/cave)
+"ih" = (/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.812233; blue_value = 0.812233},/cave/turf/dirt,/cave)
+"ii" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/block/rock_face,/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/turf/dirt,/cave)
+"ij" = (/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/block/stone_floor{icon_state = "pink_floor"},/turf/lighting{green_value = 0.840593; blue_value = 0.840593},/cave/turf/dirt,/cave)
+"ik" = (/turf/lighting{green_value = 0.866025; blue_value = 0.866025},/cave/block/stone_floor{icon_state = "pink_floor"},/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/turf/lighting{green_value = 0.866025; blue_value = 0.866025},/cave/turf/dirt,/cave)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaacadaeabaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaabaaafagahadaaaaababababaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaabaaaaabaaaaaaabaaaaaaaiajakalaaaaaaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaamabaaabaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaababanaoabaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaapaaaaaaaaaaaaaqadaaaaabaaabaaaaabaaaaaaaaabaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaabaaaaaaaaaaaaaaaaarasatauavadawaxadadaaaaababaaabaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaayazaAaBaBaBaBaBaBaCaBaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaDaEaBaFaGaFaFaFaFaFaBaaaaaaaaaaaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaHaIaBaFaJaFaKaBaFaBaBaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaMaBaNaOaPaQaPaFaFaBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRaSaTaUaVaWaXaYaBaFaBaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaBbababbaBaBbabaaBaaaaaaaabcbdaTbebfbgbhbiaFaFaBaZaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZbjaZaaaaaaaaaabkblbmbnaNbobmbmbkaaaaaaaabpbqaTbrbsbsbtbuaFaFbvbjaZaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaBbwbwbxaBaFbwbwaBaaaaaaaabybzaTbhbhbAbAaTaBbBaBaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaBbCbDbEbEbEbDbFaBaaaaaaaabybGaYbHbIbJbJaBaBaBaBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaabKbLbMbNbNbNbObPbQaaaaaaaabybGbRbSbzbTaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaaaaaaabaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaabUbVbWaVaUbXbYbZaaaaaaaabycacbcccdaaaaaaaaaaaaaaaaaZbjaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaacecfcgchbecibXcjbKaaaaaackclcmcncdcoaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacecpcqcrcsbeaUaNbpctcucvcwcxcyczbqcoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaZbjaZaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaBcAcAcBcCcDcBcEcFcGcHcIcJcKarcLcMaaaBcNcNcNcNaBaaaZaZaZaZaZaZaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaZaaaaaaaaaaaaaaaaaaaacOcPcQcRcScTcUaacVcWcXadaaaaaacYcZdadadbdcaZdddedededededfaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaababaaaZbjaZaaaaaaaaaaaaaaaaaacOdgdhcRcSdicUaZdjaMaMadadaddkdldmdndmdbdodpdqdrdsdsdsdsdeaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaZbjaZaaaaaaababaaaZaaaaaaaaaaaZaaaaaZaaaadtdhducSdvaZbjdwdxdxadadaaaacYdmdydmdbdcaZdddedededededfaZaaaaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaababaaaaaaaaaaaZbjaZaZbjaZaaaadzdudzaaaaaZaadAdBcoaaaZaacYdadadadbdcaaaZaZaZaZdCaZdCaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababaaaaaZaaaaaZaaadadbqdDbqadadaaaadEdFcoaZbjaZcNdGdHdHdHdcaaaaaaaaaaaaaaabaaabaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadCababaaaaaaaaaaadadbdbddIbdbdadadaddJdJadcodKaadLdMdLdLdNaBaaaaaaaaaaaaaaaaababaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaZbjaZaaaaaaaaaZaaaaaSaRaRaaaSaSaSaddOdOdOaddPbjaZdQdRapaaaaaaaZaaaaaaaaaaaaababaaaaaaaaabababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaZbjaZaaaaaaaZaadjaMaMaMadadcococoaZaadSdTaraaaaaZbjaZaaaaaaaaababaaaaaaabaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaZabaaabaZbjaZaadUdVdUdUcoaZaaaaaaaadWdXdEaaaaaaaZaaaaaaaaaaababaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababaaababdCaaabaZbjdKaaaZbjaZaaaaaadYdZeaaaaZaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaZaaaaabaaaaabaadKbjaZaaaZaaaaaaaaebecedaZbjaZaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZbjaZaaaaaaabaaaaaaaZaaaaaaaaaaaaaaeeefdjaaaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaegehaRaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZbjaZaaaaababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaeiejbcabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaaaaaaaabababaaaaaaaaaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaabpekbpababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababaaaaaZbjaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaabyelbyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababaaaaaaaZaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaaaemenemaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZaaabaaaaaaaaaaaaaaaaaZbjaZaaemeoemaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZbjaZaaaaaaaaaaaaaaaaaaaaaZaaaaaaemaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaZabaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaabaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
+
+(1,1,2) = {"
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeperesepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepereseteqepepeqepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqeqepeqepeuevewesepepeqeqeqeqepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepepepeqepepeqepepepeqepepepexeyezeAepepepeqepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepeBeqepeqepepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepepepepepepepepepepepepeqepepepepeqeqeCeDeqepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepepepepepeEepepepepepepeFesepepeqepeqepepeqepepepepeqepepepepeqepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepepepepeqepepepepepepepepeGeHeIeJeKeseLeMesesepepeqeqepeqepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeNeOePeQeQeQeQeQeQeReQepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqeSeTeQeUeVeUeUeUeUeUeQepepepepepepepeqepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeWeXeQeUeYeUeZeQeUeQeQepepepepepepepepepepepepepeqepeqepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepfafbeQfcfdfefffeeUeUeQepepepepepepepepepepepepepepepepepepepeqeqepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepfgfhfifjfkflfmfneQeUeQepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepfoepepepepepepeQfpfpfqeQeQfpfpeQepepepepfrfsfiftfufvfwfxeUeUeQfoepepepepepepepepepepepepepeqepeqepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepfofyfoepepepepepfzfAfBfCfcfDfBfBfzepepepepfEfFfifGfHfHfIfJeUeUfKfyfoepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepeqeqepepepepepepepepepepepfoepepepepepepeQfLfLfMeQeUfLfLeQepepepepfNfOfifwfwfPfPfieQfQeQfoepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepeqeqeqepepepepepepepeqepepepepepepepepepepepeQfRfSfTfTfTfSfUeQepepepepfNfVfnfWfXfYfYeQeQeQeQepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepeqepeqepepepepepepeqepepepepepepepepepepepfZgagbgcgcgcgdgegfepepepepfNfVggghfOgiepepepepepepepepfoepepepepepepepepepeqepepepepepeqepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepeqeqepepepepepepepepepepepepgjgkglfkfjgmgngoepepepepfNgpgqgrgsepepepepepepepepfofyfoepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepeqepepepepeqepepepepepepepepepepepepepgtgugvgwftgxgmgyfZepepgzgAgBgCgDgsgEepepepepepepepepfoepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepfoepepepepepepepepepepepepepepepepepepepepepepepepgtgFgGgHgIftfjfcgJgKgLgMgNgOgPgQfFgEepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepfofyfoepepepeqepepepepepepepepepepepepepepepepepepepeQgRgRgSgTgUgSgVgWgXgYgZhahbeGhchdepeQeQeQeQeQeQepfofofofofofofoepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepfoepepepepepepepepepepepepeqeqepepfoepepepepepepepepepephehfhghhhihjhkephlhmhnesepepepeQeUeUeUeUeQfohohphphphphphqfoepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepfoepepepeqeqepfofyfoepepepepepepepepephehrhshhhihthkfohufbfbesesesephveUeUeUeUhwhxhyhzhAhAhAhAhpfoepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepeqepepepfofyfoepepepeqeqepfoepepepepepfoepepfoepephBhshChihDfofyhEhFhFesesepepeQeUeUeUeUeQfohohphphphphphqfoepepeqepeqepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepfoepepepepepeqeqepepepepepfofyfofofyfoepephGhChGepepfoephHhIgEepfoepeQeUeUeUeUeQepfofofofohJfohJepepeqepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqeqeqeqepepfoepepfoepesesfFhKfFesesepephLhMgEfofyfoeQhNeUeUeUeQepepepepepepepeqepeqepepepepepeqeqepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepephJeqeqepepepepepesesfsfshOfsfseseseshPhPesgEhQepeQhReQeQeReQepepepepepepepepeqeqepepeqepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepeqepepepepepepepepfofyfoepepepepfoepepfhfgfgepfhfhfheshShShSeshTfyfoeEhUeEepepepfoepepepepepepeqeqepepepepeqeqeqepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepeqepepepepepepepepepepepepepepfoepepepepfofyfoepepepfoephufbfbfbesesgEgEgEfoepeGhVeGepepfofyfoepepepepeqeqepepepeqepepepepepeqepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepeqeqeqepepepepepepepepepepepepepepepepepeqepfoeqepeqfofyfoephWhXhWhWgEfoepepepephLhYhLepepepfoepepepepepeqeqepepepepepeqeqepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepeqeqeqepepepepepepepepepepepepepepepepepeqeqeqepeqeqhJepeqfofyhQepfofyfoepepephZiahZepfoepepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqeqfoepepeqepepeqephQfyfoepfoepepepepibicibfofyfoepepepepepepeqeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepfofyfoepepepeqepepepfoepepepepepepephuidhuepfoepepepepepepepepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepfoepepepepepepeqepepepepepepepepepepepepepfoepepepepepepepepepepepepepepepepfgiefgepeqepepepepepepepepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepfofyfoepepeqeqeqeqepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepfriffreqepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepfoepepepepepeqeqeqepepepepfoepepepepepepepepepepepepepepepepeqepepepepepepepfEigfEeqeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepeqeqeqepepfofyfoepepepepepepepepepepepepepepepepepeqepepepepepfNihfNepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepeqeqeqeqepepepfoepepepepepepeqepepepepepepepepepepepepepepfoepepiiijiiepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepeqeqepepepepepepepepepepepepepepepepfoepeqepepepepepepepepfofyfoepiiikiiepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepfofyfoepepepepepepepepepepfoepepepiiepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepepepepfoeqepepepepepepepepepepepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepeqepepeqepepepepeqepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+epepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepepep
+"}

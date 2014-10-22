@@ -1,0 +1,33 @@
+"a" = (/cave/block/rock_face,/cave/turf/dirt,/cave)
+"b" = (/cave/block/amethyst_podium,/cave/turf/dirt,/cave)
+"c" = (/cave/turf/dirt,/cave)
+"d" = (/tutorial_manager/tutorial/region/start_tile,/cave)
+"e" = (/cave/block/coal{bp_cost = 0; load_bearing = 0; resource_amount = 3},/cave/turf/dirt,/cave)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aabcccccbaaaaaaaaaaaaaaaa
+accccccccccaaaaaccccaaaaa
+acccccdccccccccccccccaaaa
+accccccccccaaaaccccccaaaa
+aabcccccbaaaaacccdccccaaa
+aaaaaaaaaaaaaabccccccbaaa
+aaaaaaaaaaaaaaaaeeeeaaaaa
+aaaaaaaaaaaaaaccccccccaaa
+aaaaaaaaaaaaaaccccccccaaa
+aaaaaaaaaaaaaaccccccccaaa
+aaaaaaaaaaaaaaaccccccaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaa
+"}
