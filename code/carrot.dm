@@ -56,7 +56,10 @@ tile
 	icon_state = "carrot"
 
 client/verb/say(what as text)
-	world << "<b>[key]</b>: [what]"
+	world << "<b>[key]</b>: [copytext(html_encode(what),1,256)]"
+client/verb/who()
+	for(var/client/C)
+		usr << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"
 
 proc/atan2(x, y)
     if(!x && !y) return 0

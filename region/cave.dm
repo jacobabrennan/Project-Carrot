@@ -38,7 +38,7 @@ cave
 						else
 							weight += 1
 					if(weight > 0)
-						world << "You cannot gather from this, it is supporting too much weight. (Try building stone walls around it)."
+						usr << "You cannot gather from this, it is supporting too much weight. (Try building stone walls around it)."
 						return FALSE
 			. = ..()
 
@@ -193,7 +193,7 @@ cave/block/stone_window
 			icon_state = "window"
 
 recipe/amethyst_podium
-	ingredients = list("stone","stone","amethyst")
+	ingredients = list("stone","amethyst")
 	product = /tile/amethyst_podium
 tile/amethyst_podium
 	icon = 'cave.dmi'

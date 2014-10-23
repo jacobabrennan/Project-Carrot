@@ -14,6 +14,7 @@
 #define PRIMARY 16
 #define SECONDARY 32
 
+#define TOWN_START "town_start"
 #define TOTEM_RANGE 4
 #define LIGHT_REACH 12
 #define PINGOUT_TIME 60

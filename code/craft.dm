@@ -72,11 +72,14 @@ recipe_manager
 			if(recipe)
 				return recipe
 			// Try to find duplicates. This method only works with recipes of 4 ingredients or less.
-				/* Only these four dubplication patterns exist:
-					aaaa
-					aaab
-					aabb
-					aabc
+				/* Only these seven dubplication patterns exist:
+				aa
+				aaa
+				aab
+				aaaa
+				aaab
+				aabb
+				aabc
 				*/
 			var/list/res_count = list()
 			for(var/I = 1 to resource_types.len)
@@ -103,20 +106,43 @@ recipe_manager
 			if(res_count[res_count[1]] == 1) // abcd
 				return
 			// Test Duplicate Groups, compile possible signatures.
+			//aa
+			//aaa
+			//aab
+			//aaaa
+			//aaab
+			//aabb
+			//aabc
+			// Need to refactor this whole proc now that you can craft with less than 4 tiles.
 			var/list/test_sigs = list()
 			if(res_count[res_count[1]] == 4) // aaaa
 				test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[1]))) // aaa
 				test_sigs.Add(resource_signature(list(res_count[1], res_count[1]))) // aa
 				test_sigs.Add(resource_signature(list(res_count[1]))) // a
-			else if(res_count[res_count[1]] == 3) // aaab
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
-			else if(res_count.len == 2) // aabb
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[2]))) // abb
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
-			else // aabc
-				test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[3]))) // abc
+			else if(res_count[res_count[1]] == 3) // aaa, aaab
+				if(res_count.len == 2) // aaab
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
+				else // aaa
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[1]))) // aaa
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[1]))) // aa
+					test_sigs.Add(resource_signature(list(res_count[1]))) // a
+			else if(res_count[res_count[1]] == 2) // aa, aab, aabb, aabc,
+				if(res_count.len == 1) // aa
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[1]))) // aa
+					test_sigs.Add(resource_signature(list(res_count[1]))) // a
+				if(res_count.len == 2) // aab, aabb
+					if(res_count[res_count[2]] == 1) // aab
+						test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
+						test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
+					else // aabb
+						test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2], res_count[2]))) // aabb
+						test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
+						test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[2]))) // abb
+						test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
+				else // aabc
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2], res_count[3]))) // aabc
+					test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[3]))) // abc
 			// Test each signature, return recipe as soon as one is found.
 			for(var/sig in test_sigs)
 				recipe = recipes[sig]

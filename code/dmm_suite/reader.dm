@@ -12,7 +12,6 @@ dmm_suite{
 			else if(isnum(offset_coords)){
 				z_offset = offset_coords
 				}
-			offset_coords = list(x_offset,y_offset,z_offset)
 			}
 		else{
 			x_offset = offset_coords[1]
@@ -32,12 +31,12 @@ dmm_suite{
 			grid_models[model_key] = model_contents
 			sleep(-1)
 			}
-		var/zcrd=-1
+		var/zcrd=0
 		var/ycrd=0
 		var/xcrd=0
 		for(var/zpos=findtext(tfile,"\n(1,1,");TRUE;zpos=findtext(tfile,"\n(1,1,",zpos+1,0)){
 			zcrd++
-			world.maxz = max(world.maxz, zcrd+z_offset)
+			world.maxz = max(world.maxz, (zcrd-1)+z_offset)
 			ycrd=0
 			var/zgrid = copytext(tfile,findtext(tfile,quote+"\n",zpos,0)+2,findtext(tfile,"\n"+quote,zpos,0)+1)
 			for(var/gpos=1;gpos!=0;gpos=findtext(zgrid,"\n",gpos,0)+1){
@@ -49,14 +48,14 @@ dmm_suite{
 					ycrd = y_depth
 					}
 				else{ycrd--}
-				world.maxy = max(world.maxy, ycrd+y_offset)
+				//world.maxy = max(world.maxy, ycrd+y_offset)
 				xcrd=0
 				for(var/mpos=1;mpos<=length(grid_line);mpos+=key_len){
 					xcrd++
-					world.maxx = max(world.maxx, xcrd+x_offset)
-					if(world.maxx<xcrd){world.maxx=xcrd}
+					//world.maxx = max(world.maxx, (xcrd-1)+x_offset)
+					if(world.maxx<(xcrd-1)+x_offset){world.maxx = (xcrd-1)+x_offset}
 					var/model_key = copytext(grid_line,mpos,mpos+key_len)
-					parse_grid(grid_models[model_key],xcrd+x_offset,ycrd+y_offset,zcrd+z_offset)
+					parse_grid(grid_models[model_key],(xcrd-1)+x_offset,(ycrd-1)+y_offset,(zcrd-1)+z_offset)
 					}
 				if(gpos+length(grid_line)+1>length(zgrid)){break}
 				sleep(-1)

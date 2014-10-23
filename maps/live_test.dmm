@@ -1,255 +1,346 @@
-"aa" = (/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ab" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ac" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ad" = (/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ae" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 25; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"af" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ag" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ah" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ai" = (/cave/turf/dirt,/cave)
-"aj" = (/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 8; step_y = 28; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ak" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"al" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"am" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"an" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ao" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"ap" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aq" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"ar" = (/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 1; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"as" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"at" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"au" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"av" = (/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aw" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"ax" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"ay" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"az" = (/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aA" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aB" = (/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aC" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aD" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aE" = (/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aF" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aG" = (/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aH" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aI" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aJ" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aK" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aL" = (/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aM" = (/tile/stone{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aN" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aO" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 22; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aP" = (/tile/stone{bounds = "24,24"; step_x = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aQ" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aR" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aS" = (/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aT" = (/tile/stone{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aU" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aV" = (/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aW" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 3; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"aX" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aY" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"aZ" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"ba" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bb" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bc" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bd" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"be" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 29; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bf" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bg" = (/tile/stone{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bh" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bi" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 4; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bj" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bk" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bl" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bm" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bn" = (/tile/stone{bounds = "24,24"; step_y = 22; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bo" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bp" = (/cave/block/iron,/cave/turf/dirt,/cave)
-"bq" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"br" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bs" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bt" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bu" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 4; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bv" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 9; dir = 1; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 29; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bw" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bx" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"by" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bz" = (/cave/block/coal,/cave/turf/dirt,/cave)
-"bA" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/block/iron,/cave/turf/dirt,/cave)
-"bB" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bC" = (/cave/block/amethyst,/cave/turf/dirt,/cave)
-"bD" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bE" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bF" = (/cave/block/stone_wall,/cave/turf/dirt,/cave)
-"bG" = (/cave/block/stone_wall,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bH" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/block/stone_wall,/cave/turf/dirt,/cave)
-"bI" = (/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/cave/block/stone_wall,/cave/turf/dirt,/cave)
-"bJ" = (/tile/charm/iron_ring{screen_loc = "EAST:5,Center:81"; bounds = "24,24"; step_x = 12; step_y = 29; mouse_drag_pointer = "iron_ring"},/cave/block/stone_wall,/cave/turf/dirt,/cave)
-"bK" = (/cave/block/stone_floor,/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt,/cave)
-"bL" = (/tile/stone{bounds = "24,24"; step_x = 6; step_y = 7; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bM" = (/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bN" = (/cave/block/stone_wall,/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bO" = (/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"bP" = (/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bQ" = (/cave/block/stone_door,/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bR" = (/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
-"bS" = (/cave/block/bed{owner_ckey = "kaiochao"; bounds = "7,5 to 26,30"; tag = "kaiochao_start"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bT" = (/tile/spell_book{bounds = "24,24"; mouse_drag_pointer = "spell_book"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bU" = (/cave/block/stone_floor,/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"bV" = (/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"bW" = (/cave/block/stone_floor,/cave/block/stone_door,/cave/turf/dirt,/cave)
-"bX" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/cave/block/iron,/cave/turf/dirt,/cave)
-"bY" = (/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
-"bZ" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/block/iron,/cave/turf/dirt,/cave)
-"ca" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cb" = (/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cc" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
-"cd" = (/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
-"ce" = (/tile/coal{bounds = "24,24"; step_x = 28; step_y = 26; dir = 9; mouse_drag_pointer = "coal"},/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
-"cf" = (/cave/block/stone_door,/cave/turf/dirt,/cave)
-"cg" = (/cave/block/bed{bounds = "7,5 to 26,30"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"ch" = (/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"ci" = (/tile/spell_book{bounds = "24,24"; step_x = 10; step_y = 11; dir = 9; mouse_drag_pointer = "spell_book"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"cj" = (/cave/block/bed{owner_ckey = "iainperegrine"; bounds = "7,5 to 26,30"; tag = "iainperegrine_start"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"ck" = (/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt,/cave)
-"cl" = (/cave/block/stone_window{open = 1; icon_state = "window_open"; opacity = 0},/cave/turf/dirt,/cave)
-"cm" = (/cave/block/fire{life_span = -1; ignore = 0},/cave/turf/dirt,/cave)
-"cn" = (/tile/coal{bounds = "24,24"; step_x = 24; step_y = 4; dir = 8; mouse_drag_pointer = "coal"},/cave/block/iron,/cave/turf/dirt,/cave)
-"co" = (/tile/coal{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
-"cp" = (/tile/coal{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
-"cq" = (/tile/coal{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "coal"},/cave/block/iron,/cave/turf/dirt,/cave)
-"cr" = (/tile/coal{bounds = "24,24"; step_x = 26; step_y = 7; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
-"cs" = (/tile/coal{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
-"ct" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cu" = (/tile/stone{bounds = "24,24"; step_x = 25; step_y = 7; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cv" = (/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cw" = (/tile/stone{screen_loc = "EAST:5,Center:81"; bounds = "24,24"; step_y = 22; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cx" = (/tile/stone{bounds = "24,24"; step_x = 26; step_y = 5; dir = 9; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 1; step_y = 26; dir = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cy" = (/tile/coal{screen_loc = "EAST:5,Center:-72"; bounds = "24,24"; step_x = 26; step_y = 4; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
-"cz" = (/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cA" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 25; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cB" = (/tile/coal{bounds = "24,24"; step_x = 2; step_y = 10; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
-"cC" = (/tile/iron_ore{bounds = "24,24"; mouse_drag_pointer = "iron_ore"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"cD" = (/tile/stone{bounds = "24,24"; mouse_drag_pointer = "stone"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"cE" = (/tile/coal{bounds = "24,24"; step_x = 16; step_y = 1; dir = 10; mouse_drag_pointer = "coal"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"cF" = (/cave/block/bed{owner_ckey = "higoten"; bounds = "7,5 to 26,30"; tag = "higoten_start"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
-"cG" = (/tile/stone{bounds = "24,24"; step_x = 29; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cH" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cI" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 19; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cJ" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cK" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cL" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 3; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cM" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cN" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 29; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cO" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cP" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cQ" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 8; step_y = 27; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cR" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cS" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cT" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 28; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
-"cU" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
-"cV" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt,/cave)
+"aa" = (/cave/block/rock_face,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ab" = (/cave/block/rock_face,/cave/turf/dirt,/cave)
+"ac" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ad" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ae" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"af" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 25; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ag" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ah" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ai" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aj" = (/cave/turf/dirt,/cave)
+"ak" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 8; step_y = 28; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"al" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"am" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"an" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ao" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ap" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aq" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ar" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"as" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 1; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"at" = (/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"au" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"av" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aw" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ax" = (/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ay" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"az" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aA" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aB" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aC" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aD" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aE" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aF" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aG" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aH" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aI" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aJ" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aK" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aL" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aM" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aN" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aO" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aP" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aQ" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aR" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aS" = (/tile/stone{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aT" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aU" = (/tile/stone{bounds = "24,24"; step_x = 22; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aV" = (/tile/stone{bounds = "24,24"; step_x = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"aW" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aX" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aY" = (/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"aZ" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 1; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ba" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bb" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 31; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bc" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 3; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bd" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"be" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 25; step_y = 26; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bf" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bg" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bh" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bi" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bj" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bk" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bl" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 29; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bm" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bn" = (/tile/stone{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bo" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bp" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bq" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 4; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"br" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bs" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bt" = (/tile/stone{bounds = "24,24"; step_y = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bu" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 28; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bv" = (/tile/stone{bounds = "24,24"; step_y = 22; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bw" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 4; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bx" = (/cave/block/iron,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"by" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bz" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bA" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bB" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bC" = (/tile/stone{bounds = "24,24"; step_x = 13; step_y = 15; dir = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bD" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bE" = (/cave/block/iron,/cave/turf/dirt,/cave)
+"bF" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 4; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bG" = (/tile/stone{bounds = "24,24"; step_x = 29; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 9; dir = 1; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bH" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bI" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bJ" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bK" = (/cave/block/coal,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bL" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bM" = (/tile/iron_ore{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"bN" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bO" = (/tile/iron_ore{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "iron_ore"},/tile/iron_ore{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bP" = (/cave/block/amethyst,/cave/turf/dirt,/cave)
+"bQ" = (/cave/block/amethyst,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bR" = (/cave/block/rock_face,/tile/iron_ore{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"bS" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bT" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"bU" = (/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"bV" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/block/stone_wall,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bW" = (/cave/block/stone_wall,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bX" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bY" = (/tile/stone{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"bZ" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ca" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cb" = (/tile/stone{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cc" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cd" = (/tile/iron_ore{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"ce" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 4; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cf" = (/cave/block/coal,/cave/turf/dirt,/cave)
+"cg" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ch" = (/tile/stone{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ci" = (/cave/block/stone_door,/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cj" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 28; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ck" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cl" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cm" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cn" = (/cave/block/rock_face,/tile/iron_ore{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "iron_ore"},/tile/stone{bounds = "24,24"; step_x = 24; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"co" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cp" = (/tile/stone{bounds = "24,24"; step_x = 6; step_y = 7; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cq" = (/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cr" = (/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cs" = (/cave/block/stone_floor,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ct" = (/cave/block/stone_floor,/cave/block/stone_wall,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cu" = (/cave/block/stone_floor,/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"cv" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cw" = (/cave/block/stone_floor,/cave/block/stone_door,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cx" = (/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/block/stone_floor,/cave/turf/dirt,/cave)
+"cy" = (/cave/block/stone_floor,/cave/block/stone_floor,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cz" = (/cave/block/stone_floor,/cave/block/stone_door,/cave/turf/dirt,/cave)
+"cA" = (/cave/block/rock_face,/tile/iron_ore{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cB" = (/tile/iron_ore{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"cC" = (/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/block/stone_floor,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cD" = (/cave/block/rock_face,/tile/iron_ore{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"cE" = (/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt,/cave)
+"cF" = (/cave/block/rock_face,/tile/iron_ore{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cG" = (/tile/iron_ore{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cH" = (/tile/iron_ore{bounds = "24,24"; step_x = 8; step_y = 27; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"cI" = (/cave/block/stone_floor,/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"cJ" = (/cave/block/bed{owner_ckey = "kaiochao"; bounds = "7,5 to 26,30"; tag = "kaiochao_start"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cK" = (/cave/block/rock_face{icon_state = "dug_out"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cL" = (/tile/iron_ore{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "iron_ore"},/tile/iron_ore{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cM" = (/tile/iron_ore{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"cN" = (/tile/stone{bounds = "24,24"; step_x = 15; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cO" = (/cave/block/rock_face{icon_state = "dug_out"},/tile/iron_ore{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cP" = (/cave/block/stone_wall,/tile/coal{bounds = "24,24"; step_x = 29; step_y = 6; dir = 5; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"cQ" = (/tile/coal{bounds = "24,24"; step_x = 14; step_y = 1; dir = 5; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 28; step_y = 7; dir = 5; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 8; step_y = 31; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 10; step_y = 18; dir = 5; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cR" = (/cave/block/amethyst_podium{bounds = "9,1 to 24,24"},/cave/turf/dirt,/cave)
+"cS" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 2; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cT" = (/cave/block/stone_wall,/tile/coal{bounds = "24,24"; step_x = 31; step_y = 5; dir = 1; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 28; step_y = 21; dir = 5; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"cU" = (/tile/coal{bounds = "24,24"; step_x = 13; step_y = 4; dir = 5; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 12; step_y = 19; dir = 5; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"cV" = (/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt,/cave)
+"cW" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 30; mouse_drag_pointer = "stone"},/cave/block/stone_door,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cX" = (/tile/iron_ore{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"cY" = (/tile/iron_ore{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"cZ" = (/tile/coal{bounds = "24,24"; step_x = 31; step_y = 17; dir = 4; mouse_drag_pointer = "coal"},/cave/block/stone_wall,/cave/turf/dirt,/cave)
+"da" = (/tile/coal{bounds = "24,24"; step_x = 13; step_y = 17; dir = 4; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"db" = (/cave/block/stone_door,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dc" = (/cave/block/rock_face,/tile/iron_ore{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "iron_ore"},/tile/iron_ore{bounds = "24,24"; step_x = 29; step_y = 23; dir = 10; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dd" = (/tile/iron_ore{bounds = "24,24"; step_x = 23; step_y = 3; dir = 8; mouse_drag_pointer = "iron_ore"},/tile/iron_ore{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"de" = (/tile/coal{bounds = "24,24"; step_x = 27; step_y = 31; dir = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 27; step_y = 17; dir = 9; mouse_drag_pointer = "coal"},/cave/block/stone_wall,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"df" = (/tile/coal{bounds = "24,24"; step_x = 8; step_y = 31; dir = 6; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 12; step_y = 17; dir = 6; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dg" = (/cave/block/stone_floor,/cave/block/bed{bounds = "7,5 to 26,30"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dh" = (/cave/block/stone_floor,/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"di" = (/cave/block/stone_door{open = 1; icon_state = "door_open"; opacity = 0; density = 0},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dj" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 22; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dk" = (/tile/iron_ore{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"dl" = (/tile/iron_ore{bounds = "24,24"; step_x = 9; step_y = 29; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"dm" = (/cave/block/stone_floor,/cave/block/bed{owner_ckey = "iainperegrine"; bounds = "7,5 to 26,30"; tag = "iainperegrine_start"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dn" = (/tile/coal{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "coal"},/tile/iron_ore{bounds = "24,24"; step_x = 2; step_y = 30; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"do" = (/tile/coal{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 28; step_y = 9; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dp" = (/tile/coal{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 5; step_y = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dq" = (/tile/coal{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dr" = (/tile/coal{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ds" = (/tile/stone{bounds = "24,24"; step_x = 28; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dt" = (/cave/block/rock_face,/tile/coal{bounds = "24,24"; step_x = 28; step_y = 24; dir = 10; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"du" = (/tile/coal{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 23; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dv" = (/tile/coal{bounds = "24,24"; step_x = 4; step_y = 23; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 4; step_y = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dw" = (/tile/coal{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 8; step_y = 4; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dx" = (/cave/block/coal,/tile/coal{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dy" = (/cave/block/rock_face,/tile/coal{bounds = "24,24"; step_x = 23; step_y = 29; dir = 10; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dz" = (/cave/block/coal,/tile/coal{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 28; step_y = 23; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dA" = (/cave/block/coal,/tile/coal{bounds = "24,24"; step_x = 5; step_y = 24; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 24; step_y = 28; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dB" = (/cave/block/coal,/tile/coal{bounds = "24,24"; step_y = 23; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 8; step_y = 27; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dC" = (/cave/block/stone_window,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dD" = (/cave/block/fire{life_span = -1; ignore = 0},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dE" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dF" = (/cave/turf/dirt{tag = "town_start"; icon_state = "dirt_2"},/cave)
+"dG" = (/cave/block/iron,/tile/coal{bounds = "24,24"; step_x = 24; step_y = 4; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dH" = (/tile/coal{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_y = 9; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dI" = (/tile/coal{bounds = "24,24"; step_x = 9; step_y = 3; mouse_drag_pointer = "coal"},/tile/coal{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dJ" = (/tile/stone{bounds = "24,24"; step_y = 29; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 4; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dK" = (/cave/block/bed{owner_ckey = "flick"; bounds = "7,5 to 26,30"; tag = "flick_start"},/cave/turf/dirt,/cave)
+"dL" = (/cave/block/iron,/tile/coal{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt,/cave)
+"dM" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_y = 6; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dN" = (/tile/stone{bounds = "24,24"; step_x = 25; step_y = 6; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dO" = (/tile/stone{bounds = "24,24"; step_x = 26; step_y = 7; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 6; step_y = 7; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dP" = (/tile/stone{bounds = "24,24"; step_x = 27; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dQ" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 1; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dR" = (/tile/stone{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dS" = (/tile/stone{bounds = "24,24"; step_x = 23; step_y = 1; dir = 8; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 3; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dT" = (/tile/stone{bounds = "24,24"; step_x = 26; step_y = 7; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dU" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 2; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"dV" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dW" = (/tile/stone{bounds = "24,24"; step_x = 3; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 30; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dX" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 31; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 7; step_y = 26; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dY" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 26; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"dZ" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 6; step_y = 25; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ea" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eb" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ec" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 9; step_y = 31; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ed" = (/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 6; step_y = 25; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ee" = (/cave/block/stone_door,/cave/turf/dirt,/cave)
+"ef" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/block/rock_face,/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eg" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 7; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eh" = (/cave/block/stone_floor,/cave/block/bed{owner_ckey = "alexpeterson"; bounds = "7,5 to 26,30"; tag = "alexpeterson_start"},/cave/turf/dirt,/cave)
+"ei" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 25; step_y = 25; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ej" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 5; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ek" = (/tile/stone{bounds = "24,24"; step_x = 24; step_y = 28; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"el" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 8; step_y = 27; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"em" = (/cave/block/stone_floor,/tile/iron_ore{bounds = "24,24"; mouse_drag_pointer = "iron_ore"},/cave/turf/dirt,/cave)
+"en" = (/cave/block/stone_floor,/tile/stone{bounds = "24,24"; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eo" = (/cave/block/stone_floor,/tile/stone{bounds = "24,24"; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ep" = (/cave/block/stone_floor,/tile/coal{bounds = "24,24"; step_x = 16; step_y = 1; dir = 10; mouse_drag_pointer = "coal"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eq" = (/cave/block/stone_floor,/cave/block/bed{owner_ckey = "higoten"; bounds = "7,5 to 26,30"; tag = "higoten_start"},/cave/turf/dirt,/cave)
+"er" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"es" = (/cave/block/rock_face{icon_state = "dug_out"},/tile/stone{bounds = "24,24"; step_x = 4; step_y = 24; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"et" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 19; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eu" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ev" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 1; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ew" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ex" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 31; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 23; step_y = 3; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"ey" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"ez" = (/tile/stone{bounds = "24,24"; step_x = 9; step_y = 29; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"eA" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eB" = (/tile/stone{bounds = "24,24"; step_x = 8; step_y = 27; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 8; step_y = 5; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eC" = (/tile/stone{bounds = "24,24"; step_x = 2; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eD" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 24; step_y = 27; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eE" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 23; step_y = 30; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt{icon_state = "dirt_2"},/cave)
+"eF" = (/tile/stone{bounds = "24,24"; step_x = 4; step_y = 9; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"eG" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 28; step_y = 23; dir = 10; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 30; step_y = 9; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"eH" = (/tile/stone{bounds = "24,24"; step_x = 7; step_y = 6; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 28; step_y = 8; dir = 8; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
+"eI" = (/cave/block/rock_face,/tile/stone{bounds = "24,24"; step_x = 2; step_y = 23; mouse_drag_pointer = "stone"},/tile/stone{bounds = "24,24"; step_x = 27; step_y = 24; dir = 10; mouse_drag_pointer = "stone"},/cave/turf/dirt,/cave)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaacadaeaaaaafagahaiajaaakalaaamaaaaanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaapaqaraiasatauavawawaraiaxayazaAaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaBaCaaadaDaEaFaaaGaHaaadaIaaaJataKakaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaLaMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaNawataOaPaQaAaRaSaiauaTaUaiaVaiaWaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaXaHaEaYaaaYaaakakacaZbaaabbbcaabdaabeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabfaMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabgaMaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabhaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabjawaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabkaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaablaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabmbnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaboaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaabqaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabrbsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaabraibtbpaaaabpaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpaabpbrbubvbwaiaaaabpbpbpbpaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaabpaaaabpaaaaaabpaaaaaabsaibxbyaaaaaabpaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabAaiaibpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaabpaibBaibpaaaabCaaaaaaaaaabpaaaabCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaiaiaiaNaNaiaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaabpaaaaaaaaaaaaaaaaaaapavbDbEbFbGbHaiaiaaaaaaaaaaaaaaaabzaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaBaqbIbFbFbFbFbFbJbKbFaaaaaabzaaaabCaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaCbLbFbMbMbMbNbMbMbMbFaaaaaaaaaaaaaaaaaabCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabOaibFbMbMbMbFbNbMbPbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaibFbFbQbFbRbFbMbMbFaaaabCaaaaaaaaaaaaaaaaaaaaaaaabCaaaaaabpbpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaibFbMbMbMbSbFbFbMbFaaaaaaaaaaaaaabzaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaibFbMbTbUbMbQbMbMbFaaaaaaaaaaaabCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaibFbMbMbTbMbFbMbMbFbzaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpaaaaaaaaaaaaaabVaaaaaaaaaaaiaaaabzaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaibFbMbMbMbMbFbFbNbFaaaaaaaaaaaaaaaaaaaabCaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpaaaaaaaaaabzaabpaVaiaaaaaaaiaiaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaibFbWbFbFbFbFbFbFbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaabpaaaaaaaaaaaabXaqaaaiaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaibYaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbZbMaaaiaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaibYaaaaaaaaaaaaaaaaaaaabCaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaabzaabpcaaNaiaiaaaaaiaiaaaaaaaaaabzaaaaaaaaaabzaaaaaaaabYaiaiaiaibYbYaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacbccaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaicdaibYaaaaaaaaaaaaaaaabCbCbCbCbCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaabCaaaaaaaabpaaaaaaaaaabzaaaabYceaaaiaaaiaaaabYaaaaaabFbFbFbFbFbFbFaaaaaiaiaiaibYaabYaabFbFbFcfbFbFaabCbCaiaiaibCbCaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaabpbpaabzbzaaaiaiaiaiaiaaaabFbMbMbMbMbMbFaaaiaiaiaiaiaibYaaaabFbMbPbMbMbFaabCaiaiaiaiaibCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaabpbpaabzbzaaaaaaaaaiaiaiaibFbMcgbMbMbMbFbYaiaiaiaiaiaiaiaiaibQbMbMbMbMchcfaiaiaiaiaiaibCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaabCaaaaaaaabpbpbzbzbzaabYaiaiaiaiaibFcibMbMbMbMbFaiaiaiaiaiaiaiaiaaaabFbMbMbMcjbFaabCaiaiaiaiaibCaaaaaabpaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzbzbzbzbzbYaiaiaiaiaibFbMbMbMbMbMbFaiaiaiaiaiaibYaaaaaabFbMbMbMbMbFaabCbCaiaiaibCbCaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaaaabzbzbzbzbzbYaiaiaiaiaibFbMbMbMbMbMbFaiaiaiaiaiaibYaaaaaabFbMbMbMbMbFaaaabCbCbCbCbCbpaabpaaaaaaaaaabpbpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaabzbzbzbzbzaaaiaiaiaiaibFbFbFckclbFbFaiaiaiaiaiaiaibYaaaabFbFbFbFbQbFaaaaaaaaaaaaaaaabpbpaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaiaabzbzbzbzbzbzaiaiaiaiaiaiaiaiaicmaiaiaiaiaiaiaiaiaibYaaaaaaaabpbpcfbzaaaaaaaaaaaaaabpbpaaaaaaaabpbpbpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaiaabzbzbzbzaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaibYbYaabCaaaabpcncocpbCaaaaaaaaaabpbpaaaaaabpaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpaaaaaiaiaaaaaaaiaabzbzbzaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaabpcqaibzaaaaaaaaaaaabpbpaaaaaaaaaabpbpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpaaaiaaaaaaapaiaicrcsbzaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaiaiaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaactaQcuaiaiaiaicvaicwaicxaibYaaaiaiaiaiaiaiaiaicyaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaiaiaiaiaiaaaaaaaaaaaaaabpbpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaczaYaaakcAaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaicBaiaiaiaiaiaiaiaiaiaiaiaaaaaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaiaaaaaabYaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaibYaiaiaiaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCaaaaaabpbpbpbpaaaabzaiaaaaaaaaaaaiaaaiaiaaaiaaaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaibpaabpaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpaaaaaaaabzaaaaaaaaaaaiaaaaaiaaaaaaaiaiaibYaaaiaaaaaaaaaaaabFbFckbFbFbFbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpaaaaaabCaaaaaaaaaaaiaaaaaiaaaaaaaaaaaiaiaiaiaaaaaaaaaabzbFcCbMcDcDcDbFbzaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpbpbpaaaaaaaaaaaaaaaaaiaibpaaaibYaaaabYaaaabYaiaiaaaaaaaaaaaabFbMbMcDcDcDbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabpbpaaaaaaaaaaaaaaaaaabzaaaiaaaaaaaibYaabpaaaaaaaaaaaiaiaaaabCaaaabFbMcEcDcDbMbFaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaibzaaaabzbzaaaaaaaaaaaaaaaaaiaaaaaaaaaabFbMbMbMcDbMbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaabzbzaaaabCaabpaiaaaaaaaabzbpaaaabzaaaaaaaaaiaaaabzaaaabFbMbMbMbMcFbFaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCaaaaaaaaaaaaaabzaaaaaiaaaaaaaaaabFaibFbFbFbFbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaiaiaaaaaaaaaaaiaaaaaaaabzaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaabzaaaaaabCaabpaaaabpaaaaaaaabpaaaaaaaaaiaiaabYaabYaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaiaiaiaacGaiaaaiaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaiaaaaaaaaaaaiaiaiaiaiaicHaiaiaiaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaiaaaaaabzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabzaaaaaaaaaaaaaaaaaaaiaiaaaaaiaiaiaiaiaiaaaaaaaaaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaaaaaaaiaiaiaiaaaaaaaaaaaacIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaabYaaaaaiaiaaaaaaaaaaaacJaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaczctaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacLaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacMcNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacOcPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacQaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaXauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaFaNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaXcRaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaYcSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacTaiaqcUaibYaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacVaEaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabYaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabaaabaaababaaabaaababaaaaabaaababaaaaabaaababaaaaaaaaabaaaaabaaaaaaabababaaabaaababababaaabaaabaaabaaaaabaaaaaaabaaaaaaaaaaaaaaabababaaaaaaabaaababababaaababaaaaabaaaaababaaaaabaaaaababaaabaaaaaaab
+abaaaaaaaaaaababaaaaababababaaabaaaaaaabababaaaaaaabaaaaababaaabaaabaaaaababaaaaaaaaabababaaaaabaaaaabaaabaaaaaaaaaaaaababaaababaaababaaaaaaaaabaaababababababaaababaaaaababaaababaaaaabaaabaaababaaaaab
+aaaaabaaabaaababababababaaaaaaabaaaaaaaaababaaaaabababaaabaaaaaaaaaaaaababaaabaaaaabaaaaaaaaabaaaaaaabababaaaaaaaaabaaaaaaaaababaaaaababaaaaaaaaaaaaaaaaaaaaabaaaaabaaabaaabababaaababababababaaaaaaabab
+aaabaaaaabaaabababaaabababaaabaaababababaaaaaaabaaababababababaaaaabababababaaaaaaabaaabababaaaaaaaaaaaaaaaaabaaaaaaaaababaaaaababaaaaaaababababaaabaaababababababababaaababaaabaaabaaaaaaabaaaaaaaaaaab
+aaaaaaabababaaaaaaaaaaaaabababaaaaaaababababababaaaaababaaabababaaaaababaaaaabaaaaaaaaabaaaaabaaababababaaaaabaaabaaaaaaabababaaabaaaaaaaaababaaabaaabaaabaaaaaaaaabaaababaaabaaaaaaabaaabaaabaaabababaa
+aaabaaaaaaabaaabaaaaaaabababaaaaaaaaaaabaaaaababababaaaaaaaaaaabababaaababababaaabaaaaabababaaababaaabaaacaaadaeafaaaaagahaiajakabalamaaanabaaaoababababaaabaaabaaaaabababababaaababaaaaaaaaaaabaaaaaaab
+abaaaaababaaabaaabaaaaaaabaaaaaaabaaabaaaaaaabaaaaababaaabaaaaaaaaababaaabababababaaaaababababaaaaaaaaaaabaaabababababaaabaaapaaaaababaaabababababaaaaabaaaaaaabaaabaaabaaaaababaaaaaaaaaaaaababaaabaaaa
+abaaaaabaaabaaaaabaaaaaaaaababaaaaabababaaabaaababaaaaababaaaaabaaabaaaaabaaabaaaaaaabaaabaaaaaaaqarasatauavawaxayazasajaAaBaCaDajabaaababababaaaaabaaababaaabaaaaabaaaaababaaaaabaaaaaaaaaaababaaaaabaa
+aaaaababaaabababababaaababaaaaabaaabaaaaabaaabaaababaaababaaababaaaaababababaaabababaaababababaEaFaaaGaHaIaJabaKaLabaeaMabaNaOaPaQabaaababaaaaababaaababaaaaaaabaaaaababaaabaaaaababaaabaaabaaaaabaaaaaa
+abaaaaaaabaaaaaaaaaaabaaabababaaaaaaabaaababababababaaaaaaaaabaaaaaaaaabaaaaababaaaaaaaaabababaaaaabaaaaababababababaaaaaaaRaSababaaabaaaaaaaaaaabaaaaabaaabaaaaabaaabababaaabababaaabaaabaaabababababab
+ababababaaabaaabaaaaaaabaaababaaabaaabaaababababaaabaaababababababaaaaabaaaaababaaabaaaaababababababaaaaaTayavaUaVaWaDaXaYajawaZbaajbbajbcajababaaaaababaaaaaaaaabaaabaaaaabaaaaaaaaaaaaabaaaaaaaaaaabaa
+aaabaaabaaaaaaabaaaaababababaaabaaaaaaaaabaaabaaaaabaaabaaaaaaababaaaaaaaaaaabaaaaaaabababababaaabaaaabdaLbebfaabfabalaladbgbhaabibjaabkabblabababababaaabababaaaaaaababaaaaaaabababababaaabaaaaaaaaabab
+aaaaababaaababababaaabababaaabaaabaaabaaaaabababaaabaaaaabaaaaaaaaabaaabaaaaaaabaaaaaaaaabaaababaaaaabaaabaaaaababaaaaababbmbnababaaabababaaabaaabaaaaababaaabaaaaababababaaaaaaaaabababaaaaabaaaaaaaaaa
+abaaabaaaaaaaaaaaaaaaaaaababaaaaababaaabababaaaaaaababaaaaaaababaaabababababaaaaabaaababababababaaaaaaaaababaaababaaaaaaabbobnabaaaaababababaaaaaaabababaaabaaabaaaaababaaaaabaaabaaaaaaaaaaaaabaaabaaaa
+aaababababababaaaaaaaaaaaaaaabaaabaaaaaaababaaabababaaaaabaaabaaababababaaababaaabaaaaaaaaababaaabaaaaabababababababaaaaaabpajabaaaaabaaaaababababaaabaaabababaaaaabaaabaaaaababaaababaaaaabababaaababaa
+aaaaaaababababababaaaaaaababababaaabaaaaababaaabaaabaaaaababababaaaaaaaaaaabaaaaaaaaabaaaaababaaababababaaaaaaaaabaaababababbqaaababaaabaaabaaaaabaaababaaaaababaaaaaaaaaaaaaaababaaaaaaababaaaaabaaabab
+ababababababaaababaaababaaabaaabaaaaaaabaaaaaaabababaaaaabaaaaaaaaaaabaaaaabaaaaabaaabababaaaaaaaaabababababaaababaaaaaaaabrayaaaaaaaaababaaababababaaabaaababaaaaaaaaabababababaaaaabaaabababababababaa
+aaabaaaaaaaaabaaaaaaaaaaaaababababaaabaaaaabaaababaaaaabababaaaaababaaaaaaabaaababababaaababaaaaabaaaaaaaaabaaababaaabaaaabsajaaababababaaaaaaabaaababaaababaaaaaaabababababababababababababaaabaaababab
+ababaaaaaaababaaaaaaabaaabaaaaaaaaabaaababaaaaaaaaaaabaaabaaaaaaabababaaaaabaaaaaaaaabaaabaaababaaaaaaaaabaaabaaabababaaabaabtaaabaaaaabababababaaabaaababaaaaaaabaaabaaaaaaabaaabaaabaaaaabaaaaabababab
+aaaaaaaaaaabaaabaaabababababaaaaabaaababaaaaabababaaabaaababababababaaabaaaaabababaaaaaaaaabaaabaaabababababaaaaaaaaabababbubvabaaaaababaaaaabaaabaaaaabaaabaaabaaaaababaaaaababaaaaababaaaaabababaaaaaa
+aaaaababaaaaaaabababaaabaaabaaababaaaaaaaaababaaaaababaaababaaaaaaabaaaaababaaaaababaaabaaaaababababababaaabaaababaaababababbwaaaaabaaabaaababaaabaaabaaababaaabaaababaaaaaaabaaababaaabaaaaabaaaaaaabab
+abaaaaaaaaababaaabababaaaaaaaaabababaaaaabaaababaaaaaaaaaaabaaabababaaabababababaaaaaaababaaaaaaaaaaabababaaababaaabbxaaaabyajaaaaaaaaaaaaaaababaaabababaaababaaaaaaabaaaaaaaaabaaabaaaaababaaaaaaaaaaab
+abaaabaaabababaaaaabaaaaaaaaababaaabaaaaaaabaaabaaababaaabaaababaaababaaababaaaaababaaaaaaabaaabababaaaaaaaaaaaaabaaaaaaaabzbAabaaaaabaaabaaaaaaababababaaaaaaababaaababaaababaaabaaaaabaaabababaaababaa
+abababaaaaabaaaaaaaaaaaaabaaababaaaaaaaaaaaaaaabaaabaaabaaaaaaaaaaaaaaabaaaaabaaaaaaaaabababababababaaababaaaaabababbxaabBbCbDbxabaabEabaabxaaaaaaaaabaaaaabaaaaaaababaaabaaabababaaaaabababaaabaaabaaab
+abaaabaaabaaabababaaaaaaabaaaaababababaaababaaaaabaaaaaaababaaaaaaaaaaaaaaabaaabaaababababaaababaaabababababbEbEaabxbzbFbGbHataaabbxbEbEbxaaaaabaabEaaaaababababaaaaabaaabababababaaaaabaaaaaaaaaaababab
+abaaababababaaababaaaaababaaaaababaaabaaaaaaaaaaaaaaabaaabaaabaaabaaaaaaababababaaababbEabaaabaabEababbxabaaabbEaaababbAajbIbJabaaabbxabbxabababababaaaaabaaaaaaababaaaaaaaaaaabaaababaaaaaaaaababaaaaaa
+abaaababaaaaabaaaaabaaaaaaaaaaaaababaaaaabababababababaaabababababababababaaaaababbKaaabaaaaaaabaaaaaaababaaabaaaaabbLatajbMaaababababaaabaaaaabaaabaaaaabaaabaaaaabababababaaababaaabaaabaaabaaaaababab
+aaabababababababababaaabaaabaaaaabababababaaababaaabaaaaabaaaaaaaaaaabaaababbEaaabaaaaabaaabaaaaaaaaaaaabxabaaaaaaajajbNbOataaabbPababaaababbxaaabbQabaaabaaaaaaaaabababaaaaaaabaaabaaaaababaaabaaababaa
+abababaaaaababaaabaaabaaaaabaaabababaaababaaabababaaaaaaaaabababaaaaaaaaaaaaaaaaaaaaaaababbxaaaaababababababaaajajajajatatbRabaaababataaaaabaaabaaababababaabEabababaaaaabaaaaabababaaabaaababaaaaaaaaab
+abaaaaababaaabaaaaaaaaaaaaaaaaaaaaabababaaabaaaaabaaababababaaababaaabaabxaaababaaaabEaaababaaaaababaaaaaqaxbSbTbUbVbWajajatajatavbXatbYbZatcaaXcbatcccdceabaaaaababaaaaabababaaababaaabaaababaaaaaaaaab
+abaaaaaaaaabaaababaaaaaaabaaaaabaaabaaabaaaaabaaabaaabaaaaaaababaaabaaaaaaabaaababaaaaaaababababcfaaabcgchbUbUbUbWbWbUbUcibWabbeaEatbicjatckabclclcmaacnaacfaaabaaababababaaaaaaababaaaaababaaaaaaabaaab
+aaaaaaaaaaabaaaaaaaaaaabaaaaababaaaaababababaaabaaababababaaaaabaaabababababaaabaaaaabaaaaaaabaaaaaabEcocpbWcqcrcsctcucscqbUaaabaaababaaaaaaaabQaaabaaaaaaaaababaaaaababaaababababaaaaabaaabaaaaababaaaa
+aaaaabaaaaaaabaaaaaaaaabaaababaaaaababaaaaaaabaaaaaaaaababaaabababaaaaabababaaaaaaaaaaaaabaaaaabaaaaabcvajbWcqcqcqbUctcscqbWaaabababaaabababaaaaaaabababaaabaaaaaaabaaabaaababaaaaaaaaaaabababababababab
+abaaabaaaaaaabaaababababaaabaaababaaabaaababaaaaaaaaaaaaabaaabaaababaaabababaaaaaaaaaaababaaaaabababababajbWbUcwbUcxbUcscqbWaaabbPaaaaababaaabaaababaaaaabbQabaaabbxbEabaaaaabaaabaaabababaaabababaaabaa
+ababaaaaababababaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaabaacfababaaaaabaaaaababaaabaaababaacfaaabaaaaaaabababajbUcqcscqcqbWbWcsbWaaabaaaaaaababcfaaaaababbKaaaaaaabababababababaaaaabababababababaaabaaababaa
+abaaabababaaabaaabaaabaaabaaaaabababaaaaabaaababaaaaaaaaaaaaaaababaaabababaaabcfabaaababaaabaaabaaaaabaaajbUcqcscycsczcqcsbWaaabaaaaababbQaaaaaaababaaababaaaaaaabaaaaaaababaaababaaababaaaaabaaababaaab
+aaabaaaaaaabaaabaaaaaaaaaaaaababaaaaababaaabababaabKaaaaababaaaaaaaaaaaaabababaaaaaaaaabaaabaacfaaabaaaaajbWcqcscqcqbWcqcqbUbKababababbxaaaaaaabaaabaaaaaaaaabababababaaaaaaaaabaaaaabaaabaaaaabababaaab
+aaabaaaaababaaabaaabaaababaaaaabababbxbxabaaababaaabaaataaaaabaaaaatababcfabaaaaababababaacfabaaaaabaaaaajbUcscqcscsbWbWctbWababaaabaaaaabaaaaabbQaaababababbKababababaaabaaaaaaababaaaaaaaaaaaaabababaa
+aaaaabaaaaaaababaaaaaaaaabaaabaabEbxbEabababababcfcAcBatajababaaatajabaaabaaabaaabbKabaaabaaaaaaabaaaaaabUbWcCbWbWbWbUbUbWbWabababaaaaabaaaaaaaaaaabaaabaaabaaaaabaaabaaababaaababaaababaaaaababaaaaabab
+aaaaababaaababababababababaaabababbEaabEaaabaaababcDatajcpajatajajaaaaaaababaaababababaaaaabaaaaababaaaaatatatajcEaaabaaaaabaaaaabaaabaaaaababababaaaaabaaababbQabbxaaabaaabaaaaabaaaaaaaaabaaabaaababaa
+abaaaaaaabababaaababaaaaaaaaaaababababaaaaabaaabcFcGcHcIaxatcJajajaaabababaaabaaabaaababaaaaaaaaababaaabatajajcKababaaaaatabaaaaaaaabPaaabaabxabaaaaabaaaaaaabaaababaaaaaaaaabaaababababaaabababaaababab
+aaaaaaaaabaaaaaaaaaaaaaaaaaaabaaaaabaaabbEaaabcfaacLcMatcNajajatajajbUbWaaaaabbKaaababababcfaaababaacKajajajajcEcEaaaaaaajbxaaabababaaaaaaaaababaaabcfabababcfabaaaaaaaaaaaaaaabababaaaaababaaaaabababaa
+aaabaaaaaaababaaabaaaaababaaababaaababaaaaaaaacEcOababcEajatcPcQatajbWbWabaaaaaaaaababaaaaaaaaabaaabatajajatcRatcKaaaaaaatajaaaaabbQajatajatabababababababaaaaabaaabababaaaaaaaaaaaaababaaaaabaaaaaaabaa
+aaaaaaaaaaabaaaaababaaabababbPaaabababbEaaaacSajcEcfaaaacKcKcTcUbWatcKcEcEaaaaabbWbUbWbUbWbUbUababatatatatcKaacEaabWbUbUcVbUbWaabQajatatatajajababaaaaaaababaaaaabaacfababaaababababaaabaaabababaaabaaaa
+abaaabababaaabaaaaaaaaaaabaaabaaabaaaaababababcWaaababcXcYaacZdabWajdbajatajabaabWcscqcqcscqbWaaatajajatajajcEabaabUcscucqcqbUaabQajajatatatajcKaaababaaaaaaaaababaaaaaaabaaaaababababaaababaaaaabaaabab
+aaabababaaababaaaaabaaababababaaabaaabaaabababajaacfdcddataadedfbUcEcEcKatajatajbUcsdgcqcqcsbUcEajajatajatatajajatczcqcqcscsdhdiajajatajatajbWcKabaaababababaaaaaaaaabaaaaabaaaaaaabaaabaaaaaaabababaaaa
+abaaabaaaaabaaaaaaaaaaaaababaaaaaaaabxaaaaababcscEaadjdkdlbWbWajbUcEcKajajajatatbWcscqcscqcqbUajatatatatatatajaaaabUcscqcsdmbUabbQatatajajatbQabaaabbxaabEababababababaaaaaaaaaaaaaaababaaabaaaaabababab
+abaaaaaaaaaaaaabaaabababaaababaaababaaaaababaaajcKaaaaatdndodpdqdrcfcKajajatajajbUcscqcscscsbWatatajatatajcEabababbUcqcqcscqbUabbPbQatajajbPbPaaaabEababaaabaaaaaaaaaaabaaabaaaaaaaaaaababababaaababaaab
+abaaaaaaabaaaaaaaaabaaababaaabaaaaaaaaaaaaaaabatajatdsaadtdudvdwdxbKcKatajatatajbWcscqcqcscqbUatatatatatajcEaaabaabWcqcqcqcqbWabaabPbPbPbQbQbEabbxaaabaaaaaabEbxabaaaaaaaaababababaaabababaaababaaabaaaa
+aaababaaababaaaaaaaaaaababaaabaaabaaabaaabaaaaaaaaaaatatdydzdAdBbKbKcEatajatatatbUbUbUdidCbWbUajajatatajatajcEaaabbUbUbUbWcwbWabaaababaaabaaaabEbEababbEaaaaababaaaaaaababaaaaaaaaabababaaababababaaabaa
+ababaaabaaabaaabaaabaaabaaababaaabcEcKcEcEaaaabEababaaajaabKcfbKcfcfcfbUajajatatajajatajdDatajajatajatatatajcKaaaaababbEbxdbcfaaaaaaabaaababbxbxababababbxbEbEaaabaaaaaaabaaabaaababababaaaaabaaaaabaaaa
+dEababaaabababaaaaabababaaababaabzatatatatajbWazaaaaaaatabbWbKcfbKaacEbUajajatatajajajdFajatajatatajatajatcKcKabbPaaabbxdGdHdIbQaaabaaaaabbEbEababaabxabaaabaaaabxaaababaaaaabaaaaaaaaabaaababaaaaababaa
+dJaaaaaaababababaaabaaaaabababababatdKatatajbWajabaaaaatcKatcfatabcEcKajajajajatajatatatajajajajajatajatatabaaaaababaabxdLatcfabaaaaaaaaaabEbEaaababaaabbxbEabaaaaaaaaabaaaaabaaaaaaaaaaaaaaaaaaababaaaa
+dMdNataychaydOatdPbadQajdRdSdTatdUajatajajajcVatcKaaatdVajajatatcKaaatatatajajajatatatatbWbWbUbUbWajatajatababababababaaatatababababababaaabaaabababbEabaaababababaaaaaaaaaaaaaaaaabababaaaaababaaabaaaa
+dWaadXaFaLdYaadZabcleaebaEaaecedajabatajcVajatatatatatatajajajcEcEajajajajatajatatajatateecqajcqbWajajajajaaababaaatajatajataaaaababaaababbEbxabaaaaaaabaaaaaaaaabaaaaabaaabaaaaaaabaaaaababaaabaaaaabab
+abaaaaaaababaaabaaaaaaababaaabaaefajaaabaaaaabababegababaaabatajatajajatatajajatajajajajdbcscsehbWatatajajababatatajajajataaaaaaaaaaaaabaaabaaabaaaaaaaaaaabababbxabaaababaaabababaaabaaabaaaaababaaabab
+aaabaaabaaabaaaaaaabaaabaaabababcgabaaabababaaabeiaabxaaaaaaajaaababcKajajajatajajatajajbUbUbWbUbUajajatatajatajcKatatatabbxabaaababababaaabaaabaaabaaaaabababaabxaaababaaaaaaababaaabababaaabaaabababaa
+aaaaababababaaababaaaaaaabaaabaaaaabaabQabaaabbxbEbEbxaaabatatceababaaaaataaajajaaajaaatajajajajatajatajajababaaaaababatbxabbxaaababbKabaaabababaaabaaaaaaaaabababababaaaaabaaababababaaabababaaaaaaaaab
+aaababababaaababababababaaababababaaababaaabaaaaabbEbxbxaaejekaabKaaaaabaaabajabaaatabaacKajatatcEaaatabaaabababaabWbWcVbUbWbWbUaaaaaaabababaaabaaaaaaabaaababaaabaaabaaaaabaaababaaabababababaaaaabaaab
+ababababababaaabababaaaaaaaaabababaaabaaaaaaaaaaaaaabEbxbEabelabbQaaaaabababajaaaaatabababcKabajajajatababaaaaaabKbWemcseneoenbUbKabaaabaabKababababaaaaabababaaabababaaaaaaaaabaaaaaaaaababaaaaabaaabab
+abaaabaaababaaababaaabaaaaababaaababaaabaaabababaabEbxbxbEaaabaaabaaababaaajajbxcEatcKaaabcKaaaacEajajaaaaabaaaaabbWcscqeoenenbUabaaabaaabaaaaababababababaaabababaaabababaaababaaababaaaaababababaaabaa
+aaaaabaaabaaaaabaaabaaabaaaaaaabaaabaaabababaaabbxbxaaaaababaaaaaaaaabbKaaatcEaaabatcEaabxabaaabaaaaatajaaabbQaaaabUcqepeoencsbUababaaabcfaaabababaaaaabaaaaaaabababaaaaaaaaababababababaaabababaaaaabaa
+aaaaabaaaaabaaaaababaaabaaaaabababaaaaabababaaabababaaaaaaababaaababaaaaaaatatajatatajabababababaaaaaaajaaaaabababbUcscqcqencqbWabaaaaaaaaaaabababaaababaaaaababaaaaabaaaaabaaabaaaaaaaaaaaaabaaaaababab
+abaaaaaaabaaaaaaababaaabaaaaaaabaaaaaaaaaaabaaabababcfaaaaabbKcfaaaabPaabxajajatbUatajbEaaaabKabaaababatababcfaaaabUcqcscscseqbUaaabaaaaaaaaaaaabKaaaaaaaaaaababaaaaabababaaabababaaaaabaaaaabaaaaaaaaaa
+abaaaaaaaaaaaaaaababababaaababababaaababaaaaaaaaabaaaaaaaaabababaaaaaaabaaabatatajatababababaaaabKaaaaataaabaaaaaabUatbUbUbUbUbWabaaababababaaababaaaaabababaaababaaaaababababaaabaaabaaaaaaaaabababaaab
+aaababaaaaaaaaabaaaaababaaaaababababaaabaaabaabKabaaababababaaabaaabcfaaababajatajaaabaaabababaaabaaaaatajaaababababatababababcfaaabaaaaaaabbKaaaaaaababaaabaaaaabababababaaaaabababaaaaabaaabaaaaababaa
+aaaaababaaabaaabaaabaaabababaaaaabababaaaaababaaabaaaaababbKabaabKaaababajatatatajbEababababbEababababajajaacKabcEaaataaabaaabaaaaaaabaaabaaaaaaababaaabaaabababaaaaaaaaaaabaaaaaaabaaabaaabaaabaaaaaaaa
+aaaaabaaabaaabaaababababaaababaaaaabaaaaaaabaaababababababababaaaaabaaabaaatatatajaaabaaajabaaaaabaaabatatataaabatabataaaaabaaaaaacfaaaaabaaababaaaaaaabababaaaaabaaaaabaaaaabaaaaaaabaaaaabaaababaaaaab
+aaaaaaababaaaaaaaaabaaabaaabaaabaaabaaabaaaaabaaaacfabaaaaaaaaababaaaaaaabajatataaababaaajaaaaaaaaabajajajajajatatajajajaaaaaaaaababaaabaaabbKabaaaaaaabaaababababababaaababababaaaaababaaaaabaaaaaaaaab
+aaaaababababaaaaaaabaaabaaaaaaabaaabaaabaaaaabaaaaaaabaaaaaaabbKababaaababcEataaaaabaaaaatajatajatajatajajajataaabaaaaatabababbKabababababaaaaaaaaabaaabababaaaaabaaaaaaaaabaaaaaaababaaaaabaaaaaaaaabaa
+abababaaaaaaaaaaaaaaaaaaabababaaabaaabaaaaababababababaaaaabaaaaaaaaaacfaaeratcEabaaaaaaabajajaaabajatatatajajaaababaaatatajabaaaaaaaaabaaabaaaaabaaababaaaaabaaababaaababaaababaaaaabaaababaaaaaaaaabab
+abaaaaabababaaabaaabaaabaaaaaaaaaaabaaaaaaaaaaaaabaaabaaaaaaabababaaaaabaaabesaaababababaaataaaaabajatajajabaaaaabaaabetabaaababababababaaaaaaababababaaaaaaaaaaababababababaaaaaaaaaaaaaaaaababababaaaa
+aaabaaaaaaaaaaabaaabababaaaaabababaaaaababaaabaaaaababaaaaabababaaababababaaabaaaaabaaababatabcEaaabajatabaaaaababaaeuajabababaaaaababaaabaaabababaaaaaaabaaabaaabaaaaaaaaaaabaaabababaaaaabaaababaaaaab
+aaaaabaaaaabaaababaaaaabababababababababababaaaaaaabaaabababaaaaababababaaaaaaabaaaaabababaaaaabaaabaaaaaaababaaababaaevaaabaaaaababaaaaaaabaaaaaaabaaaaabababaaaaaaabaaababaaabaaaaabaaababaaababababab
+abababaaaaababaaababaaababaaaaabaaaaabaaabaaaaaaababaaaaabaaabaaaaababaaaaaaaaababababababaaaaababababaaababababaaaaewdRabaaabaaabaaabaaabaaaaababaaabaaabaaaaaaaaaaaaabaaaaaaabababaaabaaaaaaaaababaaaa
+aaaaabababababababaaaaaaababaaaaabaaaaabaaabababaaaaababababaaaaabaaabababaaabaaaaabababaaaaaaaaababababaaaaababaaaaexajaaaaaaaaababaaaaaaabaaaaababababababababababaaaaaaaaabababaaababaaabababaaaaabaa
+abaaaaababababaaaaabaaabaaababababaaabaaababaaabababaaabaaababaaaaabaaaaababaaaaaaabababaaaaababaaabababababaaababaaeyezabaaababaaaaababaaaaabababababababaaababaaabaaaaabababababababaaaaabaaaaaaaaaaaa
+abababaaabababaaababaaaaababaaaaaaabaaaaabaaaaabaaabababaaabaaabaaaaabababaaababaaababababababaaabaaababaaaaabaaaaabejeAabaaaaabaaaaaaaaaaabaaababababaaabababaaabaaabaaaaaaaaaaaaaaaaabaaabaaabaaabaaab
+aaaaabaaaaababaaaaabaaaaaaababaaaaababaaaaabaaaaaaaaaaabababaaabaaaaaaaaaaabaaaaaaaaaaaaaaabaaaaababababaaabababababaaeBaaaaabababaaabababaaaaaaaaaaaaabaaaaababababaaababaaaaaaabaaabababaaaaababababaa
+aaababaaabaaabaaaaaaababaaaaababaaaaaaabaaaaaaabaaabaaaaabaaabaaabaaaaaaabababaaababaaaaaaaaaaaaaaaaabaaabaaaaabaaabbdeCabababaaabaaaaaaaaaaababaaabaaabababaaaaaaababaaaaababaaababababaaaaaaaaabababab
+abaaabaaaaaaaaaaabababaaababaaaaabaaabababaaaaaaaaabaaabababaaababababababaaaaabaaabaaaaababaaaaaaaaaaababababaaaaaaaJccabaaaaabaaaaaaaaaaabaaabaaaaaaaaabaaaaabaaabaaaaaaaaababababaaaaaaaaaaaaaaababab
+abaaaaabaaaaababaaaaaaaaabababaaaaababaaaaaaaaaaabaaaaabaaaaaaabababaaaaabababaaabababababaaabaaaaabaaababaaababababeDdUabaaabaaaaababababababaaaaaaaaabaaababaaababaaaaaaababaaabaaabaaaaabaaaaabababaa
+abaaababaaababaaabaaababaaaaabaaaaababaaaaababaaaaabaaababaaaaabaaaaaaaaaaabababaaabaaabababaaababaaaaaaabaaaaabaaaaeEeFababaaaaabaaaaabababaaaaabaaababababaaaaababaaaaabaaababaaabaaabaaabaaaaabababaa
+abaaabaaababaaaaaaaaabaaaaabaaaaaaabababaaabababaaaaaaabaaaaabababaaabababababababaaabababaaababaaabababababababaaabeGajcheHatcEababaaaaaaababaaaaababaaababaaaaabaaabababaaabaaaaaaabaaabaaaaabaaaaaaab
+abaaaaaaaaaaababaaabaaaaaaabababaaaaaaaaabaaabaaabaaaaaaaaabababababaaabaaaaaaaaaaaaaaababababaaaaaaaaababaaaaabababaaeIaIabagabaaaaaaaaababaaaaaaabaaaaaaaaaaabaaaaabababaaababaaaaaaabaaaaabaaababaaab
+ababaaabababaaabaaababaaabaaababaaabababaaaaaaabaaabababababaaaaaaabaaaaabaaabaaabaaaaaaaaaaababaaaaaaabaaaaaaabaaaaababababababababaaabaaabaaababaaaaaaabaaaaabaaabaaaaabababaaabababaaaaabaaaaabaaaaaa
+aaabaaaaababaaabaaaaaaababaaababaaababaaabaaabababaaaaabababaaaaababaaabaaaaaaabaaabaaabababaaaaaaababaaaaabababaaabababaaababaaababaaababaaaaaaaaaaabaaaaababaaaaaaaaabababaaaaabaaabaaabababaaabaaabab
+ababaaababaaabababaaaaababaaabaaaaababababaaababababababaaabaaabaaaaaaaaabaaababaaaaaaaaaaabaaaaabaaaaaaabaaaaabaaababaaaaaaabaaababaaaaababababaaaaaaaaababaaababababaaabaaabaaababaaababababababababab
+aaababaaabaaababababaaabaaabaaabaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaaaababaaaaaaabababaaabaaaaaaaaabaaababaaaaababaaaaaaabaaababaaaaaaababaaaaaaaaabaaaaaaababababaaaaaaabababababababaaaaababaaaaaaabaaabab
+aaababaaabaaaaababaaaaababaaababaaaaabaaaaaaabababaaabaaabaaabaaaaabaaababaaababaaaaabababaaaaabaaaaaaaaababaaaaaaaaaaabaaaaaaaaaaaaaaabaaabaaababaaabaaabaaababababaaababaaababaaaaaaaaababababaaaaaaab
+aaaaaaaaabaaabaaabaaaaabaaabaaabaaaaaaaaaaaaabababababaaaaaaabaaabababababaaaaaaabababaaababaaaaaaabababaaababaaaaabaaaaabaaaaaaabaaabaaabaaaaaaaaaaaaabaaababaaaaaaabaaaaabaaaaabababaaaaaaabaaababaaab
+aaaaabaaaaaaabaaabaaabababababaaaaaaabaaabaaaaabaaaaabaaaaaaaaaaabaaabababaaababaaaaaaabababababaaaaababaaaaababaaabaaaaabaaaaabaaabababaaaaabaaaaaaaaaaaaabababaaabaaaaabaaabaaaaabaaababaaabaaaaaaabaa
+ababaaaaabaaaaaaababaaaaaaabaaabababaaaaaaabababaaaaaaaaabaaabaaababaaabaaabaaabaaababababaaabaaabaaaaabaaaaabaaabaaababaaababababababababaaaaaaabaaaaaaaaaaabaaabaaabababababaaaaaaabaaaaaaaaabaaaaabaa
+aaaaaaabaaababaaabaaababaaaaaaaaababaaababababababaaaaaaabababababaaaaaaabaaaaabababaaaaababaaaaaaaaaaaaaaaaabaaaaaaababaaaaabaaabaaaaababababaaaaaaaaaaabaaaaaaaaaaabaaaaaaaaaaaaaaababababaaabaaaaaaaa
+aaababaaabaaaaaaaaababababaaaaaaabaaaaaaaaaaabaaaaaaaaaaaaaaababababaaababaaabaaabaaaaabababaaababababaaabaaabaaaaabababababaaaaaaababababaaababaaaaaaababaaabaaaaababaaabaaababababaaabaaabaaabaaababab
+aaaaababaaaaaaababababaaaaaaabaaaaabaaabaaaaabaaababaaabaaaaaaaaaaababaaabaaabababababcKabaaabaaabaaaaaaaaababaaaaabaaaaabaaabababaaaaabaaabaaababababaaabaaaaaaababaaaaaaaaaaaaaaaaabaaababaaaaaaabaaab
+aaaaaaababababaaaaaaaaabaaabaaaaabaaababaaaaaaaaaaabaaabaaabaaaaaaabaaaaaaababaaaaababababaaabaaaaabaaaaaaabaaaaabaaababaaaaabababaaaaabababaaaaabababaaababaaaaabaaabaaaaaaabababaaaaaaabababaaabaaaaab
+abaaababaaaaabaaaaaaaaabaaabaaaaaaaaabaaabaaaaababaaabaaaaaaababaaaaabaaababaaaaaaabaaaaaaaaabaaabababaaababaaaaababababaaaaaaabababaaaaaaaaabaaaaabaaabaaaaababaaaaaaaaaaabaaaaaaababaaabaaabababababaa
+aaaaabaaabaaababaaababaaaaababaaabababaaababaaababaaaaaaaaaaababaaabaaaaababaaabaaabaaaaaaaaaaababababaaabaaaaaaababaaaaababaaababaaababababaaababaaaaaaababababaaaaababaaaaaaababababababababababaaabaa
+aaaaaaaaaaabababaaaaaaababaaaaaaaaaaaaabaaabaaaaababaaaaaaaaabababaaabaaabaaaaaaaaaaabababababaaaaaaaaabaaabababaaaaaaaaaaaaaaaaababababaaabababababaaaaaaaaabaaabaaabaaabaaaaaaaaabaaabaaaaabaaabaaaaaa
 "}

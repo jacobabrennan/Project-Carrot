@@ -37,8 +37,11 @@ atom/movable
 	proc
 		assign_loc(turf/new_loc)
 			loc = new_loc
-			if(light_source && !istype(new_loc))
-				light_source.Move(src)
+			if(light_source)
+				if(!istype(new_loc))
+					light_source.Move(src)
+				else
+					light_source.loc = src.loc
 		change_opacity(new_value)
 			if(new_value == opacity) return
 			opacity = new_value

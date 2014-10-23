@@ -6,7 +6,8 @@ player
 		save()
 		. = ..()
 	proc
-		save()
+		save(override)
+			if(!override && !fexists("player_saves/[ckey].sav")) return
 			var/savefile/S = new("player_saves/[ckey].sav")
 			S["build_points"] << build_points
 			S["weapon"] << hud.equipment.weapon
@@ -62,7 +63,7 @@ map_handler
 			world << "Starting Save"
 			var/turf/south_west_deep = locate(1,1,1)
 			var/turf/north_east_shallow = locate(world.maxx,world.maxy,1)
-			var/file_text = write_map(south_west_deep, north_east_shallow, flags = DMM_IGNORE_MOBS|DMM_IGNORE_TURF_VARS)
+			var/file_text = write_map(south_west_deep, north_east_shallow, flags = DMM_IGNORE_MOBS)
 			if(fexists(map_name))
 				fdel(map_name)
 			var/saved_map = file(map_name)

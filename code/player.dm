@@ -35,8 +35,6 @@ player
 		// Assign random but consistent color using md5(key)
 		if(!color_assigned)
 			var/hash_browns = md5(key)
-			if(key == "Kaiochao")
-				hash_browns = md5("KaioChao")
 			var/hue = 0
 			for(var/II = 1 to length(hash_browns))
 				hue += text2ascii(hash_browns, II)
@@ -47,6 +45,9 @@ player
 				color_assigned["green"] * 255,
 				color_assigned["blue" ] * 255
 			)
+			if(key == "Kaiochao")
+				//hash_browns = md5("KaioChao")
+				color_assigned = rgb(0,0,255)
 			var/icon/I = icon(icon)
 			I.SwapColor(rgb(0,51,51), color_assigned)
 			icon = I
@@ -61,12 +62,12 @@ player
 			action = null
 			respawn()
 	proc
-		respawn()
-			tutorial_manager.create_tutorial(src)
-#warn Return player spawning disabled. Testing tutorial.
-			return
+		respawn(override)
+			if(!fexists("player_saves/[ckey].sav"))
+				tutorial_manager.create_tutorial(src)
+				return
 			var/block/bed/player_bed = locate("[ckey]_start")
-			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : (locate("town_start") || locate(50,50,1))
+			var/start_tile = player_bed? locate(player_bed.x, player_bed.y, player_bed.z) : (locate(TOWN_START) || locate(50,50,1))
 			assign_loc(start_tile)
 			if(light_source)
 				light_source.Move(start_tile)

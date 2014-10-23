@@ -5,6 +5,9 @@ actor
 	bound_width = 24
 	step_size = 3
 	layer = ACTOR_LAYER
+	assign_loc()
+		. = ..()
+		del action
 	var
 		actor/action/action
 		acting = FALSE
