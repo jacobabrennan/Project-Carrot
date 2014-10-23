@@ -38,7 +38,7 @@ cave
 						else
 							weight += 1
 					if(weight > 0)
-						usr << "You cannot gather from this, it is supporting too much weight. (Try building stone walls around it)."
+						usr << {"<span class="feedback">You cannot gather from this, it is supporting too much weight. (Try building stone walls around it).</span>"}
 						return FALSE
 			. = ..()
 
@@ -69,8 +69,7 @@ cave
 			resource_delay = 50
 		amethyst
 			icon_state = "rock_amethyst"
-			bp_cost = 0//10
-//			luminosity = 5
+			bp_cost = 10
 			load_bearing = FALSE
 			opacity = TRUE
 			resource = /tile/amethyst

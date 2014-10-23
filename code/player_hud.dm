@@ -1,6 +1,7 @@
 client/New()
 	. = ..()
 	var/obj/title_screen = new()
+	title_screen.mouse_opacity = 0
 	title_screen.screen_loc = "SOUTHWEST"
 	title_screen.layer = 100
 	title_screen.icon = 'title.png'

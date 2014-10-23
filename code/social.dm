@@ -17,82 +17,65 @@ proc
 client/New()
 	. = ..()
 	motd(src)
-	world << {"<i style="color:grey">[key] has logged in</i>"}
+	world << {"<span class="traffic">[key] has logged in</span>"}
 	// TODO: Separate out traffic
 client/Del()
-	world << {"<i style="color:grey">[key] has logged out</i>"}
+	world << {"<span class="traffic">[key] has logged out</span>"}
 	// TODO: Separate out traffic
 	. = ..()
 // End MOTD
 
 client
 	script = 'style.dms'
-	var
-		chat_delay = CHAT_DELAY // half a second is more than enough time
-		next_chat // only allow chat beyond this time
+	var/tmp
+		// see _defines.dm for constants
+		chat_cooldown = CHAT_COOLDOWN // half a second is more than enough time
+		next_chat_time // can't chat before this time
 
 	verb
 		say(message as text)
-			if(!message) return
-			// Check length
-			if(length(message) > MAX_MESSAGE_LENGTH)
-				// Explain length
-				usr << {"<span class="feedback">The message was too long. It has been shortened.</span>"}
-				message = copytext(message, 1, MAX_MESSAGE_LENGTH)
-			// Check Cooldown
-			if(next_chat > world.time) // block chat
-				var/cooldown_seconds = round((world.time - next_chat) / 10)
-				if(cooldown_seconds < 1) cooldown_seconds = 1
-				usr << {"<span class="feedback">Please wait [cooldown_seconds] second"} + (cooldown_seconds > 1 ? "s" : "") + {" before writing another message.</span>"}
-				return
-			else // allow chat
-				next_chat = world.time + chat_delay
-			// Remove Newlines
-			var/nl_pos = findtext(message, "\n")
-			while(nl_pos)
-				message = copytext(message, 1, nl_pos)+copytext(message, nl_pos+1)
-				nl_pos = findtext(message, "\n", nl_pos)
-			// TODO: Remove extra whitespace. Ie, messages that are nothing but white space.
-			if(!length(message))
-				return
-			// Passed all checks, output
-			var/escapedMessage = html_encode(message)
-			hearers(world.view+2, mob) << {"<span class="say"><b>[key]</b>: [escapedMessage]</span>"}
+			// enforce cooldown
+			if(world.time > next_chat_time)
+				// start cooldown
+				next_chat_time = world.time + chat_cooldown
+				// filter out "\n" and HTML and enforce max length
+				var/filtered_message = html_encode(copytext(text_replace(message, "\n", "\\n"), 1, MAX_CHAT_LENGTH))
+				// TODO: Remove extra whitespace. Ie, messages that are nothing but white space.
+				if(!length(filtered_message)) return
+				hearers(world.view+2, mob) << {"<span class="say"><b>[key]</b>: [filtered_message]"}
+
+			else
+				// explain cooldown
+				var time_left = round(world.time - next_chat_time) / -10
+				src << {"<span class="feedback">Please wait [time_left]s before writing another message.</span>"}
+
 		say_alias_1(message as text)
 			set name = "S"
 			set hidden = TRUE
 			say(message)
+
 		worldsay(message as text)
 			set name = "World Say"
-			if(!message) return
-			// Check length
-			if(length(message) > MAX_MESSAGE_LENGTH)
-				// Explain length
-				usr << {"<span class="feedback">The message was too long. It has been shortened.</span>"}
-				message = copytext(message, 1, MAX_MESSAGE_LENGTH)
-			// Check Cooldown
-			if(next_chat > world.time) // block chat
-				var/cooldown_seconds = round((world.time - next_chat) / 10)
-				if(cooldown_seconds < 1) cooldown_seconds = 1
-				usr << {"<span class="feedback">Please wait [cooldown_seconds] second"} + (cooldown_seconds > 1 ? "s" : "") + {" before writing another message.</span>"}
-				return
-			else // allow chat
-				next_chat = world.time + chat_delay
-			// Remove Newlines
-			var/nl_pos = findtext(message, "\n")
-			while(nl_pos)
-				message = copytext(message, 1, nl_pos)+copytext(message, nl_pos+1)
-				nl_pos = findtext(message, "\n", nl_pos)
-			// TODO: Remove extra whitespace. Ie, messages that are nothing but white space.
-			if(!length(message))
-				return
-			// Passed all checks, output
-			var/escapedMessage = html_encode(message)
-			world << {"<span class="worldsay">(World) <b>[key]</b>: [escapedMessage]</span>"}
+			// enforce cooldown
+			if(world.time > next_chat_time)
+				// start cooldown
+				next_chat_time = world.time + chat_cooldown
+				// filter out "\n" and HTML and enforce max length
+				var/filtered_message = html_encode(copytext(text_replace(message, "\n", "\\n"), 1, MAX_CHAT_LENGTH))
+				// TODO: Remove extra whitespace. Ie, messages that are nothing but white space.
+				if(!length(filtered_message)) return
+				hearers(world.view+2, mob) << {"<span class="worldsay"><b>[key]</b>: [filtered_message]"}
+
+			else
+				// explain cooldown
+				var time_left = round(world.time - next_chat_time) / -10
+				src << {"<span class="feedback">Please wait [time_left]s before writing another message.</span>"}
+
 		worldsay_alias_1(message as text)
 			set name = "W"
 			set hidden = TRUE
 			worldsay(message)
+
 		who()
 			for(var/client/C)
 				usr << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"

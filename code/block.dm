@@ -17,7 +17,7 @@ block
 			if(resource && resource_amount && destroyable)
 				if(gatherer.build_points < bp_cost)
 					// TODO: Display "can't gather" animation of some sort
-					gatherer << "You don't have enough Building Points to gather this resource."
+					gatherer << {"<span class="feedback">You don't have enough Building Points to gather this resource.</span>"}
 					return
 				gatherer.adjust_bp(-bp_cost)
 				density = FALSE

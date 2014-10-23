@@ -51,7 +51,7 @@ tile
 				if(!istype(user))
 					return
 				if(B.owner_ckey != user.ckey)
-					user << "You can't build so close to others' property."
+					user << {"<span class="feedback">You can't build so close to others' property.</span>"}
 					return
 			mouse_opacity = 0
 			spawn(TILE_TRANSLATE_TIME)
@@ -173,6 +173,6 @@ tile/default/gather
 			if(!istype(user))
 				return
 			if(B.owner_ckey != user.ckey)
-				user << "You can't gather so close to others' property."
+				user << {"<span class="feedback">You can't gather so close to others' property.</span>"}
 				return
 		target.gather(user)

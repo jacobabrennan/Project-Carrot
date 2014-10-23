@@ -2,6 +2,10 @@
 body{
 	font-family: georgia;
 }
+.traffic{
+	color: "#888";
+	font-style: italic;
+}
 .worldsay{
 	color: "#666";
 }
