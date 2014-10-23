@@ -1,10 +1,10 @@
 "a" = (/cave/block/rock_face,/cave/turf/dirt,/tutorial_manager/tutorial/region)
 "b" = (/cave/block/amethyst_podium,/cave/turf/dirt,/tutorial_manager/tutorial/region)
-"c" = (/cave/turf/dirt,/tutorial_manager/tutorial/region)
-"d" = (/cave/block/rock_face,/tile/default/gather{step_x = 20; step_y = 4},/cave/turf/dirt,/tutorial_manager/tutorial/region)
-"e" = (/tutorial_manager/tutorial/region/start_tile,/tutorial_manager/tutorial/region)
+"c" = (/tutorial_manager/tutorial/region/instruction{_maptext = "Touch (Click) to Move ->"; _maptext_width = 160},/cave/turf/dirt,/tutorial_manager/tutorial/region)
+"d" = (/cave/turf/dirt,/tutorial_manager/tutorial/region)
+"e" = (/cave/block/rock_face,/tile/default/gather{step_x = 20; step_y = 4},/cave/turf/dirt,/tutorial_manager/tutorial/region)
 "f" = (/tutorial_manager/tutorial/region/instruction{_maptext = "Touch the Mining Tile to Select it"},/cave/turf/dirt,/tutorial_manager/tutorial/region)
-"g" = (/tutorial_manager/tutorial/region/instruction{_maptext = "Touch (Click) to Move ->"},/cave/turf/dirt,/tutorial_manager/tutorial/region)
+"g" = (/tutorial_manager/tutorial/region/start_tile,/tutorial_manager/tutorial/region)
 "h" = (/tutorial_manager/tutorial/region/instruction{_maptext = "Then touch the Coal to Mine it."},/cave/turf/dirt,/tutorial_manager/tutorial/region)
 "i" = (/cave/block/coal{bp_cost = 0; load_bearing = 0; resource_amount = 3},/cave/turf/dirt,/tutorial_manager/tutorial/region)
 "j" = (/tutorial_manager/tutorial/region/instruction{_maptext = "Drag Coal into your Craft HUD, touch the Check Mark, drag the Fire onto the Map."; _maptext_height = 128},/cave/turf/dirt,/tutorial_manager/tutorial/region)
@@ -16,24 +16,24 @@
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaa
-aaabcccccbaaaaaaaadaaaaaa
-aaccccecccccaaaaafcccaaaa
-aacccccccgccccccccccccaaa
-aaccccccccccaaaaccccccaaa
-aaabcccccbaaaaaccccccccaa
-aaaaaaaaaaaaaaabchccccbaa
+aaabcddddbaaaaaaaaeaaaaaa
+aaddddddddddaaaaafdddaaaa
+aaddddgdddddddddddddddaaa
+aadddddddddddaaaddddddaaa
+aaaddddddddaaaaddddddddaa
+aaaaaaaaaaaaaaabdhddddbaa
 aaaaaaaaaaaaaaaaaaiiaaaaa
-aaaacccccccccaaabcccaaaaa
-aaccccccccccccaaaccccaaaa
-acccccacccccccccccccccaaa
-acccccaaacccccccccccccaaa
-accccccaaaaaaaaaajcccaaaa
-acacccccaaaaaaaabcccaaaaa
-aaaaccccaaaaaaaaaaaaaaaaa
-aaaaacccaaaakaaaaaaaaaaaa
-aaaaccccaablcccbaaaaaaaaa
-aaaaaaccaacccccaaaaaaaaaa
-aaaaaaccccccccccmccccccna
+aaaadddddddddaaabdddaaaaa
+aaddddddddddddaaaddddaaaa
+adddddadddddddddddddddaaa
+adddddaaadddddddddddddaaa
+addddddaaaaaaaaaajdddaaaa
+adadddddaaaaaaaabdddaaaaa
+aaaaddddaaaaaaaaaaaaaaaaa
+aaaaadddaaaakaaaaaaaaaaaa
+aaaaddddaabldddbaaaaaaaaa
+aaaaaaddaadddddaaaaaaaaaa
+aaaaaaddddddddddmddddddna
 aaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaa

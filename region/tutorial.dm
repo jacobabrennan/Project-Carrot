@@ -100,6 +100,7 @@ tutorial_manager
 					O.alpha = 0
 					O.layer = EFFECTS_LAYER
 					O.screen_loc = "SOUTHWEST to NORTHEAST"
+					O.mouse_opacity = 0
 					player.client.screen.Add(O)
 					animate(O, alpha = 255, 28)
 					spawn(30)

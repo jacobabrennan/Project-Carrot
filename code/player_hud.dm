@@ -5,7 +5,7 @@ client/New()
 	title_screen.layer = 100
 	title_screen.icon = 'title.png'
 	screen.Add(title_screen)
-	spawn(0)
+	spawn(60)
 		animate(title_screen, alpha = 0, 30, null, CIRCULAR_EASING|EASE_IN)
 		spawn(30)
 			del title_screen

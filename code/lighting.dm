@@ -41,7 +41,7 @@ atom/movable
 				if(!istype(new_loc))
 					light_source.Move(src)
 				else
-					light_source.loc = src.loc
+					light_source.assign_loc(loc)
 		change_opacity(new_value)
 			if(new_value == opacity) return
 			opacity = new_value
