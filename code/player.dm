@@ -1,9 +1,11 @@
 world
 	mob = /player
+
 client
 	perspective = EYE_PERSPECTIVE
 	show_popup_menus = FALSE
 	//script = 'style.css'
+
 player
 	parent_type = /actor
 	//sight = SEE_PIXELS // Causes problems with the HUD*
@@ -45,9 +47,7 @@ player
 				color_assigned["green"] * 255,
 				color_assigned["blue" ] * 255
 			)
-			if(key == "Kaiochao")
-				//hash_browns = md5("KaioChao")
-				color_assigned = rgb(0,0,255)
+			if(key == "Kaiochao") color_assigned = rgb(0, 0, 128)
 			var/icon/I = icon(icon)
 			I.SwapColor(rgb(0,51,51), color_assigned)
 			icon = I

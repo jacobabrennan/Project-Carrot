@@ -76,3 +76,7 @@ f(4,n) = (n**3 + n)/2
 #define DMM_IGNORE_PLAYERS 16
 #define DMM_IGNORE_MOBS 24
 #define DMM_IGNORE_TURF_VARS 32
+
+// Chat
+#define MAX_CHAT_LENGTH 250
+#define CHAT_COOLDOWN 10

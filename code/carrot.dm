@@ -55,45 +55,50 @@ obj
 tile
 	icon_state = "carrot"
 
-#define maxMessageLength 250
-#define coolDownTime 70
+proc
+	text_replace(haystack, needle, replacement)
+		var position
+		var needle_length = length(needle)
+		do
+			position = findtext(haystack, needle)
+			if(position)
+				haystack = \
+					copytext(haystack, 1, position) \
+					+ replacement \
+					+ copytext(haystack, position + needle_length)
+		while(position)
+		return haystack
 
-client/var/tmp/chatCoolDownTimer = 0
-client/verb/say(message as text)
+client
+	var
+		tmp
+			// see _defines.dm for constants
 
-	// Check length
-	if(length(message) > maxMessageLength)
+			// can't chat before this time
+			next_chat_time
 
-		// Explain length
-		usr << "Your message was too long."
-		return
+	verb
+		say(message as text)
+			// enforce cooldown
+			if(world.time > next_chat_time)
 
-	// Check no cool down exists
-	if(chatCoolDownTimer)
+				// start cooldown
+				next_chat_time = world.time + CHAT_COOLDOWN
 
-		// Explain cool down
-		var/coolDownSeconds = round(chatCoolDownTimer / 10)
-		if(coolDownSeconds < 1) coolDownSeconds = 1
-		usr << "Please wait [coolDownSeconds] second" + (coolDownSeconds > 1 ? "s" : "") + " before writing another message."
-		return
+				// filter out "\n" and HTML and enforce max length
+				world << "<b>[key]</b>: [html_encode(copytext(text_replace(message, "\n", "\\n"), 1, MAX_CHAT_LENGTH))]"
 
-	// Passed all checks, output
-	var/escapedMessage = html_encode(message)
-	world << "<b>[key]</b>: [escapedMessage]"
+			else
+				// explain silly cooldown
+				var time_left = round(world.time - next_chat_time) / -10
+				src << "Please wait [time_left]s before writing another message."
 
-	// Begin cool down
-	chatCoolDownTimer = coolDownTime
-	spawn()
-		while(chatCoolDownTimer > 0)
-			chatCoolDownTimer --
-			sleep(1)
-
-client/verb/who()
-	for(var/client/C)
-		usr << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"
+		who()
+			for(var/client/C)
+				src << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"
 
 proc/atan2(x, y)
-    if(!x && !y) return 0
+    if(!(x || y)) return 0
     return y >= 0 ? arccos(x / sqrt(x * x + y * y)) : -arccos(x / sqrt(x * x + y * y))
 
 
@@ -113,9 +118,11 @@ proc
 		. += base
 		. = max(0,min(round(.),base*2))
 		// Okay, perhaps I did write it. I must have been high on shoe pollish, or something.
-	sign(_n)
-		if(_n >= 0) return 1
-		return -1
+
+	// sign returns 0, -1, or 1
+	// it's not even being used
+	sign(n) return n && n / abs(n)
+
 	hsv2rgb(hue, saturation, value)
 		if(!isnum(hue)) return
 		var/list/rgb_prime
