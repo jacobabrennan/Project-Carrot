@@ -14,6 +14,9 @@
 #define PRIMARY 16
 #define SECONDARY 32
 
+#define MAX_MESSAGE_LENGTH 256
+#define CHAT_DELAY 20
+
 #define TOWN_START "town_start"
 #define TOTEM_RANGE 4
 #define LIGHT_REACH 12

@@ -3,12 +3,14 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "graphics"
+#define FILE_DIR "hub_resources"
 // END_FILE_DIR
 // BEGIN_PREFERENCES
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include <theodis\priorityqueue\PriorityQueue.dme>
+#include "style.dms"
 #include "code\_defines.dm"
 #include "code\actor.dm"
 #include "code\block.dm"
@@ -25,6 +27,7 @@
 #include "code\recipes.dm"
 #include "code\region.dm"
 #include "code\save_load.dm"
+#include "code\social.dm"
 #include "code\spell_book.dm"
 #include "code\theodis_pathfinder.dm"
 #include "code\tile.dm"

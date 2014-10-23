@@ -1,0 +1,15 @@
+<style>
+body{
+	font-family: georgia;
+}
+.worldsay{
+	color: "#666";
+}
+.say{
+	font-size: "larger";
+}
+.feedback{
+	color: "#900";
+	font-family: "times new roman", sans-serif;
+}
+</style>

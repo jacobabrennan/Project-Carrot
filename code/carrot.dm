@@ -1,36 +1,3 @@
-// Message of the Day //
-var
-	motd = {"
-<b><big>Quick How to</big>:
-	Click to move. Drag and Drop to move tiles.
-	Kill enemies to gain building points.
-	Click the Pick-Axe tile to gather resources instead of attacking.
-	Fill your crafting bar with 4 tiles to craft (click the crafting bar to add blank tiles).</b>
-
-The game is a work in progress, and more is being added every day. What's new today?:
-	Finally, a Title Screen!
-
-Think you could make the game better? Let me know, it'd be great to have other players making the game. Or, you could just contribute to the GitHub repo, if that's how you roll.
-	GitHub: <a href="https://github.com/jacobabrennan/carrot">https://github.com/jacobabrennan/carrot</a>
-	BYOND Hub: <a href="http://www.byond.com/games/IainPeregrine/project_carrot">IainPeregrine.project_carrot</a>
-	Email: <a href="email:jacobabrennan@gmail.com">JacobABrennan@gmail.com</a>
-	BYOND Key: IainPeregrine
-	"}
-proc
-	motd(client/client)
-		client << "[motd]"
-client/New()
-	. = ..()
-	motd(src)
-	world << {"<i style="color:grey">[key] has logged in</i>"}
-	// TODO: Separate out traffic
-client/Del()
-	world << {"<i style="color:grey">[key] has logged out</i>"}
-	// TODO: Separate out traffic
-	. = ..()
-
-// End Message of the Day
-
 /*
 	These are simple defaults for your project.
  */
@@ -47,7 +14,6 @@ atom
 
 mob
 	step_size = 8
-	icon_state = "red"
 
 obj
 	step_size = 8
@@ -55,42 +21,7 @@ obj
 tile
 	icon_state = "carrot"
 
-#define maxMessageLength 250
-#define coolDownTime 70
-
-client/var/tmp/chatCoolDownTimer = 0
-client/verb/say(message as text)
-
-	// Check length
-	if(length(message) > maxMessageLength)
-
-		// Explain length
-		usr << "Your message was too long."
-		return
-
-	// Check no cool down exists
-	if(chatCoolDownTimer)
-
-		// Explain cool down
-		var/coolDownSeconds = round(chatCoolDownTimer / 10)
-		if(coolDownSeconds < 1) coolDownSeconds = 1
-		usr << "Please wait [coolDownSeconds] second" + (coolDownSeconds > 1 ? "s" : "") + " before writing another message."
-		return
-
-	// Passed all checks, output
-	var/escapedMessage = html_encode(message)
-	world << "<b>[key]</b>: [escapedMessage]"
-
-	// Begin cool down
-	chatCoolDownTimer = coolDownTime
-	spawn()
-		while(chatCoolDownTimer > 0)
-			chatCoolDownTimer --
-			sleep(1)
-
-client/verb/who()
-	for(var/client/C)
-		usr << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"
+// Begin Math
 
 proc/atan2(x, y)
     if(!x && !y) return 0
@@ -138,6 +69,8 @@ proc
 		rgb["green"] = (rgb_prime[2]+m)
 		rgb["blue" ] = (rgb_prime[3]+m)
 		return rgb
+
+// End Math
 
 atom/proc/aloc()
 	var/atom/current = src
