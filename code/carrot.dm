@@ -55,8 +55,39 @@ obj
 tile
 	icon_state = "carrot"
 
-client/verb/say(what as text)
-	world << "<b>[key]</b>: [copytext(html_encode(what),1,256)]"
+#define maxMessageLength 250
+#define coolDownTime 70
+
+client/var/tmp/chatCoolDownTimer = 0
+client/verb/say(message as text)
+
+	// Check length
+	if(length(message) > maxMessageLength)
+
+		// Explain length
+		usr << "Your message was too long."
+		return
+
+	// Check no cool down exists
+	if(chatCoolDownTimer)
+
+		// Explain cool down
+		var/coolDownSeconds = round(chatCoolDownTimer / 10)
+		if(coolDownSeconds < 1) coolDownSeconds = 1
+		usr << "Please wait [coolDownSeconds] second" + (coolDownSeconds > 1 ? "s" : "") + " before writing another message."
+		return
+
+	// Passed all checks, output
+	var/escapedMessage = html_encode(message)
+	world << "<b>[key]</b>: [escapedMessage]"
+
+	// Begin cool down
+	chatCoolDownTimer = coolDownTime
+	spawn()
+		while(chatCoolDownTimer > 0)
+			chatCoolDownTimer --
+			sleep(1)
+
 client/verb/who()
 	for(var/client/C)
 		usr << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"

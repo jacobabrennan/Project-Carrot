@@ -3,7 +3,6 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "graphics"
-#define FILE_DIR "hub_resources"
 // END_FILE_DIR
 // BEGIN_PREFERENCES
 #define DEBUG
@@ -33,7 +32,6 @@
 #include "code\dmm_suite\dmm_suite.dm"
 #include "code\dmm_suite\reader.dm"
 #include "code\dmm_suite\writer.dm"
-#include "ignore\hub.dm"
 #include "region\cave.dm"
 #include "region\cave_amethyst.dm"
 #include "region\forest.dm"
