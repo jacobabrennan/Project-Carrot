@@ -41,11 +41,18 @@ actor
 			if(action && (!halt_tile || action.tile == halt_tile))
 				del action
 		blocked()
-			halt_action()
+			if(action)
+				if(action.path)
+					action.path = null
+				else
+					halt_action()
 		get_step_size() // Overridden on combatant
 			return step_size
 		get_iteration_delay() // Just a hook. Maybe enemies get more intelligent
 			return iteration_delay
+client/Northeast()
+	var/region/R = mob.aloc()
+	R.spawn_enemy(mob)
 
 
 actor/action
@@ -113,10 +120,13 @@ actor/action
 			if(!target)
 				del src
 				return
-			if(!next_step)
+			if(!next_step || !path)
 				if(path && path.len)
 					next_step = path[1]
 					path.Remove(next_step)
+					if(target in next_step)
+						next_step = target
+						path = null
 				else
 					next_step = target
 			var/step_mid_x = offset_x

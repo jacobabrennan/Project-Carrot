@@ -24,8 +24,14 @@ region
 				var/list/drange = DijkstraTurfInRange(
 					spawner.loc,/path_finder/proc/adjacent,/path_finder/proc/abs_distance,/proc/RangeFinished, P_INCLUDE_FINISHED)
 				drange -= view(spawner,2)
-				for(var/turf/T in drange)
-					if(T.dense()) drange.Remove(T)
+				for(var/atom/A in drange)
+					var/turf/T = A
+					if(!istype(T))
+						drange.Remove(T)
+						continue
+					if(T.dense())
+						drange.Remove(T)
+						continue
 					if(locate(/block/bed) in range(TOTEM_RANGE, T)) drange.Remove(T)
 				if(drange.len)
 					new path(pick(drange))

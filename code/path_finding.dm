@@ -33,6 +33,8 @@ path_finder
 				var/turf/T = L[I]
 				for(var/block/B in T)
 					LB.Add(B)
+				for(var/actor/_actor in T)
+					LB.Add(_actor)
 				if(!T || T.dense()) L.Cut(I,I+1)
 				else if(!L[I]) L.Cut(I,I+1)
 			L.Add(LB)
@@ -47,8 +49,8 @@ path_finder
 			return get_dist(A, B)
 		abs_distance(atom/A, atom/B)
 			if(get_dist(A, B) == 1)
-				if(locate(/actor) in B) return 5
-				else if(A.x != B.x && A.y != B.y) return 1.4
+				/*if(locate(/actor) in B) return 5
+				else */if(A.x != B.x && A.y != B.y) return 1.4
 				return 1
 			else
 				return sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y))
