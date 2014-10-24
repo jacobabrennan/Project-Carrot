@@ -79,7 +79,7 @@ block
 			hotbar.connect(user)
 			locked = user
 			return src
-		close_interaction()
+		close_interaction(player/user)
 			/*
 			This saving strategy will duplicate items if things are taken from a chest but the chest is left open during a reboot.
 				The alternative is to provide a hook for the dmm_suite to call on each object as it is being saved.

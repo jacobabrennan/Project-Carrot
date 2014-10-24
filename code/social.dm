@@ -77,5 +77,6 @@ client
 			worldsay(message)
 
 		who()
+			usr << "<b>Logged in Players</b>:"
 			for(var/client/C)
-				usr << "<b>[html_encode(C.key)]</b> \[[C.connection]\]"
+				usr << " -- <b>[html_encode(C.key)]</b> \[[C.connection]\]"

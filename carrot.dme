@@ -19,6 +19,7 @@
 #include "code\craft.dm"
 #include "code\driver.dm"
 #include "code\enemy.dm"
+#include "code\info.dm"
 #include "code\lighting.dm"
 #include "code\math.dm"
 #include "code\path_finding.dm"

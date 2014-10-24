@@ -16,8 +16,13 @@ actor
 		tile/default/move/tile_move = new()
 		tile/default/attack/tile_attack = new()
 		tile/default/gather/tile_gather = new()
+		lock // Interaction lock, for dealing with interactable blocks with HUDs, etc.
 	proc
 		act(tile/new_tile, new_target, new_offset_x, new_offset_y)
+			if(lock)
+				if(hascall(lock, "close_interaction"))
+					call(lock,"close_interaction")(src)
+				lock = null
 			if(action)
 				del action
 			if(!new_tile)
@@ -55,6 +60,7 @@ actor
 actor/action
 	parent_type = /datum
 	var
+		actor/user
 		atom/target
 		turf/next_step
 		offset_x
@@ -62,9 +68,9 @@ actor/action
 		tile/tile
 		list/path
 		timer
-		block/lock // Interaction lock, for dealing with interactable blocks with HUDs, etc.
 	New(actor/actor, new_tile, atom/new_target, new_offset_x, new_offset_y)
 		. = ..()
+		user = actor
 		tile = new_tile
 		target = new_target
 		offset_x = new_offset_x
@@ -101,10 +107,6 @@ actor/action
 					break
 			if(!dense)
 				path.Remove(T)
-	Del()
-		if(lock)
-			lock.close_interaction()
-		. = ..()
 	proc
 		iterate(actor/user)
 			/*
@@ -119,7 +121,8 @@ actor/action
 					Move user toward target
 			*/
 			// Check if action still valid (target still exists?)
-			if(lock) // Locked into interaction.
+			if(user.lock) // Locked into interaction.
+				del src
 				return
 			if(!target)
 				del src
@@ -151,9 +154,8 @@ actor/action
 						else
 							allowed = FALSE
 				if(allowed)
-					lock = interactor.interact(user)
-				if(!lock)
-					del src
+					user.lock = interactor.interact(user)
+				del src
 				return
 			// Determine Distance
 			var/delta_x

@@ -53,6 +53,10 @@ cave
 				. = ..()
 				if(!.)
 					icon_state = "dug_out"
+		rock_solid
+			icon_state = "rock_solid"
+			load_bearing = 4
+			opacity = TRUE
 		iron
 			icon_state = "rock_iron"
 			load_bearing = 2
@@ -225,6 +229,9 @@ cave/block/amethyst_podium
 	bound_width = 16
 	bound_x = 8
 	bound_height = 24
+	interact = TRUE
+	interact(player/player)
+		return new /info(player, null, 'info_top_mountains.png', "This is a Podium. It is made of Amethyst crystal and stone, and gives off a clear light. It reminds you of home.")
 	var
 		light_intensity = 0.25
 		light_radius = 256

@@ -47,7 +47,7 @@ player
 				color_assigned["green"] * 255,
 				color_assigned["blue" ] * 255
 			)
-			if(key == "Kaiochao") color_assigned = rgb(0, 0, 128)
+			if(key == "Kaiochao") color_assigned = "#0f0f33"
 			var/icon/I = icon(icon)
 			I.SwapColor(rgb(0,51,51), color_assigned)
 			icon = I
