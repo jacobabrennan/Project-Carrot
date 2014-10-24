@@ -64,7 +64,7 @@ client
 				var/filtered_message = html_encode(copytext(text_replace(message, "\n", "\\n"), 1, MAX_CHAT_LENGTH))
 				// TODO: Remove extra whitespace. Ie, messages that are nothing but white space.
 				if(!length(filtered_message)) return
-				hearers(world.view+2, mob) << {"<span class="worldsay"><b>[key]</b>: [filtered_message]"}
+				world << {"<span class="worldsay"><b>[key]</b>: [filtered_message]"}
 
 			else
 				// explain cooldown

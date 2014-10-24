@@ -6,7 +6,8 @@ client/New()
 	title_screen.layer = 100
 	title_screen.icon = 'title.png'
 	screen.Add(title_screen)
-	spawn(60)
+	#warn enable title
+	spawn(0)
 		animate(title_screen, alpha = 0, 30, null, CIRCULAR_EASING|EASE_IN)
 		spawn(30)
 			del title_screen
@@ -267,34 +268,6 @@ player/hud/hotbar
 				loc_text += (offset_y_atom > 0)? "+[offset_y_atom]" : "[offset_y_atom]"
 			loc_text += (abs(offset_y) > 0)? ":[offset_y_px]" : ""
 			screen_loc = loc_text
-		/*setup(list/_reference, _width, _height, _align_x, _align_y, _offset_x, _offset_y, _icon, _icon_state)
-			width = _width
-			height = _height
-			reference = _reference
-			icon = _icon
-			icon_state = _icon_state
-			align_x = _align_x
-			align_y = _align_y
-			offset_x = _offset_x
-			offset_y = _offset_y
-			// Calculate Screen Loc
-			offset_x_atom = 0
-			offset_y_atom = 0
-			offset_x_px = offset_x % world.icon_size
-			offset_y_px = offset_y % world.icon_size
-			if(offset_x)
-				offset_x_atom = round(abs(offset_x)/world.icon_size) * ((offset_x > 0)? 1 : -1)
-			if(offset_y)
-				offset_y_atom = round(abs(offset_y)/world.icon_size) * ((offset_y > 0)? 1 : -1)
-			var/loc_text = align_x
-			if(offset_x_atom)
-				loc_text += (offset_x_atom > 0)? "+[offset_x_atom]" : "[offset_x_atom]"
-			loc_text += (abs(offset_x) > 0)? ":[offset_x_px]" : ""
-			loc_text += ",[align_y]"
-			if(offset_y_atom)
-				loc_text += (offset_y_atom > 0)? "+[offset_y_atom]" : "[offset_y_atom]"
-			loc_text += (abs(offset_y) > 0)? ":[offset_y_px]" : ""
-			screen_loc = loc_text*/
 		connect(player/new_player)
 			player = new_player
 			if(player.client)
@@ -304,19 +277,19 @@ player/hud/hotbar
 		find_slot(pixel_x, pixel_y)
 			var/slot_x = round(pixel_x/HOTBAR_TILE_SIZE)+1
 			var/slot_y = round(pixel_y/HOTBAR_TILE_SIZE)+1
-			var/compound_index = slot_x + ((slot_y-1)*width)
-			compound_index = (reference.len+1) - compound_index
+			var/compound_index = slot_x + (height-slot_y)*width
 			return compound_index
 		find_screen_loc(compound_index)
-			var/slot = (reference.len+1) - compound_index
-			var/slot_x = 1+(slot % width)
-			var/slot_y = 1+(round(max(0,slot-1)/width))
-			var/slot_px_x = (slot_x-1)*HOTBAR_TILE_SIZE + 1
-			var/slot_px_y = (slot_y-1)*HOTBAR_TILE_SIZE + 1
+			//var/slot = slot_x + (height-slot_y)*width
+		//	var/slot = (compound_index % width) + (height - round(compound_index/width))*width
+			var/slot_x = 1+((compound_index-1) % width)
+			var/slot_y = (height-(round((compound_index-1)/width)))
+			var/slot_px_x = 1+(slot_x-1)*HOTBAR_TILE_SIZE + 1
+			var/slot_px_y = 1+(slot_y-1)*HOTBAR_TILE_SIZE + 1
 			var/loc_text = align_x
-			loc_text += (abs(offset_x) > 0)? ":[offset_x+slot_px_x]" : ""
+			loc_text += (abs(slot_px_x+offset_x) > 0)? ":[offset_x+slot_px_x]" : "[slot_px_x]"
 			loc_text += ",[align_y]"
-			loc_text += (abs(offset_y) > 0)? ":[offset_y+slot_px_y]" : ""
+			loc_text += (abs(slot_px_y+offset_y) > 0)? ":[offset_y+slot_px_y]" : "[slot_px_y]"
 			return loc_text
 		add_tile(tile/drop_tile, compound_index, pixel_y)
 			var old_index = reference.Find(drop_tile)
@@ -363,7 +336,7 @@ player/hud/hotbar
 		. = ..()
 	Entered(tile/drop_tile, turf/old_loc)
 		drop_tile.layer = HUD_TILE_LAYER
-		if(player.client)
+		if(player && player.client)
 			player.client.screen.Add(drop_tile)
 		. = ..()
 		//if(istype(old_loc)) // TODO: Replace with "animate on pixel_x/y". Whatever that means.

@@ -48,10 +48,12 @@ world
 		map_handler.load()
 		//map_handler.loaded = TRUE
 client/Northwest()
-	world.Reboot()
+	if(key == "IainPeregrine")
+		world.Reboot()
 client/Center()
-	map_handler.save()
-	world.Reboot()
+	if(key == "IainPeregrine")
+		map_handler.save()
+		world.Reboot()
 var/map_handler/map_handler = new()
 map_handler
 	parent_type = /dmm_suite

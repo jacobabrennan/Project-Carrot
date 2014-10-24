@@ -191,6 +191,22 @@ cave/block/stone_window
 			change_opacity(TRUE)
 			icon_state = "window"
 
+recipe/stone_chest
+	ingredients = list("stone","stone","iron","iron")
+	product = /tile/stone_chest
+tile/stone_chest
+	icon = 'cave.dmi'
+	icon_state = "tile_chest"
+	construct = /cave/block/stone_chest
+cave/block/stone_chest
+	parent_type = /block/storage
+	opacity = FALSE
+	icon = 'cave.dmi'
+	icon_state = "chest"
+	resource = /tile/iron
+	resource_amount = 1
+	resource_delay = 100
+
 recipe/amethyst_podium
 	ingredients = list("stone","amethyst")
 	product = /tile/amethyst_podium

@@ -47,7 +47,10 @@ tile
 			if(step_y+bound_y+(bound_height/2) >= world.icon_size)
 				offset_turf = get_step(offset_turf, NORTH)
 			var/player/user = usr
-			for(var/block/bed/B in range(TOTEM_RANGE+1, offset_turf))
+			var/check_range = TOTEM_RANGE+1
+			if(istype(construct, /block/bed))
+				check_range = TOTEM_RANGE*2
+			for(var/block/bed/B in range(check_range, offset_turf))
 				if(!istype(user))
 					return
 				if(B.owner_ckey != user.ckey)

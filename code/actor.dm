@@ -50,9 +50,6 @@ actor
 			return step_size
 		get_iteration_delay() // Just a hook. Maybe enemies get more intelligent
 			return iteration_delay
-client/Northeast()
-	var/region/R = mob.aloc()
-	R.spawn_enemy(mob)
 
 
 actor/action
@@ -65,6 +62,7 @@ actor/action
 		tile/tile
 		list/path
 		timer
+		block/lock // Interaction lock, for dealing with interactable blocks with HUDs, etc.
 	New(actor/actor, new_tile, atom/new_target, new_offset_x, new_offset_y)
 		. = ..()
 		tile = new_tile
@@ -103,6 +101,10 @@ actor/action
 					break
 			if(!dense)
 				path.Remove(T)
+	Del()
+		if(lock)
+			lock.close_interaction()
+		. = ..()
 	proc
 		iterate(actor/user)
 			/*
@@ -117,6 +119,8 @@ actor/action
 					Move user toward target
 			*/
 			// Check if action still valid (target still exists?)
+			if(lock) // Locked into interaction.
+				return
 			if(!target)
 				del src
 				return
@@ -147,8 +151,9 @@ actor/action
 						else
 							allowed = FALSE
 				if(allowed)
-					interactor.interact(user)
-				del src
+					lock = interactor.interact(user)
+				if(!lock)
+					del src
 				return
 			// Determine Distance
 			var/delta_x
