@@ -15,9 +15,16 @@ cave
 		icon = 'cave.dmi'
 		dirt
 			icon_state = "dirt_1"
+			buildable = TRUE
 			New()
 				. = ..()
 				icon_state = pick("dirt_1", "dirt_2")
+		clear_dirt
+			icon_state = "dirt_3"
+			New()
+				. = ..()
+				icon_state = pick("dirt_3", "dirt_4")
+
 	block
 		parent_type = /block
 		icon = 'cave.dmi'
@@ -38,7 +45,7 @@ cave
 						else
 							weight += 1
 					if(weight > 0)
-						usr << {"<span class="feedback">You cannot gather from this, it is supporting too much weight. (Try building stone walls around it).</span>"}
+						inform(usr, "You cannot gather from this, it is supporting too much weight. (Try building stone walls around it).")
 						return FALSE
 			. = ..()
 
@@ -82,6 +89,13 @@ cave
 			New()
 				. = ..()
 				light_source = new(loc, 210, 1, 0.25,5)
+
+cave
+	town
+		ambient_hue = 0
+		ambient_saturation = 0
+		ambient_value = 0.4
+		enemy_groups = null
 
 
 recipe/cave_bed
@@ -127,6 +141,20 @@ cave/block/stone_wall
 	resource = /tile/stone
 	resource_amount = 1
 	resource_delay = 100
+
+cave/block/stone_wall_sign
+	opacity = TRUE
+	icon = 'cave.dmi'
+	icon_state = "wall_sign"
+	load_bearing = 8
+	interact = TRUE
+	var
+		sign_text
+		sign_background
+		sign_banner
+	interact(actor/player)
+		return new /info(player, sign_text, sign_banner, sign_background)
+
 
 recipe/stone_door
 	ingredients = list("stone","stone","stone")
@@ -231,7 +259,12 @@ cave/block/amethyst_podium
 	bound_height = 24
 	interact = TRUE
 	interact(player/player)
-		return new /info(player, null, 'info_top_mountains.png', "This is a Podium. It is made of Amethyst crystal and stone, and gives off a clear light. It reminds you of home.")
+		return new /info(
+			player,
+			"This is a Podium. It is made of Amethyst crystal and stone, and gives off a clear light. It reminds you of home.",
+			'info_top_mountains.png',
+			null
+		)
 	var
 		light_intensity = 0.25
 		light_radius = 256

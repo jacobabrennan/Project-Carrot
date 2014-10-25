@@ -7,7 +7,7 @@ client/New()
 	title_screen.icon = 'title.png'
 	screen.Add(title_screen)
 	#warn enable title
-	spawn(0)
+	spawn(40)
 		animate(title_screen, alpha = 0, 30, null, CIRCULAR_EASING|EASE_IN)
 		spawn(30)
 			del title_screen
@@ -418,7 +418,8 @@ player/hud/hotbar/skills
 	align_x = "WEST"
 	align_y = "Center"
 	icon_state = "skills"
-	invisibility = 1
+	alpha = 0
+	mouse_opacity = 0
 	offset_x = -TILE_SIZE+(32+TILE_SIZE)/2
 	offset_y = -TILE_SIZE+(32-TILE_SIZE)/2 - 105
 	/* Create a global list in global scope, keep it out of the object tree, reuse for all skills hotbars. */
@@ -444,8 +445,8 @@ player/hud/hotbar/skills
 					Entered(T)
 			if(player && player.client)
 				if(show)
-					player.client.screen.Add(src)
-					invisibility = 0
+					animate(src, alpha=255, 1)
+					mouse_opacity = 1
 				else
-					player.client.screen.Remove(src)
-					invisibility = 1
+					animate(src, alpha=0, 1)
+					mouse_opacity = 0

@@ -17,7 +17,7 @@ block
 			if(resource && resource_amount && destroyable)
 				if(gatherer.build_points < bp_cost)
 					// TODO: Display "can't gather" animation of some sort
-					gatherer << {"<span class="feedback">You don't have enough Building Points to gather this resource.</span>"}
+					inform(gatherer, "You don't have enough Building Points to gather this resource. (Fight more enemies to earn points.)")
 					return
 				gatherer.adjust_bp(-bp_cost)
 				density = FALSE
@@ -74,7 +74,7 @@ block
 		interact(player/user)
 			if(locked || !istype(user)) return
 			if(user.ckey != owner_ckey)
-				user << {"<span class="feedback">This storage chest doesn't belong to you.</span>"}
+				inform(user, "This storage chest doesn't belong to you.")
 				return
 			hotbar.connect(user)
 			locked = user
@@ -99,7 +99,7 @@ block
 				locked = null
 		gather(player/gatherer)
 			if(locate(/tile) in hotbar.reference)
-				world << {"<span class="feedback">This chest cannot be destroyed while it is full.<span>"}
+				inform(gatherer, "This chest cannot be destroyed while it is full.")
 				return
 			else
 				. = ..()

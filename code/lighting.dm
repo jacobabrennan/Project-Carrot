@@ -143,7 +143,7 @@ turf
 				red_value   += amo_r
 				green_value += amo_g
 				blue_value  += amo_b
-				white_value = max(red_value,green_value,blue_value)
+				white_value = (red_value+green_value+blue_value)/3
 				overlays.Cut()
 				web_shade.alpha = max(0, min(255, ((1 - white_value)*255)))
 				if(red_value <= 1)
@@ -186,6 +186,7 @@ turf
 				blue_value = 0
 				var/region/aloc = aloc(src)
 				var/list/ambient = hsv2rgb(aloc.ambient_hue, aloc.ambient_saturation, aloc.ambient_value)
+				world << "Ambient: [ambient["red"]]"
 				adjust_light(ambient["red"],ambient["green"],ambient["blue"])
 				for(var/light_source/L in view(LIGHT_REACH, src))
 					add_light_source(L)
@@ -194,6 +195,7 @@ turf
 			mouse_opacity = 0
 			ignore = TRUE
 			layer = LIGHTING_LAYER
+			blend_mode = BLEND_SUBTRACT
 			Move(){}
 			icon = 'rectangles.dmi'
 			icon_state = "shade"

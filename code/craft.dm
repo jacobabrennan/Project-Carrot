@@ -131,7 +131,7 @@ recipe_manager
 				if(res_count.len == 1) // aa
 					test_sigs.Add(resource_signature(list(res_count[1], res_count[1]))) // aa
 					test_sigs.Add(resource_signature(list(res_count[1]))) // a
-				if(res_count.len == 2) // aab, aabb
+				else if(res_count.len == 2) // aab, aabb
 					if(res_count[res_count[2]] == 1) // aab
 						test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2]))) // aab
 						test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
@@ -141,6 +141,7 @@ recipe_manager
 						test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[2]))) // abb
 						test_sigs.Add(resource_signature(list(res_count[1], res_count[2]))) // ab
 				else // aabc
+					// list index out of bounds
 					test_sigs.Add(resource_signature(list(res_count[1], res_count[1], res_count[2], res_count[3]))) // aabc
 					test_sigs.Add(resource_signature(list(res_count[1], res_count[2], res_count[3]))) // abc
 			// Test each signature, return recipe as soon as one is found.
@@ -178,6 +179,10 @@ recipe
 				del T
 			if(product)
 				return new product()
+
+turf
+	var
+		buildable = FALSE
 
 
 

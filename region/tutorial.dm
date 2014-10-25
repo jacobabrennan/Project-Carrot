@@ -106,6 +106,18 @@ tutorial_manager
 					spawn(30)
 						player.assign_loc(locate(TOWN_START))
 						animate(O, alpha = 0, 28)
+						player.lock = new /info(
+							player,
+{"You enter a large cavern lit by many well tended fires. Other Shade Sprites walk all around you chatting with each other.
+
+You can see lights coming from many little houses carved into the cave wall, and there's a road leading off into the darkness.
+
+Behind you is a hut with a sign on it, and a cozy bed inside."},
+							'info_top_mountains.png',
+							null
+						)
+						player.hud.selection_display.select(player.tile_attack, PRIMARY)
+						player.hud.selection_display.select(player.tile_gather, SECONDARY)
 						spawn(30)
 							tutorial_manager.destroy_tutorial(player)
 							del O

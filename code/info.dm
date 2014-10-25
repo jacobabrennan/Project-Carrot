@@ -12,7 +12,7 @@ info
 		background_image = 'info_bg_1.png'
 		banner_image = 'info_top_cave.png'
 		description_text = ""
-	New(player, _background, _banner, _description)
+	New(player, _description, _banner, _background)
 		background_image = _background || background_image
 		banner_image = _banner || banner_image
 		description_text = _description || description_text

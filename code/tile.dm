@@ -37,7 +37,11 @@ tile
 	Enter()
 		return FALSE
 	Move(turf/new_loc, new_dir, new_step_x, new_step_y, construct_override)
-		if(!construct_override && construct && istype(new_loc, /turf))
+		var/player/user = usr
+		if((!construct_override && construct && istype(new_loc, /turf)))
+			if(!new_loc.buildable)
+				inform(usr, "You can't build here. (Maybe it's a road or public space?)")
+				return ..()
 			if(new_loc.dense())
 				return
 			. = ..()
@@ -46,7 +50,6 @@ tile
 				offset_turf = get_step(offset_turf, EAST)
 			if(step_y+bound_y+(bound_height/2) >= world.icon_size)
 				offset_turf = get_step(offset_turf, NORTH)
-			var/player/user = usr
 			var/check_range = TOTEM_RANGE+1
 			if(istype(construct, /block/bed))
 				check_range = TOTEM_RANGE*2
@@ -54,7 +57,7 @@ tile
 				if(!istype(user))
 					return
 				if(B.owner_ckey != user.ckey)
-					user << {"<span class="feedback">You can't build so close to others' property.</span>"}
+					inform(usr, "You can't build so close to others' property.")
 					return
 			mouse_opacity = 0
 			spawn(TILE_TRANSLATE_TIME)
@@ -176,6 +179,6 @@ tile/default/gather
 			if(!istype(user))
 				return
 			if(B.owner_ckey != user.ckey)
-				user << {"<span class="feedback">You can't gather so close to others' property.</span>"}
+				inform(user, "You can't gather so close to others' property.")
 				return
 		target.gather(user)

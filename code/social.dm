@@ -14,6 +14,8 @@ Think you could make the game better? Let me know, it'd be great to have other p
 proc
 	motd(client/client)
 		client << "[motd]"
+	inform(mob/user, message)
+		user << {"<span class="feedback">[message]</span>"}
 client/New()
 	. = ..()
 	motd(src)
@@ -39,7 +41,10 @@ client
 				// start cooldown
 				next_chat_time = world.time + chat_cooldown
 				// filter out "\n" and HTML and enforce max length
-				var/filtered_message = html_encode(copytext(text_replace(message, "\n", "\\n"), 1, MAX_CHAT_LENGTH))
+				var/filtered_message = copytext(message, 1, MAX_CHAT_LENGTH)
+				if(length(filtered_message) != length(message))
+					inform(src, "Your message was too long, and has been shortened.")
+				filtered_message = html_encode(text_replace(filtered_message, "\n", "\\n"))
 				// TODO: Remove extra whitespace. Ie, messages that are nothing but white space.
 				if(!length(filtered_message)) return
 				hearers(world.view+2, mob) << {"<span class="say"><b>[key]</b>: [filtered_message]"}
@@ -47,7 +52,7 @@ client
 			else
 				// explain cooldown
 				var time_left = round(world.time - next_chat_time) / -10
-				src << {"<span class="feedback">Please wait [time_left]s before writing another message.</span>"}
+				inform(src, "Please wait [time_left]s before writing another message.")
 
 		say_alias_1(message as text)
 			set name = "S"
@@ -69,7 +74,7 @@ client
 			else
 				// explain cooldown
 				var time_left = round(world.time - next_chat_time) / -10
-				src << {"<span class="feedback">Please wait [time_left]s before writing another message.</span>"}
+				inform(src, "Please wait [time_left]s before writing another message.</span>")
 
 		worldsay_alias_1(message as text)
 			set name = "W"
