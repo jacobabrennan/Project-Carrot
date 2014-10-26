@@ -197,12 +197,13 @@ actor/action
 				var/old_loc = user.loc
 				var/old_step_x = user.step_x
 				var/old_step_y = user.step_y
+				var new_dir = get_dir(user, next_step) // (nudge_x && (nudge_x > 0 ? EAST : WEST)) | (nudge_y && (nudge_y > 0 ? NORTH : SOUTH))
 				if(nudge_x || nudge_y)
-					if(!user.Move(user.loc, 0, user.step_x+nudge_x, user.step_y+nudge_y)) // Try full move
-						if(     nudge_y && user.Move(user.loc, 0, user.step_x, user.step_y+nudge_y)) // if blocked, try vertical move first
-							user.Move(user.loc, 0, user.step_x+nudge_x, user.step_y) // then try horizontal move again
-						else if(nudge_x && user.Move(user.loc, 0, user.step_x+nudge_x, user.step_y)) // otherwise try horizontal move first
-							user.Move(user.loc, 0, user.step_x, user.step_y+nudge_y) // then try vertical move again
+					if(!user.Move(user.loc, new_dir, user.step_x+nudge_x, user.step_y+nudge_y)) // Try full move
+						if(     nudge_y && user.Move(user.loc, new_dir, user.step_x, user.step_y+nudge_y)) // if blocked, try vertical move first
+							user.Move(user.loc, new_dir, user.step_x+nudge_x, user.step_y) // then try horizontal move again
+						else if(nudge_x && user.Move(user.loc, new_dir, user.step_x+nudge_x, user.step_y)) // otherwise try horizontal move first
+							user.Move(user.loc, new_dir, user.step_x, user.step_y+nudge_y) // then try vertical move again
 				if(old_loc != user.loc || user.step_x != old_step_x || user.step_y != old_step_y)
 					moved = TRUE
 			if(!moved && (within_range || touching))

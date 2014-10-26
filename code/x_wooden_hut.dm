@@ -5,7 +5,7 @@ tile/bed
 	icon = 'wood_hut.dmi'
 	icon_state = "tile_bed"
 	construct = /block/bed
-block/bed // Hazordu Totem
+block/bed // Hazordhu Totem
 	icon = 'wood_hut.dmi'
 	icon_state = "bed"
 	// 9x9, range(4)

@@ -5,25 +5,25 @@ region
 		ambient_value = 0
 player/Login()
 	. = ..()
-	if(client.connection == "web")
-		see_invisible = 0
-	else
-		see_invisible = 1
+	see_invisible = client.connection != "web"
 
 atom/movable
 	var
 		tmp/light_source/light_source
 	Move(turf/new_loc, _dir, _step_x, _step_y)
-		var/old_loc = loc
+		var old_loc = get_center()
 		. = ..()
-		if(light_source && loc != old_loc)
-			if(!istype(new_loc))
-				. = light_source.Move(src)
-				if(!.)
-					light_source.assign_loc(src)
-					. = TRUE
-			else
-				. = light_source.Move(new_loc, _dir, _step_x, _step_y)
+		if(.)
+			var turf/new_center = get_center()
+			if(light_source && new_center != old_loc)
+				if(!istype(new_center))
+					. = light_source.Move(src)
+					if(!.)
+						light_source.assign_loc(src)
+						. = TRUE
+				else
+					light_source.Move(new_center, dir, 0, 0)
+
 	New()
 		. = ..()
 		if(opacity && map_handler.loaded)
@@ -123,7 +123,7 @@ turf
 			green_value = 0
 			blue_value = 0
 		Move(){}
-		New(new_loc)
+		New(atom/new_loc)
 			. = ..()
 			web_shade = new(new_loc)
 			red   = image('rectangles.dmi',src,"light",LIGHTING_LAYER)
@@ -135,7 +135,7 @@ turf
 			red.color   = "#f00"
 			green.color = "#0f0"
 			blue.color  = "#00f"
-			var/region/aloc = aloc(new_loc)
+			var/region/aloc = new_loc.AreaOf()
 			var/list/ambient = hsv2rgb(aloc.ambient_hue, aloc.ambient_saturation, aloc.ambient_value)
 			adjust_light(ambient["red"],ambient["green"],ambient["blue"])
 		proc
@@ -184,7 +184,7 @@ turf
 				red_value = 0
 				green_value = 0
 				blue_value = 0
-				var/region/aloc = aloc(src)
+				var/region/aloc = AreaOf()
 				var/list/ambient = hsv2rgb(aloc.ambient_hue, aloc.ambient_saturation, aloc.ambient_value)
 				world << "Ambient: [ambient["red"]]"
 				adjust_light(ambient["red"],ambient["green"],ambient["blue"])

@@ -2,7 +2,7 @@ player
 	Move()
 		. = ..()
 		if(.)
-			var/region/R = aloc()
+			var/region/R = AreaOf()
 			if(R) R.notify(src)
 area
 	proc
