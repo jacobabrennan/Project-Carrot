@@ -21,25 +21,28 @@ obj
 tile
 	icon_state = "carrot"
 
-// Should Eventually replace this with Kaio's Library.
-atom/proc/aloc()
-	var/atom/current = src
-	while(current.loc)
-		current = current.loc
-		if(istype(current, /area))
-			return current
-atom/movable/proc/center(atom/movable/ref)
-	var/offset_x = (ref.step_x+ref.bound_x+ref.bound_width /2) - (bound_x+bound_width /2)//reference.step_x + (reference.bound_width -bound_width )/2
-	var/offset_y = (ref.step_y+ref.bound_y+ref.bound_height/2) - (bound_y+bound_height/2)//reference.step_y + (reference.bound_height-bound_height)/2
-	if(!Move(ref.loc, 0, offset_x, offset_y))
-		assign_loc(ref.loc)
-		step_x = offset_x
-		step_y = offset_y
-atom/movable/proc/get_center()
-	var/offset_x = round((step_x+bound_x+bound_width /2)/world.icon_size)
-	var/offset_y = round((step_y+bound_y+bound_height/2)/world.icon_size)
-	var/turf/center = locate(x+offset_x, y+offset_y,z)
-	return center
+atom
+	proc
+		AreaOf()
+
+turf
+	AreaOf() return loc
+
+area
+	AreaOf() return src
+
+atom/movable
+	AreaOf()
+		var area/area = loc.loc
+		while(!isarea(area)) area = area.loc
+		return area
+
+	proc
+		center(atom/movable/ref)
+			SetCenter(ref)
+
+		get_center()
+			return locate(1 + Cx()/tile_width(), 1 + Cy()/tile_height(), z)
 
 // Uncategorized
 proc
