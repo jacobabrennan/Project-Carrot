@@ -186,7 +186,6 @@ turf
 				blue_value = 0
 				var/region/aloc = AreaOf()
 				var/list/ambient = hsv2rgb(aloc.ambient_hue, aloc.ambient_saturation, aloc.ambient_value)
-				world << "Ambient: [ambient["red"]]"
 				adjust_light(ambient["red"],ambient["green"],ambient["blue"])
 				for(var/light_source/L in view(LIGHT_REACH, src))
 					add_light_source(L)
